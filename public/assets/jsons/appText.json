@@ -1,39 +1,31 @@
 {
-    "title": "Quentin A.",
-    "menuBar": {
-        "sections": {
-            "section1": {
-                "en": "previous projects",
-                "fr": "projets précédents"
-            },
-            "section2": {
-                "en": "contact",
-                "fr": "contact"
+    "fr": {
+        "title": "Quentin X.",
+        "menuBar": [
+            { "id": 1, "text": "projets précédents" },
+            { "id": 2, "text": "contact" },
+            { "id": 3, "text": "changer de langue", 
+                "settingMenu": { "language": "changer de langue", "darkMode": "dark mode" }
             }
-        },
-        "settingMenu": {
-            "language": {
-                "en": "set language",
-                "fr": "changer de langue"
-            },
-            "darkMode": {
-                "en":"dark mode",
-                "fr":"dark mode"
-            }
+        ],
+        "presentation": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "bottomSection": {
+            "contact": "Me contacter",
+            "personalAccount": "mes réseaux personels"
         }
     },
-    "presentation": {
-        "en":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        "fr":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    "bottomSection": {
-        "contact": {
-            "en":"Contact me",
-            "fr":"Me contacter"
-        },
-        "personalAccount": {
-            "en":"my personal accounts",
-            "fr":"mes réseaux personels"
+    "en": {
+        "title": "Quentin X.",
+        "menuBar": [
+            { "id": 1, "text": "previous projects" },
+            { "id": 2, "text": "contact" },
+            { "id": 3, "text": "set language", 
+            "settingMenu": { "language": "set language", "darkMode": "dark mode" } }
+        ],
+        "presentation": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "bottomSection": {
+            "contact": "Contact me",
+            "personalAccount": "my personal accounts"
         }
     }
 }

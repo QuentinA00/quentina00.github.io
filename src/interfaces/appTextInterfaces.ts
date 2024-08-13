@@ -1,32 +1,26 @@
-interface Section {
-    en: string;
-    fr: string;
+export interface MenuBarElementInterface {
+    id:number
+    text:string
+    settingMenu?:MenuBarSettingMenuInterface
 }
 
-interface MenuBar {
-    sections: {
-        section1: Section;
-        section2: Section;
-    };
-    settingMenu: {
-        language: Section;
-        darkMode: Section;
-    };
+export interface MenuBarSettingMenuInterface {
+    language: string
+    darkMode: string
 }
 
-interface BottomSection {
-    contact: Section;
-    personalAccount: Section;
+export interface AppTextInterface {
+    title: string
+    menuBar: MenuBarElementInterface[]
+    presentation: string
+    bottomSection: {
+        contact: string
+        personalAccount: string
+    }
 }
 
-interface Presentation {
-    en: string;
-    fr: string;
-}
-
-export interface AppTextInterfaces {
-    title: string;
-    menuBar: MenuBar;
-    presentation: Presentation;
-    bottomSection: BottomSection;
+// export the whole interfaces above, starting with a language
+export interface AppTextInterfacesWithLanguage {
+    fr: AppTextInterface
+    en: AppTextInterface
 }
