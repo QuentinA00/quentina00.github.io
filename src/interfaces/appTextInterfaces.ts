@@ -1,12 +1,12 @@
+export interface MenuBarSettingsItemInterface{
+    key: string
+    text: string
+}
+
 export interface MenuBarElementInterface {
     id:number
     text:string
-    settingMenu?:MenuBarSettingMenuInterface
-}
-
-export interface MenuBarSettingMenuInterface {
-    language: string
-    darkMode: string
+    settings?:MenuBarSettingsItemInterface[]
 }
 
 export interface AppTextInterface {

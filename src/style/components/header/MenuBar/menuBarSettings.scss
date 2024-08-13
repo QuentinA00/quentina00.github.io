@@ -1,0 +1,17 @@
+.menuBarSettings{
+    @include transition(.2s);
+    position: absolute;
+    // background: var(--color3);
+    padding: 0rem 1rem;
+    border-left: .05rem solid var(--color2);
+    display: none;
+    flex-direction: column;
+    width: 10rem;
+    transform: translate(-50%, -50%);
+    top: 400%;
+    left: 50%;
+
+}
+.menuBarSettings-visible{
+    display: flex;
+}

@@ -3,21 +3,32 @@
     position: relative;
     @include transition(.3s);
     cursor: pointer;
-
+    
     &:hover {
         text-decoration: underline;
         text-decoration-thickness: .05rem;
         text-underline-offset: .7rem;
     }
-
+    
     & .menuBarElement-dotPoint{
+        animation: zoomBounce_showUp .2s ease-in-out;
+        @include transition(.3s);
         position: absolute;
         width: .3rem;
         height: .3rem;
         border-radius: 3rem;
         background: var(--color2);
-        top: 100%;
+        top: 170%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes zoomBounce_showUp {
+    0%{
+        transform: scale(.1);
+    }
+    100%{
+        transform: scale(1);  
     }
 }

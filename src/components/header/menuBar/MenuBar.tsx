@@ -18,7 +18,7 @@ const MenuBar:React.FC<MenuBarInterface> = ({menuBarElements, setMenuBarSelected
             {menuBarElements.map(element => (
                 <MenuBarElement
                 key={element.id}
-                elementData={element}
+                menuBarElementData={element}
                 isElementSelected={menuBarSelectedElement === element.id}
                 setSelectedElement={handleSelection}
                 />

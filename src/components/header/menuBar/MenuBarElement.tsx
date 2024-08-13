@@ -1,17 +1,18 @@
 import { MenuBarElementInterface } from "../../../interfaces/appTextInterfaces"
+import MenuBarSettings from "./MenuBarSettings"
 
 interface MenuBarElementProps {
-    elementData:MenuBarElementInterface
+    menuBarElementData:MenuBarElementInterface
     isElementSelected:boolean
     setSelectedElement: (id:number) => void
 }
 
-const MenuBarElement:React.FC<MenuBarElementProps> = ({elementData, isElementSelected, setSelectedElement}) => {
+const MenuBarElement:React.FC<MenuBarElementProps> = ({menuBarElementData, isElementSelected, setSelectedElement}) => {
     return (
-        <div className="menuBarElement" onClick={() => setSelectedElement(elementData.id)}>
-            <p>{elementData.text}</p>
+        <div className="menuBarElement" onClick={() => setSelectedElement(menuBarElementData.id)}>
+            <p>{menuBarElementData.text}</p>
             {isElementSelected && <div className="menuBarElement-dotPoint"></div>}
-            {elementData.settingMenu && <div className="settingMenu"></div>}
+            {menuBarElementData.settings && <MenuBarSettings menuBarSettingsItems={menuBarElementData.settings} isHidden={true}/>}
         </div>
     )
 }
