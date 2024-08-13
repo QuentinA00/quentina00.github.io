@@ -1,0 +1,17 @@
+{
+    "project1": {
+        "title": {
+            "en":"",
+            "fr":""
+        },
+        "description": {
+            "en":"",
+            "fr":""
+        },
+        "media": {
+            "link":"",
+            "image":"",
+            "youtubeLink":""
+        }
+    }
+}
