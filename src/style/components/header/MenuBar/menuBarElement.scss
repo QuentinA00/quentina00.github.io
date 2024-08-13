@@ -1,0 +1,23 @@
+.menuBarElement{
+    display: flex;
+    position: relative;
+    @include transition(.3s);
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: .05rem;
+        text-underline-offset: .7rem;
+    }
+
+    & .menuBarElement-dotPoint{
+        position: absolute;
+        width: .3rem;
+        height: .3rem;
+        border-radius: 3rem;
+        background: var(--color2);
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

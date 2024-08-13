@@ -1,13 +1,13 @@
 :root {
-    --bkgColor: #2E2E2E;
-    --fontColor: #F7F7F7;
+    --color1: #2E2E2E;
+    --color2: #F7F7F7;
 }
 
 // light mode
 @media (prefers-color-scheme: light) {
     :root {
-        --bkgColor: #F7F7F7;
-        --fontColor: #2E2E2E;
+        --color1: #F7F7F7;
+        --color2: #2E2E2E;
     }
 }
 

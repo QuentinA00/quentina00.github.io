@@ -1,9 +1,12 @@
 body {
     font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
     margin: 0;
-    background: var(--bkgColor);
+    background: var(--color1);
     font-size: 1rem;
-    color: var(--fontColor);
+    color: var(--color2);
+}
+--root {
+    @include transition(.1s);
 }
 
 a {
@@ -44,4 +47,8 @@ button{
     background: none;
     padding: 0;
     margin: 0;
+}
+.divider{
+    border-bottom: .05rem solid var(--color2);
+    // width: 10rem;
 }

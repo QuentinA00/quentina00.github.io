@@ -1,28 +1,26 @@
-import { useState } from "react"
 import { AppTextInterface } from "../../../interfaces/appTextInterfaces"
 import MenuBarElement from "./MenuBarElement"
 
 interface MenuBarInterface {
     menuBarElements:AppTextInterface['menuBar']
+    setMenuBarSelectedElement: (id:MenuBarInterface['menuBarSelectedElement']) => void
+    menuBarSelectedElement:number|null
 }
 
-const MenuBar:React.FC<MenuBarInterface> = ({menuBarElements}) => {
+const MenuBar:React.FC<MenuBarInterface> = ({menuBarElements, setMenuBarSelectedElement, menuBarSelectedElement}) => {
 
-    // to keep track of the state of a selected component in MenuBar
-    const [selectedElement, setSelectedElement] = useState<number|null>(null)
-
-    const handleSelection = (id:number) => {
-        setSelectedElement(id)
+    const handleSelection = (id:number|null) => {
+        setMenuBarSelectedElement(id)
     }
 
     return (
         <div className="menuBar">
             {menuBarElements.map(element => (
                 <MenuBarElement
-                    key={element.id}
-                    elementData={element}
-                    isElementSelected={selectedElement === element.id}
-                    setSelectedElement={handleSelection}
+                key={element.id}
+                elementData={element}
+                isElementSelected={menuBarSelectedElement === element.id}
+                setSelectedElement={handleSelection}
                 />
             ))}
         </div>

@@ -1,5 +1,3 @@
-import { promiseWrapper } from "./promiseWrapper"
-
 export const simpleFetch = async (urlEndpoint: string) => {
     try {
         // here we are fetching the backend with the endpoint (baseUrl + urlEndpoint parameter) and wait for its response that we'll assign to responseFromBackend

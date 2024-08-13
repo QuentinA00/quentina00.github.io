@@ -1,6 +1,22 @@
-@import './variables.scss';
-@import './app.scss';
-@import './globalRules.scss';
 @import './import.scss';
+@import './variables.scss';
 @import './mixin.scss';
+@import './globalRules.scss';
+@import './app.scss';
 @import './responsiveRules.scss';
+
+    // pages
+    @import './pages/home.scss';
+
+    // components
+
+        // innerPages
+        @import './components/innerPages/innerPage.scss';
+
+        // header
+        @import './components/header/header.scss';
+        @import './components/header/title.scss';
+            
+            // menuBar
+            @import './components/header/MenuBar/menuBar.scss';
+            @import './components/header/MenuBar/menuBarElement.scss';

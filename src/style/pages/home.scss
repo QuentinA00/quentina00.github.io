@@ -1,0 +1,4 @@
+.home{
+    display: flex;
+    @include transition(.2s);
+}

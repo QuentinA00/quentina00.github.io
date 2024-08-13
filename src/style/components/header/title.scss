@@ -1,0 +1,13 @@
+.title {
+    display: flex;
+    @include transition(.2s);
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.05) translateX(1.5rem);
+    }
+    
+    & h1 {
+        font-size: 5rem;
+    }
+}
