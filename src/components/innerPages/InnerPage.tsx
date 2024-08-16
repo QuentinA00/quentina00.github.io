@@ -1,3 +1,5 @@
+import Presentation from "./Presentation"
+
 interface InnerPageProps {
 
 }
@@ -5,7 +7,7 @@ interface InnerPageProps {
 const InnerPage:React.FC<InnerPageProps> = ({}) => {
     return (
         <div className="innerPage">
-            
+            <Presentation/>
         </div>
     )
 }

@@ -8,9 +8,9 @@ const Presentation:React.FC<PresentationProps> = ({}) => {
             <div className="test">
                 test.
             </div>
-            <div className="text"></div>
+            <div className="text">Présentation</div>
             <div className="linkToResume">
-                <a href="http://">Download CV</a>
+                <a href="http://" style={{textDecoration:'underline'}}>Download CV</a>
             </div>
         </div>
     )
