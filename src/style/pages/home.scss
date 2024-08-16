@@ -1,4 +1,5 @@
 .home{
     display: flex;
     @include transition(.2s);
+    flex-direction: column;
 }

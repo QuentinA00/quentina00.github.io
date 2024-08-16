@@ -1,0 +1,5 @@
+.innerPage {
+    display: flex;
+    flex-direction: column;
+    @include transition(.2s);
+}
