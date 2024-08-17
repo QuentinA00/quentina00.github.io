@@ -6,7 +6,7 @@
             "media": {
                 "link":"",
                 "image":"",
-                "youtubeLink":""
+                "videoLink":""
             }
         }
     },
@@ -20,7 +20,7 @@
                     "linkUrl":""
                 },
                 "image":"",
-                "youtubeLink":""
+                "videoLink":""
             }
         }
     }

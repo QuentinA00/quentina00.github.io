@@ -1,3 +1,6 @@
 .app{
-    border-radius: 1rem;
+    display: flex;
+    @include transition(.2s);
+    flex-direction: column;
+    row-gap: 8rem;
 }

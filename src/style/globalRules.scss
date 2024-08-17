@@ -12,11 +12,11 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--color1);
-    @include underlineHover;
-    font-weight: 500;
-    background: var(--color2);
-    padding: .6rem;
+    color: var(--color2);
+    // @include underlineHover;
+    // font-weight: 500;
+    // background: var(--color2);
+    // padding: .6rem;
 }
 
 img {

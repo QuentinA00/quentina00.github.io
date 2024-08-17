@@ -1,15 +1,15 @@
+import { Link } from "react-router-dom"
 import { AppTextInterface } from "../../interfaces/appTextInterfaces"
 
 interface TitleProps {
     titleText: AppTextInterface['title']
-    setMenuBarSelectedElement: (id:null) => void
 }
 
-const Title:React.FC<TitleProps> = ({titleText, setMenuBarSelectedElement}) => {
+const Title:React.FC<TitleProps> = ({titleText}) => {
     return (
-        <div className="title" onClick={() => setMenuBarSelectedElement(null)}>
+        <Link className="title" to='/'>
             <h1>{titleText}</h1>
-        </div>
+        </Link>
     )
 }
 

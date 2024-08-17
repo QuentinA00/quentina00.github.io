@@ -4,7 +4,7 @@ export interface MenuBarSettingsItemInterface{
 }
 
 export interface MenuBarElementInterface {
-    id:number
+    id:string
     text:string
     settings?:MenuBarSettingsItemInterface[]
 }

@@ -2,10 +2,9 @@
     "en": {
         "title": "Quentin X.",
         "menuBar": [
-            { "id": 1, "text": "Previous projects" },
-            { "id": 2, "text": "Contact" },
-            { "id": 3, "text": "Settings", 
-                "settings": [
+            { "id": "projects", "text": "Previous projects" },
+            { "id": "contact", "text": "Contact" },
+            { "id": "settings", "text": "Settings", "settings": [
                     {"key":"language", "text":"set language"}, 
                     {"key":"darkMode", "text":"dark mode" } 
                 ]
@@ -27,10 +26,9 @@
     "fr": {
         "title": "Quentin X.",
         "menuBar": [
-            { "id": 1, "text": "projets précédents" },
-            { "id": 2, "text": "contact" },
-            { "id": 3, "text": "changer de langue", 
-                "settingsMenu": [
+            { "id": "projects", "text": "projets précédents" },
+            { "id": "contact", "text": "contact" },
+            { "id": "settings", "text": "changer de langue", "settingsMenu": [
                     {"key":"language", "text":"changer de langue"}, 
                     {"key":"darkMode", "text":"dark mode" }
                 ]
