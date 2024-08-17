@@ -1,17 +1,27 @@
 {
-    "project1": {
-        "title": {
-            "en":"",
-            "fr":""
-        },
-        "description": {
-            "en":"",
-            "fr":""
-        },
-        "media": {
-            "link":"",
-            "image":"",
-            "youtubeLink":""
+    "en": {
+        "project1": {
+            "title": "",
+            "description": "",
+            "media": {
+                "link":"",
+                "image":"",
+                "youtubeLink":""
+            }
+        }
+    },
+    "fr": {
+        "project1": {
+            "title": "",
+            "description": "",
+            "media": {
+                "link":{
+                    "linkText":"",
+                    "linkUrl":""
+                },
+                "image":"",
+                "youtubeLink":""
+            }
         }
     }
 }

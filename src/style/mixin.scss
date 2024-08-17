@@ -1,3 +1,12 @@
 @mixin transition($time){
     transition: $time ease-in-out 0s;
 }
+
+// global underline behaviour
+@mixin underlineHover {
+    &:hover{
+        text-decoration: underline;
+        text-decoration-thickness: .1rem;
+        text-underline-offset: .6rem;
+    }
+}

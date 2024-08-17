@@ -7,11 +7,16 @@ body {
     font-weight: 300;
 }
 --root {
-    @include transition(.1s);
+    @include transition(.15s);
 }
 
 a {
     text-decoration: none;
+    color: var(--color1);
+    @include underlineHover;
+    font-weight: 500;
+    background: var(--color2);
+    padding: .6rem;
 }
 
 img {

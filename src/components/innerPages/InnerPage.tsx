@@ -1,13 +1,14 @@
+import { AppTextProps } from "../../interfaces/globalPropsInterfaces"
 import Presentation from "./Presentation"
 
 interface InnerPageProps {
 
 }
 
-const InnerPage:React.FC<InnerPageProps> = ({}) => {
+const InnerPage:React.FC<InnerPageProps & AppTextProps> = ({appText}) => {
     return (
         <div className="innerPage">
-            <Presentation/>
+            <Presentation presentationText={appText.presentation} />
         </div>
     )
 }

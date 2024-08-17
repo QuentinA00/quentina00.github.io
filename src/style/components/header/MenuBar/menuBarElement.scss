@@ -3,12 +3,13 @@
     position: relative;
     @include transition(.3s);
     cursor: pointer;
+    @include underlineHover;
     
-    &:hover {
-        text-decoration: underline;
-        text-decoration-thickness: .05rem;
-        text-underline-offset: .7rem;
-    }
+    // &:hover {
+    //     text-decoration: underline;
+    //     text-decoration-thickness: .05rem;
+    //     text-underline-offset: .7rem;
+    // }
     
     & .menuBarElement-dotPoint{
         animation: zoomBounce_showUp .2s ease-in-out;

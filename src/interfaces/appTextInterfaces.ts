@@ -12,7 +12,14 @@ export interface MenuBarElementInterface {
 export interface AppTextInterface {
     title: string
     menuBar: MenuBarElementInterface[]
-    presentation: string
+    presentation: {
+        title:string
+        presentationText:string
+        linkSection:{
+            linkText:string
+            linkUrl:string
+        }
+    }
     bottomSection: {
         contact: string
         personalAccount: string

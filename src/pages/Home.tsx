@@ -27,7 +27,7 @@ const Home:React.FC<HomeProps> = ({appLanguage}) => {
     return (
         <div className='home'>
             <Header appText={appText} setMenuBarSelectedElement={setMenuBarSelectedElement} menuBarSelectedElement={menuBarSelectedElement}/>
-            <InnerPage/>
+            <InnerPage appText={appText}/>
         </div>
     )
 }

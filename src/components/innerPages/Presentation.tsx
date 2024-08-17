@@ -1,16 +1,16 @@
-interface PresentationProps {
+import { AppTextInterface } from "../../interfaces/appTextInterfaces"
 
+interface PresentationProps {
+    presentationText:AppTextInterface['presentation']
 }
 
-const Presentation:React.FC<PresentationProps> = ({}) => {
+const Presentation:React.FC<PresentationProps> = ({presentationText}) => {
     return (
         <div className="presentation">
-            <div className="test">
-                test.
-            </div>
-            <div className="text">Présentation</div>
-            <div className="linkToResume">
-                <a href="http://" style={{textDecoration:'underline'}}>Download CV</a>
+            <h2 className="presentationTitle">{presentationText.title}</h2>
+            <div className="presentationItems">
+                <div className="presentationText">{presentationText.presentationText}</div>
+                <a href={presentationText.linkSection.linkUrl} className="presentationLink">{presentationText.linkSection.linkText}</a>
             </div>
         </div>
     )
