@@ -30,13 +30,16 @@ const App = () => {
                 
                 <Route path="/contact" element={<Contact/>} />
 
-                <Route path="/projects" element={
-                    <ErrorBoundary fallback={<p>error</p>}>
-                        <Suspense fallback={<p>loading</p>}>
-                            <Projects appLanguage={appLanguage} appText={appText}/>
-                        </Suspense>
-                    </ErrorBoundary>
-                } />
+                <Route 
+                    path="/projects" 
+                    element={
+                        <ErrorBoundary fallback={<p>error</p>}>
+                            <Suspense fallback={<p>loading</p>}>
+                                <Projects appLanguage={appLanguage} appText={appText}/>
+                            </Suspense>
+                        </ErrorBoundary>
+                    } 
+                />
             </Routes>
         </div>
     )

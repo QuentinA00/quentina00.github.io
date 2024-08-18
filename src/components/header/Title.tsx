@@ -7,9 +7,9 @@ interface TitleProps {
 
 const Title:React.FC<TitleProps> = ({titleText}) => {
     return (
-        <Link className="title" to='/'>
-            <h1>{titleText}</h1>
-        </Link>
+        <div className="title">
+            <Link to='/'><h1>{titleText}</h1></Link>
+        </div>
     )
 }
 
