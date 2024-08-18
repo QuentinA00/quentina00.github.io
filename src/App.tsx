@@ -1,12 +1,13 @@
 import Home from "./pages/Home"
 import { Suspense, useState } from "react"
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import Contact from "./pages/Contact"
 import Projects from "./pages/Projects"
 import Header from "./components/header/Header"
 import { fetchWithPromise } from "./utils/api/promiseWrapper"
 import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
 import { ErrorBoundary } from "react-error-boundary"
+import { AnimatePresence } from "framer-motion"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -22,26 +23,33 @@ const App = () => {
     // using appTextPromise function that returns the data, and index the data depending on the app language
     const appText:AppTextInterfacesWithLanguage[typeof appLanguage] = appTextPromise()[appLanguage]
 
-    return (
-        <div className="app">
-            <Header appText={appText}/>
-            <Routes>
-                <Route path="/" element={<Home appText={appText}/>} />
-                
-                <Route path="/contact" element={<Contact/>} />
+    // getting the location datas in the app
+    const location = useLocation()
 
-                <Route 
-                    path="/projects" 
-                    element={
-                        <ErrorBoundary fallback={<p>error</p>}>
-                            <Suspense fallback={<p>loading</p>}>
-                                <Projects appLanguage={appLanguage} appText={appText}/>
-                            </Suspense>
-                        </ErrorBoundary>
-                    } 
-                />
-            </Routes>
-        </div>
+    console.log(location)
+
+    return (
+        <AnimatePresence mode='wait'>
+            <div className="app">
+                <Header appText={appText}/>
+                <Routes location={location}>
+                    <Route path="/" element={<Home appText={appText}/>} />
+                    
+                    <Route path="/contact" element={<Contact/>} />
+
+                    <Route 
+                        path="/projects" 
+                        element={
+                            <ErrorBoundary fallback={<p>error</p>}>
+                                <Suspense fallback={<p>loading</p>}>
+                                    <Projects appLanguage={appLanguage} appText={appText}/>
+                                </Suspense>
+                            </ErrorBoundary>
+                        } 
+                    />
+                </Routes>
+            </div>
+        </AnimatePresence>
     )
 }
 
