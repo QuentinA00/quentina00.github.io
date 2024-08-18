@@ -2,7 +2,7 @@
     "en": {
         "title": "Quentin X.",
         "menuBar": [
-            { "id": "projects", "text": "Previous projects" },
+            { "id": "projects", "text": "Projects" },
             { "id": "contact", "text": "Contact" },
             { "id": "settings", "text": "Settings", "settings": [
                     {"key":"language", "text":"set language"}, 
@@ -26,7 +26,7 @@
     "fr": {
         "title": "Quentin X.",
         "menuBar": [
-            { "id": "projects", "text": "projets précédents" },
+            { "id": "projects", "text": "projets" },
             { "id": "contact", "text": "contact" },
             { "id": "settings", "text": "changer de langue", "settingsMenu": [
                     {"key":"language", "text":"changer de langue"}, 

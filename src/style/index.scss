@@ -7,8 +7,13 @@
 
     // pages
     @import './pages/home.scss';
+    @import './pages/contact.scss';
+    @import './pages/entry.scss';
+    @import './pages/projects.scss';
 
     // components
+
+        @import './components/postContainer.scss';
 
         // innerPages
         @import './components/innerPages/innerPage.scss';

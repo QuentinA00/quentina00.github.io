@@ -6,8 +6,9 @@ interface MenuBarProps {
     menuBarElements:AppTextInterface['menuBar']
 }
 
-const MenuBar:React.FC<MenuBarProps> = ({menuBarElements}) => {
 
+const MenuBar:React.FC<MenuBarProps> = ({menuBarElements}) => {
+    
     return (
         <div className="menuBar">
             {menuBarElements.map(element => (

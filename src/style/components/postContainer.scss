@@ -1,0 +1,11 @@
+.postContainer{
+    display: flex;
+}
+.postContainer-projects{
+    flex-direction: column;
+    width: 70%;
+
+    & .postContainer-border{
+        border-bottom: solid .1rem var(--color2);
+    }
+}

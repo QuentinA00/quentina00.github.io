@@ -1,27 +1,46 @@
 {
-    "en": {
-        "project1": {
+    "en": [
+        {
+            "id":"project1",
+            "title": "project1",
+            "description": "jhfaieurhfiuaehrgliuaehgrpiuaehrgiuaehrgliueahrg",
+            "medias": [
+                {"id":"link","linkPath":"","text":"project1"},
+                {"id":"image","linkPath":"","text":"project1"},
+                {"id":"video","linkPath":"https://www.youtube.com/watch?v=8T1_hDxNHmM","text":"project1"}
+            ]
+        },
+        {
+            "id":"project2",
+            "title": "project2",
+            "description": "erfhgealrhfg zmaehflah aeehfl aiuhfaeiuhg aueirgh eaiughame ghaeliurgh maerhgealiugh ameruhgaeiug haeriugh aleiughaeliughaepiughapeiughpaie",
+            "medias": [
+                {"id":"link","linkPath":"","text":""},
+                {"id":"image","linkPath":"","text":""},
+                {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
+            ]
+        }
+    ],
+    "fr": [
+        {
+            "id":"project1",
             "title": "",
             "description": "",
-            "media": {
-                "link":"",
-                "image":"",
-                "videoLink":""
-            }
-        }
-    },
-    "fr": {
-        "project1": {
+            "medias": [
+                {"id":"link","linkPath":"","text":""},
+                {"id":"image","linkPath":"","text":""},
+                {"id":"video","linkPath":"","text":""}
+            ]
+        },
+        {
+            "id":"project2",
             "title": "",
             "description": "",
-            "media": {
-                "link":{
-                    "linkText":"",
-                    "linkUrl":""
-                },
-                "image":"",
-                "videoLink":""
-            }
+            "medias": [
+                {"id":"link","linkPath":"","text":""},
+                {"id":"image","linkPath":"","text":""},
+                {"id":"video","linkPath":"","text":""}
+            ]
         }
-    }
+    ]
 }
