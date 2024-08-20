@@ -26,13 +26,13 @@ const App = () => {
     // getting the location datas in the app
     const location = useLocation()
 
-    console.log(location)
+    console.log(location.pathname)
 
     return (
         <AnimatePresence mode='wait'>
             <div className="app">
                 <Header appText={appText}/>
-                <Routes location={location}>
+                <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<Home appText={appText}/>} />
                     
                     <Route path="/contact" element={<Contact/>} />

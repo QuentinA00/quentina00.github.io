@@ -1,5 +1,7 @@
 import { AppTextInterface } from "../interfaces/appTextInterfaces"
 import InnerPage from "../components/innerPages/InnerPage"
+import { motion } from 'framer-motion'
+import { slideWithStagger } from "../style/animations/animations"
 
 interface HomeProps {
     appText:AppTextInterface
@@ -7,9 +9,16 @@ interface HomeProps {
 
 const Home:React.FC<HomeProps> = ({appText}) => {
     return (
-        <div className='home'>
-            <InnerPage appText={appText}/>
-        </div>
+        <motion.div
+            variants={slideWithStagger}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+        >
+            <div className='home'>
+                <InnerPage appText={appText}/>
+            </div>
+        </motion.div>
     )
 }
 
