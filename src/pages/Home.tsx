@@ -1,7 +1,7 @@
 import { AppTextInterface } from "../interfaces/appTextInterfaces"
 import InnerPage from "../components/innerPages/InnerPage"
-import { motion } from 'framer-motion'
-import { slideWithStagger } from "../style/animations/animations"
+import { pageTransitionInOut } from "../style/animations/animations"
+import AnimationWrapper from "../components/AnimationWrapper"
 
 interface HomeProps {
     appText:AppTextInterface
@@ -9,16 +9,11 @@ interface HomeProps {
 
 const Home:React.FC<HomeProps> = ({appText}) => {
     return (
-        <motion.div
-            variants={slideWithStagger}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-        >
+        <AnimationWrapper animationType={pageTransitionInOut}>
             <div className='home'>
                 <InnerPage appText={appText}/>
             </div>
-        </motion.div>
+        </AnimationWrapper>
     )
 }
 

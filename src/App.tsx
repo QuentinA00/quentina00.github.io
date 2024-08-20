@@ -29,7 +29,7 @@ const App = () => {
     console.log(location.pathname)
 
     return (
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode="wait">
             <div className="app">
                 <Header appText={appText}/>
                 <Routes location={location} key={location.pathname}>

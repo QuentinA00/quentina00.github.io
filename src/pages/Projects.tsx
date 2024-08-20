@@ -1,7 +1,7 @@
 import PostContainer from "../components/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { ProjectsListInterfaceWithLanguage } from "../interfaces/projectsListInterfaces"
-import { pageTransitionIn, slideInOut, slideWithStagger } from "../style/animations/animations"
+import {  slideInOut, slideWithStagger } from "../style/animations/animations"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { motion } from 'framer-motion'
 
