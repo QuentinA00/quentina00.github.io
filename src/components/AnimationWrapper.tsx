@@ -1,9 +1,10 @@
 import { motion, Variants } from "framer-motion"
 
 interface AnimationWrapperProps {
+    children?:React.ReactNode
     animationType?:Variants
     transitionDuration?:number
-    children:React.ReactNode
+    className?:string
 }
 
 const defaultPageAnimation:Variants = {
@@ -12,7 +13,7 @@ const defaultPageAnimation:Variants = {
     exit: { opacity: 0 },
 }
 
-const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children}) => {
+const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className}) => {
     return (
         <motion.div
             variants={animationType ? animationType : defaultPageAnimation}
@@ -23,10 +24,9 @@ const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, a
                 duration:transitionDuration ? transitionDuration : .2,
                 ease:'easeInOut'
             }}
+            className={`animationWrapper ${className}`}
         >
-            <div className="animationWrapper">
-                {children}
-            </div>
+            {children && children}
         </motion.div>
     )
 }

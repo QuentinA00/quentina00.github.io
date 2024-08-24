@@ -2,6 +2,8 @@ import { AnimatePresence, motion } from "framer-motion"
 import { MenuBarElementInterface } from "../../../interfaces/appTextInterfaces"
 import MenuBarSettings from "./MenuBarSettings"
 import { useLocation } from "react-router-dom"
+import AnimationWrapper from "../../AnimationWrapper"
+import { zoomEffect } from "../../../style/animations/animations"
 
 interface MenuBarElementProps {
     menuBarElementData:MenuBarElementInterface
@@ -20,16 +22,9 @@ const MenuBarElement:React.FC<MenuBarElementProps> = ({ menuBarElementData }) =>
         <div className="menuBarElement">
             <p>{menuBarElementData.text}</p>
 
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
                 {isElementSelected &&
-                    <motion.div
-                        initial={{opacity:0}}
-                        animate={{opacity:1}}
-                        exit={{opacity:0}}
-                        transition={{duration:.2}}
-                    >
-                        <div className="menuBarElement-dotPoint"></div>
-                    </motion.div>
+                    <AnimationWrapper transitionDuration={.2} animationType={zoomEffect} className="menuBarElement-dotPoint"/>
                 }
             </AnimatePresence>
             

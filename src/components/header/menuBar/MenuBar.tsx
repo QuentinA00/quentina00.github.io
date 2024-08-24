@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 import { AppTextInterface } from "../../../interfaces/appTextInterfaces"
 import MenuBarElement from "./MenuBarElement"
+import { AnimatePresence } from "framer-motion"
 
 interface MenuBarProps {
     menuBarElements:AppTextInterface['menuBar']
 }
-
 
 const MenuBar:React.FC<MenuBarProps> = ({menuBarElements}) => {
     

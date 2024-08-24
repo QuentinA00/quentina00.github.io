@@ -5,15 +5,7 @@
     cursor: pointer;
     @include underlineHover;
     
-    // &:hover {
-    //     text-decoration: underline;
-    //     text-decoration-thickness: .05rem;
-    //     text-underline-offset: .7rem;
-    // }
-    
     & .menuBarElement-dotPoint{
-        animation: zoomBounce_showUp .2s ease-in-out;
-        @include transition(.3s);
         position: absolute;
         width: .3rem;
         height: .3rem;
@@ -21,7 +13,6 @@
         background: var(--color2);
         top: 170%;
         left: 50%;
-        // transform: translate(-50%, -50%);
     }
 }
 
