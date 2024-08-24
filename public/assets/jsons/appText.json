@@ -20,7 +20,12 @@
         },
         "bottomSection": {
             "contact": "Contact me",
-            "personalAccount": "my personal accounts"
+            "personalAccount": "my personal accounts",
+            "items":[
+                {"id":"item1","text":"twitter / X","icon":"","link":""},
+                {"id":"item2","text":"instagram","icon":"","link":""},
+                {"id":"item3","text":"github","icon":"","link":""}
+            ]
         }
     },
     "fr": {
@@ -44,7 +49,12 @@
         },
         "bottomSection": {
             "contact": "Me contacter",
-            "personalAccount": "mes réseaux personels"
+            "personalAccount": "mes réseaux personels",
+            "items":[
+                {"id":"item1","text":"twitter / X","icon":"","link":""},
+                {"id":"item2","text":"instagram","icon":"","link":""},
+                {"id":"item3","text":"github","icon":"","link":""}
+            ]
         }
     }
 }

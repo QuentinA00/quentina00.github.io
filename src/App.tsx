@@ -8,6 +8,7 @@ import { fetchWithPromise } from "./utils/api/promiseWrapper"
 import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
 import { ErrorBoundary } from "react-error-boundary"
 import { AnimatePresence } from "framer-motion"
+import Footer from "./components/bottomSection/Footer"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -51,6 +52,7 @@ const App = () => {
 
                 </Routes>
             </AnimatePresence>
+            <Footer/>
         </div>
     )
 }

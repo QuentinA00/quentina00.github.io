@@ -9,6 +9,13 @@ export interface MenuBarElementInterface {
     settings?:MenuBarSettingsItemInterface[]
 }
 
+export interface BottomSectionItemInterface {
+    id:string
+    text:string
+    icon:string
+    link:string
+}
+
 export interface AppTextInterface {
     title: string
     menuBar: MenuBarElementInterface[]
@@ -23,6 +30,7 @@ export interface AppTextInterface {
     bottomSection: {
         contact: string
         personalAccount: string
+        items: BottomSectionItemInterface[]
     }
 }
 
