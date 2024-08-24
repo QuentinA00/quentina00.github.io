@@ -7,7 +7,6 @@ import Header from "./components/header/Header"
 import { fetchWithPromise } from "./utils/api/promiseWrapper"
 import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
 import { ErrorBoundary } from "react-error-boundary"
-import { AnimatePresence } from "framer-motion"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -29,27 +28,14 @@ const App = () => {
     console.log(location.pathname)
 
     return (
-        <AnimatePresence mode="wait">
-            <div className="app">
-                <Header appText={appText}/>
-                <Routes location={location} key={location.pathname}>
-                    <Route path="/" element={<Home appText={appText}/>} />
-                    
-                    <Route path="/contact" element={<Contact/>} />
-
-                    <Route 
-                        path="/projects" 
-                        element={
-                            <ErrorBoundary fallback={<p>error</p>}>
-                                <Suspense fallback={<p>loading</p>}>
-                                    <Projects appLanguage={appLanguage} appText={appText}/>
-                                </Suspense>
-                            </ErrorBoundary>
-                        } 
-                    />
-                </Routes>
-            </div>
-        </AnimatePresence>
+        <div className="app">
+            <Header appText={appText}/>
+            <Routes location={location} key={location.pathname}>
+                <Route path="/*" element={<Home appText={appText}/>} />
+                <Route path="/contact" element={<Contact/>} />
+                <Route path="/projects" element={<Projects appLanguage={appLanguage} appText={appText}/>} />
+            </Routes>
+        </div>
     )
 }
 
