@@ -11,9 +11,9 @@ createRoot(document.getElementById('root')!).render(
         <ErrorBoundary fallback={<p>error</p>}>
             <Suspense fallback={<p>loading</p>}>
                 <BrowserRouter>
-                    <AnimatePresence mode="wait">
-                        <App />
-                    </AnimatePresence>
+                    <App />
+                    {/* <AnimatePresence mode="wait">
+                    </AnimatePresence> */}
                 </BrowserRouter>
             </Suspense>
         </ErrorBoundary>

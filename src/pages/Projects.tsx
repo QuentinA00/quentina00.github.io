@@ -25,19 +25,15 @@ const Projects:React.FC<ProjectsProps & AppTextProps> = ({appLanguage, appText})
                     <div className="projects-border"></div>
                     <h2>{appText.title}</h2>
                 </div>
-                <ErrorBoundary fallback={<p>error</p>}>
-                    <Suspense fallback={<p>loading</p>}>
-                        {projectsList.map(element => (
-                            <PostContainer
-                                key={element.id}
-                                title={element.title}
-                                medias={element.medias}
-                                description={element.description}
-                                className="projects"
-                            />
-                        ))}
-                    </Suspense>
-                </ErrorBoundary>
+                {projectsList.map(element => (
+                    <PostContainer
+                        key={element.id}
+                        title={element.title}
+                        medias={element.medias}
+                        description={element.description}
+                        className="projects"
+                    />
+                ))}
             </div>
         </AnimationWrapper>
     )

@@ -12,7 +12,7 @@ const Home:React.FC<HomeProps> = ({appText}) => {
     // console.log('------Home',pageTransitionInOut)
 
     return (
-        <AnimationWrapper transitionDuration={1} animationType={pageTransitionInOut}>
+        <AnimationWrapper>
             <div className='home'>
                 <InnerPage appText={appText}/>
             </div>

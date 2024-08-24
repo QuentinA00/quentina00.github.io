@@ -20,7 +20,7 @@ const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, a
             animate='animate'
             exit='exit'
             transition={{
-                duration:transitionDuration ? transitionDuration : 1,
+                duration:transitionDuration ? transitionDuration : .2,
                 ease:'easeInOut'
             }}
         >
