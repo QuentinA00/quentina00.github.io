@@ -21,10 +21,11 @@
         "bottomSection": {
             "contact": "Contact me",
             "personalAccount": "my personal accounts",
+            "mail":"mail : quentin@gmail.com",
             "items":[
-                {"id":"item1","text":"twitter / X","icon":"","link":""},
-                {"id":"item2","text":"instagram","icon":"","link":""},
-                {"id":"item3","text":"github","icon":"","link":""}
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":""},
+                {"id":"item3","text":"github","icon":"github.svg","link":""}
             ]
         }
     },
@@ -50,10 +51,11 @@
         "bottomSection": {
             "contact": "Me contacter",
             "personalAccount": "mes réseaux personels",
+            "mail":"mail : quentin@gmail.com",
             "items":[
-                {"id":"item1","text":"twitter / X","icon":"","link":""},
-                {"id":"item2","text":"instagram","icon":"","link":""},
-                {"id":"item3","text":"github","icon":"","link":""}
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":""},
+                {"id":"item3","text":"github","icon":"github.svg","link":""}
             ]
         }
     }

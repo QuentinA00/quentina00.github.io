@@ -30,6 +30,7 @@ export interface AppTextInterface {
     bottomSection: {
         contact: string
         personalAccount: string
+        mail:string
         items: BottomSectionItemInterface[]
     }
 }

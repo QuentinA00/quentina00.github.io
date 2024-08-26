@@ -52,7 +52,7 @@ const App = () => {
 
                 </Routes>
             </AnimatePresence>
-            <Footer/>
+            <Footer footerText={appText.bottomSection} />
         </div>
     )
 }

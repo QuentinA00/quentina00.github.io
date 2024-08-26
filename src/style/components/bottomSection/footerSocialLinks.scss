@@ -1,0 +1,25 @@
+.footerSocialLinks{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+
+    & > .buttonWithIcon{
+        display: flex;
+        border-radius: 5rem;
+        padding: .5rem;
+
+        &:hover{
+            background: var(--color2);
+        }
+
+        & > img {
+            width: 1rem;
+            height: 1rem;
+            fill: white;
+
+            & > svg {
+                fill: white;
+            }
+        }
+    }
+}
