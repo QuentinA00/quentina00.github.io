@@ -3,4 +3,16 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
+    row-gap: 1rem;
+
+    & .footerItems{
+        display: flex;
+        flex-direction: column;
+        row-gap: .3rem;
+        align-items: center;
+
+        & .footerDivider{
+            width: 100%;
+        }
+    }
 }

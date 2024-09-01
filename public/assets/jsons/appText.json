@@ -1,6 +1,6 @@
 {
     "en": {
-        "title": "Quentin X.",
+        "title": "portfolio project.",
         "menuBar": [
             { "id": "projects", "text": "Projects" },
             { "id": "contact", "text": "Contact" },
@@ -20,7 +20,7 @@
         },
         "bottomSection": {
             "contact": "Contact me",
-            "personalAccount": "my personal accounts",
+            "personalAccount": "my personal accounts :",
             "mail":"mail : quentin@gmail.com",
             "items":[
                 {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
@@ -30,7 +30,7 @@
         }
     },
     "fr": {
-        "title": "Quentin X.",
+        "title": "portfolio project.",
         "menuBar": [
             { "id": "projects", "text": "projets" },
             { "id": "contact", "text": "contact" },
@@ -50,7 +50,7 @@
         },
         "bottomSection": {
             "contact": "Me contacter",
-            "personalAccount": "mes réseaux personels",
+            "personalAccount": "mes réseaux personels :",
             "mail":"mail : quentin@gmail.com",
             "items":[
                 {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
