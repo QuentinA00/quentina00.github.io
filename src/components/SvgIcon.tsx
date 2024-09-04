@@ -1,8 +1,12 @@
-const SvgIcon = () => {
+interface SvgIconProps {
+    icon:SVGElement
+}
+
+const SvgIcon:React.FC<SvgIconProps> = ({icon}) => {
     return (
-        <>
+        <div className="svgIcon">
             
-        </>
+        </div>
     )
 }
 
