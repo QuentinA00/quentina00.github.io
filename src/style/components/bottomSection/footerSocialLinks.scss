@@ -7,11 +7,10 @@
         cursor: pointer;
         padding: .5rem;
         display: flex;
-        @include transition(.2s);
-
+        @include transition(.15s);
         
         &:hover{
-            border-bottom: .05rem solid black;
+            box-shadow: var(--borderShadow3);
         }
 
         & > img {

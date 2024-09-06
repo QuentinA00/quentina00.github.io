@@ -1,24 +1,35 @@
 .presentation {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 3rem;
     width: 70%;
     align-items: flex-start;
-    margin-left: 1.5rem;
-
-    & .presentationTitle{
-        font-size: 2rem;
+    
+    & .sectionBorder {
+        width: 100%;
     }
-    & .presentationItems{
+    
+    & .presentationElements {
         display: flex;
         flex-direction: column;
-        row-gap: 2rem;
-
-        & .presentationText{
-            
+        row-gap: 1rem;
+        margin-left: 1.5rem;
+        
+        & .presentationTitle{
+            font-size: 2rem;
         }
-        & .presentationLink{
-            align-self: flex-end;
+        & .presentationItems{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+    
+            & .presentationText{
+                
+            }
+            & .presentationLink{
+                align-self: flex-end;
+            }
         }
     }
+
 }

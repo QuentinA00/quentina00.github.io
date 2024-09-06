@@ -1,7 +1,6 @@
 .projects {
     display: flex;
     flex-direction: column;
-    margin-left: 2rem;
     row-gap: 4rem;
     
     & .projects-titleSection {
@@ -9,9 +8,13 @@
         flex-direction: column;
         row-gap: 2rem;
         align-self: flex-end;
+        
+        & h2{
+            margin-right: 2rem;
+        }
 
         & .projects-border {
-            border-top: solid .1rem var(--color2);
+            border-top: var(--border3);
         }
     }
 

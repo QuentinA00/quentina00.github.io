@@ -13,6 +13,11 @@ body {
 a {
     text-decoration: none;
     color: var(--color2);
+    // @include transition(.1s);
+
+    // &:hover {
+    //     box-shadow: var(--borderShadow2);
+    // }
 }
 
 img {
@@ -34,11 +39,11 @@ p {
 
 
 h1{
-    font-size: 1.7rem;
+    font-size: 3rem;
     margin: 0;
 }
 h2{
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin: 0;
 }
 h3{
@@ -54,5 +59,8 @@ button{
     margin: 0;
 }
 .divider{
-    border-bottom: .05rem solid var(--color2);
+    border-bottom: var(--border1);
+}
+.sectionBorder {
+    border-top:var(--border3);
 }

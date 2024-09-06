@@ -1,6 +1,6 @@
 {
     "en": {
-        "title": "portfolio project.",
+        "title": "Quentin V.",
         "menuBar": [
             { "id": "projects", "text": "Projects" },
             { "id": "contact", "text": "Contact" },
@@ -30,7 +30,7 @@
         }
     },
     "fr": {
-        "title": "portfolio project.",
+        "title": "Quentin V.",
         "menuBar": [
             { "id": "projects", "text": "projets" },
             { "id": "contact", "text": "contact" },

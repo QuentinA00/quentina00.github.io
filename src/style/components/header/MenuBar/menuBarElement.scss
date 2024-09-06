@@ -1,9 +1,14 @@
 .menuBarElement{
     display: flex;
     position: relative;
-    @include transition(.3s);
+    @include transition(.1s);
     cursor: pointer;
-    @include underlineHover;
+    // @include underlineHover;
+    padding-bottom: .3rem;
+
+    &.menuBarElement:hover {
+        box-shadow: var(--borderShadow2);
+    }
     
     & .menuBarElement-dotPoint{
         position: absolute;
@@ -11,7 +16,7 @@
         height: .3rem;
         border-radius: 3rem;
         background: var(--color2);
-        top: 170%;
+        top: 140%;
         left: 50%;
     }
 }

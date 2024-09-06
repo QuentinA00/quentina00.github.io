@@ -14,7 +14,6 @@ const Footer:React.FC<FooterProps> = ({footerText}) => {
                 <div className="footerDivider divider"></div>
                 <p>{footerText.personalAccount}</p>
                 <FooterSocialLinks footerSocialLinks={footerText.items}/>
-                
             </div>
         </div>
     )

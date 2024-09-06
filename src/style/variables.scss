@@ -2,6 +2,13 @@
     --color1: #2E2E2E;
     --color2: #F7F7F7;
     --color3: #5c5c5c;
+
+    --border1:.02rem solid var(--color2);
+    --border2:.05rem solid var(--color2);
+    --border3:.08rem solid var(--color2);
+    --borderShadow1:0rem .02rem 0rem 0rem var(--color2);
+    --borderShadow2:0rem .05rem 0rem 0rem var(--color2);
+    --borderShadow3:0rem .08rem 0rem 0rem var(--color2);
 }
 
 // light mode
