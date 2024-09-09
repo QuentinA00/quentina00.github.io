@@ -20,12 +20,16 @@
         },
         "bottomSection": {
             "contact": "Contact me",
-            "personalAccount": "my personal accounts :",
             "mail":"mail : quentin@gmail.com",
-            "items":[
-                {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
-                {"id":"item2","text":"instagram","icon":"instagram.svg","link":""},
-                {"id":"item3","text":"github","icon":"github.svg","link":""}
+            "professionalLinks":[
+                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my professional Github account"},
+                {"id":"item1","text":"upwork","icon":"upwork.svg","link":"", "description":"my Upwork profile"}
+            ],
+            "personalAccount": "my personal accounts :",
+            "personalLinks":[
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"", "description":"my personal Instagram"},
+                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my personal Github account"}
             ]
         }
     },
@@ -35,7 +39,7 @@
             { "id": "projects", "text": "projets" },
             { "id": "contact", "text": "contact" },
             { "id": "settings", "text": "changer de langue", "settingsMenu": [
-                    {"key":"language", "text":"changer de langue"}, 
+                    {"key":"language", "text":"changer de langue"},
                     {"key":"darkMode", "text":"dark mode" }
                 ]
             }
@@ -50,12 +54,12 @@
         },
         "bottomSection": {
             "contact": "Me contacter",
-            "personalAccount": "mes réseaux personels :",
             "mail":"mail : quentin@gmail.com",
+            "personalAccount": "mes réseaux personels :",
             "items":[
-                {"id":"item1","text":"twitter / X","icon":"x.svg","link":""},
-                {"id":"item2","text":"instagram","icon":"instagram.svg","link":""},
-                {"id":"item3","text":"github","icon":"github.svg","link":""}
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"","description":""},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"","description":""},
+                {"id":"item3","text":"github","icon":"github.svg","link":"","description":""}
             ]
         }
     }

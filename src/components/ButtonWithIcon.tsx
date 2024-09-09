@@ -12,13 +12,16 @@ export interface ButtonWithImageProps {
 ////////////////////////////////////////////
 // imageName : give full name of file. Exemple : image1.png
 // text : 
-// description : if not given, will use text value
+// description : if given, will show up a span element containing the description text
 // className : can give the name of the component in which it is, so it will be named as such "buttonWithIcon-componentName"
 
 const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, description, className}) => {
 
     // path of the assets
     const assetPath = './assets/'
+
+    // just to simplify the code, checking whether or not the description is given
+    const descriptionText = description ? description : text
 
     // defining the classes to apply
     const classesToApply = () => {
@@ -39,13 +42,13 @@ const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, descrip
         return path
     }
     
-
-    // console.log('-------ButtonWithImage',imageName,text)
+    // console.log('-------ButtonWithImage',imageName,text, descriptionText)
     
     return (
-        <div className={classesToApply()} title={description ? description : text}>
-            {imageName && <img src={`${pathToApply()}${imageName}`} alt={`${description ? description : text}`}/>}
+        <div className={classesToApply()}>
+            {imageName && <img src={`${pathToApply()}${imageName}`} alt={descriptionText}/>}
             {text && <p>{text}</p>}
+            {description && <span>{description}</span>}
         </div>
     )
 }

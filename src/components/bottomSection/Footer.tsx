@@ -11,9 +11,12 @@ const Footer:React.FC<FooterProps> = ({footerText}) => {
             <h3>{footerText.contact}</h3>
             <div className="footerItems">
                 <p>{footerText.mail}</p>
+                <FooterSocialLinks itemsLink={footerText.professionalLinks}/>
                 <div className="footerDivider divider"></div>
-                <p>{footerText.personalAccount}</p>
-                <FooterSocialLinks footerSocialLinks={footerText.items}/>
+                <div className="footerItems-bottomSection">
+                    <p>{footerText.personalAccount}</p>
+                    <FooterSocialLinks itemsLink={footerText.personalLinks}/>
+                </div>
             </div>
         </div>
     )

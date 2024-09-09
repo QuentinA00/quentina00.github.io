@@ -8,18 +8,49 @@
         padding: .5rem;
         display: flex;
         @include transition(.15s);
+        position: relative;
         
-        &:hover{
-            box-shadow: var(--borderShadow3);
-        }
-
         & > img {
             width: 1rem;
             height: 1rem;
+        }
+        
+        & span {
+            @include transition(.15s);
+            position: absolute;
+            visibility: hidden;
+            font-size: .6rem;
+            font-weight: 400;
+            opacity: 0;
+            background: var(--color2);
+            border-radius: .1rem;
+            color: var(--color1);
+            padding: .2rem .7rem;
+            inline-size: max-content;
+            left: 1.7rem;
+            box-shadow: var(--borderShadow4);
+            z-index: 1;
+            top: .4rem;
 
-            & > svg {
-
+            &:hover{
+                display: none;
             }
+            &::after{
+                content: '';
+                position: absolute;
+            }
+        }
+
+        &:hover{
+            box-shadow: var(--borderShadow3);
+        }
+        &:hover > span{
+            visibility: visible;
+            opacity: .95;
+            backdrop-filter: blur(1rem);
+            transition-delay: .3s;
+            transform: translateX(.7rem);
+            // z-index: 2;
         }
     }
 }
