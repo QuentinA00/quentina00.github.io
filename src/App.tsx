@@ -27,7 +27,7 @@ const App = () => {
     // getting the location datas in the app
     const location = useLocation()
 
-    console.log(location.pathname)
+    // console.log(location.pathname)
 
     return (
         <div className="app">
