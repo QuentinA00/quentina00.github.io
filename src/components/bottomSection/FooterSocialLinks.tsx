@@ -6,9 +6,6 @@ interface FooterSocialLinksProps {
 }
 
 const FooterSocialLinks:React.FC<FooterSocialLinksProps> = ({itemsLink}) => {
-
-    // console.log(icon)
-
     return (
         <div className="footerSocialLinks">
             {itemsLink.map(element => (
