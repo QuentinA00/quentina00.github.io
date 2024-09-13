@@ -27,9 +27,9 @@
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
+                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my personal Github account"},
                 {"id":"item1","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
-                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"", "description":"my personal Instagram"},
-                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my personal Github account"}
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"", "description":"my personal Instagram"}
             ]
         }
     },

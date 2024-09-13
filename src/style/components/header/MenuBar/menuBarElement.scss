@@ -1,14 +1,10 @@
 .menuBarElement{
     display: flex;
     position: relative;
-    @include transition(.1s);
+    @include transition(.15s);
     cursor: pointer;
-    // @include underlineHover;
-    padding-bottom: .3rem;
-
-    &.menuBarElement:hover {
-        box-shadow: var(--borderShadow2);
-    }
+    @include hoverLink(.4rem);
+    padding: 0 .5rem;
     
     & .menuBarElement-dotPoint{
         position: absolute;
@@ -18,6 +14,9 @@
         background: var(--color2);
         top: 140%;
         left: 50%;
+    }
+    & .buttonWithIcon {
+        display: flex;
     }
 }
 

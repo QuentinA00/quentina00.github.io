@@ -3,10 +3,11 @@
 }
 
 // global underline behaviour
-@mixin underlineHover {
+@mixin hoverLink ($paddingHeight){
+    @include transition(.15s);
+
     &:hover{
-        text-decoration: underline;
-        text-decoration-thickness: .1rem;
-        text-underline-offset: .6rem;
+        padding-bottom: $paddingHeight;
+        box-shadow: var(--borderShadow2);
     }
 }
