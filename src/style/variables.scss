@@ -1,6 +1,6 @@
 :root {
-    --color1: #2E2E2E;
-    --color2: #F7F7F7;
+    --color1: #3d3d3d;
+    --color2: #f1f1f1;
     --color3: #5c5c5c;
 
     --border1:.02rem solid var(--color2);
@@ -15,15 +15,15 @@
 // light mode
 @media (prefers-color-scheme: light) {
     :root {
-        --color1: #F7F7F7;
-        --color2: #2E2E2E;
+        --color1: #f1f1f1;
+        --color2: #3d3d3d;
     }
 }
 
 // dark mode
 @media (prefers-color-scheme: dark) {
     :root {
-        --bkgColor: #2E2E2E;
-        --fontColor: #F7F7F7;
+        --color1: #3d3d3d;
+        --color2: #f1f1f1;
     }
 }
