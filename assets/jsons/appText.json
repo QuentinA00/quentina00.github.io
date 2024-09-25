@@ -1,0 +1,66 @@
+{
+    "en": {
+        "title": "Project test.",
+        "menuBar": [
+            { "id": "projects", "text": "Projects" },
+            { "id": "contact", "text": "Contact" },
+            { "id": "settings", "text": "Settings", "settings": [
+                    {"key":"language", "text":"set language"}, 
+                    {"key":"darkMode", "text":"dark mode" } 
+                ]
+            }
+        ],
+        "presentation": {
+            "title":"About Me",
+            "presentationText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "linkSection":{
+                "linkText":"Download CV",
+                "linkUrl":""
+            }
+        },
+        "bottomSection": {
+            "contact": "Contact me",
+            "mail":"mail : quentin@gmail.com",
+            "professionalLinks":[
+                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my professional Github account"},
+                {"id":"item1","text":"upwork","icon":"upwork.svg","link":"", "description":"my Upwork profile"}
+            ],
+            "personalAccount": "my personal accounts :",
+            "personalLinks":[
+                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my personal Github account"},
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"", "description":"my personal Instagram"}
+            ]
+        }
+    },
+    "fr": {
+        "title": "Quentin V.",
+        "menuBar": [
+            { "id": "projects", "text": "projets" },
+            { "id": "contact", "text": "contact" },
+            { "id": "settings", "text": "changer de langue", "settingsMenu": [
+                    {"key":"language", "text":"changer de langue"},
+                    {"key":"darkMode", "text":"dark mode" }
+                ]
+            }
+        ],
+        "presentation": {
+            "title":"A propos de moi",
+            "presentationText":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "linkSection":{
+                "linkText":"Télécharger mon CV",
+                "linkUrl":""
+            }
+        },
+        "bottomSection": {
+            "contact": "Me contacter",
+            "mail":"mail : quentin@gmail.com",
+            "personalAccount": "mes réseaux personels :",
+            "items":[
+                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"","description":""},
+                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"","description":""},
+                {"id":"item3","text":"github","icon":"github.svg","link":"","description":""}
+            ]
+        }
+    }
+}
