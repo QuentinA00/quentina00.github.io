@@ -44,16 +44,12 @@
             }
         }
 
-        // &:hover{
-        //     box-shadow: var(--borderShadow3);
-        // }
         &:hover > span{
             visibility: visible;
             opacity: .95;
             backdrop-filter: blur(1rem);
             transition-delay: .3s;
             transform: translateX(.7rem);
-            // z-index: 2;
         }
     }
 }

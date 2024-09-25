@@ -2,9 +2,12 @@
   "name": "portfolio_website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://quentina00.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy" : "vite build --base=./",
+    "deploy" : "gh-pages -d build",
     "build": "tsc -b && vite build --base=./",
     "lint": "eslint .",
     "preview": "vite preview"
