@@ -1,17 +1,16 @@
 import ReactPlayer from "react-player"
+import { ProjectsMediasInterface } from "../interfaces/projectsListInterfaces"
 
 interface MediaComponentProps {
-    linkPath:string
-    type:'image'|'video'
-    text?:string
+    mediaData: ProjectsMediasInterface
 }
 
-const MediaComponent:React.FC<MediaComponentProps> = ({linkPath, text, type}) => {
+const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
     return (
         <div className="mediaComponent">
-            {type === 'image' && <img src={linkPath} alt={text} />}
-            {type === 'video' && <ReactPlayer url={linkPath} controls width='50%' height='50%'/>}
-            <p>{text}</p>
+            {mediaData.id === 'image' && <img src={mediaData.linkPath} alt={mediaData.text} />}
+            {mediaData.id === 'video' && <ReactPlayer url={mediaData.linkPath} controls width='50%' height='50%'/>}
+            <p>{mediaData.text}</p>
         </div>
     )
 }

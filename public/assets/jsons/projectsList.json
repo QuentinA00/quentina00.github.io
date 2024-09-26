@@ -2,51 +2,44 @@
     "en": [
         {
             "id":"project1",
-            "title": "project1",
-            "description": "jhfaieurhfiuaehrgliuaehgrpiuaehrgiuaehrgliueahrg",
+            "projectOrigin":"professional project",
+            "title": "Portfolio Website",
+            "description": "A portfolio website",
+            "tags": [
+                {"id":"tag1","text":"javascript / typescript"},
+                {"id":"tag2","text":"ReactJS"},
+                {"id":"tag3","text":"Vite"},
+                {"id":"tag4","text":"suspense / fallback"},
+                {"id":"tag4","text":"error boundaries"},
+                {"id":"tag5","text":"github pages"},
+                {"id":"tag6","text":"framer motion"},
+                {"id":"tag7","text":"react-router"}
+            ],
+            "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
             "medias": [
                 {"id":"link","linkPath":"","text":"project1"},
-                {"id":"image","linkPath":"","text":"project1"},
                 {"id":"video","linkPath":"https://www.youtube.com/watch?v=8T1_hDxNHmM","text":"project1"}
             ]
         },
         {
             "id":"project2",
-            "title": "project2",
-            "description": "erfhgealrhfg zmaehflah aeehfl aiuhfaeiuhg aueirgh eaiughame ghaeliurgh maerhgealiugh ameruhgaeiug haeriugh aleiughaeliughaepiughapeiughpaie",
+            "projectOrigin":"personal project",
+            "title": "Kosmo Project.",
+            "description": "An ideal social network for me",
+            "tags": [
+                {"id":"tag1","text":"javascript / typescript"},
+                {"id":"tag2","text":"ReactJS"},
+                {"id":"tag3","text":"Vite"},
+                {"id":"tag4","text":"suspense / fallback"},
+                {"id":"tag4","text":"error boundaries"},
+                {"id":"tag5","text":"github pages"},
+                {"id":"tag6","text":"framer motion"},
+                {"id":"tag7","text":"react-router"}
+            ],
+            "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
             "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
-            ]
-        },
-        {
-            "id":"project3",
-            "title": "project3",
-            "description": "erfhgealrhfg zmaehflah aeehfl aiuhfaeiuhg aueirgh eaiughame ghaeliurgh maerhgealiugh ameruhgaeiug haeriugh aleiughaeliughaepiughapeiughpaie",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
-            ]
-        },
-        {
-            "id":"project4",
-            "title": "project4",
-            "description": "erfhgealrhfg zmaehflah aeehfl aiuhfaeiuhg aueirgh eaiughame ghaeliurgh maerhgealiugh ameruhgaeiug haeriugh aleiughaeliughaepiughapeiughpaie",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
-            ]
-        },
-        {
-            "id":"project5",
-            "title": "project5",
-            "description": "erfhgealrhfg zmaehflah aeehfl aiuhfaeiuhg aueirgh eaiughame ghaeliurgh maerhgealiugh ameruhgaeiug haeriugh aleiughaeliughaepiughapeiughpaie",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
+                {"id":"link","linkPath":"","text":"project2"},
+                {"id":"image","linkPath":"","text":"project2"},
                 {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
             ]
         }

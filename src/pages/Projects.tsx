@@ -1,5 +1,5 @@
 // import { ErrorBoundary } from "react-error-boundary"
-import PostContainer from "../components/PostContainer"
+import PostContainer from "../components/post/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { ProjectsListInterfaceWithLanguage } from "../interfaces/projectsListInterfaces"
 // import {  slideInOut, slideWithStagger } from "../style/animations/animations"
@@ -26,12 +26,10 @@ const Projects:React.FC<ProjectsProps & AppTextProps> = ({appLanguage, appText})
                     {/* <div className="projects-border"></div> */}
                     <h2>{appText.title}</h2>
                 </div>
-                {projectsList.map(element => (
+                {projectsList.map(projectData => (
                     <PostContainer
-                        key={element.id}
-                        title={element.title}
-                        medias={element.medias}
-                        description={element.description}
+                        key={projectData.id}
+                        projectData={projectData}
                         className="projects"
                     />
                 ))}
