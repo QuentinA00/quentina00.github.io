@@ -1,11 +1,11 @@
-import { ErrorBoundary } from "react-error-boundary"
+// import { ErrorBoundary } from "react-error-boundary"
 import PostContainer from "../components/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { ProjectsListInterfaceWithLanguage } from "../interfaces/projectsListInterfaces"
-import {  slideInOut, slideWithStagger } from "../style/animations/animations"
+// import {  slideInOut, slideWithStagger } from "../style/animations/animations"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
-import { motion } from 'framer-motion'
-import { Suspense } from "react"
+// import { motion } from 'framer-motion'
+// import { Suspense } from "react"
 import AnimationWrapper from "../components/AnimationWrapper"
 
 const projectsListPromise = fetchWithPromise('./assets/jsons/projectsList.json')

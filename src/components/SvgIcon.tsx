@@ -2,7 +2,7 @@ interface SvgIconProps {
     icon:SVGElement
 }
 
-const SvgIcon:React.FC<SvgIconProps> = ({icon}) => {
+const SvgIcon:React.FC<SvgIconProps> = ({}) => {
     return (
         <div className="svgIcon">
             

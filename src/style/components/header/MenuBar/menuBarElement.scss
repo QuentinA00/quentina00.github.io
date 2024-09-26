@@ -1,10 +1,10 @@
 .menuBarElement{
     display: flex;
     position: relative;
-    @include transition(.15s);
     cursor: pointer;
-    @include hoverLink(.4rem);
     padding: 0 .5rem;
+    @include transition(.15s);
+    @include hoverLink(.4rem);
     
     & .menuBarElement-dotPoint{
         position: absolute;

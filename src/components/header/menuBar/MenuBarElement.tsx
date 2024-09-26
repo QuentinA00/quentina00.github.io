@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence } from "framer-motion"
 import { MenuBarElementInterface } from "../../../interfaces/appTextInterfaces"
 import MenuBarSettings from "./MenuBarSettings"
 import { useLocation } from "react-router-dom"
