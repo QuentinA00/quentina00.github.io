@@ -9,8 +9,8 @@ const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
     return (
         <div className="mediaComponent">
             {mediaData.id === 'image' && <img src={mediaData.linkPath} alt={mediaData.text} />}
-            {mediaData.id === 'video' && <ReactPlayer url={mediaData.linkPath} controls width='50%' height='50%'/>}
-            <p>{mediaData.text}</p>
+            {mediaData.id === 'video' && <ReactPlayer url={mediaData.linkPath} controls width='100%' height='100%'/>}
+            <p className="mediaComponent-comment">{mediaData.text}</p>
         </div>
     )
 }

@@ -1,0 +1,15 @@
+.postContentSection{
+    display: flex;
+    column-gap: 2rem;
+
+    & .postContentSection-medias{
+        flex: 1;
+    }
+    & .postContentSection-text{
+        flex: 2;
+    }
+}
+.postContentSection-mobile{
+    flex-direction: column;
+    row-gap: 2rem;
+}

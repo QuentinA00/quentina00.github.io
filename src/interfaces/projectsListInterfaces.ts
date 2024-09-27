@@ -19,6 +19,7 @@ export interface ProjectsInterface {
     description:string
     tags?: ProjectsTagsInterface[]
     postText: string
+    projectLink:string
     medias?: ProjectsMediasInterface[]
 }
 

@@ -21,16 +21,14 @@ const Projects:React.FC<ProjectsProps & AppTextProps> = ({appLanguage, appText})
     return (
         <AnimationWrapper>
             <div className="projects">
-                {/* <h2 className="projects-titleSection sectionBorder">{appText.title}</h2> */}
-                <div className="projects-titleSection sectionBorder">
-                    {/* <div className="projects-border"></div> */}
+                <div className="projects-titleSection">
                     <h2>{appText.title}</h2>
                 </div>
                 {projectsList.map(projectData => (
                     <PostContainer
                         key={projectData.id}
-                        projectData={projectData}
-                        className="projects"
+                        postData={projectData}
+                        className="project"
                     />
                 ))}
             </div>

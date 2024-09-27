@@ -1,0 +1,15 @@
+.mediaComponent {
+    display: flex;
+    flex-direction: column;
+
+    & div {
+        border-radius: 2rem;
+    }
+
+    & p{
+        color: var(--color2);
+        font-style: italic;
+        font-size: .8rem;
+        margin-top: -.4rem;
+    }
+}

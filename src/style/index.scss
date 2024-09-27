@@ -12,8 +12,8 @@
     @import './pages/projects.scss';
 
     // components
-    @import './components/postContainer.scss';
     @import './components/bottomSection/footerSocialLinks.scss';
+    @import './components/mediaComponent.scss';
 
         // innerPages
         @import './components/innerPages/innerPage.scss';
@@ -30,4 +30,10 @@
             @import './components/header/MenuBar/menuBarSettingsItem.scss';
 
         // footer
-        @import './components/bottomSection/footer.scss'
+        @import './components/bottomSection/footer.scss';
+
+        // post
+        @import './components/post/postContainer.scss';
+        @import './components/post/tag.scss';
+        @import './components/post/postTopSection.scss';
+        @import './components/post/postContentSection.scss';
