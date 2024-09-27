@@ -8,11 +8,11 @@ interface AnimationWrapperProps {
     className?:string
 }
 
-const defaultPageAnimation:Variants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-}
+// const defaultPageAnimation:Variants = {
+//     initial: { opacity: 0 },
+//     animate: { opacity: 1 },
+//     exit: { opacity: 0 },
+// }
 
 const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className}) => {
     return (
