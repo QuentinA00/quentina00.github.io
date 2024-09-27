@@ -67,3 +67,7 @@ button{
 .sectionBorder {
     border-top:var(--border3);
 }
+.regularLink{
+    cursor: pointer;
+    @include transition(.2s);
+}

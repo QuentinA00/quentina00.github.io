@@ -26,7 +26,7 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
 
             <div className="postContentSection-text">
                 <p>{postData.postText}</p>
-                <p>{postData.projectLink}</p>
+                <a className="regularLink">{postData.projectLink}</a>
             </div>
         </div>
     )
