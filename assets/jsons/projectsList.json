@@ -2,28 +2,28 @@
     "en": [
         {
             "id":"project1",
-            "projectOrigin":"professional project",
+            "projectOrigin":"Professional project",
             "title": "Portfolio Website",
-            "description": "A portfolio website",
+            "description": "The portfolio website you're currently on",
             "tags": [
                 {"id":"tag1","text":"javascript / typescript"},
                 {"id":"tag2","text":"ReactJS"},
                 {"id":"tag3","text":"Vite"},
                 {"id":"tag4","text":"suspense / fallback"},
-                {"id":"tag4","text":"error boundaries"},
-                {"id":"tag5","text":"github pages"},
-                {"id":"tag6","text":"framer motion"},
-                {"id":"tag7","text":"react-router"}
+                {"id":"tag5","text":"error boundaries"},
+                {"id":"tag6","text":"github pages"},
+                {"id":"tag7","text":"framer motion"},
+                {"id":"tag8","text":"react-router"}
             ],
             "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+            "projectLink":"test link",
             "medias": [
-                {"id":"link","linkPath":"","text":"project1"},
                 {"id":"video","linkPath":"https://www.youtube.com/watch?v=8T1_hDxNHmM","text":"project1"}
             ]
         },
         {
             "id":"project2",
-            "projectOrigin":"personal project",
+            "projectOrigin":"Personal project",
             "title": "Kosmo Project.",
             "description": "An ideal social network for me",
             "tags": [
@@ -31,15 +31,14 @@
                 {"id":"tag2","text":"ReactJS"},
                 {"id":"tag3","text":"Vite"},
                 {"id":"tag4","text":"suspense / fallback"},
-                {"id":"tag4","text":"error boundaries"},
-                {"id":"tag5","text":"github pages"},
-                {"id":"tag6","text":"framer motion"},
-                {"id":"tag7","text":"react-router"}
+                {"id":"tag5","text":"error boundaries"},
+                {"id":"tag6","text":"github pages"},
+                {"id":"tag7","text":"framer motion"},
+                {"id":"tag8","text":"react-router"}
             ],
             "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+            "projectLink":"test link",
             "medias": [
-                {"id":"link","linkPath":"","text":"project2"},
-                {"id":"image","linkPath":"","text":"project2"},
                 {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
             ]
         }
