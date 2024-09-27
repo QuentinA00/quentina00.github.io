@@ -1,4 +1,5 @@
 import { motion, Variants } from "framer-motion"
+import { zoomEffect } from "../style/animations/animations"
 
 interface AnimationWrapperProps {
     children?:React.ReactNode
@@ -16,7 +17,7 @@ const defaultPageAnimation:Variants = {
 const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className}) => {
     return (
         <motion.div
-            variants={animationType ? animationType : defaultPageAnimation}
+            variants={animationType ? animationType : zoomEffect}
             initial='initial'
             animate='animate'
             exit='exit'

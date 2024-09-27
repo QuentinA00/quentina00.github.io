@@ -9,16 +9,30 @@ export const pageTransitionInOut: Variants = {
 
 export const zoomEffect: Variants = {
     initial:{ 
-        // opacity: 0, 
-        scale: 0.1 
+        opacity: 0, 
+        scale: 0.95
     },
     animate:{ 
-        // opacity: 1, 
-        scale: 1 
+        opacity: 1, 
+        scale: 1
     },
     exit:{ 
-        // opacity: 0, 
-        scale: 0.1
+        opacity: 0, 
+        scale: 0.95
+     }
+}
+export const slideFromTop: Variants = {
+    initial:{ 
+        opacity: 0, 
+        y: -20
+    },
+    animate:{ 
+        opacity: 1, 
+        y: 0
+    },
+    exit:{ 
+        opacity: 0, 
+        y: -20
      }
 }
 

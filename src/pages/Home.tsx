@@ -1,6 +1,5 @@
 import { AppTextInterface } from "../interfaces/appTextInterfaces"
 import InnerPage from "../components/innerPages/InnerPage"
-// import { pageTransitionInOut, slideInOut } from "../style/animations/animations"
 import AnimationWrapper from "../components/AnimationWrapper"
 
 interface HomeProps {
@@ -13,7 +12,7 @@ const Home:React.FC<HomeProps> = ({appText}) => {
     // console.log('------Home',pageTransitionInOut)
 
     return (
-        <AnimationWrapper>
+        <AnimationWrapper transitionDuration={.3}>
             <div className='home'>
                 <InnerPage appText={appText}/>
             </div>

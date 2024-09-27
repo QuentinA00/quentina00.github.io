@@ -3,6 +3,8 @@ import { AppTextInterface } from "../../interfaces/appTextInterfaces"
 import MenuBar from "./menuBar/MenuBar"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobilePlus } from "../../utils/responsiveUtils"
+import AnimationWrapper from "../AnimationWrapper"
+import { slideFromTop } from "../../style/animations/animations"
 
 
 interface HeaderProps {
@@ -17,10 +19,12 @@ const Header:React.FC<HeaderProps> = ({appText}) => {
     // console.log('mobileScreen : ',mobileScreen ? 'oui' : 'non')
 
     return (
-        <div className={`header ${mobileScreen ? 'header-mobile' : ''}`}>
-            <Title titleText={appText.title}/>
-            <MenuBar menuBarElements={appText.menuBar}/>
-        </div>
+        <AnimationWrapper transitionDuration={.8} animationType={slideFromTop}>
+            <div className={`header ${mobileScreen ? 'header-mobile' : ''}`}>
+                <Title titleText={appText.title}/>
+                <MenuBar menuBarElements={appText.menuBar}/>
+            </div>
+        </AnimationWrapper>
     )
 }
 
