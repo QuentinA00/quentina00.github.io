@@ -1,13 +1,13 @@
 // default style
 .postContainer{
     display: flex;
-    background: var(--color3);
-    border-radius: 1.5rem;
-    padding: 1.5rem;
 }
 
 // style for projects page
 .postContainer-project{
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color3);
     flex-direction: column;
     width: 75%;
     row-gap: 1.5rem;

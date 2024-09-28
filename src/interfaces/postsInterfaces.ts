@@ -17,8 +17,8 @@ export interface PostsLinksInterface {
     link:string
 }
 
-// the whole interface
-export interface PostsInterface {
+// interface for a single post item
+export interface PostInterface {
     id: string
     projectOrigin?: string
     title?:string
@@ -29,7 +29,13 @@ export interface PostsInterface {
     medias?: PostsMediasInterface[]
 }
 
+// the whole interface
+export interface PostsInterface {
+    presentation:PostInterface[]
+    projects:PostInterface[]
+}
+
 export interface PostsInterfaceWithLanguage {
-    en:PostsInterface[]
-    fr:PostsInterface[]
+    en:PostsInterface
+    fr:PostsInterface
 }

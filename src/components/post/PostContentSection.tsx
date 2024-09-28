@@ -1,10 +1,10 @@
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "../../utils/responsiveUtils"
 import MediaComponent from "../MediaComponent"
-import { PostsInterface } from "../../interfaces/postsInterfaces"
+import { PostInterface, PostsInterface } from "../../interfaces/postsInterfaces"
 
 interface PostContentSectionProps {
-    postData: PostsInterface
+    postData: PostInterface
 }
 
 const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {

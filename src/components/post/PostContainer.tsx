@@ -2,10 +2,13 @@ import { useMediaQuery } from "react-responsive"
 import PostContentSection from "./PostContentSection"
 import PostTopSection from "./PostTopSection"
 import { screen_mobile } from "../../utils/responsiveUtils"
-import { PostsInterface } from "../../interfaces/postsInterfaces"
+import { PostInterface } from "../../interfaces/postsInterfaces"
 
 interface PostContainerProps {
-    postData: PostsInterface
+
+    // data of a single post element
+    postData: PostInterface
+    
     className?:string
 }
 
@@ -14,7 +17,7 @@ const PostContainer:React.FC<PostContainerProps> = ({ className, postData}) => {
     const mobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
     const topSectionEnabled = () => {
-        if (postData.description || postData.title || postData.tags) return true
+        if (postData.id.includes('project')) return true
     }
 
     return (

@@ -1,112 +1,102 @@
 {
-    "en": [
-        {
-            "id":"presentation",
-            "projectOrigin":"",
-            "title": "",
-            "description": "",
-            "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-            "postsLinks":[
-                {"linkName":"test","link":"test"}
-            ]
-        },
-        {
-            "id":"project1",
-            "projectOrigin":"Professional project",
-            "title": "Portfolio Website",
-            "description": "The portfolio website you're currently on",
-            "tags": [
-                {"id":"tag1","text":"javascript / typescript"},
-                {"id":"tag2","text":"ReactJS"},
-                {"id":"tag3","text":"Vite"},
-                {"id":"tag4","text":"suspense / fallback"},
-                {"id":"tag5","text":"error boundaries"},
-                {"id":"tag6","text":"github pages"},
-                {"id":"tag7","text":"framer motion"},
-                {"id":"tag8","text":"react-router"}
-            ],
-            "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-            "postsLinks":[
-                {"linkName":"test","link":"test"}
-            ],
-            "medias": [
-                {"id":"video","linkPath":"https://www.youtube.com/watch?v=8T1_hDxNHmM","text":"project1"}
-            ]
-        },
-        {
-            "id":"project2",
-            "projectOrigin":"Personal project",
-            "title": "Kosmo Project.",
-            "description": "An ideal social network for me",
-            "tags": [
-                {"id":"tag1","text":"javascript / typescript"},
-                {"id":"tag2","text":"ReactJS"},
-                {"id":"tag3","text":"Vite"},
-                {"id":"tag4","text":"suspense / fallback"},
-                {"id":"tag5","text":"error boundaries"},
-                {"id":"tag6","text":"github pages"},
-                {"id":"tag7","text":"framer motion"},
-                {"id":"tag8","text":"react-router"}
-            ],
-            "postText":"qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqhqjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-            "postsLinks":[
-                {"linkName":"test","link":"test"}
-            ],
-            "medias": [
-                {"id":"video","linkPath":"https://www.youtube.com/watch?v=zUIhEe6YTM8","text":"project2"}
-            ]
-        }
-    ],
-    "fr": [
-        {
-            "id":"project1",
-            "title": "",
-            "description": "",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"","text":""}
-            ]
-        },
-        {
-            "id":"project2",
-            "title": "",
-            "description": "",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"","text":""}
-            ]
-        },
-        {
-            "id":"project2",
-            "title": "",
-            "description": "",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"","text":""}
-            ]
-        },
-        {
-            "id":"project2",
-            "title": "",
-            "description": "",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"","text":""}
-            ]
-        },
-        {
-            "id":"project2",
-            "title": "",
-            "description": "",
-            "medias": [
-                {"id":"link","linkPath":"","text":""},
-                {"id":"image","linkPath":"","text":""},
-                {"id":"video","linkPath":"","text":""}
-            ]
-        }
-    ]
+    "en": {
+        "presentation": [
+            {
+                "id": "presentation",
+                "projectOrigin": "",
+                "title": "",
+                "description": "",
+                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh...",
+                "postsLinks": [
+                    {"linkName": "test","link": "test"}
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "id": "project1",
+                "projectOrigin": "Professional project",
+                "title": "Portfolio Website",
+                "description": "The portfolio website you're currently on",
+                "tags": [
+                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Vite" },
+                    { "id": "tag4", "text": "suspense / fallback" },
+                    { "id": "tag5", "text": "error boundaries" },
+                    { "id": "tag6", "text": "github pages" },
+                    { "id": "tag7", "text": "framer motion" },
+                    { "id": "tag8", "text": "react-router" }
+                ],
+                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh...",
+                "postsLinks": [
+                    {
+                        "linkName": "test",
+                        "link": "test"
+                    }
+                ],
+                "medias": [
+                    {
+                        "id": "video",
+                        "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
+                        "text": "project1"
+                    }
+                ]
+            },
+            {
+                "id": "project2",
+                "projectOrigin": "Personal project",
+                "title": "Kosmo Project",
+                "description": "An ideal social network for me",
+                "tags": [
+                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Vite" },
+                    { "id": "tag4", "text": "suspense / fallback" },
+                    { "id": "tag5", "text": "error boundaries" },
+                    { "id": "tag6", "text": "github pages" },
+                    { "id": "tag7", "text": "framer motion" },
+                    { "id": "tag8", "text": "react-router" }
+                ],
+                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh...",
+                "postsLinks": [
+                    {
+                        "linkName": "test",
+                        "link": "test"
+                    }
+                ],
+                "medias": [
+                    {
+                        "id": "video",
+                        "linkPath": "https://www.youtube.com/watch?v=zUIhEe6YTM8",
+                        "text": "project2"
+                    }
+                ]
+            }
+        ]
+    },
+    "fr": {
+        "projects": [
+            {
+                "id": "project1",
+                "title": "",
+                "description": "",
+                "medias": [
+                    { "id": "link", "linkPath": "", "text": "" },
+                    { "id": "image", "linkPath": "", "text": "" },
+                    { "id": "video", "linkPath": "", "text": "" }
+                ]
+            },
+            {
+                "id": "project2",
+                "title": "",
+                "description": "",
+                "medias": [
+                    { "id": "link", "linkPath": "", "text": "" },
+                    { "id": "image", "linkPath": "", "text": "" },
+                    { "id": "video", "linkPath": "", "text": "" }
+                ]
+            }
+        ]
+    }
 }

@@ -15,9 +15,11 @@ interface PageComponentProps {
 
 const PageComponent:React.FC<PageComponentProps> = ({pageItem, appLanguage, appText, setAppLanguage}) => {
     return (
-        <div>
+        <div className="pageComponent">
 
-            {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage}/>}
+            <h2>{pageItem.text}</h2>
+
+            {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
             {pageItem.id === 'contact' && <Contact/>}
             {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
 
