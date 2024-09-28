@@ -70,4 +70,9 @@ button{
 .regularLink{
     cursor: pointer;
     @include transition(.2s);
+    @include hoverLink2;
+    padding: .2rem 1.2rem;
+    border-radius: 3rem;
+    font-size: .9rem;
+    background: var(--color3);
 }

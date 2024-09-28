@@ -1,12 +1,14 @@
-export interface MenuBarSettingsItemInterface{
+export interface MenuBarSubMenuItemInterface{
     key: string
     text: string
+    icon:string
 }
 
-export interface MenuBarElementInterface {
+export interface MenuBarItemInterface {
     id:string
     text:string
-    settings?:MenuBarSettingsItemInterface[]
+    icon?:string
+    subMenu:MenuBarSubMenuItemInterface[]
 }
 
 export interface BottomSectionLinkInterface {
@@ -17,9 +19,21 @@ export interface BottomSectionLinkInterface {
     description:string
 }
 
+export interface PagesTextInterface {
+    id:string
+    text:string
+}
+
 export interface AppTextInterface {
     title: string
-    menuBar: MenuBarElementInterface[]
+    
+    // pages are used to create the routes of the app as well as menuBar elements
+    pages:PagesTextInterface[]
+    
+    // menuBar are some additional elements that can be added asides pages elements in menuBar
+    menuBar: MenuBarItemInterface[]
+    
+    // deprecated
     presentation: {
         title:string
         presentationText:string
@@ -28,6 +42,7 @@ export interface AppTextInterface {
             linkUrl:string
         }
     }
+
     bottomSection: {
         contact: string
         mail:string

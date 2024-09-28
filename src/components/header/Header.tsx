@@ -22,7 +22,7 @@ const Header:React.FC<HeaderProps> = ({appText}) => {
         <AnimationWrapper transitionDuration={.8} animationType={slideFromTop}>
             <div className={`header ${mobileScreen ? 'header-mobile' : ''}`}>
                 <Title titleText={appText.title}/>
-                <MenuBar menuBarElements={appText.menuBar}/>
+                <MenuBar pageItems={appText.pages} menuBarItems={appText.menuBar}/>
             </div>
         </AnimationWrapper>
     )

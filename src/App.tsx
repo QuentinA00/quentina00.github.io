@@ -9,6 +9,7 @@ import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
 import { ErrorBoundary } from "react-error-boundary"
 import { AnimatePresence } from "framer-motion"
 import Footer from "./components/bottomSection/Footer"
+import PageComponent from "./pages/PageComponent"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -31,11 +32,13 @@ const App = () => {
 
     return (
         <div className="app">
+            
             <Header appText={appText}/>
+
             <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
 
-                    <Route path="/*" element={<Home appText={appText} setAppLanguage={setAppLanguage}/>} />
+                    {/* <Route path="/*" element={<Home appText={appText} setAppLanguage={setAppLanguage}/>} />
                     
                     <Route path="/contact" element={<Contact/>} />
 
@@ -48,7 +51,17 @@ const App = () => {
                                 </Suspense>
                             </ErrorBoundary>
                         } 
-                    />
+                    /> */}
+
+                    {appText.pages.map((pageItem) => (
+                        <Route key={pageItem.id} path={pageItem.id} element={
+                            <ErrorBoundary fallback={<p>error</p>}>
+                                <Suspense fallback={<p>loading</p>}>
+                                    <PageComponent pageItem={pageItem} appLanguage={appLanguage} appText={appText} setAppLanguage={setAppLanguage}/>
+                                </Suspense>
+                            </ErrorBoundary>
+                        }/>
+                    ))}
 
                 </Routes>
             </AnimatePresence>

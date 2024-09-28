@@ -1,14 +1,17 @@
 {
     "en": {
-        "title": "Project test.",
+        "title": "Quentin.",
         "menuBar": [
-            { "id": "projects", "text": "Projects" },
-            { "id": "contact", "text": "Contact" },
-            { "id": "settings", "text": "Settings", "settings": [
-                    {"key":"language", "text":"set language"}, 
-                    {"key":"darkMode", "text":"dark mode" } 
+            { "id": "settings", "text": "", "icon":"settings.svg", "subMenuItems": [
+                    {"key":"language", "text":"set language", "icon":""}, 
+                    {"key":"darkMode", "text":"dark mode", "icon":"" } 
                 ]
             }
+        ],
+        "pages":[
+            { "id": "projects", "text": "Projects" },
+            { "id": "contact", "text": "Contact" },
+            { "id": "", "text": "About me" }
         ],
         "presentation": {
             "title":"About Me",

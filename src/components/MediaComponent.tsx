@@ -1,8 +1,8 @@
 import ReactPlayer from "react-player"
-import { ProjectsMediasInterface } from "../interfaces/projectsListInterfaces"
+import { PostsMediasInterface } from "../interfaces/postsInterfaces"
 
 interface MediaComponentProps {
-    mediaData: ProjectsMediasInterface
+    mediaData: PostsMediasInterface
 }
 
 const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {

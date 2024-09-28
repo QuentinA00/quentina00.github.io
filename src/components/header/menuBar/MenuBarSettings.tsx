@@ -1,9 +1,9 @@
 import React from "react"
-import { MenuBarElementInterface } from "../../../interfaces/appTextInterfaces"
 import MenuBarSettingsItem from "./MenuBarSettingsItem"
+import { MenuBarItemInterface } from "../../../interfaces/appTextInterfaces"
 
 interface MenuBarSettingsProps {
-    menuBarSettingsItems:MenuBarElementInterface['settings']
+    menuBarSettingsItems:MenuBarItemInterface['settings']
     isHidden:boolean
 }
 

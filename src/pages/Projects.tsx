@@ -1,26 +1,28 @@
 import PostContainer from "../components/post/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
-import { ProjectsListInterfaceWithLanguage } from "../interfaces/projectsListInterfaces"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import AnimationWrapper from "../components/AnimationWrapper"
+import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
 
-const projectsListPromise = fetchWithPromise('./assets/jsons/projectsList.json')
+const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
 interface ProjectsProps {
     appLanguage:'en'|'fr'
+
+    appText:AppTextProps['appText']
 }
 
-const Projects:React.FC<ProjectsProps & AppTextProps> = ({appLanguage, appText}) => {
+const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
 
-    const projectsList:ProjectsListInterfaceWithLanguage[typeof appLanguage] = projectsListPromise()[appLanguage]
+    const posts:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
 
     return (
-        <AnimationWrapper transitionDuration={.3}>
+        <AnimationWrapper>
             <div className="projects">
                 <div className="projects-titleSection">
-                    <h2>{appText.title}</h2>
+                    <h2>{appText?.title}</h2>
                 </div>
-                {projectsList.map(projectData => (
+                {posts.map(projectData => (
                     <PostContainer
                         key={projectData.id}
                         postData={projectData}
