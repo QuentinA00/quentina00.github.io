@@ -16,13 +16,9 @@ const PostContainer:React.FC<PostContainerProps> = ({ className, postData}) => {
 
     const mobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
-    const topSectionEnabled = () => {
-        if (postData.id.includes('project')) return true
-    }
-
     return (
         <div className={`postContainer postContainer-${className} ${mobileScreen ? 'postContainer-mobile' : ''}`}>
-            {topSectionEnabled() && <PostTopSection postData={postData}/>}
+            <PostTopSection postData={postData}/>
             <PostContentSection postData={postData}/>
         </div>
     )

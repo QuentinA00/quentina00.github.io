@@ -4,6 +4,7 @@
     align-items: center;
     margin-bottom: 5rem;
     row-gap: 1rem;
+    @include transition(.1s);
 
     & .footerItems{
         display: flex;

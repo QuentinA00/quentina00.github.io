@@ -30,7 +30,7 @@ const Home:React.FC<HomeProps> = ({appText, appLanguage}) => {
         <AnimationWrapper>
             <div className='home'>
                 {/* <InnerPage appText={appText}/> */}
-                {presentationPosts.map((presentationPost) => <PostContainer postData={presentationPost} className="home"/>)}
+                {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home"/>)}
                 {/* <Presentation presentationText={appText?.presentation} /> */}
                 {/* <PostContainer postData={appText}/> */}
             </div>

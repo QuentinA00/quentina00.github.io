@@ -34,14 +34,14 @@ export interface AppTextInterface {
     menuBar: MenuBarItemInterface[]
     
     // deprecated
-    presentation: {
-        title:string
-        presentationText:string
-        linkSection:{
-            linkText:string
-            linkUrl:string
-        }
-    }
+    // presentation: {
+    //     title:string
+    //     presentationText:string
+    //     linkSection:{
+    //         linkText:string
+    //         linkUrl:string
+    //     }
+    // }
 
     bottomSection: {
         contact: string
