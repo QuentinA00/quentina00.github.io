@@ -4,16 +4,16 @@ import App from './App.tsx'
 import './style/index.scss'
 import { ErrorBoundary } from 'react-error-boundary'
 import { BrowserRouter } from 'react-router-dom'
+import FallbackError from './components/fallbackComponents/FallbackError.tsx'
+import FallbackLoading from './components/fallbackComponents/FallbackLoading.tsx'
 // import { AnimatePresence } from 'framer-motion'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <ErrorBoundary fallback={<p>error</p>}>
-            <Suspense fallback={<p>loading</p>}>
+        <ErrorBoundary fallback={<FallbackError/>}>
+            <Suspense fallback={<FallbackLoading/>}>
                 <BrowserRouter>
                     <App />
-                    {/* <AnimatePresence mode="wait">
-                    </AnimatePresence> */}
                 </BrowserRouter>
             </Suspense>
         </ErrorBoundary>

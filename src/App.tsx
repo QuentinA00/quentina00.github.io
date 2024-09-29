@@ -10,6 +10,8 @@ import { ErrorBoundary } from "react-error-boundary"
 import { AnimatePresence } from "framer-motion"
 import Footer from "./components/bottomSection/Footer"
 import PageComponent from "./pages/PageComponent"
+import FallbackError from "./components/fallbackComponents/FallbackError"
+import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -55,8 +57,8 @@ const App = () => {
 
                     {appText.pages.map((pageItem) => (
                         <Route key={pageItem.id} path={pageItem.id} element={
-                            <ErrorBoundary fallback={<p>error</p>}>
-                                <Suspense fallback={<p>loading</p>}>
+                            <ErrorBoundary fallback={<FallbackError/>}>
+                                <Suspense fallback={<FallbackLoading/>}>
                                     <PageComponent pageItem={pageItem} appLanguage={appLanguage} appText={appText} setAppLanguage={setAppLanguage}/>
                                 </Suspense>
                             </ErrorBoundary>

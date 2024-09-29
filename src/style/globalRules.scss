@@ -5,6 +5,11 @@ body {
     font-size: 1rem;
     color: var(--color2);
     font-weight: 300;
+
+    & #root {
+        display: flex;
+        flex-direction: column;
+    }
 }
 --root {
     @include transition(.15s);
