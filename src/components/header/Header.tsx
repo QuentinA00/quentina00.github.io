@@ -4,7 +4,8 @@ import MenuBar from "./menuBar/MenuBar"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobilePlus } from "../../utils/responsiveUtils"
 import AnimationWrapper from "../AnimationWrapper"
-import { slideFromTop } from "../../style/animations/animations"
+import { headerAppearance, slideFromTop } from "../../style/animations/animations"
+import { AnimatePresence } from "framer-motion"
 
 
 interface HeaderProps {
@@ -19,12 +20,17 @@ const Header:React.FC<HeaderProps> = ({appText}) => {
     // console.log('mobileScreen : ',mobileScreen ? 'oui' : 'non')
 
     return (
-        <AnimationWrapper transitionDuration={.8} animationType={slideFromTop}>
-            <div className={`header ${mobileScreen ? 'header-mobile' : ''}`}>
-                <Title titleText={appText.title}/>
-                <MenuBar pageItems={appText.pages} menuBarItems={appText.menuBar}/>
-            </div>
-        </AnimationWrapper>
+        <AnimatePresence mode='wait'>
+            <AnimationWrapper transitionDuration={.5} animationType={headerAppearance}>
+                <div className={`header ${mobileScreen ? 'header-mobile' : ''}`}>
+                    <div className="header-topSection">
+                        <Title titleText={appText.title}/>
+                        <MenuBar pageItems={appText.pages} menuBarItems={appText.menuBar}/>
+                    </div>
+                    {/* <div className="divider2"></div> */}
+                </div>
+            </AnimationWrapper>
+        </AnimatePresence>
     )
 }
 

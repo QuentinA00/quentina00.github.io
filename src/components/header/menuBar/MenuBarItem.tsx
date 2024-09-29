@@ -27,15 +27,15 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
     // const isSettingsElement = pageItemData.id === 'settings'
 
     return (
-        <div className="menuBarElement">
+        <div className="menuBarItem">
             
-            <p>{text}</p>
+            {!icon && <div className="menuBarItem-button">{text}</div>}
             
             {icon && <ButtonWithIcon imageName={icon} description={text}/>}
 
             <AnimatePresence mode="wait">
                 {isElementSelected &&
-                    <AnimationWrapper transitionDuration={.2} animationType={zoomEffect} className="menuBarElement-dotPoint"/>
+                    <AnimationWrapper transitionDuration={.2} animationType={zoomEffect} className="menuBarItem-dotPoint"/>
                 }
             </AnimatePresence>
             

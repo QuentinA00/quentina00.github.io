@@ -69,15 +69,21 @@ button{
 .divider{
     border-bottom: var(--border1);
 }
+.divider2{
+    @include transition(.1s);
+    border-bottom: var(--border4);
+    width: 70%;
+    border-radius: 3rem;
+    align-self: center;
+}
 .sectionBorder {
     border-top:var(--border3);
 }
 .regularLink{
     cursor: pointer;
-    @include transition(.2s);
-    @include hoverLink2;
+    @include hoverLink3;
     padding: .2rem 1.2rem;
     border-radius: 3rem;
     font-size: .9rem;
-    background: var(--color3);
+    font-weight: 500;
 }

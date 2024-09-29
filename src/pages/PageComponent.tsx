@@ -1,3 +1,4 @@
+import { AnimatePresence } from "framer-motion"
 import { PagesTextInterface } from "../interfaces/appTextInterfaces"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import Contact from "./Contact"
@@ -19,9 +20,11 @@ const PageComponent:React.FC<PageComponentProps> = ({pageItem, appLanguage, appT
 
             <h2>{pageItem.text}</h2>
 
-            {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
-            {pageItem.id === 'contact' && <Contact/>}
-            {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
+            <AnimatePresence mode='wait'>
+                {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
+                {pageItem.id === 'contact' && <Contact/>}
+                {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
+            </AnimatePresence>
 
         </div>
     )

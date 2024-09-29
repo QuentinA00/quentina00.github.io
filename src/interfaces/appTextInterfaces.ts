@@ -1,6 +1,6 @@
 export interface MenuBarSubMenuItemInterface{
-    key: string
-    text: string
+    key:string
+    text:string
     icon:string
 }
 
@@ -8,7 +8,7 @@ export interface MenuBarItemInterface {
     id:string
     text:string
     icon?:string
-    subMenu:MenuBarSubMenuItemInterface[]
+    subMenuItems:MenuBarSubMenuItemInterface[]
 }
 
 export interface BottomSectionLinkInterface {
@@ -32,16 +32,6 @@ export interface AppTextInterface {
     
     // menuBar are some additional elements that can be added asides pages elements in menuBar
     menuBar: MenuBarItemInterface[]
-    
-    // deprecated
-    // presentation: {
-    //     title:string
-    //     presentationText:string
-    //     linkSection:{
-    //         linkText:string
-    //         linkUrl:string
-    //     }
-    // }
 
     bottomSection: {
         contact: string

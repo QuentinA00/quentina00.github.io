@@ -1,8 +1,11 @@
+import { AnimatePresence } from "framer-motion"
 import { styleVariables } from "../../style/globalRules"
 import ButtonWithIcon from "../ButtonWithIcon"
+import AnimationWrapper from "../AnimationWrapper"
 
 const FallbackLoading = () => {
 
+    // note 29/09/24 : the animation of it is in the .scss file, because using keyframe within component is tough
     const style = {
         container: {
             background:styleVariables.color3_light,
@@ -12,16 +15,11 @@ const FallbackLoading = () => {
             borderRadius:'5rem',
             margin:'2rem 0rem',
             transition:'.15s'
-        },
-        paragraph:{
-            // fontWeight:'200'
-            fontSize:'.9rem'
         }
     }
 
     return (
-        <div className="fallbackLoading" style={style.container}>
-            {/* <p>Loading...</p> */}
+        <div className="fallbackLoading fallbackComponent" style={style.container}>
             <ButtonWithIcon imageName="" text="loading..." />
         </div>
     )

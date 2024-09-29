@@ -33,7 +33,7 @@ export const slideFromTop: Variants = {
     exit:{ 
         opacity: 0, 
         y: -20
-     }
+    }
 }
 
 // ----- testing out -----
@@ -67,4 +67,24 @@ export const slideWithStagger: Variants = {
             ease: "easeIn",
         },
     },
+}
+
+export const headerAppearance: Variants = {
+    initial:{ 
+        opacity: 0,
+        // scale:.1,
+        // y: -20
+    },
+    animate:{ 
+        opacity: [0,1],
+        // scale:[.98,1.04,1],
+        margin:['0 4rem','0 -1rem','0rem']
+        // y: 0
+    },
+    exit:{ 
+        opacity: 0,
+        // scale:[1,1.04,.98],
+        margin:['0','0 4rem']
+        // y: -20
+    }
 }

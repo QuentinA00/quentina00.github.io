@@ -2,7 +2,11 @@
     @include transition(.2s);
     display: flex;
     align-self: center;
-    // margin-right: 5rem;
-    column-gap: 2rem;
+    column-gap: 1.8rem;
     align-items: center;
+
+    .menuBar-mobile {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
 }

@@ -37,7 +37,6 @@ const App = () => {
             
             <Header appText={appText}/>
 
-            <AnimatePresence mode="wait">
                 <Routes location={location} key={location.pathname}>
 
                     {/* <Route path="/*" element={<Home appText={appText} setAppLanguage={setAppLanguage}/>} />
@@ -66,7 +65,6 @@ const App = () => {
                     ))}
 
                 </Routes>
-            </AnimatePresence>
             <Footer footerText={appText.bottomSection} />
         </div>
     )

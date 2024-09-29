@@ -16,6 +16,11 @@
     @import './components/bottomSection/footerSocialLinks.scss';
     @import './components/mediaComponent.scss';
 
+        // fallbackComponents
+        // @import './components/fallbackComponents/fallbackError.scss';
+        // @import './components/fallbackComponents/fallbackLoading.scss';
+        @import './components/fallbackComponents/fallbackComponent.scss';
+
         // innerPages
         @import './components/innerPages/innerPage.scss';
         @import './components/innerPages/presentation.scss';
@@ -26,7 +31,7 @@
             
             // menuBar
             @import './components/header/MenuBar/menuBar.scss';
-            @import './components/header/MenuBar/menuBarElement.scss';
+            @import './components/header/MenuBar/menuBarItem.scss';
             @import './components/header/MenuBar/menuBarSettings.scss';
             @import './components/header/MenuBar/menuBarSettingsItem.scss';
 

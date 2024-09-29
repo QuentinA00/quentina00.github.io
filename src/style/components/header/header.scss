@@ -1,13 +1,23 @@
 .header{
     display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
+    flex-direction: column;
     @include transition(.1s);
-    margin: 0rem 2rem;
+    row-gap: 2rem;
+    
+    & .header-topSection{
+        @include transition(.1s);
+        margin: 0rem 2rem;
+        display: flex;
+        flex-grow: 1;
+        justify-content:space-between;
+    }
 
     &.header-mobile {
-        flex-direction: column;
-        row-gap: 3rem;
+
+        & .header-topSection{
+            flex-direction: column;
+            row-gap: 3rem;
+        }
 
         & .menuBar {
             margin-right: 0rem;

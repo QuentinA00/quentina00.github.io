@@ -20,8 +20,6 @@ interface MenuBarProps {
 }
 
 const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
-
-    const subMenuData = menuBarItems.map(menuBarItem => menuBarItem.subMenu)
     
     return (
         <div className="menuBar">
@@ -38,11 +36,11 @@ const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
 
             {/* mapping menuBar elements */}
             {menuBarItems.map(menuBarItem => (
-                <MenuBarItem key={menuBarItem.id} id={menuBarItem.id} text={menuBarItem.text} icon={menuBarItem.icon}/>
+                <div key={menuBarItem.id} className="menuBarContainer">
+                    <MenuBarItem key={menuBarItem.id} id={menuBarItem.id} text={menuBarItem.text} icon={menuBarItem.icon}/>
+                    {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}
+                </div>
             ))}
-
-            {/* <MenuBarSettings menuBarSettingsItems={} isHidden={true}/> */}
-            <MenuBarSubMenu subMenuItems={subMenuData}/>
         </div>
     )
 }

@@ -7,11 +7,12 @@
     
     & > .buttonWithIcon{
         cursor: pointer;
-        padding: .5rem;
+        padding: .6rem;
         display: flex;
         @include transition(.15s);
         position: relative;
-        @include hoverLink(.7rem);
+        @include hoverLink3;
+        border-radius: 3rem;
         
         & > img {
             width: 1rem;
@@ -31,7 +32,7 @@
             padding: .2rem .7rem;
             inline-size: max-content;
             left: 1.7rem;
-            box-shadow: var(--borderShadow4);
+            box-shadow: var(--borderShadow5);
             z-index: 1;
             top: .4rem;
 
