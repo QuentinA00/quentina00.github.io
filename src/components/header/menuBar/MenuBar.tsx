@@ -4,6 +4,8 @@ import ButtonWithIcon from "../../ButtonWithIcon"
 import MenuBarSettings from "./MenuBarSettings"
 import MenuBarItem from "./MenuBarItem"
 import MenuBarSubMenu from "./MenuBarSubMenu"
+import { useMediaQuery } from "react-responsive"
+import { screen_mobile } from "../../../utils/responsiveUtils"
 
 
 /////////////////////////////////////////////////
@@ -20,27 +22,35 @@ interface MenuBarProps {
 }
 
 const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
+
+    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
     
     return (
-        <div className="menuBar">
+        <div className={`menuBar ${isOnMobileScreen ? 'menuBar-mobile' : ''}`}>
 
             {/* mapping pages elements */}
-            {pageItems.map(pageItem => (
-                <Link 
-                    to={pageItem.id}
-                    key={pageItem.id}
-                >
-                    <MenuBarItem key={pageItem.id} id={pageItem.id} text={pageItem.text}/>
-                </Link>
-            ))}
+            <div className="menuBar-pagesLinks">
+                {pageItems.map(pageItem => (
+                        <Link 
+                            to={pageItem.id}
+                            key={pageItem.id}
+                        >
+                            <MenuBarItem key={pageItem.id} id={pageItem.id} text={pageItem.text}/>
+                        </Link>
+                ))}
+            </div>
+
+            {isOnMobileScreen && <div className="divider2"></div>}
 
             {/* mapping menuBar elements */}
-            {menuBarItems.map(menuBarItem => (
-                <div key={menuBarItem.id} className="menuBarContainer">
+            <div className="menuBar-items">
+                {menuBarItems.map(menuBarItem => (
                     <MenuBarItem key={menuBarItem.id} id={menuBarItem.id} text={menuBarItem.text} icon={menuBarItem.icon}/>
-                    {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}
-                </div>
-            ))}
+                ))}
+            </div>
+            
+            {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}
+
         </div>
     )
 }

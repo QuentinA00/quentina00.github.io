@@ -4,6 +4,7 @@ import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import Contact from "./Contact"
 import Home from "./Home"
 import Projects from "./Projects"
+import AnimationWrapper from "../components/AnimationWrapper"
 
 interface PageComponentProps {
     pageItem: PagesTextInterface
@@ -21,9 +22,11 @@ const PageComponent:React.FC<PageComponentProps> = ({pageItem, appLanguage, appT
             <h2>{pageItem.text}</h2>
 
             <AnimatePresence mode='wait'>
-                {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
-                {pageItem.id === 'contact' && <Contact/>}
-                {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
+                <AnimationWrapper transitionDuration={.4}>
+                    {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
+                    {pageItem.id === 'contact' && <Contact/>}
+                    {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
+                </AnimationWrapper>
             </AnimatePresence>
 
         </div>

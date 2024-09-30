@@ -6,16 +6,20 @@
 @mixin hoverLink ($paddingHeight){
     @include transition(.15s);
 
-    &:hover{
-        padding-bottom: $paddingHeight;
-        box-shadow: var(--borderShadow2);
+    @media (hover:hover){
+        &:hover{
+            padding-bottom: $paddingHeight;
+            box-shadow: var(--borderShadow2);
+        }
     }
 }
 @mixin hoverLink2{
     @include transition(.15s);
 
-    &:hover{
-        transform: scale(1.05);
+    @media (hover:hover){
+        &:hover{
+            transform: scale(1.05);
+        }
     }
     &:active{
         transform: scale(1);
@@ -24,8 +28,10 @@
 @mixin hoverLink3{
     @include transition(.1s);
 
-    &:hover{
-        background: var(--color3);
+    @media (hover:hover){
+        &:hover{
+            background: var(--color3);
+        }
     }
     &:active{
         transform: scale(.95);

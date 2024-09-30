@@ -22,15 +22,18 @@
         left: 50%;
     }
     & .buttonWithIcon {
-        display: flex;
+        padding: .5rem;
+        border-radius: 3rem;
     }
-}
-
-@keyframes zoomBounce_showUp {
-    0%{
-        transform: scale(.1);
-    }
-    100%{
-        transform: scale(1);  
+    
+    &.menuBarItem-mobile{
+        
+        & .menuBarItem-button{
+            // background: var(--color3);
+        }
+        & .buttonWithIcon {
+            background: var(--color3);
+            
+        }
     }
 }

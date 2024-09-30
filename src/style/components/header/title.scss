@@ -3,8 +3,10 @@
     @include transition(.15s);
     cursor: pointer;
 
-    &:hover{
-        transform: scale(1.05) translateX(1.5rem);
+    @media (hover:hover){
+        &:hover{
+            transform: scale(1.05) translateX(1.5rem);
+        }
     }
     &:active{
         transform: scale(1.07) translateX(1.6rem);
@@ -14,7 +16,10 @@
         font-size: 5rem;
         font-weight: 700;
     }
-}
-.title-mobile{
-    & h1 {font-size: 3rem;}
+    
+    &.title-mobile{
+        align-self: center;
+
+        & h1 {font-size: 3rem;}
+    }
 }

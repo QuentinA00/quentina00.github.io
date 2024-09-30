@@ -21,11 +21,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
     const projectsPosts = posts.projects
 
     return (
-        <AnimationWrapper>
             <div className="projects">
-                {/* <div className="projects-titleSection">
-                    <h2>{appText}</h2>
-                </div> */}
                 {projectsPosts.map(projectData => (
                     <PostContainer
                         key={projectData.id}
@@ -34,7 +30,8 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
                     />
                 ))}
             </div>
-        </AnimationWrapper>
+        // <AnimationWrapper>
+        // </AnimationWrapper>
     )
 }
 

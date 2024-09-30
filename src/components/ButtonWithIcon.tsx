@@ -1,4 +1,6 @@
 import React from "react"
+import { screen_mobile } from "../utils/responsiveUtils"
+import { useMediaQuery } from "react-responsive"
 
 export interface ButtonWithImageProps {
     text?: string
@@ -23,6 +25,8 @@ const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, descrip
     // just to simplify the code, checking whether or not the description is given
     const descriptionText = description ? description : text
 
+    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+
     // defining the classes to apply
     const classesToApply = () => {
         let classes = 'buttonWithIcon'
@@ -45,10 +49,10 @@ const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, descrip
     // console.log('-------ButtonWithImage',imageName,text, descriptionText)
     
     return (
-        <div className={classesToApply()}>
+        <div className={classesToApply()} style={{display:'flex'}}>
             {imageName && <img src={`${pathToApply()}${imageName}`} alt={descriptionText}/>}
             {text && <p>{text}</p>}
-            {description && <span>{description}</span>}
+            {description && !isOnMobileScreen && <span>{description}</span>}
         </div>
     )
 }

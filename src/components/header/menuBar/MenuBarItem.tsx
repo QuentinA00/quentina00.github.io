@@ -6,6 +6,8 @@ import AnimationWrapper from "../../AnimationWrapper"
 import { zoomEffect } from "../../../style/animations/animations"
 import ButtonWithIcon from "../../ButtonWithIcon"
 import { PagesTextInterface } from "../../../interfaces/appTextInterfaces"
+import { screen_mobile } from "../../../utils/responsiveUtils"
+import { useMediaQuery } from "react-responsive"
 
 interface MenuBarItemProps {
     // pageItemData:PagesTextInterface
@@ -26,8 +28,10 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
     // to check if it's the settings element
     // const isSettingsElement = pageItemData.id === 'settings'
 
+    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+
     return (
-        <div className="menuBarItem">
+        <div className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : '' }`}>
             
             {!icon && <div className="menuBarItem-button">{text}</div>}
             
