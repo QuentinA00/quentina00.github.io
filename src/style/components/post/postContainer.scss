@@ -1,7 +1,8 @@
 // default style
 .postContainer{
+    @include transition(.1s);
     display: flex;
-    width: 75%;
+    width: 65%;
 }
 
 // style for projects page
@@ -10,7 +11,7 @@
     padding: 1.5rem;
     background: var(--color3);
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 2.5rem;
 }
 
 // style for mobile

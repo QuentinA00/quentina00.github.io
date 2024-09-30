@@ -21,13 +21,13 @@ const PageComponent:React.FC<PageComponentProps> = ({pageItem, appLanguage, appT
 
             <h2>{pageItem.text}</h2>
 
-            <AnimatePresence mode='wait'>
-                <AnimationWrapper transitionDuration={.4}>
-                    {pageItem.id === '' && <Home appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
-                    {pageItem.id === 'contact' && <Contact/>}
-                    {pageItem.id === 'projects' && <Projects appLanguage={appLanguage} appText={appText}/>}
-                </AnimationWrapper>
-            </AnimatePresence>
+            {/* <AnimatePresence mode='wait'> */}
+            <AnimationWrapper className="pageComponent-pages">
+                {pageItem.id === '' && <Home key={pageItem.id} appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
+                {pageItem.id === 'projects' && <Projects key={pageItem.id} appLanguage={appLanguage} appText={appText}/>}
+                {pageItem.id === 'contact' && <Contact key={pageItem.id} contactData={appText.contact}/>}
+            </AnimationWrapper>
+            {/* </AnimatePresence> */}
 
         </div>
     )

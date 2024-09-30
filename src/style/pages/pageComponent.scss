@@ -4,4 +4,9 @@
     margin: 0 2%;
     row-gap: 2rem;
     @include transition(.1s);
+
+    & .pageComponent-pages{
+        display: flex;
+        align-self: center;
+    }
 }

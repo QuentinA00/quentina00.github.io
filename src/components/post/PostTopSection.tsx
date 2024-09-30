@@ -23,7 +23,7 @@ const PostTopSection:React.FC<PostTopSectionProps> = ({postData}) => {
             {postData.title && <div className="postSectionTop-title">
                 <h3>{postData.title}</h3>
                 <p>•</p>
-                <p>{postData.description}</p>
+                <p className="postTopSection-description">{postData.description}</p>
             </div>}
             
             {postData.tags && <div className="postTopSection-tags">

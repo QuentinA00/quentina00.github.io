@@ -25,9 +25,24 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                 })}
             </div>}
 
-            <div className="postContentSection-text">
-                <p>{postData.postText}</p>
-                {postData.postsLinks.map((linkItem) => <a key={linkItem.link} className="regularLink" href={linkItem.link}>{linkItem.linkName}</a>)}
+            <div className="postContentSection-description">
+                <div className="postContentSection-text">
+                    {postData.postTextParagraphs?.map((postTextParagraph, index)=> (
+                        <p key={index}>{postTextParagraph}</p>
+                    ))}
+                </div>
+                <div className="divider2"></div>
+                <div className="postContentSection-keyPoints">
+                    <p>{postData.postTextKeyPoints?.text}</p>
+                    <ul>
+                        {postData.postTextKeyPoints?.points.map((keyPoint) =>(
+                            <li key={keyPoint.id}>{keyPoint.text}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="postContentSection-links">
+                    {postData.postsLinks.map((linkItem) => <a key={linkItem.link} className="regularLink" href={linkItem.link}>{linkItem.linkName}</a>)}
+                </div>
             </div>
 
         </div>

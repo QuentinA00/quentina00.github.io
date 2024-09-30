@@ -24,14 +24,20 @@ export interface PagesTextInterface {
     text:string
 }
 
+// main interface
 export interface AppTextInterface {
     title: string
     
-    // pages are used to create the routes of the app as well as menuBar elements
-    pages:PagesTextInterface[]
-    
     // menuBar are some additional elements that can be added asides pages elements in menuBar
     menuBar: MenuBarItemInterface[]
+    
+    // pages are used to create the routes of the app as well as menuBar elements
+    pages:PagesTextInterface[]
+
+    contact:{
+        text:string
+        image:string
+    }
 
     bottomSection: {
         contact: string

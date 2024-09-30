@@ -12,6 +12,7 @@ import Footer from "./components/bottomSection/Footer"
 import PageComponent from "./pages/PageComponent"
 import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
+import AnimationWrapper from "./components/AnimationWrapper"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -36,35 +37,29 @@ const App = () => {
         <div className="app">
             
             <Header appText={appText}/>
+            
+            <AnimatePresence mode='wait'>
 
                 <Routes location={location} key={location.pathname}>
 
-                    {/* <Route path="/*" element={<Home appText={appText} setAppLanguage={setAppLanguage}/>} />
-                    
-                    <Route path="/contact" element={<Contact/>} />
-
-                    <Route 
-                        path="/projects" 
-                        element={
-                            <ErrorBoundary fallback={<p>error</p>}>
-                                <Suspense fallback={<p>loading</p>}>
-                                    <Projects appLanguage={appLanguage} appText={appText}/>
-                                </Suspense>
-                            </ErrorBoundary>
-                        } 
-                    /> */}
-
                     {appText.pages.map((pageItem) => (
-                        <Route key={pageItem.id} path={pageItem.id} element={
-                            <ErrorBoundary fallback={<FallbackError/>}>
-                                <Suspense fallback={<FallbackLoading/>}>
-                                    <PageComponent pageItem={pageItem} appLanguage={appLanguage} appText={appText} setAppLanguage={setAppLanguage}/>
-                                </Suspense>
-                            </ErrorBoundary>
-                        }/>
+                        <Route 
+                            key={pageItem.id} 
+                            path={pageItem.id} 
+                            element={
+                                <ErrorBoundary fallback={<FallbackError/>}>
+                                    <Suspense fallback={<FallbackLoading/>}>
+                                        <PageComponent pageItem={pageItem} appLanguage={appLanguage} appText={appText} setAppLanguage={setAppLanguage}/>
+                                    </Suspense>
+                                </ErrorBoundary>
+                            }
+                        />
                     ))}
 
+
                 </Routes>
+            </AnimatePresence>
+
             <Footer footerText={appText.bottomSection} />
         </div>
     )

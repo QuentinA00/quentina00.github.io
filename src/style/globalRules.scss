@@ -21,17 +21,16 @@ a {
 }
 
 img {
-    max-width: 10rem;
+    // max-width: 10rem;
 }
 
 ul {
-    list-style-type: none;
-    padding-inline-start: 0;
+    list-style-type: circle;
+    line-height: 1.8rem;
 }
 
 li {
-    margin: 1rem;
-    list-style: none;
+    // list-style:circle;
 }
 p {
     margin: 0;

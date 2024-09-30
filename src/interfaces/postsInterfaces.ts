@@ -17,6 +17,11 @@ export interface PostsLinksInterface {
     link:string
 }
 
+export interface PostTextKeyPointsInterface{
+    id:number
+    text:string
+}
+
 // interface for a single post item
 export interface PostInterface {
     id: string
@@ -24,7 +29,11 @@ export interface PostInterface {
     title?:string
     description?:string
     tags?: PostsTagsInterface[]
-    postText: string
+    postTextParagraphs: [string]
+    postTextKeyPoints?:{
+        text:string
+        points: PostTextKeyPointsInterface[]
+    }
     postsLinks:PostsLinksInterface[]
     medias?: PostsMediasInterface[]
 }

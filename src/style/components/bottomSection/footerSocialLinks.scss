@@ -4,63 +4,68 @@
     column-gap: 1rem;
     height: 2.5rem;
     align-items: center;
-    
-    & > .buttonWithIcon{
-        cursor: pointer;
-        padding: .6rem;
-        display: flex;
-        @include transition(.15s);
-        position: relative;
-        @include hoverLink3;
-        border-radius: 3rem;
-        
-        & > img {
-            width: 1rem;
-            height: 1rem;
-        }
-        
-        & span {
-            @include transition(.15s);
-            position: absolute;
-            visibility: hidden;
-            font-size: .6rem;
-            font-weight: 400;
-            opacity: 0;
-            background: var(--color2);
-            border-radius: 3rem;
-            color: var(--color1);
-            padding: .2rem .7rem;
-            inline-size: max-content;
-            left: 1.7rem;
-            box-shadow: var(--borderShadow5);
-            z-index: 1;
-            top: .4rem;
 
-            @media (hover:hover){
-                &:hover{
-                    display: none;
+    & a {
+
+        & > .buttonWithIcon{
+            cursor: pointer;
+            padding: .6rem;
+            display: flex;
+            @include transition(.15s);
+            position: relative;
+            @include hoverLink3;
+            border-radius: 3rem;
+            
+            & > img {
+                width: 1rem;
+                height: 1rem;
+            }
+            
+            & span {
+                @include transition(.15s);
+                position: absolute;
+                visibility: hidden;
+                font-size: .6rem;
+                font-weight: 400;
+                opacity: 0;
+                background: var(--color2);
+                border-radius: 3rem;
+                color: var(--color1);
+                padding: .2rem .7rem;
+                inline-size: max-content;
+                left: 2.3rem;
+                box-shadow: var(--borderShadow5);
+                z-index: 2;
+                top: .4rem;
+                // transform: scale(.8);
+    
+                @media (hover:hover){
+                    &:hover{
+                        display: none;
+                    }
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
                 }
             }
-            &::after{
-                content: '';
-                position: absolute;
+    
+            @media (hover:hover){
+                &:hover > span{
+                    visibility: visible;
+                    opacity: 1;
+                    // backdrop-filter: blur(1rem);
+                    transition-delay: .3s;
+                    transform: translateX(.5rem);
+                }
             }
-        }
-
-        @media (hover:hover){
-            &:hover > span{
+            &:active > span{
                 visibility: visible;
                 opacity: 1;
-                // backdrop-filter: blur(1rem);
                 transition-delay: .3s;
-                transform: translateX(.7rem);
+                transform: translateX(.5rem);
             }
         }
-        &:active > span{
-            visibility: visible;
-            opacity: 1;
-            transition-delay: .3s;
-            transform: translateX(.7rem);
-        }
     }
+    
 }

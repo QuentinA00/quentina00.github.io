@@ -5,7 +5,7 @@ import MenuBarSettings from "./MenuBarSettings"
 import MenuBarItem from "./MenuBarItem"
 import MenuBarSubMenu from "./MenuBarSubMenu"
 import { useMediaQuery } from "react-responsive"
-import { screen_mobile } from "../../../utils/responsiveUtils"
+import { screen_mobile, screen_tinyMobile } from "../../../utils/responsiveUtils"
 
 
 /////////////////////////////////////////////////
@@ -24,9 +24,11 @@ interface MenuBarProps {
 const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+
+    const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})
     
     return (
-        <div className={`menuBar ${isOnMobileScreen ? 'menuBar-mobile' : ''}`}>
+        <div className={`menuBar ${isOnMobileScreen ? 'menuBar-mobile' : ''} ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}`}>
 
             {/* mapping pages elements */}
             <div className="menuBar-pagesLinks">

@@ -13,7 +13,7 @@ export const zoomEffect: Variants = {
         scale: 0.97
     },
     animate:{ 
-        opacity: 1, 
+        opacity: [1.5,1], 
         scale: 1
     },
     exit:{ 

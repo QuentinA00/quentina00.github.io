@@ -16,7 +16,7 @@ const Footer:React.FC<FooterProps> = ({footerText}) => {
                     <div className="footerItems">
                         <p>{footerText.mail}</p>
                         <FooterSocialLinks itemsLink={footerText.professionalLinks}/>
-                        <div className="footerDivider divider"></div>
+                        <div className="footerDivider divider2"></div>
                         <div className="footerItems-bottomSection">
                             <p>{footerText.personalAccount}</p>
                             <FooterSocialLinks itemsLink={footerText.personalLinks}/>

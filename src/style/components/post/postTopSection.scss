@@ -1,7 +1,8 @@
 .postTopSection {
+    @include transition(.1s);
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 2rem;
 
     & .buttonWithIcon {
         display: flex;
@@ -27,6 +28,10 @@
         display: flex;
         align-items: center;
         column-gap: 1rem;
+
+        & .postTopSection-description{
+            font-style: italic;
+        }
     }
     & .postTopSection-tags{
         display: flex;

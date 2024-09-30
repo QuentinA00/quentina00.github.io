@@ -7,6 +7,7 @@ import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import PostContainer from "../components/post/PostContainer"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
+import { AnimatePresence } from "framer-motion"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -27,13 +28,11 @@ const Home:React.FC<HomeProps> = ({appText, appLanguage}) => {
     const presentationPosts = postsData.presentation
 
     return (
-            <div className='home'>
-                {/* <InnerPage appText={appText}/> */}
-                {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home"/>)}
-                {/* <Presentation presentationText={appText?.presentation} /> */}
-                {/* <PostContainer postData={appText}/> */}
-            </div>
-        // <AnimationWrapper>
+        <div className="home">
+            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home"/>)}
+            
+        </div>
+        // <AnimationWrapper className="home">
         // </AnimationWrapper>
     )
 }

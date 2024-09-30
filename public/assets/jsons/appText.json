@@ -13,18 +13,24 @@
             { "id": "projects", "text": "Projects" },
             { "id": "contact", "text": "Contact" }
         ],
+        "contact":{
+            "text":"Linktree flashcode link, to more contact infos",
+            "image":"flashcode.png"
+        },
         "bottomSection": {
             "contact": "Contact me",
-            "mail":"mail : quentin@gmail.com",
+            "mail":"",
             "professionalLinks":[
-                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my professional Github account"},
-                {"id":"item1","text":"upwork","icon":"upwork.svg","link":"", "description":"my Upwork profile"}
+                {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"my Linktree, with all the links to contact me"},
+                {"id":"item2","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
+                {"id":"item3","text":"github","icon":"github.svg","link":"https://github.com/QuentinA00", "description":"my professional Github account"},
+                {"id":"item4","text":"upwork","icon":"upwork.svg","link":"https://www.upwork.com/freelancers/~014cacd3cd93b80725", "description":"my Upwork profile"}
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
-                {"id":"item3","text":"github","icon":"github.svg","link":"", "description":"my personal Github account"},
-                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
-                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"", "description":"my personal Instagram"}
+                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account"},
+                {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
+                {"id":"item3","text":"discord","icon":"discord.svg","link":"", "description":"my Discord"}
             ]
         }
     },

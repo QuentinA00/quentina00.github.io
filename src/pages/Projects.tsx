@@ -3,6 +3,7 @@ import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import AnimationWrapper from "../components/AnimationWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
+import { AnimatePresence } from "framer-motion"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -21,7 +22,8 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
     const projectsPosts = posts.projects
 
     return (
-            <div className="projects">
+        <div className="projects">
+            {/* <AnimationWrapper className="projects"> */}
                 {projectsPosts.map(projectData => (
                     <PostContainer
                         key={projectData.id}
@@ -29,9 +31,9 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
                         className="project"
                     />
                 ))}
-            </div>
-        // <AnimationWrapper>
-        // </AnimationWrapper>
+            {/* </AnimationWrapper> */}
+
+        </div>
     )
 }
 

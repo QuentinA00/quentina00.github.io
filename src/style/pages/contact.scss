@@ -1,0 +1,18 @@
+.contact {
+    @include transition(.1s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--color3);
+    align-self: center;
+    padding: 3rem;
+    row-gap: 3rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    margin-top: 4rem;
+
+    img {
+        width: 17rem;
+    }
+}

@@ -9,7 +9,9 @@ const FooterSocialLinks:React.FC<FooterSocialLinksProps> = ({itemsLink}) => {
     return (
         <div className="footerSocialLinks">
             {itemsLink.map(element => (
-                <ButtonWithIcon key={element.id} imageName={element.icon} className="linkItem" description={element.description}/>
+                <a key={element.id} href={element.link} target='_blank'>
+                    <ButtonWithIcon imageName={element.icon} className="linkItem" description={element.description}/>
+                </a>
             ))}
             {/* <SvgIcon icon={icon}/> */}
         </div>

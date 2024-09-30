@@ -6,9 +6,16 @@
                 "projectOrigin": "",
                 "title": "",
                 "description": "",
-                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                "postTextParagraphs": [
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai",
+                    "erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi",
+                    "eu hf g apiueghrap iuerhapeiuhs fqsdgjqh"
+                ],
                 "postsLinks": [
-                    {"linkName": "test","link": "test"}
+                    {"linkName": "Download my resume","link": "test"}
                 ]
             }
         ],
@@ -16,8 +23,8 @@
             {
                 "id": "project1",
                 "projectOrigin": "Professional project",
-                "title": "Portfolio Website / website structure",
-                "description": "The portfolio website you're currently on",
+                "title": "Portfolio Website / whole website structure",
+                "description": "This current website.",
                 "tags": [
                     { "id": "tag1", "text": "javascript / typescript" },
                     { "id": "tag2", "text": "ReactJS" },
@@ -28,18 +35,27 @@
                     { "id": "tag7", "text": "framer motion" },
                     { "id": "tag8", "text": "react-router" }
                 ],
-                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                "postTextParagraphs": [
+                    "When I built this website, I considered using it as a kind of website-template-structure, that can be used for a lot of different websites.", 
+                    "It aims to be pretty flexible, fed up with a json file for the text of the whole application (to handle translations), and a json file for the 'posts', such as the projects in this list.",
+                    "This is only a version 1.0, and a lot of additional features can be added. For example, in the next release, I'd like to add a filter by tags, to filter the projects by their tags"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"reusable structure"},
+                        {"id":2,"text":"can be fed by a json file"},
+                        {"id":3,"text":""}
+                    ]
+                },
                 "postsLinks": [
-                    {
-                        "linkName": "test",
-                        "link": "test"
-                    }
+                    {"linkName": "• test","link": "test"}
                 ],
                 "medias": [
                     {
                         "id": "video",
                         "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
-                        "text": "project1"
+                        "text": "A video showing of my project"
                     }
                 ]
             },
@@ -60,10 +76,7 @@
                 ],
                 "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
                 "postsLinks": [
-                    {
-                        "linkName": "test",
-                        "link": "test"
-                    }
+                    {"linkName": "• test","link": "test"}
                 ],
                 "medias": [
                     {

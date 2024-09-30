@@ -23,11 +23,16 @@
         
         & .menuBar-pagesLinks{
             gap: 2rem;
-            flex-wrap: wrap;
             justify-content: center;
+            flex-wrap: wrap;
         }
         & .menuBar-items{
-    
+            
         }
+    }
+    
+    &.menuBar-tinyMobile {
+        flex-direction: column;
+        align-items: center;
     }
 }
