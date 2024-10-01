@@ -37,3 +37,15 @@
         transform: scale(.95);
     }
 }
+@mixin hoverLink4($color){
+    @include transition(.1s);
+
+    @media (hover:hover){
+        &:hover{
+            background: $color;
+        }
+    }
+    &:active{
+        transform: scale(.95);
+    }
+}

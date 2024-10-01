@@ -8,13 +8,12 @@ interface ContactProps{
 
 const Contact:React.FC<ContactProps> = ({contactData}) => {
     return (
-        // <AnimationWrapper className="contact">
         <div className="contact">
-            <p>{contactData.text}</p>
-            <img src={'./assets/imgs/'+contactData.image} alt={contactData.text} />
-
+            <div className="contactItems">
+                <p>{contactData.text}</p>
+                <img src={'./assets/imgs/'+contactData.image} alt={contactData.text} />
+            </div>
         </div>
-        // </AnimationWrapper>
     )
 }
 

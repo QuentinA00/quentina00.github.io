@@ -30,10 +30,7 @@ const Home:React.FC<HomeProps> = ({appText, appLanguage}) => {
     return (
         <div className="home">
             {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home"/>)}
-            
         </div>
-        // <AnimationWrapper className="home">
-        // </AnimationWrapper>
     )
 }
 

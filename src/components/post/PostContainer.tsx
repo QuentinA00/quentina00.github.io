@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive"
 import PostContentSection from "./PostContentSection"
 import PostTopSection from "./PostTopSection"
-import { screen_mobile } from "../../utils/responsiveUtils"
+import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 
 interface PostContainerProps {
@@ -12,13 +12,20 @@ interface PostContainerProps {
     className?:string
 }
 
-const PostContainer:React.FC<PostContainerProps> = ({ className, postData}) => {
+const PostContainer:React.FC<PostContainerProps> = ({ className, postData }) => {
 
     const mobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
+    const tabletScreen = useMediaQuery({maxWidth:screen_tablet})
+
     return (
-        <div className={`postContainer postContainer-${className} ${mobileScreen ? 'postContainer-mobile' : ''}`}>
-            <PostTopSection postData={postData}/>
+        <div className={`postContainer 
+            postContainer-${className} 
+            ${mobileScreen ? 'postContainer-mobile' : ''}
+            ${tabletScreen ? 'postContainer-tablet' : ''}
+            `}
+        >
+            {className === 'project' && <PostTopSection postData={postData}/>}
             <PostContentSection postData={postData}/>
         </div>
     )

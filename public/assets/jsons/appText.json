@@ -14,7 +14,7 @@
             { "id": "contact", "text": "Contact" }
         ],
         "contact":{
-            "text":"Linktree flashcode link, to more contact infos",
+            "text":"Linktree flashcode link, for more contact infos",
             "image":"flashcode.png"
         },
         "bottomSection": {

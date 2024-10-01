@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive"
-import { screen_mobile } from "../../utils/responsiveUtils"
+import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import MediaComponent from "../MediaComponent"
 import { PostInterface, PostsInterface } from "../../interfaces/postsInterfaces"
 
@@ -9,12 +9,12 @@ interface PostContentSectionProps {
 
 const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
 
-    const mobileScreen = useMediaQuery({maxWidth:screen_mobile})
+    const smallerScreen = useMediaQuery({maxWidth:screen_tablet})
 
     return (
-        <div className={`postContentSection ${mobileScreen ? 'postContentSection-mobile' : ''}`}>
+        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''}`}>
             
-            {postData.medias && <div className="postContentSection-medias">
+            {/* {postData.medias && <div className="postContentSection-medias">
                 {postData.medias.map((mediaElement) => {
                     switch (mediaElement.id) {
                         case 'image': return <MediaComponent key={mediaElement.id} mediaData={mediaElement}/>
@@ -23,7 +23,9 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                         default: return null
                     }
                 })}
-            </div>}
+            </div>} */}
+
+            {postData.medias && <MediaComponent mediaData={postData.medias}/>}
 
             <div className="postContentSection-description">
                 <div className="postContentSection-text">
@@ -31,7 +33,9 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                         <p key={index}>{postTextParagraph}</p>
                     ))}
                 </div>
-                <div className="divider2"></div>
+
+                {postData.id != 'presentation' && <div className="divider3"></div>}
+                
                 <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>
                     <ul>

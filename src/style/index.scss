@@ -14,10 +14,9 @@
     // components
     @import './components/bottomSection/footerSocialLinks.scss';
     @import './components/mediaComponent.scss';
+    @import './components/imageWrapper.scss';
 
         // fallbackComponents
-        // @import './components/fallbackComponents/fallbackError.scss';
-        // @import './components/fallbackComponents/fallbackLoading.scss';
         @import './components/fallbackComponents/fallbackComponent.scss';
 
         // innerPages

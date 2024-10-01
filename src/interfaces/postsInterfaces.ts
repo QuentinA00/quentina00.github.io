@@ -1,18 +1,19 @@
 // interface for the links of the project
-export interface PostsMediasInterface {
+export interface PostMediasInterface {
     id:string
     linkPath:string
+    linkPathHd?:string
     text:string
 }
 
 // interface for the tags
-export interface PostsTagsInterface {
+export interface PostTagsInterface {
     id: string
     text: string
 }
 
 // interface for the link
-export interface PostsLinksInterface {
+export interface PostLinksInterface {
     linkName: string
     link:string
 }
@@ -28,14 +29,17 @@ export interface PostInterface {
     projectOrigin?: string
     title?:string
     description?:string
-    tags?: PostsTagsInterface[]
+    tags?: PostTagsInterface[]
     postTextParagraphs: [string]
     postTextKeyPoints?:{
         text:string
         points: PostTextKeyPointsInterface[]
     }
-    postsLinks:PostsLinksInterface[]
-    medias?: PostsMediasInterface[]
+    postsLinks:PostLinksInterface[]
+    medias?: {
+        images:PostMediasInterface[]
+        videos:PostMediasInterface[]
+    }
 }
 
 // the whole interface

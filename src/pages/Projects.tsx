@@ -23,16 +23,13 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
 
     return (
         <div className="projects">
-            {/* <AnimationWrapper className="projects"> */}
-                {projectsPosts.map(projectData => (
-                    <PostContainer
-                        key={projectData.id}
-                        postData={projectData}
-                        className="project"
-                    />
-                ))}
-            {/* </AnimationWrapper> */}
-
+            {projectsPosts.map(projectData => (
+                <PostContainer
+                    key={projectData.id}
+                    postData={projectData}
+                    className="project"
+                />
+            ))}
         </div>
     )
 }

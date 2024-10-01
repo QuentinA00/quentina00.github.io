@@ -21,7 +21,7 @@ a {
 }
 
 img {
-    // max-width: 10rem;
+    max-width: 20rem;
 }
 
 ul {
@@ -66,6 +66,13 @@ button{
 .divider2{
     @include transition(.1s);
     border-bottom: var(--border4);
+    width: 70%;
+    border-radius: 3rem;
+    align-self: center;
+}
+.divider3{
+    @include transition(.1s);
+    border-bottom: var(--border5);
     width: 70%;
     border-radius: 3rem;
     align-self: center;

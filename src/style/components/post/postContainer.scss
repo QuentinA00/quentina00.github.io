@@ -2,7 +2,8 @@
 .postContainer{
     @include transition(.1s);
     display: flex;
-    width: 65%;
+    width: 75%;
+    max-width: 80rem;
 }
 
 // style for projects page
@@ -14,8 +15,13 @@
     row-gap: 2.5rem;
 }
 
-// style for mobile
+// style for mobile < 700
 .postContainer-mobile{
     width: unset;
     row-gap: 3rem;
+}
+
+// style for tablet < 1000
+.postContainer-tablet{
+    width: unset;
 }

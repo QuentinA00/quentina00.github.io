@@ -51,13 +51,33 @@
                 "postsLinks": [
                     {"linkName": "• test","link": "test"}
                 ],
-                "medias": [
-                    {
-                        "id": "video",
-                        "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
-                        "text": "A video showing of my project"
-                    }
-                ]
+                "medias": {
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/logo_q.png",
+                            "text": "test"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/logo_qvsp.png",
+                            "linkPathHd":"./assets/imgs/logo_qvsp.png",
+                            "text": "test"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/flashcode.png",
+                            "text": "A video showing of my project"
+                        }
+                    ],
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
+                            "text": "A video showing of my project"
+                        }
+                    ]
+                }
             },
             {
                 "id": "project2",

@@ -13,13 +13,13 @@ export const zoomEffect: Variants = {
         scale: 0.97
     },
     animate:{ 
-        opacity: [1.5,1], 
+        opacity: 1, 
         scale: 1
     },
     exit:{ 
         opacity: 0, 
         scale: 0.97
-     }
+    }
 }
 export const slideFromTop: Variants = {
     initial:{ 
@@ -33,6 +33,21 @@ export const slideFromTop: Variants = {
     exit:{ 
         opacity: 0, 
         y: -20
+    }
+}
+
+export const bounce: Variants = {
+    initial:{ 
+        opacity: 0, 
+        scale: 0.95,
+    },
+    animate:{ 
+        opacity: 1, 
+        scale: [.97,1.02,1],
+    },
+    exit:{ 
+        opacity: 0, 
+        scale: 0.95,
     }
 }
 
@@ -80,6 +95,26 @@ export const headerAppearance: Variants = {
         // scale:[.98,1.04,1],
         margin:['0 4rem','0 -1rem','0rem']
         // y: 0
+    },
+    exit:{ 
+        opacity: 0,
+        // scale:[1,1.04,.98],
+        margin:['0','0 4rem']
+        // y: -20
+    }
+}
+export const imageWrapper: Variants = {
+    initial:{ 
+        opacity: 0,
+        // scale:.1,
+        // y: -20
+    },
+    animate:{ 
+        opacity: [0,1],
+        // scale:[.98,1.04,1],
+        margin:['0 4rem','0 -1rem','0rem'],
+        // y: 0
+
     },
     exit:{ 
         opacity: 0,
