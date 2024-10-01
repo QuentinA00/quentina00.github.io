@@ -55,12 +55,13 @@
                     "images":[
                         {
                             "id": 1,
-                            "linkPath": "./assets/imgs/logo_q.png",
+                            "linkPath": "./assets/imgs/logo_q_small.jpeg",
+                            "linkPathHd":"./assets/imgs/logo_q.png",
                             "text": "test"
                         },
                         {
                             "id": 2,
-                            "linkPath": "./assets/imgs/logo_qvsp.png",
+                            "linkPath": "./assets/imgs/logo_qvsp_small.jpeg",
                             "linkPathHd":"./assets/imgs/logo_qvsp.png",
                             "text": "test"
                         },

@@ -18,7 +18,7 @@ const PostTopSection:React.FC<PostTopSectionProps> = ({postData}) => {
     return (
         <div className={`postTopSection ${mobileScreen ? 'postTopSection-mobile' : ''}`}>
 
-            {postData.projectOrigin && <ButtonWithIcon text={postData.projectOrigin} imageName={isPersonal ? 'logo_qvsp.png' : 'logo_q.png'}/>}
+            {postData.projectOrigin && <ButtonWithIcon text={postData.projectOrigin} imageName={isPersonal ? 'logo_qvsp_small.jpeg' : 'logo_q_small.jpeg'}/>}
             
             {postData.title && <div className="postSectionTop-title">
                 <h3>{postData.title}</h3>

@@ -46,6 +46,13 @@ export interface AppTextInterface {
         personalAccount: string
         personalLinks: BottomSectionLinkInterface[]
     }
+
+    generalAppContent: {
+        imgsPath:{
+            professional:string
+            personal:string
+        }
+    }
 }
 
 // export the whole interfaces above, starting with a language

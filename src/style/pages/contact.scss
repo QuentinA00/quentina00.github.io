@@ -7,18 +7,24 @@
     & .contactItems{
         @include transition(.1s);
         display: flex;
-        align-items: center;
+        // align-items: center;
         flex-direction: column;
         background: var(--color3);
         align-self: center;
         padding: 3rem;
-        row-gap: 3rem;
         border-radius: 1rem;
         font-weight: 600;
         margin-top: 3rem;
         
-        & img {
-            width: 17rem;
+        & .buttonWithIcon {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 3rem;
+            
+            & img {
+                width: 17rem;
+            }
         }
     }
 

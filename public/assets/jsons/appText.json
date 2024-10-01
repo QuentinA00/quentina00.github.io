@@ -32,6 +32,12 @@
                 {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
                 {"id":"item3","text":"discord","icon":"discord.svg","link":"", "description":"my Discord"}
             ]
+        },
+        "generalAppContent":{
+            "imgsPath":{
+                "professional":"./assets/imgs/logo_q_small.jpeg",
+                "personal":"./assets/imgs/logo_qvsp_small.jpeg"
+            }
         }
     },
     "fr": {
