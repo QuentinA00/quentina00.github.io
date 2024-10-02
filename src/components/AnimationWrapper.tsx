@@ -2,7 +2,7 @@ import { motion, Variants } from "framer-motion"
 import { zoomEffect } from "../style/animations/animations"
 
 interface AnimationWrapperProps {
-    children:React.ReactNode
+    children?:React.ReactNode
     animationType?:Variants
     transitionDuration?:number
     className?:string
@@ -22,7 +22,7 @@ const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, a
             }}
             className={`animationWrapper ${className}`}
         >
-            {children}
+            {children && children}
         </motion.div>
     )
 }

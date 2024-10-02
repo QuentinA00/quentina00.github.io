@@ -1,13 +1,8 @@
 import { AppTextInterface } from "../interfaces/appTextInterfaces"
-// import InnerPage from "../components/innerPages/InnerPage"
-import AnimationWrapper from "../components/AnimationWrapper"
-// import PostContainer from "../components/post/PostContainer"
-import Presentation from "../components/innerPages/Presentation"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import PostContainer from "../components/post/PostContainer"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
-import { AnimatePresence } from "framer-motion"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -17,7 +12,7 @@ interface HomeProps {
     appLanguage:AppTextProps['appLanguage']
 }
 
-const Home:React.FC<HomeProps> = ({appText, appLanguage}) => {
+const Home:React.FC<HomeProps> = ({appLanguage}) => {
 
     // console.log('------Home',pageTransitionInOut)
 

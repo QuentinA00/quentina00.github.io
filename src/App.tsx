@@ -1,8 +1,5 @@
-import Home from "./pages/Home"
 import { Suspense, useState } from "react"
 import { Route, Routes, useLocation } from "react-router-dom"
-import Contact from "./pages/Contact"
-import Projects from "./pages/Projects"
 import Header from "./components/header/Header"
 import { fetchWithPromise } from "./utils/api/promiseWrapper"
 import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
@@ -12,7 +9,6 @@ import Footer from "./components/bottomSection/Footer"
 import PageComponent from "./pages/PageComponent"
 import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
-import AnimationWrapper from "./components/AnimationWrapper"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches

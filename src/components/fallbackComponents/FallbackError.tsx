@@ -1,6 +1,4 @@
-import { AnimatePresence } from "framer-motion"
 import { styleVariables } from "../../style/globalRules"
-import AnimationWrapper from "../AnimationWrapper"
 
 const FallbackError = () => {
 

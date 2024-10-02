@@ -1,9 +1,7 @@
 import PostContainer from "../components/post/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
-import AnimationWrapper from "../components/AnimationWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
-import { AnimatePresence } from "framer-motion"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -13,7 +11,7 @@ interface ProjectsProps {
     appText:AppTextProps['appText']
 }
 
-const Projects:React.FC<ProjectsProps> = ({appLanguage, appText}) => {
+const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
 
     // gather posts data from json, according to the selected language
     const posts:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]

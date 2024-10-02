@@ -28,6 +28,11 @@
     
     &.menuBarItem-mobile{
         
+        & .menuBarItem-dotPoint{
+            top: 40%;
+            left: 0%;
+        }
+
         & .menuBarItem-button{
             // background: var(--color3);
         }

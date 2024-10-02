@@ -1,7 +1,5 @@
-import { AnimatePresence } from "framer-motion"
 import { styleVariables } from "../../style/globalRules"
 import ButtonWithIcon from "../ButtonWithIcon"
-import AnimationWrapper from "../AnimationWrapper"
 
 const FallbackLoading = () => {
 

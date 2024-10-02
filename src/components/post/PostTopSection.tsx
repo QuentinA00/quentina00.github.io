@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive"
 import ButtonWithIcon from "../ButtonWithIcon"
 import Tag from "./Tag"
 import { screen_mobile } from "../../utils/responsiveUtils"
-import { PostInterface, PostsInterface } from "../../interfaces/postsInterfaces"
+import { PostInterface } from "../../interfaces/postsInterfaces"
 
 interface PostTopSectionProps {
     postData: PostInterface

@@ -1,7 +1,7 @@
-import { ProjectsTagsInterface } from "../../interfaces/postsInterfaces"
+import { PostTagsInterface } from "../../interfaces/postsInterfaces"
 
 interface TagProps {
-    text:ProjectsTagsInterface['text']
+    text:PostTagsInterface['text']
     className?:string
 }
 

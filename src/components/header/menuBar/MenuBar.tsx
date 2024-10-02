@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
 import { AppTextInterface } from "../../../interfaces/appTextInterfaces"
-import ButtonWithIcon from "../../ButtonWithIcon"
-import MenuBarSettings from "./MenuBarSettings"
 import MenuBarItem from "./MenuBarItem"
-import MenuBarSubMenu from "./MenuBarSubMenu"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile, screen_tinyMobile } from "../../../utils/responsiveUtils"
 

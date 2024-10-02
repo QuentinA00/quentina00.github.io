@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { PostMediasInterface } from "../interfaces/postsInterfaces"
 import ButtonWithIcon from "./ButtonWithIcon"
 import ReactDOM from 'react-dom'
-import { AnimatePresence } from "framer-motion"
 import AnimationWrapper from "./AnimationWrapper"
 import { bounce } from "../style/animations/animations"
 

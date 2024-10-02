@@ -1,10 +1,9 @@
 import ReactPlayer from "react-player"
 import { PostInterface, PostMediasInterface } from "../interfaces/postsInterfaces"
-import { screen_tablet, screen_tinyMobile } from "../utils/responsiveUtils"
+import { screen_tablet } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import ImageWrapper from "./ImageWrapper"
 import { useState } from "react"
-import AnimationWrapper from "./AnimationWrapper"
 import { AnimatePresence } from "framer-motion"
 
 interface MediaComponentProps {

@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion"
 import { PagesTextInterface } from "../interfaces/appTextInterfaces"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import Contact from "./Contact"

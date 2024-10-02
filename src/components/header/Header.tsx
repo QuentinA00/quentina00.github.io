@@ -4,7 +4,7 @@ import MenuBar from "./menuBar/MenuBar"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobilePlus } from "../../utils/responsiveUtils"
 import AnimationWrapper from "../AnimationWrapper"
-import { headerAppearance, slideFromTop } from "../../style/animations/animations"
+import { headerAppearance } from "../../style/animations/animations"
 import { AnimatePresence } from "framer-motion"
 
 
@@ -27,7 +27,6 @@ const Header:React.FC<HeaderProps> = ({appText}) => {
                         <Title titleText={appText.title}/>
                         <MenuBar pageItems={appText.pages} menuBarItems={appText.menuBar}/>
                     </div>
-                    {/* <div className="divider2"></div> */}
                 </div>
             </AnimationWrapper>
         </AnimatePresence>
