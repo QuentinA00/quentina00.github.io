@@ -1,0 +1,136 @@
+{
+    "en": {
+        "presentation": [
+            {
+                "id": "presentation",
+                "projectOrigin": "",
+                "title": "",
+                "description": "",
+                "postTextParagraphs": [
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai",
+                    "erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi",
+                    "eu hf g apiueghrap iuerhapeiuhs fqsdgjqh"
+                ],
+                "postsLinks": [
+                    {"linkName": "Download my resume","link": "test"}
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "id": "project1",
+                "projectOrigin": "Professional project",
+                "title": "Portfolio Website / reusable website structure",
+                "description": "This current website.",
+                "tags": [
+                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Vite" },
+                    { "id": "tag4", "text": "suspense / fallback" },
+                    { "id": "tag5", "text": "error boundaries" },
+                    { "id": "tag6", "text": "github pages" },
+                    { "id": "tag7", "text": "framer motion" },
+                    { "id": "tag8", "text": "react-router" }
+                ],
+                "postTextParagraphs": [
+                    "When I built this website, I considered using it as a kind of website-template-structure, that can be used for a lot of different websites.", 
+                    "It aims to be pretty flexible, fed up with a json file for the text of the whole application (to handle translations), and a json file for the 'posts', such as the projects in this list.",
+                    "This is only a version 1.0, and a lot of additional features can be added. For example, in the next release, I'd like to add a filter by tags, to filter the projects by their tags"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"reusable structure"},
+                        {"id":2,"text":"can be fed by a json file"},
+                        {"id":3,"text":""}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "• test","link": "test"}
+                ],
+                "medias": {
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/logo_q_small.jpeg",
+                            "linkPathHd":"./assets/imgs/logo_q.png",
+                            "text": "test"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/logo_qvsp_small.jpeg",
+                            "linkPathHd":"./assets/imgs/logo_qvsp.png",
+                            "text": "test"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/flashcode.png",
+                            "text": "A video showing of my project"
+                        }
+                    ],
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
+                            "text": "A video showing of my project"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "project2",
+                "projectOrigin": "Personal project",
+                "title": "Kosmo Project",
+                "description": "An ideal social network for me",
+                "tags": [
+                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Vite" },
+                    { "id": "tag4", "text": "suspense / fallback" },
+                    { "id": "tag5", "text": "error boundaries" },
+                    { "id": "tag6", "text": "github pages" },
+                    { "id": "tag7", "text": "framer motion" },
+                    { "id": "tag8", "text": "react-router" }
+                ],
+                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                "postsLinks": [
+                    {"linkName": "• test","link": "test"}
+                ],
+                "medias": [
+                    {
+                        "id": "video",
+                        "linkPath": "https://www.youtube.com/watch?v=zUIhEe6YTM8",
+                        "text": "project2"
+                    }
+                ]
+            }
+        ]
+    },
+    "fr": {
+        "projects": [
+            {
+                "id": "project1",
+                "title": "",
+                "description": "",
+                "medias": [
+                    { "id": "link", "linkPath": "", "text": "" },
+                    { "id": "image", "linkPath": "", "text": "" },
+                    { "id": "video", "linkPath": "", "text": "" }
+                ]
+            },
+            {
+                "id": "project2",
+                "title": "",
+                "description": "",
+                "medias": [
+                    { "id": "link", "linkPath": "", "text": "" },
+                    { "id": "image", "linkPath": "", "text": "" },
+                    { "id": "video", "linkPath": "", "text": "" }
+                ]
+            }
+        ]
+    }
+}
