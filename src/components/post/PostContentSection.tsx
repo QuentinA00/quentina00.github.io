@@ -2,6 +2,7 @@ import { useMediaQuery } from "react-responsive"
 import { screen_tablet } from "../../utils/responsiveUtils"
 import MediaComponent from "../MediaComponent"
 import { PostInterface } from "../../interfaces/postsInterfaces"
+import PostTopSection from "./PostTopSection"
 
 interface PostContentSectionProps {
     postData: PostInterface
@@ -25,6 +26,9 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
 
                 {postData.id != 'presentation' && <div className="divider3"></div>}
                 
+                {/* ##### the point here below is to show up the tags in the presentation section below the text, instead of above. But later when I'll rebuild PostContainer, the tags section will be a whole component perhaps, it's gonna be easier */}
+                {postData.id == 'presentation' && <PostTopSection postData={postData} />}
+
                 <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>
                     <ul>

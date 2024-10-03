@@ -15,6 +15,18 @@
     row-gap: 2.5rem;
 }
 
+.postContainer-home{
+    font-size: 1.1rem;
+
+    & .postContentSection{
+        & .postContentSection-description{
+            & .postContentSection-text{
+                font-weight: 200;
+            }
+        }
+    }
+}
+
 // style for mobile < 700
 .postContainer-mobile{
     width: unset;

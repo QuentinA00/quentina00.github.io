@@ -19,13 +19,17 @@ const PostContainer:React.FC<PostContainerProps> = ({ className, postData }) => 
     const tabletScreen = useMediaQuery({maxWidth:screen_tablet})
 
     return (
-        <div className={`postContainer 
-            postContainer-${className} 
-            ${mobileScreen ? 'postContainer-mobile' : ''}
-            ${tabletScreen ? 'postContainer-tablet' : ''}
+        <div 
+            className={`
+                postContainer 
+                postContainer-${className} 
+                ${mobileScreen ? 'postContainer-mobile' : ''}
+                ${tabletScreen ? 'postContainer-tablet' : ''}
             `}
         >
-            {className === 'project' && <PostTopSection postData={postData}/>}
+            {/* ##### hide the top section in the presentation section */}
+            {postData.id != 'presentation' && <PostTopSection postData={postData}/>}
+
             <PostContentSection postData={postData}/>
         </div>
     )

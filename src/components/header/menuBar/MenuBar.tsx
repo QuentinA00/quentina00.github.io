@@ -25,7 +25,13 @@ const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
     const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})
     
     return (
-        <div className={`menuBar ${isOnMobileScreen ? 'menuBar-mobile' : ''} ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}`}>
+        <div 
+            className={`
+                menuBar 
+                ${isOnMobileScreen ? 'menuBar-mobile' : ''} 
+                ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}
+            `}
+        >
 
             {/* mapping pages elements */}
             <div className="menuBar-pagesLinks">
