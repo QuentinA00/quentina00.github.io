@@ -27,7 +27,9 @@
         & .postContentSection-links{
             display: flex;
             align-self: flex-end;
-            column-gap: 1rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
     }
 
