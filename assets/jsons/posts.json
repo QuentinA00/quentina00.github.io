@@ -7,15 +7,34 @@
                 "title": "",
                 "description": "",
                 "postTextParagraphs": [
-                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
-                    "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai",
-                    "erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi",
-                    "eu hf g apiueghrap iuerhapeiuhs fqsdgjqh"
+                    "I'm a developer experienced in creating modern, robust, scalable and responsive websites and web applications, with an emphasis on user-experience.",
+                    "I also have experience with linux server administration.",
+                    "I love to learn new technologies, and enhance my skills.",
+                    "As of now, my expertise includes those languages / technologies:"
+                ],
+                "tags": [
+                    { "id": "tag1", "text": "Javascript / Typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Suspense / Fallback" },
+                    { "id": "tag4", "text": "Error Boundaries" },
+                    { "id": "tag5", "text": "Framer Motion" },
+                    { "id": "tag6", "text": "NodeJS" },
+                    { "id": "tag7", "text": "Scss" },
+                    { "id": "tag7", "text": "HTML / CSS" },
+                    { "id": "tag7", "text": "MongoDB" },
+                    { "id": "tag7", "text": "utilisation of LLM" },
+                    { "id": "tag7", "text": "Linux server support" },
+                    { "id": "tag7", "text": "Debian" },
+                    { "id": "tag7", "text": "Proxmox" },
+                    { "id": "tag7", "text": "Swift (in progress)" },
+                    { "id": "tag7", "text": "Python (in progress)" },
+                    { "id": "tag7", "text": "Ollama" },
+                    { "id": "tag7", "text": "Notion" },
+                    { "id": "tag7", "text": "Obsidian" },
+                    { "id": "tag7", "text": "Figma" }
                 ],
                 "postsLinks": [
-                    {"linkName": "Download my resume","link": "test"}
+                    {"linkName": "Go to the projects page to see my current/previous works","link": "projects"}
                 ]
             }
         ],
@@ -23,62 +42,38 @@
             {
                 "id": "project1",
                 "projectOrigin": "Professional project",
-                "title": "Portfolio Website / reusable website structure",
+                "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
                 "tags": [
-                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag1", "text": "Javascript / Typescript" },
                     { "id": "tag2", "text": "ReactJS" },
                     { "id": "tag3", "text": "Vite" },
-                    { "id": "tag4", "text": "suspense / fallback" },
-                    { "id": "tag5", "text": "error boundaries" },
-                    { "id": "tag6", "text": "github pages" },
-                    { "id": "tag7", "text": "framer motion" },
-                    { "id": "tag8", "text": "react-router" }
+                    { "id": "tag4", "text": "Suspense / Fallback" },
+                    { "id": "tag5", "text": "Error Boundaries" },
+                    { "id": "tag6", "text": "Github Pages" },
+                    { "id": "tag7", "text": "Framer Motion" },
+                    { "id": "tag8", "text": "React-Responsive" },
+                    { "id": "tag9", "text": "React-Router" },
+                    { "id": "tag10", "text": "Scss" }
                 ],
                 "postTextParagraphs": [
-                    "When I built this website, I considered using it as a kind of website-template-structure, that can be used for a lot of different websites.", 
-                    "It aims to be pretty flexible, fed up with a json file for the text of the whole application (to handle translations), and a json file for the 'posts', such as the projects in this list.",
-                    "This is only a version 1.0, and a lot of additional features can be added. For example, in the next release, I'd like to add a filter by tags, to filter the projects by their tags"
+                    "When I built this website, I envisioned it as a kind of website template structure that could be used for many different websites.", 
+                    "It aims to be quite flexible, with the text of the entire application managed through a JSON file (to handle translations for example) and another JSON file for the 'posts', like the projects in this list.",
+                    "This is just a 1.0 version, and a lot of additional features can be added.",
+                    "For instance, in the upcoming version, I'd like to add a filter feature to sort the projects by their tags."
                 ],
                 "postTextKeyPoints":{
                     "text":"Key features : ", 
                     "points":[
-                        {"id":1,"text":"reusable structure"},
-                        {"id":2,"text":"can be fed by a json file"},
-                        {"id":3,"text":""}
+                        {"id":1,"text":"Reusable structure"},
+                        {"id":2,"text":"Can be fed by a json file or a backend server for the app's text / projects elements"},
+                        {"id":3,"text":"Ready to be connected to a backend"},
+                        {"id":4,"text":"Use of Suspense, Fallback, ErrorBoundaries to avoid issues when fetching data for example"}
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "• test","link": "test"}
-                ],
-                "medias": {
-                    "images":[
-                        {
-                            "id": 1,
-                            "linkPath": "./assets/imgs/logo_q_small.jpeg",
-                            "linkPathHd":"./assets/imgs/logo_q.png",
-                            "text": "test"
-                        },
-                        {
-                            "id": 2,
-                            "linkPath": "./assets/imgs/logo_qvsp_small.jpeg",
-                            "linkPathHd":"./assets/imgs/logo_qvsp.png",
-                            "text": "test"
-                        },
-                        {
-                            "id": 3,
-                            "linkPath": "./assets/imgs/flashcode.png",
-                            "text": "A video showing of my project"
-                        }
-                    ],
-                    "videos":[
-                        {
-                            "id": 1,
-                            "linkPath": "https://www.youtube.com/watch?v=8T1_hDxNHmM",
-                            "text": "A video showing of my project"
-                        }
-                    ]
-                }
+                    {"linkName": "Github repot","link": "https://github.com/QuentinA00/quentina00.github.io"}
+                ]
             },
             {
                 "id": "project2",
@@ -86,26 +81,61 @@
                 "title": "Kosmo Project",
                 "description": "An ideal social network for me",
                 "tags": [
-                    { "id": "tag1", "text": "javascript / typescript" },
+                    { "id": "tag1", "text": "Javascript / Typescript" },
                     { "id": "tag2", "text": "ReactJS" },
                     { "id": "tag3", "text": "Vite" },
-                    { "id": "tag4", "text": "suspense / fallback" },
-                    { "id": "tag5", "text": "error boundaries" },
-                    { "id": "tag6", "text": "github pages" },
-                    { "id": "tag7", "text": "framer motion" },
-                    { "id": "tag8", "text": "react-router" }
+                    { "id": "tag4", "text": "Suspense / Fallback" },
+                    { "id": "tag5", "text": "Error Boundaries" },
+                    { "id": "tag6", "text": "Github Pages" },
+                    { "id": "tag7", "text": "Scss" }
                 ],
-                "postText": "qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh qjfpai erfhapi eu hf g apiueghrap iuerhapeiuhs fqsdgjqh",
+                "postTextParagraphs": [
+                    "The idea behind this project was to create my ideal Twitter-like social network.",
+                    "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
+                    "For me, many features on Reddit are really well-designed and should be integrated into Twitter. I've drawn a lot of inspiration from it.",
+                    "I don't take it too seriously for now though, I see it more as a portfolio project to show off a bit, rather than something that will release for real one day, but who knows 🤷🏻‍♂️"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Meant to be a healthy social network"},
+                        {"id":2,"text":"Upvote/downvote system"},
+                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations/responsive/pages.."}
+                    ]
+                },
                 "postsLinks": [
-                    {"linkName": "• test","link": "test"}
+                    {"linkName": "Github repot","link": "https://github.com/quentinvespero/kosmo_front_web"},
+                    {"linkName": "Try the current version online (in dev)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
                 ],
-                "medias": [
-                    {
-                        "id": "video",
-                        "linkPath": "https://www.youtube.com/watch?v=zUIhEe6YTM8",
-                        "text": "project2"
-                    }
-                ]
+                "medias": {
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://youtu.be/mfaUbzyOqTk",
+                            "text": "A video showing of the project"
+                        }
+                    ],
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/kosmo3_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo3.png",
+                            "text": "Entry page"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/kosmo1_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo1.png",
+                            "text": "Home page"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/kosmo2_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo2.png",
+                            "text": "Home page displaying posts in a column view, with the menu to create a post toggled."
+                        }
+                    ]
+                }
             }
         ]
     },
