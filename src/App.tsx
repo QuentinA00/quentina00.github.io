@@ -1,5 +1,5 @@
 import { Suspense, useState } from "react"
-import { Route, Routes, useLocation } from "react-router-dom"
+import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import Header from "./components/header/Header"
 import { fetchWithPromise } from "./utils/api/promiseWrapper"
 import { AppTextInterfacesWithLanguage } from "./interfaces/appTextInterfaces"
@@ -56,6 +56,8 @@ const App = () => {
                         />
                     ))}
 
+                    {/* in case of a mistype in the url, this route below will redirect to the root / */}
+                    <Route path="*" element={<Navigate to="/" replace />}/>
 
                 </Routes>
             </AnimatePresence>

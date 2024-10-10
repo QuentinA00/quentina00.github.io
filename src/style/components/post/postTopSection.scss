@@ -28,7 +28,11 @@
         display: flex;
         align-items: center;
         column-gap: 1rem;
-
+        
+        & .postTopSection-dot{
+            align-self: center;
+        }
+        
         & .postTopSection-description{
             font-style: italic;
         }
@@ -41,9 +45,10 @@
 }
 .postTopSection-mobile{
     row-gap: 2rem;
-
+    
     & .postSectionTop-title{
         flex-direction: column;
+        align-items: flex-start;
 
         // h3 {white-space: nowrap;}
     }
