@@ -40,7 +40,7 @@
         ],
         "projects": [
             {
-                "id": "project1",
+                "id": "project3",
                 "projectOrigin": "Professional project",
                 "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
@@ -133,6 +133,57 @@
                             "linkPath": "./assets/imgs/kosmo2_small.jpeg",
                             "linkPathHd":"./assets/imgs/kosmo2.png",
                             "text": "Home page displaying posts in a column view, with the menu to create a post toggled."
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "project1",
+                "projectOrigin": "Professional project",
+                "title": "Coaching section",
+                "description": "React web app to find coaches by topics",
+                "tags": [
+                    { "id": "tag1", "text": "Javascript / Typescript" },
+                    { "id": "tag2", "text": "ReactJS" },
+                    { "id": "tag3", "text": "Vite" },
+                    { "id": "tag7", "text": "Scss" },
+                    { "id": "tag8", "text": "Swiper" }
+                ],
+                "postTextParagraphs": [
+                    "It aims to be a pretty simple web app that needs to be fed with a JSON file containing coaches in different topics.", 
+                    "It allows clients to find the perfect coach for their needs.",
+                    "Client : Amazon"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Fed with a JSON file"},
+                        {"id":2,"text":"Filter items by topics"}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Github repot","link": "https://github.com/weuplearning/ADN-coaching"}
+                ],
+                "medias": {
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://youtu.be/hsKi0e8-Wyc",
+                            "text": "A video showing of the project"
+                        }
+                    ],
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/coaching1_small.jpeg",
+                            "linkPathHd":"./assets/imgs/coaching1.png",
+                            "text": ""
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/coaching2_small.jpeg",
+                            "linkPathHd":"./assets/imgs/coaching2.png",
+                            "text": "Filter feature"
                         }
                     ]
                 }
