@@ -16,15 +16,14 @@
     
     &.menuBar-mobile {
         background: var(--color3);
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 1rem;
         flex-direction: column;
-        row-gap: 4rem;
+        row-gap: 2rem;
         
         & .menuBar-pagesLinks{
             gap: 2rem;
             justify-content: center;
-            flex-wrap: wrap;
         }
         & .menuBar-items{
             
@@ -34,5 +33,10 @@
     &.menuBar-tinyMobile {
         flex-direction: column;
         align-items: center;
+        width: 80%;
+
+        & .menuBar-pagesLinks{
+            flex-direction: column;
+        }
     }
 }

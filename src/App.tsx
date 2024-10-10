@@ -9,6 +9,8 @@ import Footer from "./components/bottomSection/Footer"
 import PageComponent from "./pages/PageComponent"
 import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
+import { useMediaQuery } from "react-responsive"
+import { screen_mobile } from "./utils/responsiveUtils"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -29,8 +31,10 @@ const App = () => {
 
     // console.log(location.pathname)
 
+    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+
     return (
-        <div className="app">
+        <div className={`app ${isOnMobileScreen ? 'app-mobile' : ''}`}>
             
             <Header appText={appText}/>
             
