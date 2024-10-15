@@ -15,13 +15,13 @@
                 "tags": [
                     { "id": "tag1", "text": "Javascript / Typescript" },
                     { "id": "tag2", "text": "ReactJS" },
-                    { "id": "tag3", "text": "Suspense / Fallback" },
-                    { "id": "tag4", "text": "Error Boundaries" },
-                    { "id": "tag5", "text": "Framer Motion" },
                     { "id": "tag6", "text": "NodeJS" },
                     { "id": "tag7", "text": "Scss" },
                     { "id": "tag7", "text": "HTML / CSS" },
                     { "id": "tag7", "text": "MongoDB" },
+                    { "id": "tag3", "text": "Suspense / Fallback" },
+                    { "id": "tag4", "text": "Error Boundaries" },
+                    { "id": "tag5", "text": "Framer Motion" },
                     { "id": "tag7", "text": "utilisation of LLM" },
                     { "id": "tag7", "text": "Linux server support" },
                     { "id": "tag7", "text": "Debian" },
@@ -34,7 +34,7 @@
                     { "id": "tag7", "text": "Figma" }
                 ],
                 "postsLinks": [
-                    {"linkName": "Go to the projects page to see my current/previous works","link": "projects"}
+                    {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
                 ]
             }
         ],
