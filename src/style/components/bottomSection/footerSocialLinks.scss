@@ -11,10 +11,12 @@
             cursor: pointer;
             padding: .6rem;
             display: flex;
-            @include transition(.15s);
             position: relative;
-            @include hoverLink3;
             border-radius: 3rem;
+            & {
+                @include hoverLink3;
+                @include transition(.15s);
+            }
             
             & > img {
                 width: 1rem;

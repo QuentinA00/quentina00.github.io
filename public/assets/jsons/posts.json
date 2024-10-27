@@ -19,9 +19,6 @@
                     { "id": "tag7", "text": "Scss" },
                     { "id": "tag7", "text": "HTML / CSS" },
                     { "id": "tag7", "text": "MongoDB" },
-                    { "id": "tag3", "text": "Suspense / Fallback" },
-                    { "id": "tag4", "text": "Error Boundaries" },
-                    { "id": "tag5", "text": "Framer Motion" },
                     { "id": "tag7", "text": "utilisation of LLM" },
                     { "id": "tag7", "text": "Linux server support" },
                     { "id": "tag7", "text": "Debian" },
@@ -68,7 +65,7 @@
                         {"id":1,"text":"Reusable structure"},
                         {"id":2,"text":"Can be fed by a json file or a backend server for the app's text / projects elements"},
                         {"id":3,"text":"Ready to be connected to a backend"},
-                        {"id":4,"text":"Use of Suspense, Fallback, ErrorBoundaries to avoid issues when fetching data for example"}
+                        {"id":4,"text":"Use of Suspense, Fallback, ErrorBoundaries to mitigate / manage issues when fetching data for example"}
                     ]
                 },
                 "postsLinks": [
