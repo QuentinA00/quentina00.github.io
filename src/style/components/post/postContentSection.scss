@@ -1,7 +1,7 @@
 .postContentSection{
-    @include transition(.1s);
     display: flex;
     column-gap: 2rem;
+    @include transition(.1s);
 
     & .postContentSection-medias{
         flex: 1;

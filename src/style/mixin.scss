@@ -1,5 +1,5 @@
 @mixin transition($time){
-    transition: $time ease-in-out 0s;
+    & {transition: $time ease-in-out 0s;}
 }
 
 // global underline behaviour

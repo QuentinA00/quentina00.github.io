@@ -1,9 +1,9 @@
 // default style
 .postContainer{
-    @include transition(.1s);
     display: flex;
     width: 75%;
     max-width: 80rem;
+    @include transition(.1s);
 }
 
 // style for projects page

@@ -1,8 +1,8 @@
 .postTopSection {
-    @include transition(.1s);
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    @include transition(.1s);
 
     & .buttonWithIcon {
         display: flex;

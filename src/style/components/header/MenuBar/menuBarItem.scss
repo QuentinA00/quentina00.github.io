@@ -1,7 +1,7 @@
 .menuBarItem{
     display: flex;
     position: relative;
-    & {@include transition(.15s);}
+    @include transition(.15s);
     // @include hoverLink(.4rem);
     
     & .menuBarItem-button{

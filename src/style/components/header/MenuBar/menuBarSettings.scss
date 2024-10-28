@@ -1,5 +1,4 @@
 .menuBarSettings{
-    @include transition(.2s);
     position: absolute;
     padding: 0rem 1rem;
     border-left: var(--border2);
@@ -9,7 +8,7 @@
     transform: translate(-50%, -50%);
     top: 400%;
     left: 50%;
-
+    @include transition(.2s);
 }
 .menuBarSettings-visible{
     display: flex;

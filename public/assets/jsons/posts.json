@@ -15,20 +15,20 @@
                 "tags": [
                     { "id": "tag1", "text": "Javascript / Typescript" },
                     { "id": "tag2", "text": "ReactJS" },
-                    { "id": "tag6", "text": "NodeJS" },
-                    { "id": "tag7", "text": "Scss" },
-                    { "id": "tag7", "text": "HTML / CSS" },
-                    { "id": "tag7", "text": "MongoDB" },
+                    { "id": "tag3", "text": "NodeJS" },
+                    { "id": "tag4", "text": "Scss" },
+                    { "id": "tag5", "text": "HTML / CSS" },
+                    { "id": "tag6", "text": "MongoDB" },
                     { "id": "tag7", "text": "utilisation of LLM" },
-                    { "id": "tag7", "text": "Linux server support" },
-                    { "id": "tag7", "text": "Debian" },
-                    { "id": "tag7", "text": "Proxmox" },
-                    { "id": "tag7", "text": "Swift (in progress)" },
-                    { "id": "tag7", "text": "Python (in progress)" },
-                    { "id": "tag7", "text": "Ollama" },
-                    { "id": "tag7", "text": "Notion" },
-                    { "id": "tag7", "text": "Obsidian" },
-                    { "id": "tag7", "text": "Figma" }
+                    { "id": "tag8", "text": "Linux server support" },
+                    { "id": "tag9", "text": "Debian" },
+                    { "id": "tag10", "text": "Proxmox" },
+                    { "id": "tag11", "text": "Swift (in progress)" },
+                    { "id": "tag12", "text": "Python (in progress)" },
+                    { "id": "tag13", "text": "Ollama" },
+                    { "id": "tag14", "text": "Notion" },
+                    { "id": "tag15", "text": "Obsidian" },
+                    { "id": "tag16", "text": "Figma" }
                 ],
                 "postsLinks": [
                     {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
@@ -36,6 +36,57 @@
             }
         ],
         "projects": [
+            {
+                "id": "project4",
+                "projectOrigin": "Personal project",
+                "title": "WebInsights",
+                "description": "A Chrome extension to get summaries and informations about websites. (In progress)",
+                "tags": [
+                    { "id": "tag1", "text": "Chrome extension" },
+                    { "id": "tag2", "text": "Javascript / Typescript" },
+                    { "id": "tag3", "text": "ReactJS" },
+                    { "id": "tag4", "text": "Vite" },
+                    { "id": "tag5", "text": "Styled Components" },
+                    { "id": "tag6", "text": "React Context" },
+                    { "id": "tag7", "text": "React Router" },
+                    { "id": "tag8", "text": "Suspense / Fallback" },
+                    { "id": "tag9", "text": "Error Boundaries" },
+                    { "id": "tag10", "text": "Github Pages" }
+                ],
+                "postTextParagraphs": [
+                    "It aims to be a simple Chrome extension that provides summaries and explanations using the context of the current webpage.",
+                    "Initially, the idea behind this extension was to use Chrome's built-in Gemini Nano LLM, relying solely on a local LLM for inference within the app.",
+                    "But.. this feature isn't widely available yet, so I added the option to enter an OpenAi API key and use gpt4o-mini instead."
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Summaries using LLM"},
+                        {"id":2,"text":"Flexible application structure"},
+                        {"id":3,"text":"Sync the settings among the Chrome instances for a given Google account"}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Github repot","link": "https://github.com/quentinvespero/WebInsights"},
+                    {"linkName": "Try the current version online (in dev)","link": "https://quentinvespero.github.io/webInsights"}
+                ],
+                "medias": {
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/webinsights1_small.jpeg",
+                            "linkPathHd":"./assets/imgs/webinsights1.png",
+                            "text": "The summary page, with the choice of tones to use (that uses different prompts)"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/webinsights2_small.jpeg",
+                            "linkPathHd":"./assets/imgs/webinsights2.png",
+                            "text": "The setting page, where you can set a default tone, as well as setting up the api key"
+                        }
+                    ]
+                }
+            },
             {
                 "id": "project3",
                 "projectOrigin": "Professional project",
@@ -76,7 +127,7 @@
                 "id": "project2",
                 "projectOrigin": "Personal project",
                 "title": "Kosmo Project",
-                "description": "An ideal social network for me",
+                "description": "An ideal social network for me. (In progress...)",
                 "tags": [
                     { "id": "tag1", "text": "Javascript / Typescript" },
                     { "id": "tag2", "text": "ReactJS" },
@@ -84,7 +135,8 @@
                     { "id": "tag4", "text": "Suspense / Fallback" },
                     { "id": "tag5", "text": "Error Boundaries" },
                     { "id": "tag6", "text": "Github Pages" },
-                    { "id": "tag7", "text": "Scss" }
+                    { "id": "tag7", "text": "Scss" },
+                    { "id": "tag8", "text": "NodeJS" }
                 ],
                 "postTextParagraphs": [
                     "The idea behind this project was to create my ideal Twitter-like social network.",
@@ -149,6 +201,7 @@
                 "postTextParagraphs": [
                     "It aims to be a pretty simple web app that needs to be fed with a JSON file containing coaches in different topics.", 
                     "It allows clients to find the perfect coach for their needs.",
+                    "Also it was my first React application, so not at my best for sure in terms of good practices and such...",
                     "Client : Amazon"
                 ],
                 "postTextKeyPoints":{

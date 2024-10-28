@@ -1,11 +1,10 @@
 .contact {
-    @include transition(.1s);
     display: flex;
     width: 100%;
     justify-content: center;
+    @include transition(.1s);
     
     & .contactItems{
-        @include transition(.1s);
         display: flex;
         flex-direction: column;
         background: var(--color3);
@@ -14,6 +13,7 @@
         border-radius: 1rem;
         font-weight: 600;
         margin-top: 3rem;
+        @include transition(.1s);
         
         & .buttonWithIcon {
             display: flex;

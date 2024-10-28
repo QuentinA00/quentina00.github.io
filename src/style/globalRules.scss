@@ -64,18 +64,18 @@ button{
     border-bottom: var(--border1);
 }
 .divider2{
-    @include transition(.1s);
     border-bottom: var(--border4);
     width: 70%;
     border-radius: 3rem;
     align-self: center;
+    @include transition(.1s);
 }
 .divider3{
-    @include transition(.1s);
     border-bottom: var(--border5);
     width: 70%;
     border-radius: 3rem;
     align-self: center;
+    @include transition(.1s);
 }
 .sectionBorder {
     border-top:var(--border3);

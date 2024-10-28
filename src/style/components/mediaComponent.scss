@@ -17,10 +17,10 @@
         // max-width: 70%;
         
         & img{
-            @include transition(.15s);
             border-radius: .5rem;
             width: 5rem;
             cursor:pointer;
+            @include transition(.15s);
 
             @media (hover:hover){
                 &:hover{

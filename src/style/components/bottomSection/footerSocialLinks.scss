@@ -24,7 +24,6 @@
             }
             
             & span {
-                @include transition(.15s);
                 position: absolute;
                 visibility: hidden;
                 font-size: .6rem;
@@ -40,6 +39,7 @@
                 z-index: 2;
                 top: .4rem;
                 // transform: scale(.8);
+                @include transition(.15s);
     
                 @media (hover:hover){
                     &:hover{
