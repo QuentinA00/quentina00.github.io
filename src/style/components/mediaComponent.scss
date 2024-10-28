@@ -19,9 +19,9 @@
             border-radius: .5rem;
             width: 5rem;
             cursor:pointer;
-            @include transition(.15s);
             border:solid .15rem var(--color3);
             padding: .2rem;
+            @include transition(.15s);
 
             @media (hover:hover){
                 &:hover{
