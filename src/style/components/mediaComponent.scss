@@ -14,13 +14,14 @@
         gap: 1rem;
         justify-content: center;
         align-self: center;
-        // max-width: 70%;
         
         & img{
             border-radius: .5rem;
             width: 5rem;
             cursor:pointer;
             @include transition(.15s);
+            border:solid .15rem var(--color3);
+            padding: .2rem;
 
             @media (hover:hover){
                 &:hover{
@@ -44,7 +45,6 @@
                 text-align: center;
             }
         }
-
     }
 
     &.mediaComponent-smallScreen{

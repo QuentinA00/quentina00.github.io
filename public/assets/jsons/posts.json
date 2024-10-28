@@ -68,7 +68,7 @@
                 },
                 "postsLinks": [
                     {"linkName": "Github repot","link": "https://github.com/quentinvespero/WebInsights"},
-                    {"linkName": "Try the current version online (in dev)","link": "https://quentinvespero.github.io/webInsights"}
+                    {"linkName": "See the current version online (in dev)","link": "https://quentinvespero.github.io/WebInsights/"}
                 ],
                 "medias": {
                     "images":[
