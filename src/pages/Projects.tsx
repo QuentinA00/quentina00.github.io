@@ -2,6 +2,7 @@ import PostContainer from "../components/post/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
+import PostFilterComponent from "../components/post/PostFilterComponent"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -28,6 +29,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
                     className="project"
                 />
             ))}
+            <PostFilterComponent/>
         </div>
     )
 }
