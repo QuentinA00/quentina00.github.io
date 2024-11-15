@@ -8,7 +8,6 @@ const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
 interface ProjectsProps {
     appLanguage:'en'|'fr'
-
     appText:AppTextProps['appText']
 }
 
