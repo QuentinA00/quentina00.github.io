@@ -7,6 +7,6 @@ export interface AppTextProps {
     setAppLanguage: (chosenLanguage:AppTextProps['appLanguage']) => void
 }
 
-export interface ContextProviderProps {
-    children:ReactNode
-}
+// export interface ContextProviderProps {
+//     children:ReactNode
+// }

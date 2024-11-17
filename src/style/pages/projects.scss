@@ -1,23 +1,17 @@
 .projects {
     display: flex;
-    flex-direction: column;
-    row-gap: 3rem;
-    // margin: 0 2%;
+    flex-direction: row;
     @include transition(.1s);
+    gap: 3rem;
     
-    & .projects-titleSection {
+    & .projectItems{
         display: flex;
         flex-direction: column;
-        row-gap: 2rem;
-        // align-self: flex-start;
-        
-        & h2{
-            // margin-right: 2rem;
-        }
-
-        & .projects-border {
-            // border-top: var(--border3);
-        }
+        row-gap: 3rem;
+        flex-grow: 1;
     }
-
+    
+    &.projects-tablet{
+        flex-direction: column-reverse;
+    }
 }

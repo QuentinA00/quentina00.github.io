@@ -48,7 +48,7 @@
                     { "id": "tag4", "text": "Vite" },
                     { "id": "tag5", "text": "Styled Components" },
                     { "id": "tag6", "text": "React Context" },
-                    { "id": "tag7", "text": "React Router" },
+                    { "id": "tag7", "text": "React-Router" },
                     { "id": "tag8", "text": "Suspense / Fallback" },
                     { "id": "tag9", "text": "Error Boundaries" },
                     { "id": "tag10", "text": "Github Pages" }
@@ -149,7 +149,7 @@
                     "points":[
                         {"id":1,"text":"Meant to be a healthy social network"},
                         {"id":2,"text":"Upvote/downvote system"},
-                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations/responsive/pages.."}
+                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations / responsive / pages.."}
                     ]
                 },
                 "postsLinks": [
