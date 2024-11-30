@@ -4,7 +4,7 @@ import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/post/PostFilterComponent"
 import { useState } from "react"
-import { screen_mobile, screen_tablet } from "../utils/responsiveUtils"
+import { screen_desktop } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
@@ -25,9 +25,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
     // tags selected in PostFilterComponent
     const [selectedTags, setSelectedTags] = useState<string[]>([])
 
-    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
-
-    const isOnTablet = useMediaQuery({maxWidth:screen_tablet})
+    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
 
     const filteredPosts = projectsPosts.filter(post =>
         selectedTags.length === 0 ||
@@ -35,7 +33,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
     )
 
     return (
-        <div className={`projects ${isOnTablet ? 'projects-tablet' : ''}`}>
+        <div className={`projects ${isOnSmallerScreen ? 'projects-smallerScreen' : ''}`}>
             <div className="projectItems">
                 {filteredPosts.map(projectData => (
                     <PostContainer

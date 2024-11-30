@@ -51,6 +51,7 @@
                     { "id": "tag7", "text": "React-Router" },
                     { "id": "tag8", "text": "Suspense / Fallback" },
                     { "id": "tag9", "text": "Error Boundaries" },
+                    { "id": "tag9", "text": "LLM integration" },
                     { "id": "tag10", "text": "Github Pages" }
                 ],
                 "postTextParagraphs": [

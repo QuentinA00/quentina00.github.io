@@ -1,7 +1,6 @@
 // default style
 .postContainer{
     display: flex;
-    // width: 75%;
     max-width: 80rem;
     @include transition(.1s);
 }

@@ -7,20 +7,19 @@ import { useMediaQuery } from 'react-responsive';
 import { screen_tablet } from '../../utils/responsiveUtils';
 
 // Styled component for both container and buttons
-// !! important note : the background is set in the component's dedicated scss file, for the color variable..
 const Style = styled.div`
     display: flex;
     flex-direction:column;
     row-gap:2rem;
-    width:30%;
+    /* width:30%; */
+    flex:1;
     place-self:flex-start;
     padding: 1.5rem;
     border-radius: 1.5rem;
-    /* border:solid .1rem var(--color3); */
     background: var(--color3);
     
     &.postFilterComponent-tablet{
-        width:unset;
+        /* width:unset; */
     }
 
     .tagListItems {
@@ -29,7 +28,6 @@ const Style = styled.div`
         column-gap: .7rem;
         row-gap:.7rem;
         flex-wrap: wrap;
-
         
         .tagSelector {
 
@@ -68,7 +66,7 @@ const Style = styled.div`
             }
         }
     }
-`;
+`
 
 interface PostFilterProps {
     projectPosts: PostsInterface['projects']
