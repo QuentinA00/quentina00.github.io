@@ -5,7 +5,7 @@
   "homepage": "https://quentina00.github.io/",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "predeploy": "vite build --base=./",
     "deploy": "gh-pages -d dist",
     "build": "tsc -b && vite build --base=./",
