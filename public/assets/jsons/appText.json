@@ -1,6 +1,6 @@
 {
     "en": {
-        "title": "Quentin.",
+        "title": "Quentin A.",
         "menuBar": [
             { "id": "settings", "text": "", "icon":"settings.svg", "subMenuItems": [
                     {"key":"language", "text":"set language", "icon":""}, 

@@ -1,22 +1,24 @@
+// not used anymore, style now in the component itself
+
 .tag{
-    display: flex;
-    align-items: center;
-    background: var(--color2);
-    border-radius: 3rem;
-    color: var(--color1);
-    font-size: .8rem;
-    padding: .15rem 1rem;
-    padding-left: .4rem;
-    column-gap: .5rem;
+    // display: flex;
+    // align-items: center;
+    // background: var(--color2);
+    // border-radius: 3rem;
+    // color: var(--color1);
+    // font-size: .8rem;
+    // padding: .15rem 1rem;
+    // padding-left: .4rem;
+    // column-gap: .5rem;
 
-    & svg {
-        width: .7rem;
+    // & svg {
+    //     width: .7rem;
 
-        & .circle1 {
-            fill: var(--color1);
-        }
-        & .circle2 {
-            stroke: var(--color1);
-        }
-    }
+    //     & .circle1 {
+    //         fill: var(--color1);
+    //     }
+    //     & .circle2 {
+    //         stroke: var(--color1);
+    //     }
+    // }
 }
