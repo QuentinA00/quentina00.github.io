@@ -6,6 +6,10 @@ import PostFilterComponent from "../components/post/PostFilterComponent"
 import { useState } from "react"
 import { screen_desktop } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
+import { AnimatePresence } from "framer-motion"
+import AnimationWrapper from "../components/AnimationWrapper"
+import { slideFromRight } from "../style/animations/animations"
+import styled from "styled-components"
 
 const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
 
@@ -13,6 +17,29 @@ interface ProjectsProps {
     appLanguage:'en'|'fr'
     appText:AppTextProps['appText']
 }
+
+const Style = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    @include transition(.1s);
+
+    &.projects-smallerScreen{
+        flex-direction: column-reverse;
+    }
+
+    .projectItems{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        flex: 3;
+    }
+    
+    .postFilter {
+        display: flex;
+        flex: 1;
+    }
+`
 
 const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
 
@@ -33,7 +60,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
     )
 
     return (
-        <div className={`projects ${isOnSmallerScreen ? 'projects-smallerScreen' : ''}`}>
+        <Style className={`projects ${isOnSmallerScreen ? 'projects-smallerScreen' : ''}`}>
             <div className="projectItems">
                 {filteredPosts.map(projectData => (
                     <PostContainer
@@ -43,8 +70,12 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
                     />
                 ))}
             </div>
-            {<PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>}
-        </div>
+            <AnimatePresence mode='wait'>
+                <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.5}>
+                    <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
+                </AnimationWrapper>
+            </AnimatePresence>
+        </Style>
     )
 }
 

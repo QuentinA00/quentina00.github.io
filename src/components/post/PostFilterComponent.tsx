@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { PostsInterface } from '../../interfaces/postsInterfaces';
-import Tag from './Tag';
-import { styleVariables } from '../../style/globalRules';
-import { useMediaQuery } from 'react-responsive';
-import { screen_desktop } from '../../utils/responsiveUtils';
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { PostsInterface } from '../../interfaces/postsInterfaces'
+import Tag from './Tag'
+import { styleVariables } from '../../style/globalRules'
+import { useMediaQuery } from 'react-responsive'
+import { screen_desktop } from '../../utils/responsiveUtils'
 
 // Styled component for both container and buttons
 const Style = styled.div`
     display: flex;
     flex-direction:column;
     row-gap:2rem;
-    flex:1;
+    /* flex:1; */
     place-self:flex-start;
     position:sticky;
     top:2rem;

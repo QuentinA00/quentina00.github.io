@@ -1,17 +1,19 @@
-.projects {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    @include transition(.1s);
+// style now inside component itself using styled-component
+
+// .projects {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 3rem;
+//     @include transition(.1s);
     
-    & .projectItems{
-        display: flex;
-        flex-direction: column;
-        row-gap: 3rem;
-        flex: 3;
-    }
+//     & .projectItems{
+//         display: flex;
+//         flex-direction: column;
+//         row-gap: 3rem;
+//         flex: 3;
+//     }
     
-    &.projects-smallerScreen{
-        flex-direction: column-reverse;
-    }
-}
+//     &.projects-smallerScreen{
+//         flex-direction: column-reverse;
+//     }
+// }
