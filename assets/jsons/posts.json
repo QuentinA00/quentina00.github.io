@@ -44,14 +44,15 @@
                 "tags": [
                     { "id": "tag1", "text": "Chrome extension" },
                     { "id": "tag2", "text": "Javascript / Typescript" },
-                    { "id": "tag3", "text": "ReactJS" },
-                    { "id": "tag4", "text": "Vite" },
-                    { "id": "tag5", "text": "Styled Components" },
-                    { "id": "tag6", "text": "React Context" },
-                    { "id": "tag7", "text": "React Router" },
-                    { "id": "tag8", "text": "Suspense / Fallback" },
-                    { "id": "tag9", "text": "Error Boundaries" },
-                    { "id": "tag10", "text": "Github Pages" }
+                    { "id": "tag3", "text": "LLM / AI integration" },
+                    { "id": "tag4", "text": "ReactJS" },
+                    { "id": "tag5", "text": "Vite" },
+                    { "id": "tag6", "text": "Styled Components" },
+                    { "id": "tag7", "text": "React Context" },
+                    { "id": "tag8", "text": "React-Router" },
+                    { "id": "tag9", "text": "Suspense / Fallback" },
+                    { "id": "tag10", "text": "Error Boundaries" },
+                    { "id": "tag11", "text": "Github Pages" }
                 ],
                 "postTextParagraphs": [
                     "It aims to be a simple Chrome extension that provides summaries and explanations using the context of the current webpage.",
@@ -149,7 +150,7 @@
                     "points":[
                         {"id":1,"text":"Meant to be a healthy social network"},
                         {"id":2,"text":"Upvote/downvote system"},
-                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations/responsive/pages.."}
+                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations / responsive / pages.."}
                     ]
                 },
                 "postsLinks": [
