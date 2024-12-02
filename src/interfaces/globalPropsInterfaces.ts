@@ -1,5 +1,4 @@
-import { ReactNode } from "react";
-import { AppTextInterface } from "./appTextInterfaces";
+import { AppTextInterface } from "./appTextInterfaces"
 
 export interface AppTextProps {
     appText: AppTextInterface

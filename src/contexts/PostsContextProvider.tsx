@@ -8,16 +8,19 @@ import posts from '../../public/assets/jsons/posts.json'
 // ---------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------
 
-interface PostsInterfaceWithLanguage {
-    en:PostsInterface
-    fr:PostsInterface
-}
+// --------------------------------------
+// below, the 2 are temporarily commented in order to be able to build before the full implementation of teh context / react-query
+// --------------------------------------
+// interface PostsInterfaceWithLanguage {
+//     en:PostsInterface
+//     fr:PostsInterface
+// }
 
 // the whole interface
-interface PostsInterface {
-    presentation:PostInterface[]
-    projects:PostInterface[]
-}
+// interface PostsInterface {
+//     presentation:PostInterface[]
+//     projects:PostInterface[]
+// }
 
 // interface for a single post item
 interface PostInterface {

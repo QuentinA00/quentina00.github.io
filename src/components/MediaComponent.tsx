@@ -31,8 +31,8 @@ const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
             {mediaData?.videos && 
                 <div className="mediaComponent-videoSection">
                     { mediaData.videos.map((video) => (
-                        <div className="mediaComponent-video">
-                            <ReactPlayer key={video.id} url={video.linkPath} controls width='100%' height='12rem'/>
+                        <div key={video.id} className="mediaComponent-video">
+                            <ReactPlayer url={video.linkPath} controls width='100%' height='12rem'/>
                             <p className="mediaComponent-comment">{video.text}</p>
                         </div>
                     ))}
