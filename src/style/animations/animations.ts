@@ -38,7 +38,7 @@ export const slideFromTop: Variants = {
 export const slideFromRight: Variants = {
     initial:{ 
         opacity: 0, 
-        x: 100
+        x: 50
     },
     animate:{ 
         opacity: 1, 
@@ -46,7 +46,7 @@ export const slideFromRight: Variants = {
     },
     exit:{ 
         opacity: 0, 
-        x: 100
+        x: 50
     }
 }
 
