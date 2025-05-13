@@ -23,14 +23,13 @@
             "professionalLinks":[
                 {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"my Linktree, with all the links to contact me"},
                 {"id":"item2","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
-                {"id":"item3","text":"github","icon":"github.svg","link":"https://github.com/QuentinA00", "description":"my professional Github account"},
-                {"id":"item4","text":"upwork","icon":"upwork.svg","link":"https://www.upwork.com/freelancers/~014cacd3cd93b80725", "description":"my Upwork profile"}
+                {"id":"item3","text":"github","icon":"github.svg","link":"https://github.com/QuentinA00", "description":"my professional Github account"}
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
                 {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account"},
                 {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
-                {"id":"item3","text":"discord","icon":"discord.svg","link":"", "description":"my Discord"}
+                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/GWB8W6f8", "description":"my Discord"}
             ]
         },
         "generalAppContent":{
