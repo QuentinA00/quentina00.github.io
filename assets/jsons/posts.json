@@ -17,18 +17,18 @@
                     { "id": "tag2", "text": "ReactJS" },
                     { "id": "tag3", "text": "NodeJS" },
                     { "id": "tag4", "text": "Scss" },
-                    { "id": "tag5", "text": "HTML / CSS" },
+                    { "id": "tag5", "text": "CursorAI" },
                     { "id": "tag6", "text": "MongoDB" },
-                    { "id": "tag7", "text": "utilisation of LLM" },
+                    { "id": "tag7", "text": "LLM integration" },
                     { "id": "tag8", "text": "Linux server support" },
                     { "id": "tag9", "text": "Debian" },
                     { "id": "tag10", "text": "Proxmox" },
                     { "id": "tag11", "text": "Swift (in progress)" },
                     { "id": "tag12", "text": "Python (in progress)" },
-                    { "id": "tag13", "text": "Ollama" },
+                    { "id": "tag13", "text": "Figma" },
                     { "id": "tag14", "text": "Notion" },
                     { "id": "tag15", "text": "Obsidian" },
-                    { "id": "tag16", "text": "Figma" }
+                    { "id": "tag16", "text": "Ollama" }
                 ],
                 "postsLinks": [
                     {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
@@ -36,6 +36,71 @@
             }
         ],
         "projects": [
+            {
+                "id": "project5",
+                "projectOrigin": "Personal project",
+                "title": "Temporo",
+                "description": "A simple and flexible app to manage timers and habits",
+                "tags": [
+                    { "id": "tag1", "text": "iOS app" },
+                    { "id": "tag2", "text": "Vibe-Coding" },
+                    { "id": "tag3", "text": "CursorAI" },
+                    { "id": "tag4", "text": "Figma" },
+                    { "id": "tag5", "text": "AppStore Connect" }
+                ],
+                "medias": {
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/temporo_small1.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large1.png"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/temporo_small2.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large2.png"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/temporo_small3.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large3.png"
+                        },
+                        {
+                            "id": 4,
+                            "linkPath": "./assets/imgs/temporo_small4.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large4.png"
+                        },
+                        {
+                            "id": 5,
+                            "linkPath": "./assets/imgs/temporo_small5.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large5.png"
+                        },
+                        {
+                            "id": 6,
+                            "linkPath": "./assets/imgs/temporo_small6.jpeg",
+                            "linkPathHd":"./assets/imgs/temporo_large6.png"
+                        }
+                    ]
+                },
+                "postTextParagraphs": [
+                    "The app supports setting timers for cooking, creating countdowns for goals and events, and tracking workout sessions.",
+                    "It is designed to be intuitive and flexible.",
+                    "Timers can be customized with names, colors, icons, and categories. Progress can be monitored over time using a completion grid."
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Timers of different types"},
+                        {"id":2,"text":"Manage, sort and filter timers with categories, colors, name and more"},
+                        {"id":3,"text":"Completion grid to track progress over time"}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Privacy Policy","link": "temporo_privacy_policy.html"},
+                    {"linkName": "Terms of Service","link": "temporo_terms_of_service.html"},
+                    {"linkName": "App Store link (soon)","link": ""}
+                ]
+            },
             {
                 "id": "project4",
                 "projectOrigin": "Personal project",
