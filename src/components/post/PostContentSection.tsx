@@ -38,7 +38,12 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                     </ul>
                 </div>
                 <div className="postContentSection-links">
-                    {postData.postsLinks.map((linkItem) => <a key={linkItem.link} className="regularLink" href={linkItem.link}>{linkItem.linkName}</a>)}
+                    {postData.postsLinks.map((linkItem) => <a 
+                        key={linkItem.link} 
+                        className="regularLink" 
+                        href={linkItem.link} 
+                        target={postData.id == 'presentation' ? '_self' : '_blank'}>{linkItem.linkName}</a>
+                    )}
                 </div>
             </div>
 

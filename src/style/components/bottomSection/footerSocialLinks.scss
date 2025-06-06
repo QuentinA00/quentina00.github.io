@@ -8,27 +8,43 @@
     & a {
 
         & > .buttonWithIcon{
-            cursor: pointer;
             padding: .6rem;
-            display: flex;
-            position: relative;
             border-radius: 3rem;
-            & {
-                @include hoverLink3;
-                @include transition(.15s);
-            }
+            @include itemDescriptionOnHover;
+            // cursor: pointer;
+            // display: flex;
+            // position: relative;
+            // @include hoverLink3;
+            @include transition(.15s);
             
             & > img {
                 width: 1rem;
                 height: 1rem;
             }
             
+            @media (hover:hover){
+                &:hover > span{
+                    // visibility: visible;
+                    // opacity: 1;
+                    // transition-delay: .3s;
+                    transform: translateX(.5rem);
+                }
+            }
+            &:active > span{
+                // visibility: visible;
+                // opacity: 1;
+                // transition-delay: .3s;
+                transform: translateX(.5rem);
+            }
+            
             & span {
-                position: absolute;
-                visibility: hidden;
+                // position: absolute;
+                // visibility: hidden;
+                // opacity: 0;
+                // z-index: 2;
+                @include transition(.15s);
                 font-size: .6rem;
                 font-weight: 400;
-                opacity: 0;
                 background: var(--color2);
                 border-radius: 3rem;
                 color: var(--color1);
@@ -36,37 +52,19 @@
                 inline-size: max-content;
                 left: 2.3rem;
                 box-shadow: var(--borderShadow5);
-                z-index: 2;
                 top: .4rem;
-                // transform: scale(.8);
-                @include transition(.15s);
     
-                @media (hover:hover){
-                    &:hover{
-                        display: none;
-                    }
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                }
+                // @media (hover:hover){
+                //     &:hover{
+                //         display: none;
+                //     }
+                // }
+                // &::after{
+                //     content: '';
+                //     position: absolute;
+                // }
             }
     
-            @media (hover:hover){
-                &:hover > span{
-                    visibility: visible;
-                    opacity: 1;
-                    // backdrop-filter: blur(1rem);
-                    transition-delay: .3s;
-                    transform: translateX(.5rem);
-                }
-            }
-            &:active > span{
-                visibility: visible;
-                opacity: 1;
-                transition-delay: .3s;
-                transform: translateX(.5rem);
-            }
         }
     }
     

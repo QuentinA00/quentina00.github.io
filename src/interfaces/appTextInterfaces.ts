@@ -8,6 +8,7 @@ export interface MenuBarItemInterface {
     id:string
     text:string
     icon?:string
+    link?:string
     subMenuItems:MenuBarSubMenuItemInterface[]
 }
 

@@ -19,6 +19,10 @@ const Style = styled.div`
     border-radius: 1.5rem;
     background: var(--color3);
     border: solid .15rem var(--color3);
+
+    & .postFilterComponent-title{
+        font-weight:600;
+    }
     
     &.postFilterComponent-smallerScreen{
         position:unset;
@@ -116,7 +120,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     return (
         <Style className={`postFilterComponent ${isOnSmallerScreen ? 'postFilterComponent-smallerScreen' : ''}`}>
             
-            <p>Filter the projects by tags :</p>
+            <p className='postFilterComponent-title'>Filter the projects by tags :</p>
 
             <div className="tagListItems">
 

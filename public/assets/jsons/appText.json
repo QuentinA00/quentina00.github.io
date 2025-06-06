@@ -2,11 +2,7 @@
     "en": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "settings", "text": "", "icon":"settings.svg", "subMenuItems": [
-                    {"key":"language", "text":"set language", "icon":""}, 
-                    {"key":"darkMode", "text":"dark mode", "icon":"" } 
-                ]
-            }
+            { "id": "monetization", "text": "Support is always appreciated :)", "icon":"dollar.svg", "link":"https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
         ],
         "pages":[
             { "id": "", "text": "About me" },

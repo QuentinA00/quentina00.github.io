@@ -30,7 +30,7 @@ const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, descrip
     // defining the classes to apply
     const classesToApply = () => {
         let classes = 'buttonWithIcon'
-        if (className) classes += ` buttonWithIcon-${className}`
+        if (className) classes += ` ${className}`
         return classes
     }
 
