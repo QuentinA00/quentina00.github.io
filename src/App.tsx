@@ -11,6 +11,9 @@ import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "./utils/responsiveUtils"
+import SlidingMenu from "./components/SlidingMenu"
+import { useSlidingMenu } from "./contexts/SlidingMenuContextProvider"
+import StripePayment from "./components/StripePayment"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -32,6 +35,7 @@ const App = () => {
     // console.log(location.pathname)
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+    const { isMenuOpen, closeMenu } = useSlidingMenu()
 
     return (
         <div className={`app ${isOnMobileScreen ? 'app-mobile' : ''}`}>
@@ -62,7 +66,17 @@ const App = () => {
                 </Routes>
             </AnimatePresence>
 
-            <Footer footerText={appText.bottomSection} />
+            <Footer bottomSectionText={appText.bottomSection} />
+            
+            {/* Sliding Menu */}
+            <SlidingMenu isOpen={isMenuOpen} onClose={closeMenu}>
+                <StripePayment />
+                <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid var(--color3)' }}>
+                    <a href="https://revolut.me/quentinatd" target="_blank" rel="noopener noreferrer">
+                        Or Support Me via Revolut
+                    </a>
+                </div>
+            </SlidingMenu>
         </div>
     )
 }

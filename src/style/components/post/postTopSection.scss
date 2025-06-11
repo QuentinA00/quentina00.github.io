@@ -39,7 +39,7 @@
     }
     & .postTopSection-tags{
         display: flex;
-        gap: .8rem .6rem;
+        gap: .8rem;
         flex-wrap: wrap;
     }
 }
@@ -49,7 +49,5 @@
     & .postSectionTop-title{
         flex-direction: column;
         align-items: flex-start;
-
-        // h3 {white-space: nowrap;}
     }
 }

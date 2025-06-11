@@ -15,7 +15,7 @@
         },
         "bottomSection": {
             "contact": "Contact me",
-            "mail":"",
+            "mail":"quentinartaud.work@gmail.com",
             "professionalLinks":[
                 {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"my Linktree, with all the links to contact me"},
                 {"id":"item2","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
@@ -26,13 +26,18 @@
                 {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account"},
                 {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
                 {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/GWB8W6f8", "description":"my Discord"}
-            ]
+            ],
+            "copyright":{
+                "title":"Copyright",
+                "text":"© Quentin A. All rights reserved"
+            }
         },
         "generalAppContent":{
             "imgsPath":{
                 "professional":"./assets/imgs/logo_q_small.jpeg",
                 "personal":"./assets/imgs/logo_qvsp_small.jpeg"
-            }
+            },
+            "stripeKey":""
         }
     },
     "fr": {

@@ -76,7 +76,7 @@ const Style = styled.div`
         cursor:pointer;
         transition:ease-in-out .15s;
         padding: .15rem 1rem;
-        border:solid .1rem var(--color3);
+        border:var(--border6);
         background: var(--color3);
         font-size:.8rem;
         border-radius: 3rem;

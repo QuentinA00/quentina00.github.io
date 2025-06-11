@@ -1,0 +1,29 @@
+.slidingMenu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(1rem);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.slidingMenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20rem;
+    background: var(--color1);
+    box-shadow: 0 0 2rem .5rem var(--color3);
+    z-index: 1001;
+    overflow-y: auto;
+    margin: 1rem;
+    border-radius: .7rem;
+    border: var(--border6);
+}
+
+.slidingMenu-content {
+    padding: 2rem;
+} 

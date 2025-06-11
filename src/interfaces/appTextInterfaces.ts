@@ -46,6 +46,10 @@ export interface AppTextInterface {
         professionalLinks: BottomSectionLinkInterface[]
         personalAccount: string
         personalLinks: BottomSectionLinkInterface[]
+        copyright:{
+            title:string
+            text:string
+        }
     }
 
     generalAppContent: {
@@ -53,6 +57,7 @@ export interface AppTextInterface {
             professional:string
             personal:string
         }
+        stripeKey:string
     }
 }
 

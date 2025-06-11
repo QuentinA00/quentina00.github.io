@@ -50,7 +50,7 @@
     }
 }
 
-// item description on hover
+// item description on hover. Note : it must be used with buttonWithIcon and a span inside it
 @mixin itemDescriptionOnHover{
     display: flex;
     position: relative;
