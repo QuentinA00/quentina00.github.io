@@ -1,0 +1,269 @@
+.paymentSelector {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    // p {
+    //     margin-bottom: 1.5rem;
+    //     color: var(--color2);
+    //     opacity: 0.8;
+    // }
+}
+
+// Progress indicator
+.paymentSelector-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.paymentSelector-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    &.active {
+        .paymentSelector-stepNumber {
+            background: var(--color2);
+            color: var(--color1);
+        }
+        .paymentSelector-stepLabel {
+            color: var(--color2);
+            // font-weight: 600;
+        }
+    }
+
+    &.completed {
+        .paymentSelector-stepNumber {
+            background: var(--color2);
+            color: var(--color1);
+        }
+        .paymentSelector-stepLabel {
+            color: var(--color2);
+        }
+    }
+}
+
+.paymentSelector-stepNumber {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color3);
+    color: var(--color2);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.paymentSelector-stepLabel {
+    font-size: 0.8rem;
+    color: var(--color2);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.paymentSelector-stepConnector {
+    width: 3rem;
+    height: 2px;
+    background: var(--color3);
+    margin: 0 1rem;
+}
+
+.paymentSelector-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+// Custom amount input
+.paymentSelector-customInput {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(var(--color2-rgb, 0, 0, 0), 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color3);
+
+    input {
+        padding: 0.8rem;
+        border: 1px solid var(--color3);
+        border-radius: 0.3rem;
+        font-size: 1rem;
+        background: var(--color1);
+        color: var(--color2);
+
+        &:focus {
+            outline: none;
+            border-color: var(--color2);
+        }
+    }
+}
+
+.paymentSelector-customButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.paymentSelector-cancelButton, .paymentSelector-confirmButton {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.paymentSelector-cancelButton {
+    background: transparent;
+    color: var(--color2);
+    border: 1px solid var(--color3);
+
+    &:hover {
+        background: rgba(var(--color2-rgb, 0, 0, 0), 0.1);
+    }
+}
+
+.paymentSelector-confirmButton {
+    background: var(--color2);
+    color: var(--color1);
+
+    &:hover:not(:disabled) {
+        filter: brightness(1.1);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.paymentSelector-optionButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--color2);
+    color: var(--color1);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+
+    &:hover {
+        transform: translateY(-0.2rem);
+        filter: brightness(1.1);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.paymentSelector-amount {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.paymentSelector-description {
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+// Header section for method selection step
+.paymentSelector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color3);
+}
+
+.paymentSelector-backButton {
+    background: none;
+    border: none;
+    color: var(--color2);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: rgba(var(--color2-rgb, 0, 0, 0), 0.1);
+    }
+}
+
+.paymentSelector-selectedAmount {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color2);
+    padding: 0.5rem 1rem;
+    background: rgba(var(--color2-rgb, 0, 0, 0), 0.1);
+    border-radius: 0.5rem;
+}
+
+// Payment methods section
+.paymentSelector-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.paymentSelector-methodButton {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--color1);
+    color: var(--color2);
+    border: 2px solid var(--color3);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: var(--color2);
+        transform: translateY(-0.1rem);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.paymentSelector-methodIcon {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+}
+
+.paymentSelector-methodName {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.paymentSelector-info {
+    padding: 1rem;
+    background: rgba(var(--color2-rgb, 0, 0, 0), 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid var(--color3);
+
+    p {
+        margin: 0.3rem 0;
+        font-size: 0.9rem;
+        color: var(--color2);
+        opacity: 0.7;
+    }
+} 

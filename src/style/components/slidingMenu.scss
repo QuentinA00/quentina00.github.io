@@ -14,7 +14,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    width: 20rem;
+    width: 27rem;
     background: var(--color1);
     box-shadow: 0 0 2rem .5rem var(--color3);
     z-index: 1001;
@@ -26,4 +26,9 @@
 
 .slidingMenu-content {
     padding: 2rem;
+}
+
+// Prevent body scroll when sliding menu is open
+body.slidingMenu-noScroll {
+    overflow: hidden;
 } 

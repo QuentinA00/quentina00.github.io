@@ -25,21 +25,35 @@ export interface BottomSectionLinkInterface {
 
 
 // ---------- paiements
-export interface PaymentOptionInterface {
-    amount: string
+export interface PaymentAmountInterface {
+    value: string
     description: string
-    paymentLink: string
+}
+
+export interface PaymentMethodInterface {
+    name: string
+    displayName: string
+    icon: string
+    baseUrl: string
+}
+
+export interface PaymentStepsInterface {
+    selectAmount: string
+    selectMethod: string
+    backButton: string
 }
 
 export interface PaymentInfoInterface {
-    security:string
-    encryption:string
+    security: string
+    encryption: string
 }
 
-export interface StripePaymentInterface {
+export interface PaymentInterface {
     title: string
     description: string
-    paymentOptions: PaymentOptionInterface[]
+    amounts: PaymentAmountInterface[]
+    methods: PaymentMethodInterface[]
+    steps: PaymentStepsInterface
     info: PaymentInfoInterface
 }
 
@@ -84,8 +98,8 @@ export interface AppTextInterface {
         }
     }
 
-    // paiment in the app
-    stripePayment: StripePaymentInterface
+    // payment in the app
+    payment: PaymentInterface
 }
 
 // export the whole interfaces above, starting with a language

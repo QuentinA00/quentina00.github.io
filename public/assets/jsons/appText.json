@@ -39,38 +39,58 @@
             },
             "stripeKey":""
         },
-        "stripePayment": {
+        "payment": {
             "title": "If you want to support me :)",
             "description": "Select an amount:",
-            "paymentOptions": [
+            "amounts": [
                 {
-                    "amount": "5€",
-                    "description": "A parisian coffee",
-                    "paymentLink": "https://buy.stripe.com/your-5-dollar-link"
+                    "value": "5€",
+                    "description": "A parisian coffee"
                 },
                 {
-                    "amount": "10€",
-                    "description": "A McDonald's menu",
-                    "paymentLink": "https://buy.stripe.com/your-10-dollar-link"
+                    "value": "10€",
+                    "description": "A McDonald's menu"
                 },
                 {
-                    "amount": "25€",
-                    "description": "",
-                    "paymentLink": "https://buy.stripe.com/your-25-dollar-link"
+                    "value": "30€",
+                    "description": "test"
                 },
                 {
-                    "amount": "50€",
-                    "description": "",
-                    "paymentLink": "https://buy.stripe.com/your-25-dollar-link"
+                    "value": "50€",
+                    "description": "test"
                 },
                 {
-                    "amount":"custom",
-                    "description":"",
-                    "paymentLink":"https://buy.stripe.com/"
+                    "value": "custom",
+                    "description": "Custom amount"
                 }
             ],
+            "methods": [
+                {
+                    "name": "stripe",
+                    "displayName": "Stripe",
+                    "icon": "stripe.svg",
+                    "baseUrl": "https://buy.stripe.com/"
+                },
+                {
+                    "name": "revolut",
+                    "displayName": "Revolut",
+                    "icon": "revolut.svg",
+                    "baseUrl": "https://revolut.me/quentinatd"
+                },
+                {
+                    "name": "paypal",
+                    "displayName": "PayPal",
+                    "icon": "paypal.svg",
+                    "baseUrl": "https://paypal.me/"
+                }
+            ],
+            "steps": {
+                "selectAmount": "Select an amount:",
+                "selectMethod": "Choose your payment method:",
+                "backButton": "Back"
+            },
             "info": {
-                "security": "Secure payment powered by Stripe",
+                "security": "Secure payment powered by trusted providers",
                 "encryption": "Your payment information is encrypted and secure"
             }
         }
@@ -96,28 +116,58 @@
                 {"id":"item3","text":"github","icon":"github.svg","link":"","description":""}
             ]
         },
-        "stripePayment": {
-            "title": "Soutenir Mon Travail",
-            "description": "Choisissez un montant pour soutenir ce projet:",
-            "paymentOptions": [
+        "payment": {
+            "title": "Si vous voulez me soutenir :)",
+            "description": "Sélectionnez un montant:",
+            "amounts": [
                 {
-                    "amount": "5€",
-                    "description": "Petit Soutien",
-                    "paymentLink": "https://buy.stripe.com/your-5-euro-link"
+                    "value": "5€",
+                    "description": "Un café parisien"
                 },
                 {
-                    "amount": "10€",
-                    "description": "Soutien Moyen",
-                    "paymentLink": "https://buy.stripe.com/your-10-euro-link"
+                    "value": "10€",
+                    "description": "Un menu McDonald's"
                 },
                 {
-                    "amount": "25€",
-                    "description": "Grand Soutien",
-                    "paymentLink": "https://buy.stripe.com/your-25-euro-link"
+                    "value": "25€",
+                    "description": ""
+                },
+                {
+                    "value": "50€",
+                    "description": ""
+                },
+                {
+                    "value": "custom",
+                    "description": "Montant personnalisé"
                 }
             ],
+            "methods": [
+                {
+                    "name": "stripe",
+                    "displayName": "Stripe",
+                    "icon": "stripe.svg",
+                    "baseUrl": "https://buy.stripe.com/"
+                },
+                {
+                    "name": "revolut",
+                    "displayName": "Revolut",
+                    "icon": "revolut.svg",
+                    "baseUrl": "https://revolut.me/quentinatd"
+                },
+                {
+                    "name": "paypal",
+                    "displayName": "PayPal",
+                    "icon": "paypal.svg",
+                    "baseUrl": "https://paypal.me/"
+                }
+            ],
+            "steps": {
+                "selectAmount": "Sélectionnez un montant:",
+                "selectMethod": "Choisissez votre méthode de paiement:",
+                "backButton": "Retour"
+            },
             "info": {
-                "security": "Paiement sécurisé par Stripe",
+                "security": "Paiement sécurisé par des fournisseurs de confiance",
                 "encryption": "Vos informations de paiement sont cryptées et sécurisées"
             }
         }

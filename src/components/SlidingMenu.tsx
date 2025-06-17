@@ -27,6 +27,22 @@ const SlidingMenu: React.FC<SlidingMenuProps> = ({ isOpen, onClose, children }) 
         }
     }, [isOpen, onClose])
 
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (isOpen) {
+            // Add class to prevent body scroll
+            document.body.classList.add('slidingMenu-noScroll')
+        } else {
+            // Remove class to restore body scroll
+            document.body.classList.remove('slidingMenu-noScroll')
+        }
+
+        // Cleanup function to ensure scroll is restored if component unmounts
+        return () => {
+            document.body.classList.remove('slidingMenu-noScroll')
+        }
+    }, [isOpen])
+
     return (
         <AnimatePresence>
             {isOpen && (
