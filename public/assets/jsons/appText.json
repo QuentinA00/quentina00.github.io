@@ -38,6 +38,41 @@
                 "personal":"./assets/imgs/logo_qvsp_small.jpeg"
             },
             "stripeKey":""
+        },
+        "stripePayment": {
+            "title": "If you want to support me :)",
+            "description": "Select an amount:",
+            "paymentOptions": [
+                {
+                    "amount": "5€",
+                    "description": "A parisian coffee",
+                    "paymentLink": "https://buy.stripe.com/your-5-dollar-link"
+                },
+                {
+                    "amount": "10€",
+                    "description": "A McDonald's menu",
+                    "paymentLink": "https://buy.stripe.com/your-10-dollar-link"
+                },
+                {
+                    "amount": "25€",
+                    "description": "",
+                    "paymentLink": "https://buy.stripe.com/your-25-dollar-link"
+                },
+                {
+                    "amount": "50€",
+                    "description": "",
+                    "paymentLink": "https://buy.stripe.com/your-25-dollar-link"
+                },
+                {
+                    "amount":"custom",
+                    "description":"",
+                    "paymentLink":"https://buy.stripe.com/"
+                }
+            ],
+            "info": {
+                "security": "Secure payment powered by Stripe",
+                "encryption": "Your payment information is encrypted and secure"
+            }
         }
     },
     "fr": {
@@ -60,6 +95,31 @@
                 {"id":"item2","text":"instagram","icon":"instagram.svg","link":"","description":""},
                 {"id":"item3","text":"github","icon":"github.svg","link":"","description":""}
             ]
+        },
+        "stripePayment": {
+            "title": "Soutenir Mon Travail",
+            "description": "Choisissez un montant pour soutenir ce projet:",
+            "paymentOptions": [
+                {
+                    "amount": "5€",
+                    "description": "Petit Soutien",
+                    "paymentLink": "https://buy.stripe.com/your-5-euro-link"
+                },
+                {
+                    "amount": "10€",
+                    "description": "Soutien Moyen",
+                    "paymentLink": "https://buy.stripe.com/your-10-euro-link"
+                },
+                {
+                    "amount": "25€",
+                    "description": "Grand Soutien",
+                    "paymentLink": "https://buy.stripe.com/your-25-euro-link"
+                }
+            ],
+            "info": {
+                "security": "Paiement sécurisé par Stripe",
+                "encryption": "Vos informations de paiement sont cryptées et sécurisées"
+            }
         }
     }
 }

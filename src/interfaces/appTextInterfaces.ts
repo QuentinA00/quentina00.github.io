@@ -1,3 +1,4 @@
+// ---------- menuBar in the header
 export interface MenuBarSubMenuItemInterface{
     key:string
     text:string
@@ -12,6 +13,8 @@ export interface MenuBarItemInterface {
     subMenuItems:MenuBarSubMenuItemInterface[]
 }
 
+
+// ---------- bottom section
 export interface BottomSectionLinkInterface {
     id:string
     text:string
@@ -20,12 +23,34 @@ export interface BottomSectionLinkInterface {
     description:string
 }
 
+
+// ---------- paiements
+export interface PaymentOptionInterface {
+    amount: string
+    description: string
+    paymentLink: string
+}
+
+export interface PaymentInfoInterface {
+    security:string
+    encryption:string
+}
+
+export interface StripePaymentInterface {
+    title: string
+    description: string
+    paymentOptions: PaymentOptionInterface[]
+    info: PaymentInfoInterface
+}
+
+
+// ---------- pages of the app
 export interface PagesTextInterface {
     id:string
     text:string
 }
 
-// main interface
+// ---------- main interface
 export interface AppTextInterface {
     title: string
     
@@ -57,8 +82,10 @@ export interface AppTextInterface {
             professional:string
             personal:string
         }
-        stripeKey:string
     }
+
+    // paiment in the app
+    stripePayment: StripePaymentInterface
 }
 
 // export the whole interfaces above, starting with a language
