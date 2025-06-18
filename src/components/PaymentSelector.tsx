@@ -36,19 +36,20 @@ const PaymentSelector: React.FC = () => {
 
     const generatePaymentUrl = (amount: PaymentAmountInterface, method: PaymentMethodInterface): string => {
         const { value } = amount
-        const { name, baseUrl } = method
+        const { name } = method
+        const paymentUrls = paymentText.paymentUrls
 
         // Handle custom amount case - open base URL for manual entry
         if (value === 'custom') {
             switch (name) {
                 case 'stripe':
-                    return 'https://buy.stripe.com/' // User can browse available products
+                    return paymentUrls.stripe.custom
                 case 'revolut':
-                    return 'https://revolut.me/quentinatd' // User can enter custom amount
+                    return paymentUrls.revolut.base
                 case 'paypal':
-                    return 'https://paypal.me/yourhandle' // User can enter custom amount
+                    return paymentUrls.paypal.base
                 default:
-                    return baseUrl
+                    return method.baseUrl
             }
         }
 
@@ -57,25 +58,19 @@ const PaymentSelector: React.FC = () => {
 
         switch (name) {
             case 'stripe':
-                // For Stripe Payment Links - replace with your actual payment link IDs
-                const stripeLinks: { [key: string]: string } = {
-                    '5': 'https://buy.stripe.com/test_your_5_euro_link',
-                    '10': 'https://buy.stripe.com/test_your_10_euro_link',
-                    '25': 'https://buy.stripe.com/test_your_25_euro_link',
-                    '50': 'https://buy.stripe.com/test_your_50_euro_link'
-                }
-                return stripeLinks[numericAmount] || baseUrl
+                // For Stripe Payment Links - use configured URLs
+                return paymentUrls.stripe.amounts[numericAmount] || method.baseUrl
 
             case 'revolut':
                 // Revolut.me supports direct amount parameter
-                return `https://revolut.me/quentinatd/${numericAmount}`
+                return `${paymentUrls.revolut.base}/${numericAmount}`
 
             case 'paypal':
                 // PayPal.me supports direct amount with currency
-                return `https://paypal.me/yourhandle/${numericAmount}EUR`
+                return `${paymentUrls.paypal.base}/${numericAmount}EUR`
 
             default:
-                return baseUrl
+                return method.baseUrl
         }
     }
 
@@ -131,7 +126,7 @@ const PaymentSelector: React.FC = () => {
             type="number"
             value={customAmountValue}
             onChange={(e) => setCustomAmountValue(e.target.value)}
-            placeholder="Enter amount (1-500€)"
+            placeholder={paymentText.customInput.placeholder}
             min="1"
             max="500"
             step="0.01"
@@ -139,14 +134,14 @@ const PaymentSelector: React.FC = () => {
           />
           <div className="paymentSelector-customButtons">
             <button onClick={handleCustomAmountCancel} className="paymentSelector-cancelButton">
-              Cancel
+              {paymentText.customInput.cancel}
             </button>
             <button 
               onClick={handleCustomAmountSubmit} 
               className="paymentSelector-confirmButton"
               disabled={!customAmountValue || parseFloat(customAmountValue) < 1 || parseFloat(customAmountValue) > 500}
             >
-              Confirm
+              {paymentText.customInput.confirm}
             </button>
           </div>
         </div>
@@ -192,12 +187,12 @@ const PaymentSelector: React.FC = () => {
         <div className="paymentSelector-progress">
             <div className={`paymentSelector-step ${currentStep === 'amount' ? 'active' : 'completed'}`}>
                 <div className="paymentSelector-stepNumber">1</div>
-                <span className="paymentSelector-stepLabel">Amount</span>
+                <span className="paymentSelector-stepLabel">{paymentText.steps.stepLabels.amount}</span>
             </div>
             <div className="paymentSelector-stepConnector"></div>
             <div className={`paymentSelector-step ${currentStep === 'method' ? 'active' : ''}`}>
                 <div className="paymentSelector-stepNumber">2</div>
-                <span className="paymentSelector-stepLabel">Method</span>
+                <span className="paymentSelector-stepLabel">{paymentText.steps.stepLabels.method}</span>
             </div>
         </div>
     )
@@ -207,6 +202,8 @@ const PaymentSelector: React.FC = () => {
             {renderProgressIndicator()}
 
             {currentStep === 'amount' ? renderAmountSelection() : renderMethodSelection()}
+
+            <div className="divider2"></div>
 
             <div className="paymentSelector-info">
                 <p>{paymentText.info.security}</p>

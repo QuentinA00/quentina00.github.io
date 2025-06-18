@@ -87,7 +87,34 @@
             "steps": {
                 "selectAmount": "Select an amount:",
                 "selectMethod": "Choose your payment method:",
-                "backButton": "Back"
+                "backButton": "Back",
+                "stepLabels": {
+                    "amount": "Amount",
+                    "method": "Method"
+                }
+            },
+            "customInput": {
+                "placeholder": "Enter amount (1-500€)",
+                "cancel": "Cancel",
+                "confirm": "Confirm"
+            },
+            "paymentUrls": {
+                "stripe": {
+                    "custom": "https://buy.stripe.com/",
+                    "amounts": {
+                        "5": "https://buy.stripe.com/test_your_5_euro_link",
+                        "10": "https://buy.stripe.com/test_your_10_euro_link",
+                        "25": "https://buy.stripe.com/test_your_25_euro_link",
+                        "30": "https://buy.stripe.com/test_your_30_euro_link",
+                        "50": "https://buy.stripe.com/test_your_50_euro_link"
+                    }
+                },
+                "revolut": {
+                    "base": "https://revolut.me/quentinatd"
+                },
+                "paypal": {
+                    "base": "https://paypal.me/yourhandle"
+                }
             },
             "info": {
                 "security": "Secure payment powered by trusted providers",
@@ -164,7 +191,34 @@
             "steps": {
                 "selectAmount": "Sélectionnez un montant:",
                 "selectMethod": "Choisissez votre méthode de paiement:",
-                "backButton": "Retour"
+                "backButton": "Retour",
+                "stepLabels": {
+                    "amount": "Montant",
+                    "method": "Méthode"
+                }
+            },
+            "customInput": {
+                "placeholder": "Saisissez le montant (1-500€)",
+                "cancel": "Annuler",
+                "confirm": "Confirmer"
+            },
+            "paymentUrls": {
+                "stripe": {
+                    "custom": "https://buy.stripe.com/",
+                    "amounts": {
+                        "5": "https://buy.stripe.com/test_your_5_euro_link",
+                        "10": "https://buy.stripe.com/test_your_10_euro_link",
+                        "25": "https://buy.stripe.com/test_your_25_euro_link",
+                        "30": "https://buy.stripe.com/test_your_30_euro_link",
+                        "50": "https://buy.stripe.com/test_your_50_euro_link"
+                    }
+                },
+                "revolut": {
+                    "base": "https://revolut.me/quentinatd"
+                },
+                "paypal": {
+                    "base": "https://paypal.me/yourhandle"
+                }
             },
             "info": {
                 "security": "Paiement sécurisé par des fournisseurs de confiance",

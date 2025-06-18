@@ -41,6 +41,29 @@ export interface PaymentStepsInterface {
     selectAmount: string
     selectMethod: string
     backButton: string
+    stepLabels: {
+        amount: string
+        method: string
+    }
+}
+
+export interface PaymentCustomInputInterface {
+    placeholder: string
+    cancel: string
+    confirm: string
+}
+
+export interface PaymentUrlsInterface {
+    stripe: {
+        custom: string
+        amounts: { [key: string]: string }
+    }
+    revolut: {
+        base: string
+    }
+    paypal: {
+        base: string
+    }
 }
 
 export interface PaymentInfoInterface {
@@ -54,6 +77,8 @@ export interface PaymentInterface {
     amounts: PaymentAmountInterface[]
     methods: PaymentMethodInterface[]
     steps: PaymentStepsInterface
+    customInput: PaymentCustomInputInterface
+    paymentUrls: PaymentUrlsInterface
     info: PaymentInfoInterface
 }
 
