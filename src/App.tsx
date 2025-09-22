@@ -62,7 +62,7 @@ const App = () => {
                 </Routes>
             </AnimatePresence>
 
-            <Footer footerText={appText.bottomSection} />
+            <Footer bottomSectionText={appText.bottomSection} />
         </div>
     )
 }

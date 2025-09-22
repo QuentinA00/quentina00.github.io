@@ -2,7 +2,7 @@
     "en": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "monetization", "text": "Support is always appreciated :)", "icon":"dollar.svg", "link":"https://www.youtube.com/watch?v=dQw4w9WgXcQ" }
+            { "id": "monetization", "text": "Support is always appreciated :)", "icon":"dollar.svg", "link":"" }
         ],
         "pages":[
             { "id": "", "text": "About me" },
@@ -10,7 +10,7 @@
             { "id": "contact", "text": "Contact" }
         ],
         "contact":{
-            "text":"Flashcode to my Linktree, for more contact infos",
+            "text":"Flashcode to my Linktree, for more contact info",
             "image":"flashcode.png"
         },
         "bottomSection": {
@@ -26,7 +26,11 @@
                 {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account"},
                 {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
                 {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/GWB8W6f8", "description":"my Discord"}
-            ]
+            ],
+            "copyright":{
+                "title":"Copyright",
+                "text":"© 2025 Quentin Artaud. All rights reserved"
+            }
         },
         "generalAppContent":{
             "imgsPath":{
