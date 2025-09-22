@@ -4,6 +4,7 @@
     align-self: center;
     column-gap: 1rem;
     @include transition(.2s);
+    margin-right: 2rem;
     
     & .menuBar-pagesLinks{
         column-gap: 1rem;

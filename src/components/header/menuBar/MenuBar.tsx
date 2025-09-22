@@ -48,11 +48,11 @@ const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
             {isOnMobileScreen && <div className="divider2"></div>}
 
             {/* mapping menuBar elements */}
-            <div className="menuBar-items">
+            {/* <div className="menuBar-items">
                 {menuBarItems.map(menuBarItem => (
                     <MenuBarItem key={menuBarItem.id} id={menuBarItem.id} text={menuBarItem.text} icon={menuBarItem.icon}/>
                 ))}
-            </div>
+            </div> */}
             
             {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}
 
