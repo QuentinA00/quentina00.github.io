@@ -13,7 +13,7 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
     const smallerScreen = useMediaQuery({maxWidth:screen_tablet})
 
     return (
-        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''}`}>
+        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${postData.id == 'presentation' ? 'postContentSection-presentation' : ''}`}>
 
             {postData.medias && <MediaComponent mediaData={postData.medias}/>}
 
@@ -29,14 +29,15 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                 {/* ##### the point here below is to show up the tags in the presentation section below the text, instead of above. But later when I'll rebuild PostContainer, the tags section will be a whole component perhaps, it's gonna be easier */}
                 {postData.id == 'presentation' && <PostTopSection postData={postData} />}
 
-                <div className="postContentSection-keyPoints">
+                {postData.id != 'presentation' && <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>
                     <ul>
                         {postData.postTextKeyPoints?.points.map((keyPoint) =>(
                             <li key={keyPoint.id}>{keyPoint.text}</li>
                         ))}
                     </ul>
-                </div>
+                </div>}
+
                 <div className="postContentSection-links">
                     {postData.postsLinks.map((linkItem) => <a 
                         key={linkItem.link} 
