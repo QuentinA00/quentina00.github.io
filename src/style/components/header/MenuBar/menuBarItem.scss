@@ -2,9 +2,8 @@
     display: flex;
     position: relative;
     @include transition(.15s);
-    // @include hoverLink(.4rem);
     
-    & .menuBarItem-button{
+    & .menuBarItem-buttonWithText{
         cursor: pointer;
         padding: .2rem 1.3rem;
         border-radius: 3rem;
@@ -20,9 +19,39 @@
         top: 140%;
         left: 50%;
     }
-    & .buttonWithIcon {
+    & .menuBarItem-buttonWithIcon {
         padding: .5rem;
         border-radius: 3rem;
+        cursor: pointer;
+        background: var(--color3);
+        @include itemDescriptionOnHover;
+        @include transition(.15s);
+
+        @media (hover:hover){
+            &:hover > span{
+                transform: translate(-14rem, 2.7rem) scale(1);
+            }
+        }
+        &:active > span{
+            transform: translate(-14rem, 2.7rem) scale(1);
+        }
+
+        & > span{
+            background: var(--color2);
+            border-radius: 3rem 0 3rem 3rem;
+            padding: .2rem .7rem;
+            font-size: .8rem;
+            font-weight: 400;
+            color: var(--color1);
+            box-shadow: var(--borderShadow5);
+            inline-size: max-content;
+            transform: translate(-50%,0) scale(.1);
+            @include transition(.15s);
+        }
+
+        & img{
+            width: 1rem;
+        }
     }
     
     &.menuBarItem-mobile{
@@ -33,12 +62,10 @@
         }
 
         & .menuBarItem-button{
-            // background: var(--color3);
             padding: .2rem 1rem;
         }
-        & .buttonWithIcon {
+        & .menuBarItem-buttonWithIcon {
             background: var(--color3);
-            
         }
     }
 }

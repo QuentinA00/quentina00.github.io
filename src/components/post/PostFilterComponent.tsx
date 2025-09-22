@@ -11,7 +11,6 @@ const Style = styled.div`
     display: flex;
     flex-direction:column;
     row-gap:2rem;
-    /* flex:1; */
     place-self:flex-start;
     position:sticky;
     top:2rem;
@@ -19,6 +18,10 @@ const Style = styled.div`
     border-radius: 1.5rem;
     background: var(--color3);
     border: solid .15rem var(--color3);
+
+    & .postFilterComponent-title{
+        font-weight:600;
+    }
     
     &.postFilterComponent-smallerScreen{
         position:unset;
@@ -68,11 +71,12 @@ const Style = styled.div`
         }
     }
     
-    .postFilterButton{
+    // on mobile, button that show/hide the list of tags
+    .postFilterShowMoreButton{
         cursor:pointer;
         transition:ease-in-out .15s;
         padding: .15rem 1rem;
-        border:solid .1rem var(--color3);
+        border:var(--border6);
         background: var(--color3);
         font-size:.8rem;
         border-radius: 3rem;
@@ -116,7 +120,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     return (
         <Style className={`postFilterComponent ${isOnSmallerScreen ? 'postFilterComponent-smallerScreen' : ''}`}>
             
-            <p>Filter the projects by tags :</p>
+            <p className='postFilterComponent-title'>Filter the projects by tags :</p>
 
             <div className="tagListItems">
 
@@ -126,7 +130,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
                     </div>
                 ))}
 
-                {isOnSmallerScreen && tagsHidden && <div className='postFilterButton postFilterButton-showMoreItems' onClick={() => setTagsHidden(!tagsHidden)}>show more...</div>}
+                {isOnSmallerScreen && tagsHidden && <div className='postFilterShowMoreButton postFilterShowMoreButton-showMoreItems' onClick={() => setTagsHidden(!tagsHidden)}>show more...</div>}
                 
             </div>
         </Style>

@@ -13,7 +13,6 @@ const FooterSocialLinks:React.FC<FooterSocialLinksProps> = ({itemsLink}) => {
                     <ButtonWithIcon imageName={element.icon} className="linkItem" description={element.description}/>
                 </a>
             ))}
-            {/* <SvgIcon icon={icon}/> */}
         </div>
     )
 }

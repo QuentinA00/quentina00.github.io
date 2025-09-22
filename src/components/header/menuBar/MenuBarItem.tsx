@@ -28,9 +28,11 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
     return (
         <div className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : '' }`}>
             
-            {!icon && <div className="menuBarItem-button">{text}</div>}
+            {/* if there isn't icon, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
+            {!icon && <div className="menuBarItem-buttonWithText">{text}</div>}
             
-            {icon && <ButtonWithIcon imageName={icon} description={text}/>}
+            {/* if there is an icon, then we use the component ButtonWithIcon, and the class is menuBarItem-buttonWithIcon */}
+            {icon && <ButtonWithIcon imageName={icon} description={text} className="menuBarItem-buttonWithIcon"/>}
 
             <AnimatePresence mode="wait">
                 {isElementSelected && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint"/>}

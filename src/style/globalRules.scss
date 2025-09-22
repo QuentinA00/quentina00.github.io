@@ -87,12 +87,14 @@ button{
 .regularLink{
     cursor: pointer;
     padding: .3rem 1rem;
-    border-radius: .3rem;
+    border-radius: .2rem;
     font-size: .9rem;
     font-weight: 500;
     text-underline-offset: .4rem;
     text-decoration: underline;
-    &:hover {
-        @include hoverLink3;
+    @include hoverLink3;
+
+    &:active{
+        box-shadow: 0 0 0rem .15rem var(--color3);
     }
 }

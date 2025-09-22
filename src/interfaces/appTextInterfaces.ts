@@ -8,6 +8,7 @@ export interface MenuBarItemInterface {
     id:string
     text:string
     icon?:string
+    link?:string
     subMenuItems:MenuBarSubMenuItemInterface[]
 }
 
@@ -45,6 +46,10 @@ export interface AppTextInterface {
         professionalLinks: BottomSectionLinkInterface[]
         personalAccount: string
         personalLinks: BottomSectionLinkInterface[]
+        copyright:{
+            title:string
+            text:string
+        }
     }
 
     generalAppContent: {

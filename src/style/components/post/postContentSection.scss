@@ -5,7 +5,6 @@
 
     & .postContentSection-medias{
         flex: 1;
-        // align-content: center;
     }
     & .postContentSection-description{
         display: flex;
@@ -41,5 +40,10 @@
             display: flex;
             justify-content: center;
         }
+    }
+}
+.postContentSection-presentation{
+    & .postContentSection-description{
+        row-gap: 5rem;
     }
 }

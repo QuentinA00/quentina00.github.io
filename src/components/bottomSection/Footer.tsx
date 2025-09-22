@@ -4,23 +4,26 @@ import AnimationWrapper from "../AnimationWrapper"
 import FooterSocialLinks from "./FooterSocialLinks"
 
 interface FooterProps {
-    footerText:AppTextInterface['bottomSection']
+    bottomSectionText:AppTextInterface['bottomSection']
 }
 
-const Footer:React.FC<FooterProps> = ({footerText}) => {
+const Footer:React.FC<FooterProps> = ({bottomSectionText}) => {
     return (
         <AnimatePresence mode="wait">
             <AnimationWrapper transitionDuration={.8}>
                 <div className="footer">
-                    <h3>{footerText.contact}</h3>
+                    <h3>{bottomSectionText.contact}</h3>
                     <div className="footerItems">
-                        <p>{footerText.mail}</p>
-                        <FooterSocialLinks itemsLink={footerText.professionalLinks}/>
+                        <p>{bottomSectionText.mail}</p>
+                        <FooterSocialLinks itemsLink={bottomSectionText.professionalLinks}/>
                         <div className="footerDivider divider2"></div>
                         <div className="footerItems-bottomSection">
-                            <p>{footerText.personalAccount}</p>
-                            <FooterSocialLinks itemsLink={footerText.personalLinks}/>
+                            <p>{bottomSectionText.personalAccount}</p>
+                            <FooterSocialLinks itemsLink={bottomSectionText.personalLinks}/>
                         </div>
+                        <br />
+                        <br />
+                        <p title={bottomSectionText.copyright.title} className="footer-copyright">{bottomSectionText.copyright.text}</p>
                     </div>
                 </div>
             </AnimationWrapper>
