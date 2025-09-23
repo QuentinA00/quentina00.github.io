@@ -1,40 +1,39 @@
-@import './import.scss';
-@import './variables.scss';
-@import './mixin.scss';
-@import './globalRules.scss';
-@import './app.scss';
-@import './mediaQueries.scss';
+@use './variables';
+@use './mixin';
+@use './globalRules';
+@use './app';
+@use './mediaQueries';
 
     // pages
-    @import './pages/home.scss';
-    @import './pages/contact.scss';
-    @import './pages/projects.scss';
-    @import './pages/pageComponent.scss';
+    @use './pages/home';
+    @use './pages/contact';
+    @use './pages/projects';
+    @use './pages/pageComponent';
 
     // components
-    @import './components/bottomSection/footerSocialLinks.scss';
-    @import './components/mediaComponent.scss';
-    @import './components/imageWrapper.scss';
+    @use './components/bottomSection/footerSocialLinks';
+    @use './components/mediaComponent';
+    @use './components/imageWrapper';
 
         // fallbackComponents
-        @import './components/fallbackComponents/fallbackComponent.scss';
+        @use './components/fallbackComponents/fallbackComponent';
 
         // header
-        @import './components/header/header.scss';
-        @import './components/header/title.scss';
+        @use './components/header/header';
+        @use './components/header/title';
             
             // menuBar
-            @import './components/header/MenuBar/menuBar.scss';
-            @import './components/header/MenuBar/menuBarItem.scss';
-            @import './components/header/MenuBar/menuBarSettings.scss';
-            @import './components/header/MenuBar/menuBarSettingsItem.scss';
+            @use './components/header/MenuBar/menuBar';
+            @use './components/header/MenuBar/menuBarItem';
+            @use './components/header/MenuBar/menuBarSettings';
+            @use './components/header/MenuBar/menuBarSettingsItem';
 
         // footer
-        @import './components/bottomSection/footer.scss';
+        @use './components/bottomSection/footer';
 
         // post
-        @import './components/post/postContainer.scss';
-        @import './components/post/tag.scss';
-        @import './components/post/postTopSection.scss';
-        @import './components/post/postContentSection.scss';
-        @import './components/post/postFilterComponent.scss';
+        @use './components/post/postContainer';
+        @use './components/post/tag';
+        @use './components/post/postTopSection';
+        @use './components/post/postContentSection';
+        @use './components/post/postFilterComponent';

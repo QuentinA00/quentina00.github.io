@@ -1,8 +1,9 @@
+@use '../../mixin';
 // default style
 .postContainer{
     display: flex;
     max-width: 70rem;
-    @include transition(.1s);
+    @include mixin.transition(.1s);
 }
 
 // style for projects page

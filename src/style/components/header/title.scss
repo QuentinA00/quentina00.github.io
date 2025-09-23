@@ -1,7 +1,9 @@
+@use '../../mixin';
 .title {
     display: flex;
     cursor: pointer;
-    @include transition(.15s);
+    @include mixin.transition(.15s);
+    white-space: nowrap;
 
     @media (hover:hover){
         &:hover{

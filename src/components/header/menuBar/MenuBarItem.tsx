@@ -26,7 +26,7 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
     return (
-        <div className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : '' }`}>
+        <div className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : '' } ${isElementSelected ? 'menuBarItem-selected' : ''}`}>
             
             {/* if there isn't icon, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
             {!icon && <div className="menuBarItem-buttonWithText">{text}</div>}
@@ -35,7 +35,7 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
             {icon && <ButtonWithIcon imageName={icon} description={text} className="menuBarItem-buttonWithIcon"/>}
 
             <AnimatePresence mode="wait">
-                {isElementSelected && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint"/>}
+                {isElementSelected && !isOnMobileScreen && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint"/>}
             </AnimatePresence>
             
             {/* {pageItemData.settings && <MenuBarSettings menuBarSettingsItems={pageItemData.settings} isHidden={true}/>} */}
