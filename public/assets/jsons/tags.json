@@ -1,0 +1,19 @@
+{
+    "tag1" : { "text": "Javascript / Typescript", "skillCategory":"Software Development" },
+    "tag2" : { "text": "ReactJS", "skillCategory":"Software Development" },
+    "tag3" : { "text": "NodeJS / NextJS", "skillCategory":"Software Development" },
+    "tag4" : { "text": "Python", "skillCategory":"Software Development" },
+    "tag5" : { "text": "PostgreSQL", "skillCategory":"Software Development" },
+    "tag6" : { "text": "MongoDB", "skillCategory":"Software Development" },
+    "tag7" : { "text": "Git", "skillCategory":"Dev Tools" },
+    "tag8" : { "text": "Jupyter Notebook", "skillCategory":"Dev Tools" },
+    "tag9" : { "text": "LLM integration", "skillCategory":"Software Development" },
+    "tag10" : { "text": "Linux", "skillCategory":"IT" },
+    "tag11" : { "text": "Debian", "skillCategory":"IT" },
+    "tag12" : { "text": "Proxmox", "skillCategory":"IT" },
+    "tag13" : { "text": "Figma", "skillCategory":"Artistic" },
+    "tag14" : { "text": "Notion", "skillCategory":"Dev Tools" },
+    "tag15" : { "text": "Obsidian", "skillCategory":"IT" },
+    "tag16" : { "text": "CursorAI", "skillCategory":"IT" },
+    "tag17" : { "text": "Ollama", "skillCategory":"Dev Tools" }
+}
