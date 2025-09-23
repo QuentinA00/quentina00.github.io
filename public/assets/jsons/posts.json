@@ -115,7 +115,8 @@
                     ]
                 },
                 "postTextParagraphs": [
-                    "The app supports setting timers for cooking, creating countdowns for goals and events, and tracking workout sessions.",
+                    "(This project was a sort of experience, I wanted to see if I could create a whole iOS app and post it to the appstore without writing a single line of code.)",
+                    "It supports setting timers for cooking, creating countdowns for goals and events, and tracking workout sessions.",
                     "It is designed to be intuitive and flexible.",
                     "Timers can be customized with names, colors, icons, and categories. Progress can be monitored over time using a completion grid."
                 ],
