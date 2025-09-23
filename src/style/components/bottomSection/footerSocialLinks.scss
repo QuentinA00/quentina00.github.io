@@ -1,4 +1,4 @@
-@use './mixin';
+@use '../../mixin';
 .footerSocialLinks{
     display: flex;
     flex-direction: row;
@@ -11,12 +11,12 @@
         & > .buttonWithIcon{
             padding: .6rem;
             border-radius: 3rem;
-            @include itemDescriptionOnHover;
+            @include mixin.itemDescriptionOnHover;
             // cursor: pointer;
             // display: flex;
             // position: relative;
             // @include hoverLink3;
-            @include transition(.15s);
+            @include mixin.transition(.15s);
             
             & > img {
                 width: 1rem;
@@ -43,7 +43,7 @@
                 // visibility: hidden;
                 // opacity: 0;
                 // z-index: 2;
-                @include transition(.15s);
+                @include mixin.transition(.15s);
                 font-size: .6rem;
                 font-weight: 400;
                 background: var(--color2);

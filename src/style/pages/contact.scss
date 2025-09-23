@@ -1,9 +1,9 @@
-@use './mixin';
+@use '../mixin';
 .contact {
     display: flex;
     width: 100%;
     justify-content: center;
-    @include transition(.1s);
+    @include mixin.transition(.1s);
     
     & .contactItems{
         display: flex;
@@ -14,7 +14,7 @@
         border-radius: 1rem;
         font-weight: 600;
         margin-top: 3rem;
-        @include transition(.1s);
+        @include mixin.transition(.1s);
         
         & .buttonWithIcon {
             display: flex;

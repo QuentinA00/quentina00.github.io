@@ -1,4 +1,4 @@
-@use './mixin' as *;
+@use './mixin';
 body {
     font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
     margin: 0;
@@ -13,7 +13,7 @@ body {
     }
 }
 --root {
-    @include transition(.15s);
+    @include mixin.transition(.15s);
 }
 
 a {
@@ -73,14 +73,14 @@ button{
     width: 70%;
     border-radius: 3rem;
     align-self: center;
-    @include transition(.1s);
+    @include mixin.transition(.1s);
 }
 .divider3{
     border-bottom: var(--border5);
     width: 70%;
     border-radius: 3rem;
     align-self: center;
-    @include transition(.1s);
+    @include mixin.transition(.1s);
 }
 .sectionBorder {
     border-top:var(--border3);
@@ -93,7 +93,7 @@ button{
     font-weight: 500;
     text-underline-offset: .4rem;
     text-decoration: underline;
-    @include hoverLink3;
+    @include mixin.hoverLink3;
 
     &:active{
         box-shadow: 0 0 0rem .15rem var(--color3);

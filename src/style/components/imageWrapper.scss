@@ -1,4 +1,4 @@
-@use './mixin';
+@use '../mixin';
 .imageWrapper{
     // @include transition(.1s);
     display: flex;
@@ -31,7 +31,7 @@
             background: var(--color3);
             border-radius: 5rem;
             cursor: pointer;
-            @include hoverLink4(var(--color1));
+            @include mixin.hoverLink4(var(--color1));
         }
         
         & img{

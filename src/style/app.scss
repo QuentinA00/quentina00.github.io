@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 12rem;
-    @include transition(.2s);
+    @include mixin.transition(.2s);
 }
 .app-mobile{
     row-gap: 4rem;

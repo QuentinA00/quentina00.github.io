@@ -1,5 +1,5 @@
-@use './mixin';
+@use '../mixin';
 .home{
     display: flex;
-    @include transition(.2s);
+    @include mixin.transition(.2s);
 }

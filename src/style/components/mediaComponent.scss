@@ -1,4 +1,4 @@
-@use './mixin';
+@use '../mixin';
 .mediaComponent {
     display: flex;
     flex-direction: column;
@@ -22,7 +22,7 @@
             cursor:pointer;
             border:solid .15rem var(--color3);
             padding: .2rem;
-            @include transition(.15s);
+            @include mixin.transition(.15s);
 
             @media (hover:hover){
                 &:hover{

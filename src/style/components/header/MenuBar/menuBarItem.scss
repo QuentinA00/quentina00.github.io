@@ -1,14 +1,14 @@
-@use './mixin';
+@use '../../../mixin';
 .menuBarItem{
     display: flex;
     position: relative;
-    @include transition(.15s);
+    @include mixin.transition(.15s);
     
     & .menuBarItem-buttonWithText{
         cursor: pointer;
         padding: .2rem 1.3rem;
         border-radius: 3rem;
-        @include hoverLink3;
+        @include mixin.hoverLink3;
     }
     
     & .menuBarItem-dotPoint{
@@ -25,8 +25,8 @@
         border-radius: 3rem;
         cursor: pointer;
         background: var(--color3);
-        @include itemDescriptionOnHover;
-        @include transition(.15s);
+        @include mixin.itemDescriptionOnHover;
+        @include mixin.transition(.15s);
 
         @media (hover:hover){
             &:hover > span{
@@ -47,7 +47,7 @@
             box-shadow: var(--borderShadow5);
             inline-size: max-content;
             transform: translate(-50%,0) scale(.1);
-            @include transition(.15s);
+            @include mixin.transition(.15s);
         }
 
         & img{

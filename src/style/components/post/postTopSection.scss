@@ -1,9 +1,9 @@
-@use './mixin';
+@use '../../mixin';
 .postTopSection {
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    @include transition(.1s);
+    @include mixin.transition(.1s);
 
     & .buttonWithIcon {
         display: flex;
