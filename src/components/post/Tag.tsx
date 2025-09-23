@@ -4,6 +4,7 @@ import { PostTagsInterface } from "../../interfaces/postsInterfaces"
 interface TagProps {
     text:PostTagsInterface['text']
     className?:string
+    tagId?:string
 }
 
 export const TagGlobalStyle = styled.div`
@@ -29,7 +30,7 @@ export const TagGlobalStyle = styled.div`
     }
 `
 
-const Tag:React.FC<TagProps> = ({text, className}) => {
+const Tag:React.FC<TagProps> = ({text, className, tagId}) => {
     return (
         <TagGlobalStyle className={`tag tag-${className}`}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
