@@ -29,13 +29,25 @@
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        & h3 {
+            // flex-grow: 1;
+            flex-shrink: 0;
+            // flex-basis: auto;
+        }
         
         & .postTopSection-dot{
             align-self: center;
+            // flex-grow: 0;
+            flex-shrink: 1;
+            // flex-basis: auto;
         }
         
         & .postTopSection-description{
             font-style: italic;
+            // flex-grow: 0;
+            flex-shrink: 1;
+            // flex-basis: auto;
         }
     }
     & .postTopSection-tags{
