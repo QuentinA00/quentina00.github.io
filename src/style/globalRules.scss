@@ -12,7 +12,7 @@ body {
         flex-direction: column;
     }
 }
---root {
+:root {
     @include mixin.transition(.15s);
 }
 

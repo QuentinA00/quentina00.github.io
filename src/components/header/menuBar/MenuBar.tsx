@@ -21,7 +21,6 @@ interface MenuBarProps {
 const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
-
     const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})
     
     return (
@@ -45,7 +44,8 @@ const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
                 ))}
             </div>
 
-            {isOnMobileScreen && <div className="divider2"></div>}
+            {/* ---------- below is the code for menubar items/icons : divider on mobile + menubar items ---------- */}
+            {/* {isOnMobileScreen && <div className="divider2"></div>} */}
 
             {/* mapping menuBar elements */}
             {/* <div className="menuBar-items">

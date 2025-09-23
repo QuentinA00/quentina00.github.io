@@ -9,6 +9,7 @@
         padding: .2rem 1.3rem;
         border-radius: 3rem;
         @include mixin.hoverLink3;
+        white-space: nowrap;
     }
     
     & .menuBarItem-dotPoint{
@@ -66,7 +67,12 @@
             padding: .2rem 1rem;
         }
         & .menuBarItem-buttonWithIcon {
+            // background: var(--color3);
+            background: red;
+        }
+        &.menuBarItem-selected{
             background: var(--color3);
+            border-radius: 3rem;
         }
     }
 }

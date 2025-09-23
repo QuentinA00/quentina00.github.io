@@ -18,13 +18,15 @@
     
     &.menuBar-mobile {
         background: var(--color3);
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 1rem;
         flex-direction: column;
         row-gap: 2rem;
+        margin-right: 0;
         
         & .menuBar-pagesLinks{
-            gap: 1.5rem;
+            row-gap: 1.5rem;
+            column-gap: 0;
             justify-content: center;
             align-items: center;
         }
