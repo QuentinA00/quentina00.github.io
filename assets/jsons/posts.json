@@ -252,15 +252,16 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/quentinvespero/kosmo_front_web"},
-                    {"linkName": "Try the current version online (in dev)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
+                    {"linkName": "Github repot front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
+                    {"linkName": "Github repot (v2)","link": "https://github.com/quentinvespero/kosmo"},
+                    {"linkName": "Current version online (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
                 ],
                 "medias": {
                     "videos":[
                         {
                             "id": 1,
                             "linkPath": "https://youtu.be/mfaUbzyOqTk",
-                            "text": "A video showing of the project"
+                            "text": "A video showing off the project"
                         }
                     ],
                     "images":[
