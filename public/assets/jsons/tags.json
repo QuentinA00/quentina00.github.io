@@ -1,7 +1,8 @@
 [
     { "id": "tag_js", "text": "Javascript / Typescript", "skillCategory": "Software Development" },
     { "id": "tag_react", "text": "ReactJS", "skillCategory": "Software Development" },
-    { "id": "tag_node", "text": "NodeJS / NextJS", "skillCategory": "Software Development" },
+    { "id": "tag_node", "text": "NodeJS", "skillCategory": "Software Development" },
+    { "id": "tag_next", "text": "NextJS", "skillCategory": "Software Development" },
     { "id": "tag_python", "text": "Python", "skillCategory": "Software Development" },
     { "id": "tag_postgre", "text": "PostgreSQL", "skillCategory": "Software Development" },
     { "id": "tag_mongo", "text": "MongoDB", "skillCategory": "Software Development" },
@@ -19,5 +20,20 @@
     { "id": "tag_whisper", "text": "Whisper.cpp", "skillCategory": "Software Development" },
     { "id": "tag_qdrant", "text": "Qdrant", "skillCategory": "Software Development" },
     { "id": "tag_ytdlp", "text": "Yt-Dlp", "skillCategory": "Dev Tools" },
-    { "id": "tag_docker", "text": "Docker", "skillCategory": "Dev Tools" }
+    { "id": "tag_docker", "text": "Docker", "skillCategory": "Dev Tools" },
+    { "id": "tag_ios", "text": "iOS app", "skillCategory": "Mobile Development" },
+    { "id": "tag_vibeCoding", "text": "Vibe-Coding", "skillCategory": "Dev Tools" },
+    { "id": "tag_appStore", "text": "AppStore Connect", "skillCategory": "Mobile Development" },
+    { "id": "tag_chromeExtension", "text": "Chrome extension", "skillCategory": "Software Development" },
+    { "id": "tag_vite", "text": "Vite", "skillCategory": "Dev Tools" },
+    { "id": "tag_styledComponents", "text": "Styled Components", "skillCategory": "Software Development" },
+    { "id": "tag_reactContext", "text": "React Context", "skillCategory": "Software Development" },
+    { "id": "tag_reactRouter", "text": "React-Router", "skillCategory": "Software Development" },
+    { "id": "tag_suspense", "text": "Suspense / Fallback", "skillCategory": "Software Development" },
+    { "id": "tag_errorBoundaries", "text": "Error Boundaries", "skillCategory": "Software Development" },
+    { "id": "tag_githubPages", "text": "Github Pages", "skillCategory": "Dev Tools" },
+    { "id": "tag_framerMotion", "text": "Framer Motion", "skillCategory": "Software Development" },
+    { "id": "tag_reactResponsive", "text": "React-Responsive", "skillCategory": "Software Development" },
+    { "id": "tag_scss", "text": "Scss", "skillCategory": "Software Development" },
+    { "id": "tag_swiper", "text": "Swiper", "skillCategory": "Software Development" }
 ]
