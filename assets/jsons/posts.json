@@ -12,25 +12,7 @@
                     "I love to learn new technologies, and enhance my skills.",
                     "As of now, my expertise includes those languages / technologies:"
                 ],
-                "tags": [
-                    { "id": "tag1", "text": "Javascript / Typescript", "skillCategory":"Software Development" },
-                    { "id": "tag2", "text": "ReactJS", "skillCategory":"Software Development" },
-                    { "id": "tag3", "text": "NodeJS / NextJS", "skillCategory":"Software Development" },
-                    { "id": "tag4", "text": "Python", "skillCategory":"Software Development" },
-                    { "id": "tag5", "text": "PostgreSQL", "skillCategory":"Software Development" },
-                    { "id": "tag6", "text": "MongoDB", "skillCategory":"Software Development" },
-                    { "id": "tag7", "text": "Git", "skillCategory":"Dev Tools" },
-                    { "id": "tag8", "text": "Jupyter Notebook", "skillCategory":"Dev Tools" },
-                    { "id": "tag9", "text": "LLM integration", "skillCategory":"Software Development" },
-                    { "id": "tag10", "text": "Linux", "skillCategory":"IT" },
-                    { "id": "tag11", "text": "Debian", "skillCategory":"IT" },
-                    { "id": "tag12", "text": "Proxmox", "skillCategory":"IT" },
-                    { "id": "tag13", "text": "Figma", "skillCategory":"Artistic" },
-                    { "id": "tag14", "text": "Notion", "skillCategory":"Dev Tools" },
-                    { "id": "tag15", "text": "Obsidian", "skillCategory":"IT" },
-                    { "id": "tag16", "text": "CursorAI", "skillCategory":"IT" },
-                    { "id": "tag17", "text": "Ollama", "skillCategory":"Dev Tools" }
-                ],
+                "tagsId":["tag_js","tag_react","tag_node","tag_next","tag_python","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
                 "postsLinks": [
                     {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
                 ]
@@ -42,6 +24,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Semantic searches on audio transcripts",
                 "description": "Python script for creating/storing audio transcripts in vector db (in progress)",
+                "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "tags": [
                     { "id": "tag1", "text": "Python" },
                     { "id": "tag2", "text": "Jupyter Notebook" },
@@ -73,13 +56,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Temporo",
                 "description": "A simple and flexible app to manage timers and habits",
-                "tags": [
-                    { "id": "tag1", "text": "iOS app" },
-                    { "id": "tag2", "text": "Vibe-Coding" },
-                    { "id": "tag3", "text": "CursorAI" },
-                    { "id": "tag4", "text": "Figma" },
-                    { "id": "tag5", "text": "AppStore Connect" }
-                ],
+                "tagsId": ["tag_ios", "tag_vibeCoding", "tag_cursor", "tag_figma", "tag_appStore"],
                 "medias": {
                     "images":[
                         {
@@ -139,19 +116,7 @@
                 "projectOrigin": "Personal project",
                 "title": "WebInsights",
                 "description": "A Chrome extension to get summaries and informations about websites. (In progress)",
-                "tags": [
-                    { "id": "tag1", "text": "Chrome extension" },
-                    { "id": "tag2", "text": "Javascript / Typescript" },
-                    { "id": "tag3", "text": "LLM / AI integration" },
-                    { "id": "tag4", "text": "ReactJS" },
-                    { "id": "tag5", "text": "Vite" },
-                    { "id": "tag6", "text": "Styled Components" },
-                    { "id": "tag7", "text": "React Context" },
-                    { "id": "tag8", "text": "React-Router" },
-                    { "id": "tag9", "text": "Suspense / Fallback" },
-                    { "id": "tag10", "text": "Error Boundaries" },
-                    { "id": "tag11", "text": "Github Pages" }
-                ],
+                "tagsId": ["tag_chromeExtension", "tag_js", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
                 "postTextParagraphs": [
                     "It aims to be a simple Chrome extension that provides summaries and explanations using the context of the current webpage.",
                     "Initially, the idea behind this extension was to use Chrome's built-in Gemini Nano LLM, relying solely on a local LLM for inference within the app.",
@@ -191,18 +156,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
-                "tags": [
-                    { "id": "tag1", "text": "Javascript / Typescript" },
-                    { "id": "tag2", "text": "ReactJS" },
-                    { "id": "tag3", "text": "Vite" },
-                    { "id": "tag4", "text": "Suspense / Fallback" },
-                    { "id": "tag5", "text": "Error Boundaries" },
-                    { "id": "tag6", "text": "Github Pages" },
-                    { "id": "tag7", "text": "Framer Motion" },
-                    { "id": "tag8", "text": "React-Responsive" },
-                    { "id": "tag9", "text": "React-Router" },
-                    { "id": "tag10", "text": "Scss" }
-                ],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss"],
                 "postTextParagraphs": [
                     "When I built this website, I envisioned it as a kind of website template structure that could be used for many different websites.", 
                     "It aims to be quite flexible, with the text of the entire application managed through a JSON file (to handle translations for example) and another JSON file for the 'posts', like the projects in this list.",
@@ -227,16 +181,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Kosmo Project",
                 "description": "An ideal social network for me. (In progress...)",
-                "tags": [
-                    { "id": "tag1", "text": "Javascript / Typescript" },
-                    { "id": "tag2", "text": "ReactJS" },
-                    { "id": "tag3", "text": "Vite" },
-                    { "id": "tag4", "text": "Suspense / Fallback" },
-                    { "id": "tag5", "text": "Error Boundaries" },
-                    { "id": "tag6", "text": "Github Pages" },
-                    { "id": "tag7", "text": "Scss" },
-                    { "id": "tag8", "text": "NodeJS" }
-                ],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next"],
                 "postTextParagraphs": [
                     "The idea behind this project was to create my ideal Twitter-like social network.",
                     "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
@@ -291,13 +236,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Coaching section",
                 "description": "React web app to find coaches by topics",
-                "tags": [
-                    { "id": "tag1", "text": "Javascript / Typescript" },
-                    { "id": "tag2", "text": "ReactJS" },
-                    { "id": "tag3", "text": "Vite" },
-                    { "id": "tag7", "text": "Scss" },
-                    { "id": "tag8", "text": "Swiper" }
-                ],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
                 "postTextParagraphs": [
                     "It aims to be a pretty simple web app that needs to be fed with a JSON file containing coaches in different topics.", 
                     "It allows clients to find the perfect coach for their needs.",
