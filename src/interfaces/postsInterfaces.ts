@@ -18,7 +18,7 @@ export interface PostMediasInterface {
 export interface TagInterface{
     id:string
     text: string
-    skillCategory?:string
+    category:string
 }
 
 // interface for the link
