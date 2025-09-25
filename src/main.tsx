@@ -7,6 +7,7 @@ import { HashRouter } from 'react-router-dom'
 import FallbackError from './components/fallbackComponents/FallbackError.tsx'
 import FallbackLoading from './components/fallbackComponents/FallbackLoading.tsx'
 import { PostsContextProvider } from './contexts/PostsContextProvider.tsx'
+import { TagsProvider } from './contexts/TagContextProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
@@ -14,7 +15,9 @@ createRoot(document.getElementById('root')!).render(
             <Suspense fallback={<FallbackLoading/>}>
                 <HashRouter>
                     <PostsContextProvider>
-                        <App />
+                        <TagsProvider>
+                            <App />
+                        </TagsProvider>
                     </PostsContextProvider>
                 </HashRouter>
             </Suspense>

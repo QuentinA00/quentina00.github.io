@@ -1,13 +1,14 @@
 import styled from "styled-components"
-import { PostTagsInterface } from "../../interfaces/postsInterfaces"
+// import { PostTagsInterface } from "../../interfaces/postsInterfaces"
+import { useTags } from "../../contexts/TagContextProvider"
 
 interface TagProps {
-    text:PostTagsInterface['text']
+    // text?:PostTagsInterface['text']
     className?:string
-    tagId?:string
+    tagId:string
 }
 
-export const TagGlobalStyle = styled.div`
+const TagGlobalStyle = styled.div`
     display: flex;
     align-items: center;
     background: var(--color2);
@@ -30,14 +31,24 @@ export const TagGlobalStyle = styled.div`
     }
 `
 
-const Tag:React.FC<TagProps> = ({text, className, tagId}) => {
+const Tag:React.FC<TagProps> = ({className, tagId}) => {
+
+    const {getTagById} = useTags()
+
+    const tag = getTagById(tagId)
+
+    if (!tag) {
+        console.warn(`Tag with id "${tagId}" not found`)
+        return null
+    }
+
     return (
         <TagGlobalStyle className={`tag tag-${className}`}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle className="circle1" cx="9" cy="9" r="4" fill="#F1F1F1"/>
                 <circle className="circle2" cx="9" cy="9" r="8.15" stroke="#F1F1F1" strokeWidth="1.7"/>
             </svg>
-            <p>{text}</p>
+            {tagId && <p>{tag?.text}</p>}
         </TagGlobalStyle>
     )
 }

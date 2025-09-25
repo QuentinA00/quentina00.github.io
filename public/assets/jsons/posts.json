@@ -12,6 +12,7 @@
                     "I love to learn new technologies, and enhance my skills.",
                     "As of now, my expertise includes those languages / technologies:"
                 ],
+                "tagsId":["tag_js","tag_react","tag_node","tag_python","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
                 "tags": [
                     { "id": "tag1", "text": "Javascript / Typescript", "skillCategory":"Software Development" },
                     { "id": "tag2", "text": "ReactJS", "skillCategory":"Software Development" },
@@ -42,6 +43,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Semantic searches on audio transcripts",
                 "description": "Python script for creating/storing audio transcripts in vector db (in progress)",
+                "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "tags": [
                     { "id": "tag1", "text": "Python" },
                     { "id": "tag2", "text": "Jupyter Notebook" },
