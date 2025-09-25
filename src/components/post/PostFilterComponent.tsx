@@ -103,17 +103,17 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     // for mobile, when tags are hidden to avoid having too many that takes too much place
     const [tagsHidden, setTagsHidden] = useState<boolean|undefined>(isOnSmallerScreen ? true : undefined)
 
-    // Extract all unique tags from the project posts
-    const uniqueTags = Array.from(
-        new Set(projectPosts.flatMap(post => post.tags?.map(tag => tag.text) || []))
+    // Extract all unique tags from the projects posts
+    const projectsTagsId = Array.from(
+        new Set(projectPosts.flatMap(post => post.tagsId?.map(tag => tag) || []))
     )
 
     // Handle tag selection toggling
-    const handleTagToggle = (tag: string) => {
+    const handleTagToggle = (tagId: string) => {
         setSelectedTags(prevSelectedTags =>
-            prevSelectedTags.includes(tag)
-                ? prevSelectedTags.filter(selectedTag => selectedTag !== tag)
-                : [...prevSelectedTags, tag]
+            prevSelectedTags.includes(tagId)
+                ? prevSelectedTags.filter(selectedTag => selectedTag !== tagId)
+                : [...prevSelectedTags, tagId]
         )
     }
 
@@ -124,9 +124,9 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
 
             <div className="tagListItems">
 
-                {uniqueTags.slice(0, isOnSmallerScreen ? tagsHidden ? 3 : uniqueTags.length : undefined).map(tag => (
-                    <div className='tagSelector' key={tag} onClick={() => handleTagToggle(tag)}>
-                        <Tag key={tag} text={tag} className={`selector ${selectedTags.includes(tag) ? 'tag-selected' : ''}`}/>
+                {projectsTagsId.slice(0, isOnSmallerScreen ? tagsHidden ? 3 : projectsTagsId.length : undefined).map(tagId => (
+                    <div className='tagSelector' key={tagId} onClick={() => handleTagToggle(tagId)}>
+                        <Tag key={tagId} tagId={tagId} className={`selector ${selectedTags.includes(tagId) ? 'tag-selected' : ''}`}/>
                     </div>
                 ))}
 

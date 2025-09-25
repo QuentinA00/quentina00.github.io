@@ -1,7 +1,7 @@
 import PostContainer from "../components/post/PostContainer"
 import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import { fetchWithPromise } from "../utils/api/promiseWrapper"
-import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
+import { PostsInterfaceWithLanguage, TagInterface } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/post/PostFilterComponent"
 import { useState } from "react"
 import { screen_desktop } from "../utils/responsiveUtils"
@@ -43,6 +43,8 @@ const Style = styled.div`
 
 const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
 
+    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
+
     // gather posts data from json, according to the selected language
     const posts:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
 
@@ -50,13 +52,11 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
     const projectsPosts = posts.projects
 
     // tags selected in PostFilterComponent
-    const [selectedTags, setSelectedTags] = useState<string[]>([])
-
-    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
-
+    const [selectedTags, setSelectedTags] = useState<TagInterface['id'][]>([])
+    
     const filteredPosts = projectsPosts.filter(post =>
         selectedTags.length === 0 ||
-        (post.tags?.some(tag => selectedTags.includes(tag.text)) || false)
+        (post.tagsId?.some(tagId => selectedTags.includes(tagId)) || false)
     )
 
     return (
