@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { PostsInterface } from '../../interfaces/postsInterfaces'
 import Tag from './Tag'
 import { styleVariables } from '../../style/globalRules'
 import { useMediaQuery } from 'react-responsive'
 import { screen_desktop } from '../../utils/responsiveUtils'
+import { useTags } from '../../contexts/TagContextProvider'
 
 // Styled component for both container and buttons
 const Style = styled.div`
@@ -100,16 +101,35 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     
     const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
 
+    const {getTagsByIds} = useTags()
+
     // for mobile, when tags are hidden to avoid having too many that takes too much place
     const [tagsHidden, setTagsHidden] = useState<boolean|undefined>(isOnSmallerScreen ? true : undefined)
 
     // Extract all unique tags from the projects posts
-    const projectsTagsId = Array.from(
+    // we don't get them from tags context, because then we would get tags that are not used in projects
+    const postsTagsIds = Array.from(
         new Set(projectPosts.flatMap(post => post.tagsId?.map(tag => tag) || []))
     )
 
+    // get all the tags object from the posts's ids
+    const postsTags = useMemo(
+        () => getTagsByIds(postsTagsIds),
+        [postsTagsIds]
+    )
+
+    // get all unique categories from the tags
+    const postTagsCategories = useMemo(
+        () => Array.from(new Set(postsTags.map(tag => tag.category))), // here, for info, Set store unique value only
+        [postsTags]
+    )
+
+    console.log('------------------------------------------',postTagsCategories)
+
+    // const projectsCategoriesStructure = postsTags.map
+
     // Handle tag selection toggling
-    const handleTagToggle = (tagId: string) => {
+    const handleTagSelectionToggle = (tagId: string) => {
         setSelectedTags(prevSelectedTags =>
             prevSelectedTags.includes(tagId)
                 ? prevSelectedTags.filter(selectedTag => selectedTag !== tagId)
@@ -124,11 +144,23 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
 
             <div className="tagListItems">
 
-                {projectsTagsId.slice(0, isOnSmallerScreen ? tagsHidden ? 3 : projectsTagsId.length : undefined).map(tagId => (
-                    <div className='tagSelector' key={tagId} onClick={() => handleTagToggle(tagId)}>
+                {postsTagsIds.slice(0, isOnSmallerScreen ? tagsHidden ? 3 : postsTagsIds.length : undefined).map(tagId => (
+                    <div className='tagSelector' key={tagId} onClick={() => handleTagSelectionToggle(tagId)}>
                         <Tag key={tagId} tagId={tagId} className={`selector ${selectedTags.includes(tagId) ? 'tag-selected' : ''}`}/>
                     </div>
                 ))}
+
+                {/* <div className="tagListItems-category">
+                    <p>Tags by category</p>
+
+                    {!isOnSmallerScreen && postsTags.map(tag =>(
+                        <div className="tagCategory">
+                            <div className="tagSelector">
+                                <Tag tagId={tag.id} />
+                            </div>
+                        </div>
+                    ))}
+                </div> */}
 
                 {isOnSmallerScreen && tagsHidden && <div className='postFilterShowMoreButton postFilterShowMoreButton-showMoreItems' onClick={() => setTagsHidden(!tagsHidden)}>show more...</div>}
                 
