@@ -6,15 +6,7 @@ export interface PostMediasInterface {
     text:string
 }
 
-// interface for the tags
-// deprecated
-// export interface PostTagsInterface {
-//     id: string
-//     text: string
-//     skillCategory?:string
-// }
-
-// (new) interface for tag
+// interface for tag
 export interface TagInterface{
     id:string
     text: string
@@ -38,8 +30,7 @@ export interface PostInterface {
     projectOrigin?: string
     title?:string
     description?:string
-    // tags?: PostTagsInterface[] // deprecated
-    tagsId?: string[] // new
+    tagsId?: string[]
     postTextParagraphs: [string]
     postTextKeyPoints?:{
         text:string
