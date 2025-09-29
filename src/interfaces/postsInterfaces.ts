@@ -1,3 +1,7 @@
+export interface TagGroupedByCategory{
+    
+}
+
 // interface for the links of the project
 export interface PostMediasInterface {
     id:string

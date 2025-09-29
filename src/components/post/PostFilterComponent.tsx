@@ -101,7 +101,8 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     
     const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
 
-    const {getTagsByIds} = useTags()
+    // get function to get tag object from context
+    const {getTagsByIds, getTagsGroupedByCategory} = useTags()
 
     // for mobile, when tags are hidden to avoid having too many that takes too much place
     const [tagsHidden, setTagsHidden] = useState<boolean|undefined>(isOnSmallerScreen ? true : undefined)
@@ -118,15 +119,23 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
         [postsTagsIds]
     )
 
-    // get all unique categories from the tags
+    // get all unique categories from the tags used in posts
     const postTagsCategories = useMemo(
         () => Array.from(new Set(postsTags.map(tag => tag.category))), // here, for info, Set store unique value only
         [postsTags]
     )
+    
+    // create the structure to group the tags by their category
+    const tagsByCategory = useMemo(
+        () => getTagsGroupedByCategory(postsTagsIds),
+        [postsTagsIds]
+    )
 
-    console.log('------------------------------------------',postTagsCategories)
+    console.log('----------------------get tags grouped--------------------',tagsByCategory)
 
-    // const projectsCategoriesStructure = postsTags.map
+    // since groupBy is quite a new thing (ES2024), ensure the browser actually supports it
+    // render a non-grouped version of tag filter if browser doesn't support it
+    // const hasGroupByFeature = typeof (Object as any).groupBy === 'function'
 
     // Handle tag selection toggling
     const handleTagSelectionToggle = (tagId: string) => {
@@ -150,17 +159,17 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
                     </div>
                 ))}
 
-                {/* <div className="tagListItems-category">
+                <div className="tagListItems-category">
                     <p>Tags by category</p>
 
-                    {!isOnSmallerScreen && postsTags.map(tag =>(
+                    {/* {!isOnSmallerScreen && tagsByCategory.map(tag =>(
                         <div className="tagCategory">
                             <div className="tagSelector">
                                 <Tag tagId={tag.id} />
                             </div>
                         </div>
-                    ))}
-                </div> */}
+                    ))} */}
+                </div>
 
                 {isOnSmallerScreen && tagsHidden && <div className='postFilterShowMoreButton postFilterShowMoreButton-showMoreItems' onClick={() => setTagsHidden(!tagsHidden)}>show more...</div>}
                 
