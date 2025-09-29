@@ -102,7 +102,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
 
     // get function to get tag object from context
-    const {getTagsByIds, getTagsGroupedByCategory} = useTags()
+    const {getTagsGroupedByCategory} = useTags()
 
     // for mobile, when tags are hidden to avoid having too many that takes too much place
     const [tagsHidden, setTagsHidden] = useState<boolean|undefined>(isOnSmallerScreen ? true : undefined)
@@ -113,29 +113,11 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
         new Set(projectPosts.flatMap(post => post.tagsId?.map(tag => tag) || []))
     )
 
-    // get all the tags object from the posts's ids
-    const postsTags = useMemo(
-        () => getTagsByIds(postsTagsIds),
-        [postsTagsIds]
-    )
-
-    // get all unique categories from the tags used in posts
-    const postTagsCategories = useMemo(
-        () => Array.from(new Set(postsTags.map(tag => tag.category))), // here, for info, Set store unique value only
-        [postsTags]
-    )
-    
     // create the structure to group the tags by their category
     const tagsByCategory = useMemo(
         () => getTagsGroupedByCategory(postsTagsIds),
         [postsTagsIds]
     )
-
-    console.log('----------------------get tags grouped--------------------',tagsByCategory)
-
-    // since groupBy is quite a new thing (ES2024), ensure the browser actually supports it
-    // render a non-grouped version of tag filter if browser doesn't support it
-    // const hasGroupByFeature = typeof (Object as any).groupBy === 'function'
 
     // Handle tag selection toggling
     const handleTagSelectionToggle = (tagId: string) => {
@@ -151,7 +133,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
             
             <p className='postFilterComponent-title'>Filter the projects by tags :</p>
 
-            <div className="tagListItems">
+            {isOnSmallerScreen && <div className="tagListItems">
 
                 {postsTagsIds.slice(0, isOnSmallerScreen ? tagsHidden ? 3 : postsTagsIds.length : undefined).map(tagId => (
                     <div className='tagSelector' key={tagId} onClick={() => handleTagSelectionToggle(tagId)}>
@@ -159,21 +141,29 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
                     </div>
                 ))}
 
-                <div className="tagListItems-category">
-                    <p>Tags by category</p>
-
-                    {/* {!isOnSmallerScreen && tagsByCategory.map(tag =>(
-                        <div className="tagCategory">
-                            <div className="tagSelector">
-                                <Tag tagId={tag.id} />
-                            </div>
-                        </div>
-                    ))} */}
-                </div>
-
-                {isOnSmallerScreen && tagsHidden && <div className='postFilterShowMoreButton postFilterShowMoreButton-showMoreItems' onClick={() => setTagsHidden(!tagsHidden)}>show more...</div>}
+                {isOnSmallerScreen && tagsHidden && 
+                    <div 
+                        className='postFilterShowMoreButton postFilterShowMoreButton-showMoreItems' 
+                        onClick={() => setTagsHidden(!tagsHidden)}
+                    >
+                        show more...
+                    </div>
+                }
                 
-            </div>
+            </div>}
+
+            {!isOnSmallerScreen && <div className="tagListedByCategory">
+                {tagsByCategory.map(categoryObject => (
+                    <div className="tagCategory" key={categoryObject.category}>
+                        <p>{categoryObject.category}</p>
+                        {categoryObject.tags.map(tag => (
+                            <div className="tagSelector" onClick={() => handleTagSelectionToggle(tag.id)} key={tag.id}>
+                                <Tag tagId={tag.id} isSelected={selectedTags.includes(tag.id)}/>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>}
         </Style>
     )
 }

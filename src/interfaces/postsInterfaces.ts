@@ -1,5 +1,7 @@
+// interface for tags grouped by category
 export interface TagGroupedByCategory{
-    
+    category:string
+    tags: TagInterface[]
 }
 
 // interface for the links of the project
