@@ -71,6 +71,24 @@ const Style = styled.div`
             }
         }
     }
+    & .tagListedByCategory {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        
+        & .tagCategory {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            row-gap:0.5rem;
+
+            & .tagItems {
+                display:flex;
+                flex-wrap:wrap;
+                gap:.5rem;
+            }
+        }
+    }
     
     // on mobile, button that show/hide the list of tags
     .postFilterShowMoreButton{
@@ -156,11 +174,13 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
                 {tagsByCategory.map(categoryObject => (
                     <div className="tagCategory" key={categoryObject.category}>
                         <p>{categoryObject.category}</p>
-                        {categoryObject.tags.map(tag => (
-                            <div className="tagSelector" onClick={() => handleTagSelectionToggle(tag.id)} key={tag.id}>
-                                <Tag tagId={tag.id} isSelected={selectedTags.includes(tag.id)}/>
-                            </div>
-                        ))}
+                        <div className="tagItems">
+                            {categoryObject.tags.map(tag => (
+                                <div className="tagSelector" onClick={() => handleTagSelectionToggle(tag.id)} key={tag.id}>
+                                    <Tag tagId={tag.id} isSelected={selectedTags.includes(tag.id)}/>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>}
