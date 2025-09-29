@@ -74,13 +74,13 @@ const Style = styled.div`
     & .tagListedByCategory {
         display: flex;
         flex-direction: column;
-        row-gap: 1.5rem;
+        row-gap: 1.7rem;
         
         & .tagCategory {
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            row-gap:0.5rem;
+            row-gap:0.7rem;
 
             & .tagItems {
                 display:flex;

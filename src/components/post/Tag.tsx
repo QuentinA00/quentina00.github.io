@@ -1,5 +1,4 @@
 import styled from "styled-components"
-// import { PostTagsInterface } from "../../interfaces/postsInterfaces"
 import { useTags } from "../../contexts/TagContextProvider"
 
 interface TagProps {
@@ -43,7 +42,7 @@ const Tag:React.FC<TagProps> = ({className, tagId, isSelected}) => {
     }
 
     return (
-        <TagGlobalStyle className={`tag tag-${className} ${isSelected ? 'tag' : 'tag-selected'}`}>
+        <TagGlobalStyle className={`tag tag-${className} ${isSelected ? 'tag-selected' : ''}`}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle className="circle1" cx="9" cy="9" r="4" fill="#F1F1F1"/>
                 <circle className="circle2" cx="9" cy="9" r="8.15" stroke="#F1F1F1" strokeWidth="1.7"/>
