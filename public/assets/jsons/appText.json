@@ -23,9 +23,9 @@
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
-                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account"},
-                {"id":"item2","text":"twitter / X","icon":"x.svg","link":"", "description":"my personal Twitter / X"},
-                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/GWB8W6f8", "description":"my Discord"}
+                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account (main)"},
+                {"id":"item2","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"my Telegram"},
+                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "copyright":{
                 "title":"Copyright",
