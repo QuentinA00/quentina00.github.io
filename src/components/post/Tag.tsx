@@ -32,6 +32,7 @@ const TagGlobalStyle = styled.div`
     }
     
     /* below the !important should be removed when the component TagSelector will be used */
+    /* tag-selected is only meant to be used when tag component is used in post filter component, as a filter button */
     &.tag-selected{
         color:${styleVariables.color2} !important;
         background:${styleVariables.color1} !important;
