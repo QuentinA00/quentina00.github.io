@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { PostsInterface } from '../../interfaces/postsInterfaces'
-import Tag from './Tag'
+import Tag from '../post/Tag'
 import { styleVariables } from '../../style/globalRules'
 import { useMediaQuery } from 'react-responsive'
 import { screen_desktop } from '../../utils/responsiveUtils'
@@ -19,16 +19,15 @@ const Style = styled.div`
     border-radius: 1.5rem;
     background: var(--color3);
     border: solid .15rem var(--color3);
+    &.postFilterComponent-smallerScreen{
+        position:unset;
+    }
 
     & .postFilterComponent-title{
         font-weight:600;
     }
     
-    &.postFilterComponent-smallerScreen{
-        position:unset;
-    }
-    
-    .tagListItems {
+    & .tagListItems {
         display: flex;
         align-content:flex-start;
         column-gap: .7rem;
@@ -36,41 +35,8 @@ const Style = styled.div`
         flex-wrap: wrap;
         align-items:center;
         
-        .tagSelector {
-
-            // below, the values for the colors are not mean to change, it uses the same colors in both light and dark mode
-            // will have to move this style in the tag component later, to make it cleaner
-            .tag {
-                cursor:pointer;
-                transition:ease-in-out .15s;
-                color:${styleVariables.color1};
-                background:${styleVariables.color2};
-                border:solid .1rem var(--color3);
-                
-                &:hover{
-                    filter:brightness(.95);
-                }
-                &:active{
-                    transform:scale(.97);
-                }
-                
-                & svg{
-                    .circle1{fill:${styleVariables.color2}}
-                    .circle2{stroke:${styleVariables.color1}}
-                }
-                
-                &.tag-selected{
-                    color:${styleVariables.color2};
-                    background:${styleVariables.color1};
-                    
-                    & svg{
-                        .circle1{fill:${styleVariables.color2}}
-                        .circle2{stroke:${styleVariables.color2}}
-                    }
-                }
-            }
-        }
     }
+    
     & .tagListedByCategory {
         display: flex;
         flex-direction: column;
@@ -86,6 +52,32 @@ const Style = styled.div`
                 display:flex;
                 flex-wrap:wrap;
                 gap:.5rem;
+            }
+        }
+    }
+
+    // will have to move this style in the tagSelector component later
+    .tagSelector {
+        
+        // style only for tags that act as button in the filter component
+        // the values for the colors are not mean to change, it uses the same colors in both light and dark mode
+        & .tag {
+            cursor:pointer;
+            transition:ease-in-out .15s;
+            color:${styleVariables.color1};
+            background:${styleVariables.color2};
+            border:solid .1rem var(--color3);
+            
+            &:hover{
+                filter:brightness(.95);
+            }
+            &:active{
+                transform:scale(.97);
+            }
+            
+            & svg{
+                .circle1{fill:none}
+                .circle2{stroke:${styleVariables.color1}}
             }
         }
     }
