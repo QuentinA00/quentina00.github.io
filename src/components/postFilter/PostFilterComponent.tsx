@@ -48,6 +48,10 @@ const Style = styled.div`
             flex-direction: column;
             row-gap:0.7rem;
 
+            & .categoryText{
+                font-size:.9rem;
+            }
+
             & .tagItems {
                 display:flex;
                 flex-wrap:wrap;
@@ -165,7 +169,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
             {!isOnSmallerScreen && <div className="tagListedByCategory">
                 {tagsByCategory.map(categoryObject => (
                     <div className="tagCategory" key={categoryObject.category}>
-                        <p>{categoryObject.category}</p>
+                        <p className='categoryText'>{categoryObject.category}</p>
                         <div className="tagItems">
                             {categoryObject.tags.map(tag => (
                                 <div className="tagSelector" onClick={() => handleTagSelectionToggle(tag.id)} key={tag.id}>

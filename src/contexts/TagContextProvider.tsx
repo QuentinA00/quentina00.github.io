@@ -44,7 +44,7 @@ export const TagsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         // console.log('------ tag context getTagsGroupedByCategory ------',groupedTags)
 
         return Object.keys(groupedTags)
-            .sort()
+            // .sort().reverse()
             // retrieve the tag object from groupedTags for each category
             .map(category => ({category, tags: groupedTags[category]}))
     }
