@@ -4,7 +4,7 @@ import { fetchWithPromise } from "../utils/api/promiseWrapper"
 import { PostsInterfaceWithLanguage, TagInterface } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/postFilter/PostFilterComponent"
 import { useState } from "react"
-import { screen_desktop } from "../utils/responsiveUtils"
+import { screen_desktop_medium, screen_desktop_small } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { AnimatePresence } from "framer-motion"
 import AnimationWrapper from "../components/AnimationWrapper"
@@ -33,6 +33,10 @@ const Style = styled.div`
         flex-direction: column;
         row-gap: 3rem;
         flex: 3;
+
+        &.projectItems-mediumScreen{
+            flex:2;
+        }
     }
     
     .postFilter {
@@ -43,7 +47,10 @@ const Style = styled.div`
 
 const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
 
-    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
+    // below 1200px screen width
+    const isOnDesktopSmallScreen = useMediaQuery({maxWidth:screen_desktop_small})
+    // below 1600px screen width
+    const isOnDesktopMediumScreen = useMediaQuery({maxWidth:screen_desktop_medium})
 
     // gather posts data from json, according to the selected language
     const posts:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
@@ -60,8 +67,8 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
     )
 
     return (
-        <Style className={`projects ${isOnSmallerScreen ? 'projects-smallerScreen' : ''}`}>
-            <div className="projectItems">
+        <Style className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
+            <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
                 {filteredPosts.map(projectData => (
                     <PostContainer
                         key={projectData.id}

@@ -4,7 +4,7 @@ import { PostsInterface } from '../../interfaces/postsInterfaces'
 import Tag from '../post/Tag'
 import { styleVariables } from '../../style/globalRules'
 import { useMediaQuery } from 'react-responsive'
-import { screen_desktop } from '../../utils/responsiveUtils'
+import { screen_desktop_small } from '../../utils/responsiveUtils'
 import { useTags } from '../../contexts/TagContextProvider'
 
 // Styled component for both container and buttons
@@ -34,13 +34,20 @@ const Style = styled.div`
         row-gap:.7rem;
         flex-wrap: wrap;
         align-items:center;
-        
     }
     
     & .tagListedByCategory {
         display: flex;
         flex-direction: column;
         row-gap: 1.7rem;
+
+        /* overflow-y: scroll;
+        max-height:78vh; */
+        /* border: solid .2rem var(--color3); */
+        /* background: var(--color3); */
+        /* border-radius: 1.5rem;
+        padding: 1.5rem; */
+        /* box-shadow: 0rem 0rem 1rem 1rem var(--color3) inset; */
         
         & .tagCategory {
             display: flex;
@@ -113,7 +120,7 @@ interface PostFilterProps {
 
 const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelectedTags, selectedTags }) => {
     
-    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop})
+    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop_small})
 
     // get function to get tag object from context
     const {getTagsGroupedByCategory} = useTags()

@@ -9,7 +9,7 @@
     { "id": "tag_qdrant", "text": "Qdrant", "category": "Software Development" },
     { "id": "tag_llmIntegration", "text": "LLM integration", "category": "Software Development" },
     { "id": "tag_styledComponents", "text": "Styled Components", "category": "React" },
-    { "id": "tag_reactRouter", "text": "React-Router", "category": "React" },
+    { "id": "tag_reactRouter", "text": "React Router", "category": "React" },
     { "id": "tag_errorBoundaries", "text": "Error Boundaries", "category": "React" },
     { "id": "tag_reactResponsive", "text": "React-Responsive", "category": "React" },
     { "id": "tag_vite", "text": "Vite", "category": "React" },
