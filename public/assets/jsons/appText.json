@@ -14,17 +14,18 @@
             "image":"flashcode.png"
         },
         "bottomSection": {
-            "contact": "Contact me",
+            "contact": "Socials",
             "mail":"",
             "professionalLinks":[
-                {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"my Linktree, with all the links to contact me"},
+                {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"item2","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
-                {"id":"item3","text":"github","icon":"github.svg","link":"https://github.com/QuentinA00", "description":"my professional Github account"}
+                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"personal Github account"},
+                {"id":"item2","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"my Telegram"},
+                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
                 {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account (main)"},
-                {"id":"item2","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"my Telegram"},
                 {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "copyright":{
