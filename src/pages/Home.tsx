@@ -24,7 +24,7 @@ const Home:React.FC<HomeProps> = ({appLanguage}) => {
 
     return (
         <div className="home">
-            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home"/>)}
+            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home" variantType='presentation'/>)}
         </div>
     )
 }

@@ -74,6 +74,7 @@ const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
                         key={projectData.id}
                         postData={projectData}
                         className="project"
+                        variantType='project'
                     />
                 ))}
             </div>

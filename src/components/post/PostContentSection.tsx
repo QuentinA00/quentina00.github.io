@@ -3,17 +3,18 @@ import { screen_tablet } from "../../utils/responsiveUtils"
 import MediaComponent from "../MediaComponent"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import PostTopSection from "./PostTopSection"
+import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 
 interface PostContentSectionProps {
     postData: PostInterface
 }
 
-const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
+const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = ({postData, variantType}) => {
 
     const smallerScreen = useMediaQuery({maxWidth:screen_tablet})
 
     return (
-        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${postData.id == 'presentation' ? 'postContentSection-presentation' : ''}`}>
+        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
 
             {postData.medias && <MediaComponent mediaData={postData.medias}/>}
 
@@ -24,12 +25,12 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                     ))}
                 </div>
 
-                {postData.id != 'presentation' && <div className="divider3"></div>}
+                {variantType == 'project' && <div className="divider3"></div>}
                 
                 {/* ##### the point here below is to show up the tags in the presentation section below the text, instead of above. But later when I'll rebuild PostContainer, the tags section will be a whole component perhaps, it's gonna be easier */}
-                {postData.id == 'presentation' && <PostTopSection postData={postData} />}
+                {variantType == 'presentation' && <PostTopSection postData={postData} />}
 
-                {postData.id != 'presentation' && <div className="postContentSection-keyPoints">
+                {variantType == 'project' && <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>
                     <ul>
                         {postData.postTextKeyPoints?.points.map((keyPoint) =>(
@@ -43,7 +44,7 @@ const PostContentSection:React.FC<PostContentSectionProps> = ({postData}) => {
                         key={linkItem.link} 
                         className="regularLink" 
                         href={linkItem.link} 
-                        target={postData.id == 'presentation' ? '_self' : '_blank'}>{linkItem.linkName}</a>
+                        target={variantType == 'presentation' ? '_self' : '_blank'}>{linkItem.linkName}</a>
                     )}
                 </div>
             </div>

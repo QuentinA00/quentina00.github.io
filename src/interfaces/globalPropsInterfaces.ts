@@ -9,3 +9,7 @@ export interface AppTextProps {
 // export interface ContextProviderProps {
 //     children:ReactNode
 // }
+
+export interface PostVariantProps {
+    variantType:'presentation'|'project'
+}
