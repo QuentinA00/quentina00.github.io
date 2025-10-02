@@ -28,7 +28,7 @@ const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = 
                 {variantType == 'project' && <div className="divider3"></div>}
                 
                 {/* ##### the point here below is to show up the tags in the presentation section below the text, instead of above. But later when I'll rebuild PostContainer, the tags section will be a whole component perhaps, it's gonna be easier */}
-                {variantType == 'presentation' && <PostTopSection postData={postData} />}
+                {variantType == 'presentation' && <PostTopSection postData={postData} variantType={variantType}/>}
 
                 {variantType == 'project' && <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>

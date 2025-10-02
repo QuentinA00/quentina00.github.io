@@ -20,6 +20,17 @@ const TagGlobalStyle = styled.div`
     padding-left: .4rem;
     column-gap: .5rem;
 
+    // style for tag in the home, in presentation
+    &.tag-presentation{
+        font-size:.9rem;
+        padding:0.3rem 1.25rem;
+        padding-left:.6rem;
+
+        & svg{
+            width:.9rem;
+        }
+    }
+
     & svg {
         width: .7rem;
 
@@ -60,7 +71,7 @@ const Tag:React.FC<TagProps> = ({className, tagId, isSelected}) => {
     }
 
     return (
-        <TagGlobalStyle className={`tag tag-${className} ${isSelected ? 'tag-selected' : ''}`}>
+        <TagGlobalStyle className={`tag ${className ? 'tag-'+className : ''} ${isSelected ? 'tag-selected' : ''}`}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle className="circle1" cx="9" cy="9" r="4" />
                 <circle className="circle2" cx="9" cy="9" r="8.15" strokeWidth="1.7"/>

@@ -3,12 +3,13 @@ import ButtonWithIcon from "../ButtonWithIcon"
 import Tag from "./Tag"
 import { screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
+import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 
 interface PostTopSectionProps {
     postData: PostInterface
 }
 
-const PostTopSection: React.FC<PostTopSectionProps> = ({ postData }) => {
+const PostTopSection: React.FC<PostTopSectionProps & PostVariantProps> = ({ postData, variantType }) => {
 
     // whether the post is from professional or personal account
     const isPersonal = postData.projectOrigin?.includes('Personal')
@@ -31,7 +32,7 @@ const PostTopSection: React.FC<PostTopSectionProps> = ({ postData }) => {
             </div>} */}
 
             <div className="postTopSection-tags">
-                {postData.tagsId?.map((tagId) => <Tag key={tagId} tagId={tagId} />)}
+                {postData.tagsId?.map((tagId) => <Tag key={tagId} tagId={tagId} className={variantType == 'presentation' ? 'presentation' : ''}/>)}
             </div>
 
         </div>

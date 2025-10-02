@@ -26,7 +26,7 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ classNa
             `}
         >
             {/* ##### hide the top section in the presentation section */}
-            {variantType == 'project' && <PostTopSection postData={postData}/>}
+            {variantType == 'project' && <PostTopSection postData={postData} variantType={variantType}/>}
 
             <PostContentSection postData={postData} variantType={variantType}/>
         </div>
