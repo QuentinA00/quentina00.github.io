@@ -16,20 +16,24 @@ const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = 
     return (
         <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
 
-            {postData.medias && <MediaComponent mediaData={postData.medias}/>}
+            {postData.medias && <MediaComponent medias={postData.medias}/>}
 
             <div className="postContentSection-description">
+                
+                {/* deprecated */}
                 <div className="postContentSection-text">
                     {postData.postTextParagraphs?.map((postTextParagraph, index)=> (
                         <p key={index}>{postTextParagraph}</p>
                     ))}
                 </div>
 
+                {/* deprecated */}
                 {variantType == 'project' && <div className="divider3"></div>}
                 
                 {/* ##### the point here below is to show up the tags in the presentation section below the text, instead of above. But later when I'll rebuild PostContainer, the tags section will be a whole component perhaps, it's gonna be easier */}
                 {variantType == 'presentation' && <PostTopSection postData={postData} variantType={variantType}/>}
 
+                {/* deprecated */}
                 {variantType == 'project' && <div className="postContentSection-keyPoints">
                     <p>{postData.postTextKeyPoints?.text}</p>
                     <ul>
@@ -39,6 +43,7 @@ const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = 
                     </ul>
                 </div>}
 
+                {/* deprecated */}
                 <div className="postContentSection-links">
                     {postData.postsLinks.map((linkItem) => <a 
                         key={linkItem.link} 

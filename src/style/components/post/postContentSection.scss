@@ -1,30 +1,30 @@
 @use '../../mixin';
-.postContentSection{
+.postContentSection{ // deprecated
     display: flex;
     column-gap: 2rem;
     @include mixin.transition(.1s);
 
-    & .postContentSection-medias{
-        flex: 1;
-    }
-    & .postContentSection-description{
+    // & .postContentSection-medias{ // deprecated
+    //     flex: 1;
+    // }
+    & .postContentSection-description{ // deprecated
         display: flex;
         flex-direction: column;
         flex: 2;
         row-gap: 2rem;
 
-        & .postContentSection-text{
+        & .postContentSection-text{ // deprecated
             display: flex;
             flex-direction: column;
             row-gap: .7rem;
         }
-        & .postContentSection-keyPoints{
+        & .postContentSection-keyPoints{ // deprecated
             display: flex;
             flex-direction: column;
             font-size: .9rem;
             font-weight: 400;
         }
-        & .postContentSection-links{
+        & .postContentSection-links{ // deprecated
             display: flex;
             align-self: flex-end;
             gap: 1rem;
@@ -33,17 +33,17 @@
         }
     }
 
-    &.postContentSection-smallerScreen{
+    &.postContentSection-smallerScreen{ // deprecated
         flex-direction: column;
         row-gap: 2rem;
 
-        & .postContentSection-medias{
-            display: flex;
-            justify-content: center;
-        }
+        // & .postContentSection-medias{ // deprecated
+        //     display: flex;
+        //     justify-content: center;
+        // }
     }
 }
-.postContentSection-presentation{
+.postContentSection-presentation{ // deprecated
     & .postContentSection-description{
         row-gap: 5rem;
     }

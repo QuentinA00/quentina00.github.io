@@ -5,12 +5,65 @@ import { useMediaQuery } from "react-responsive"
 import ImageWrapper from "./ImageWrapper"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion"
+import styled from "styled-components"
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2rem;
+    border-radius: .7rem;
+    align-self: start;
+    max-width: 22rem;
+    
+    & .mediaComponent-imageSection{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        align-self: center;
+        
+        & img{
+            border-radius: .8rem;
+            width: 5rem;
+            cursor:pointer;
+            border:solid .15rem var(--color3);
+            padding: .2rem;
+            transition: .15s ease-in-out 0s;
+
+            @media (hover:hover){
+                &:hover{
+                    filter: brightness(.7);
+                }
+            }
+            &:active{
+                transform: scale(.97);
+            }
+        }
+    }
+    & .mediaComponent-videoSection{
+
+        & .mediaComponent-video{
+
+            & p{
+                color: var(--color2);
+                font-style: italic;
+                font-size: .8rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &.mediaComponent-smallScreen{
+        align-self: center;
+    }
+`
 
 interface MediaComponentProps {
-    mediaData: PostInterface['medias']
+    medias: PostInterface['medias']
 }
 
-const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
+const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
 
     const smallScreen = useMediaQuery({maxWidth:screen_tablet})
 
@@ -26,11 +79,11 @@ const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
     }
 
     return (
-        <div className={`mediaComponent ${smallScreen ? 'mediaComponent-smallScreen' : ''}`}>
+        <Container className={`mediaComponent ${smallScreen ? 'mediaComponent-smallScreen' : ''}`}>
             
-            {mediaData?.videos && 
+            {medias?.videos && 
                 <div className="mediaComponent-videoSection">
-                    { mediaData.videos.map((video) => (
+                    { medias.videos.map((video) => (
                         <div key={video.id} className="mediaComponent-video">
                             <ReactPlayer url={video.linkPath} controls width='100%' height='12rem'/>
                             <p className="mediaComponent-comment">{video.text}</p>
@@ -39,11 +92,11 @@ const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
                 </div>
             }
 
-            {mediaData?.videos && <div className="divider3"></div>}
+            {medias?.videos && <div className="divider3"></div>}
             
-            {mediaData?.images && 
+            {medias?.images && 
                 <div className="mediaComponent-imageSection">
-                    {mediaData.images.map((image) => (
+                    {medias.images.map((image) => (
                         <img key={image.id} src={image.linkPath} alt={image.text} onClick={() => openImageWrapper(image)}/>
                     ))}
                 </div>
@@ -53,7 +106,7 @@ const MediaComponent:React.FC<MediaComponentProps> = ({mediaData}) => {
                 {selectedImage && <ImageWrapper key='imageWrapper' pathHdImage={selectedImage.linkPathHd} imageDescription={selectedImage.text} closingImageWrapper={closingImageWrapper}/>}
             </AnimatePresence>
 
-        </div>
+        </Container>
     )
 }
 

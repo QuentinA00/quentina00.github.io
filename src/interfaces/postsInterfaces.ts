@@ -20,12 +20,12 @@ export interface TagInterface{
 }
 
 // interface for the link
-export interface PostLinksInterface {
+export interface PostLinkInterface {
     linkName: string
     link:string
 }
 
-export interface PostTextKeyPointsInterface{
+export interface PostKeyPointsInterface{
     id:number
     text:string
 }
@@ -34,15 +34,15 @@ export interface PostTextKeyPointsInterface{
 export interface PostInterface {
     id: string
     projectOrigin?: string
-    title?:string
+    title:string
     description?:string
     tagsId?: string[]
     postTextParagraphs: string[]
     postTextKeyPoints?:{
         text:string
-        points: PostTextKeyPointsInterface[]
+        points: PostKeyPointsInterface[]
     }
-    postsLinks:PostLinksInterface[]
+    postsLinks:PostLinkInterface[]
     medias?: {
         images?:PostMediasInterface[]
         videos?:PostMediasInterface[]

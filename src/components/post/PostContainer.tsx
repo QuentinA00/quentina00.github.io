@@ -5,12 +5,15 @@ import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 import styled from "styled-components"
+import PostLinks from "./PostLinks"
+import PostKeypoints from "./PostKeypoints"
+import PostText from "./PostText"
+import MediaComponent from "../MediaComponent"
+import PostTags from "./PostTags"
+import PostTitle from "./postTitle"
+import PostOrigin from "./PostOrigin"
 
-interface PostContainerProps {
-    postData: PostInterface
-}
-
-const Style = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     max-width: 70rem;
     transition: .1s ease-in-out 0s;
@@ -28,9 +31,9 @@ const Style = styled.div`
     &.postContainer-presentation{
         font-size: 1.1rem;
 
-        & .postContentSection{
+        & .postContentSection{ // ----- deprecated
             & .postContentSection-description{
-                & .postContentSection-text{
+                & .postContentSection-text{ 
                     font-weight: 200;
                 }
             }
@@ -47,7 +50,47 @@ const Style = styled.div`
     &.postContainer-tablet{
         width: unset;
     }
+
+    /* --------------- postContentSection --------------- */
+    .postContentSection{
+        display: flex;
+        column-gap: 2rem;
+        transition: .1s ease-in-out 0s;
+
+        & .postContentSection-description{
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+            row-gap: 2rem;
+        }
+
+        &.postContentSection-smallerScreen{
+            flex-direction: column;
+            row-gap: 2rem;
+        }
+        &.postContentSection-presentation{
+            & .postContentSection-description{
+                row-gap: 5rem;
+            }
+        }
+    }
+
+    /* --------------- postTopSection --------------- */
+    .postTopSection {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        transition: .1s ease-in-out 0s;
+
+        &.postTopSection-mobile{
+            row-gap: 2rem;
+        }
+    }
 `
+
+interface PostContainerProps {
+    postData: PostInterface
+}
 
 const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postData, variantType }) => {
 
@@ -55,7 +98,7 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
     const tabletScreen = useMediaQuery({maxWidth:screen_tablet})
 
     return (
-        <Style 
+        <StyleContainer 
             className={`
                 postContainer 
                 ${variantType ? 'postContainer-'+variantType : ''}
@@ -67,7 +110,37 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
             {variantType == 'project' && <PostTopSection postData={postData} variantType={variantType}/>}
 
             <PostContentSection postData={postData} variantType={variantType}/>
-        </Style>
+            
+            {/* ----- new implementation for posts ----- */}
+            {variantType === 'presentation' 
+            ? 
+                <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
+                    <div className="postContentSection-description">
+                        <PostText textParagraphs={postData.postTextParagraphs} className="postText-presentation"/>
+                        <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
+                            <PostTags tagsId={postData.tagsId} tagClassName='presentation' />
+                        </div>
+                        <PostLinks links={postData.postsLinks} linkTarget='_self' />
+                    </div>
+                </div>
+            : 
+                <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'project' ? 'postContentSection-presentation' : ''}`}>
+                    <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
+                        <PostOrigin postOrigin={postData.projectOrigin}/>
+                        <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''}/>
+                        <PostTags tagsId={postData.tagsId} tagClassName='presentation' />
+                    </div>
+                    <MediaComponent medias={postData.medias}/>
+                    <div className="postContentSection-description">
+                        <PostText textParagraphs={postData.postTextParagraphs}/>
+                        <div className="divider3"></div>
+                        <PostKeypoints keypoints={postData.postTextKeyPoints?.points} keypointsTitle={postData.postTextKeyPoints?.text}/>
+                        <PostLinks links={postData.postsLinks} linkTarget='_blank' />
+                    </div>
+                </div>
+            }
+
+        </StyleContainer>
     )
 }
 
