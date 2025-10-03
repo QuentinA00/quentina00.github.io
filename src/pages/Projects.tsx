@@ -1,7 +1,5 @@
 import PostContainer from "../components/post/PostContainer"
-import { AppTextProps } from "../interfaces/globalPropsInterfaces"
-import { fetchWithPromise } from "../utils/api/promiseWrapper"
-import { PostsInterfaceWithLanguage, TagInterface } from "../interfaces/postsInterfaces"
+import { TagInterface } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/postFilter/PostFilterComponent"
 import { useState } from "react"
 import { screen_desktop_medium, screen_desktop_small } from "../utils/responsiveUtils"
@@ -10,13 +8,7 @@ import { AnimatePresence } from "framer-motion"
 import AnimationWrapper from "../components/AnimationWrapper"
 import { slideFromRight } from "../style/animations/animations"
 import styled from "styled-components"
-
-const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
-
-interface ProjectsProps {
-    appLanguage:'en'|'fr'
-    appText:AppTextProps['appText']
-}
+import { usePost } from "../contexts/PostContextProvider"
 
 const Style = styled.div`
     display: flex;
@@ -45,18 +37,17 @@ const Style = styled.div`
     }
 `
 
-const Projects:React.FC<ProjectsProps> = ({appLanguage}) => {
+const Projects = () => {
 
     // below 1200px screen width
     const isOnDesktopSmallScreen = useMediaQuery({maxWidth:screen_desktop_small})
     // below 1600px screen width
     const isOnDesktopMediumScreen = useMediaQuery({maxWidth:screen_desktop_medium})
 
-    // gather posts data from json, according to the selected language
-    const posts:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
+    // get the posts from the context
+    const {getProjectPosts} = usePost()
 
-    // gather project element(s) from posts.json
-    const projectsPosts = posts.projects
+    const projectsPosts = getProjectPosts()
 
     // tags selected in PostFilterComponent
     const [selectedTags, setSelectedTags] = useState<TagInterface['id'][]>([])

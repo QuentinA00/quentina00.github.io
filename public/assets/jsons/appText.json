@@ -17,16 +17,16 @@
             "contact": "Socials",
             "mail":"",
             "professionalLinks":[
-                {"id":"item1","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
-                {"id":"item2","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
-                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"personal Github account"},
-                {"id":"item2","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"my Telegram"},
-                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
+                {"id":"linktree","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
+                {"id":"mail","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
+                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"personal Github account"},
+                {"id":"telegram","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"my Telegram"},
+                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "personalAccount": "my personal accounts :",
             "personalLinks":[
-                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account (main)"},
-                {"id":"item3","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
+                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account (main)"},
+                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "copyright":{
                 "title":"Copyright",
@@ -41,25 +41,44 @@
         }
     },
     "fr": {
-        "title": "Quentin V.",
+        "title": "Quentin A.",
         "menuBar": [
-            { "id": "projects", "text": "projets" },
-            { "id": "contact", "text": "contact" },
-            { "id": "settings", "text": "changer de langue", "settingsMenu": [
-                    {"key":"language", "text":"changer de langue"},
-                    {"key":"darkMode", "text":"dark mode" }
-                ]
-            }
+            { "id": "monetization", "text": "Le soutien est toujours apprécié :)", "icon":"dollar.svg", "link":"" }
         ],
+        "pages":[
+            { "id": "", "text": "À propos de moi" },
+            { "id": "projects", "text": "Projets" },
+            { "id": "contact", "text": "Contact" }
+        ],
+        "contact":{
+            "text":"Flashcode vers mon Linktree, pour plus d'informations de contact",
+            "image":"flashcode.png"
+        },
         "bottomSection": {
-            "contact": "Me contacter",
-            "mail":"mail : quentin@gmail.com",
-            "personalAccount": "mes réseaux personels :",
-            "items":[
-                {"id":"item1","text":"twitter / X","icon":"x.svg","link":"","description":""},
-                {"id":"item2","text":"instagram","icon":"instagram.svg","link":"","description":""},
-                {"id":"item3","text":"github","icon":"github.svg","link":"","description":""}
-            ]
+            "contact": "Réseaux sociaux",
+            "mail":"",
+            "professionalLinks":[
+                {"id":"linktree","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
+                {"id":"mail","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
+                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"compte Github personnel"},
+                {"id":"telegram","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
+                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
+            ],
+            "personalAccount": "mes comptes personnels :",
+            "personalLinks":[
+                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"mon compte Github personnel (principal)"},
+                {"id":"item2","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"mon Discord"}
+            ],
+            "copyright":{
+                "title":"Copyright",
+                "text":"© 2025 Quentin Artaud. Tous droits réservés"
+            }
+        },
+        "generalAppContent":{
+            "imgsPath":{
+                "professional":"./assets/imgs/logo_q_small.jpeg",
+                "personal":"./assets/imgs/logo_qvsp_small.jpeg"
+            }
         }
     }
 }

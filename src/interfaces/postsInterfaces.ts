@@ -6,10 +6,10 @@ export interface TagGroupedByCategory{
 
 // interface for the links of the project
 export interface PostMediasInterface {
-    id:string
+    id:number
     linkPath:string
     linkPathHd?:string
-    text:string
+    text?:string
 }
 
 // interface for tag
@@ -37,15 +37,15 @@ export interface PostInterface {
     title?:string
     description?:string
     tagsId?: string[]
-    postTextParagraphs: [string]
+    postTextParagraphs: string[]
     postTextKeyPoints?:{
         text:string
         points: PostTextKeyPointsInterface[]
     }
     postsLinks:PostLinksInterface[]
     medias?: {
-        images:PostMediasInterface[]
-        videos:PostMediasInterface[]
+        images?:PostMediasInterface[]
+        videos?:PostMediasInterface[]
     }
 }
 

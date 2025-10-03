@@ -6,19 +6,22 @@ import { ErrorBoundary } from 'react-error-boundary'
 import { HashRouter } from 'react-router-dom'
 import FallbackError from './components/fallbackComponents/FallbackError.tsx'
 import FallbackLoading from './components/fallbackComponents/FallbackLoading.tsx'
-import { PostsContextProvider } from './contexts/PostsContextProvider.tsx'
 import { TagsProvider } from './contexts/TagContextProvider.tsx'
+import { PostProvider } from './contexts/PostContextProvider.tsx'
+import { LanguageProvider } from './contexts/LanguageContextProvider.tsx'
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <ErrorBoundary fallback={<FallbackError/>}>
             <Suspense fallback={<FallbackLoading/>}>
                 <HashRouter>
-                    <PostsContextProvider>
-                        <TagsProvider>
-                            <App />
-                        </TagsProvider>
-                    </PostsContextProvider>
+                    <LanguageProvider>
+                        <PostProvider>
+                            <TagsProvider>
+                                <App />
+                            </TagsProvider>
+                        </PostProvider>
+                    </LanguageProvider>
                 </HashRouter>
             </Suspense>
         </ErrorBoundary>
