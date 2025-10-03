@@ -14,8 +14,6 @@ interface HomeProps {
 
 const Home:React.FC<HomeProps> = ({appLanguage}) => {
 
-    // console.log('------Home',pageTransitionInOut)
-
     // gather posts data from json, according to the selected language
     const postsData:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
 
@@ -24,7 +22,7 @@ const Home:React.FC<HomeProps> = ({appLanguage}) => {
 
     return (
         <div className="home">
-            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} className="home" variantType='presentation'/>)}
+            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} variantType='presentation'/>)}
         </div>
     )
 }

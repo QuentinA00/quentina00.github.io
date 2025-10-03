@@ -64,7 +64,6 @@ const Projects = () => {
                     <PostContainer
                         key={projectData.id}
                         postData={projectData}
-                        className="project"
                         variantType='project'
                     />
                 ))}

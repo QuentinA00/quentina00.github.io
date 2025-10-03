@@ -1,39 +1,39 @@
 @use '../../mixin';
 // default style
-.postContainer{
-    display: flex;
-    max-width: 70rem;
-    @include mixin.transition(.1s);
-}
+// .postContainer{
+//     display: flex;
+//     max-width: 70rem;
+//     @include mixin.transition(.1s);
+// }
 
-// style for projects page
-.postContainer-project{
-    border-radius: 1.5rem;
-    padding: 1.5rem;
-    background: var(--color3);
-    flex-direction: column;
-    row-gap: 2.5rem;
-}
+// // style for projects page
+// .postContainer-project{
+//     border-radius: 1.5rem;
+//     padding: 1.5rem;
+//     background: var(--color3);
+//     flex-direction: column;
+//     row-gap: 2.5rem;
+// }
 
-.postContainer-home{
-    font-size: 1.1rem;
+// .postContainer-presentation{
+//     font-size: 1.1rem;
 
-    & .postContentSection{
-        & .postContentSection-description{
-            & .postContentSection-text{
-                font-weight: 200;
-            }
-        }
-    }
-}
+//     & .postContentSection{
+//         & .postContentSection-description{
+//             & .postContentSection-text{
+//                 font-weight: 200;
+//             }
+//         }
+//     }
+// }
 
-// style for mobile < 700
-.postContainer-mobile{
-    width: unset;
-    row-gap: 3rem;
-}
+// // style for mobile < 700
+// .postContainer-mobile{
+//     width: unset;
+//     row-gap: 3rem;
+// }
 
-// style for tablet < 1000
-.postContainer-tablet{
-    width: unset;
-}
+// // style for tablet < 1000
+// .postContainer-tablet{
+//     width: unset;
+// }
