@@ -34,7 +34,7 @@ const PostOrigin: React.FC<PostOriginProps> = ({postOrigin}) => {
 
     if (!postOrigin) return null
 
-    const isPersonal = postOrigin.includes('personal')
+    const isPersonal = postOrigin.toLowerCase().includes('personal')
     const imageName = isPersonal ? 'logo_qvsp_small.jpeg' : 'logo_q_small.jpeg'
 
     return (

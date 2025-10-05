@@ -42,7 +42,7 @@ export interface PostInterface {
         text:string
         points: PostKeyPointsInterface[]
     }
-    postsLinks:PostLinkInterface[]
+    postsLinks?:PostLinkInterface[]
     medias?: {
         images?:PostMediasInterface[]
         videos?:PostMediasInterface[]

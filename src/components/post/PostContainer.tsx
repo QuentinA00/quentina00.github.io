@@ -10,8 +10,8 @@ import PostKeypoints from "./PostKeypoints"
 import PostText from "./PostText"
 import MediaComponent from "../MediaComponent"
 import PostTags from "./PostTags"
-import PostTitle from "./postTitle"
 import PostOrigin from "./PostOrigin"
+import PostTitle from "./PostTitle"
 
 const StyleContainer = styled.div`
     display: flex;
@@ -112,13 +112,13 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
             <PostContentSection postData={postData} variantType={variantType}/>
             
             {/* ----- new implementation for posts ----- */}
-            {variantType === 'presentation' 
+            {/* {variantType === 'presentation' 
             ? 
                 <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
                     <div className="postContentSection-description">
-                        <PostText textParagraphs={postData.postTextParagraphs} className="postText-presentation"/>
+                        <PostText textParagraphs={postData.postTextParagraphs} className="presentation"/>
                         <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
-                            <PostTags tagsId={postData.tagsId} tagClassName='presentation' />
+                            <PostTags tagsId={postData.tagsId} className='presentation' />
                         </div>
                         <PostLinks links={postData.postsLinks} linkTarget='_self' />
                     </div>
@@ -127,8 +127,8 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
                 <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'project' ? 'postContentSection-presentation' : ''}`}>
                     <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
                         <PostOrigin postOrigin={postData.projectOrigin}/>
-                        <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''}/>
-                        <PostTags tagsId={postData.tagsId} tagClassName='presentation' />
+                        <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''} />
+                        <PostTags tagsId={postData.tagsId} className='presentation' />
                     </div>
                     <MediaComponent medias={postData.medias}/>
                     <div className="postContentSection-description">
@@ -138,7 +138,7 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
                         <PostLinks links={postData.postsLinks} linkTarget='_blank' />
                     </div>
                 </div>
-            }
+            } */}
 
         </StyleContainer>
     )

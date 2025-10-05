@@ -65,6 +65,8 @@ interface MediaComponentProps {
 
 const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
 
+    if (!medias) return null
+
     const smallScreen = useMediaQuery({maxWidth:screen_tablet})
 
     // keeping track of the selected image, in order to show it up in the image wrapper

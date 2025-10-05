@@ -19,7 +19,7 @@ interface PostTextProps {
 
 const PostText: FC<PostTextProps> = ({textParagraphs, className}) => {
     return (
-        <Style className={className}>
+        <Style className={`${className ? 'postText-'+className : ''}`}>
             {textParagraphs.map((postTextParagraph, index)=> (
                 <p key={index}>{postTextParagraph}</p>
             ))}

@@ -3,7 +3,7 @@ import { PostLinkInterface } from "../../interfaces/postsInterfaces"
 import { FC } from "react"
 
 interface PostLinksProps {
-    links:PostLinkInterface[]
+    links?:PostLinkInterface[]
     linkTarget:'_self' | '_blank'
 }
 
@@ -16,6 +16,7 @@ const Style = styled.div`
 `
 
 const PostLinks: FC<PostLinksProps> = ({links, linkTarget}) => {
+    if (!links || links.length === 0) return null
     return (
         <Style>
             {links.map((link) => <a 

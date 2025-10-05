@@ -10,14 +10,17 @@ const Style = styled.div`
 
 interface PostTagsProps {
     tagsId?:string[]
-    tagClassName?:'presentation'|'project'
+    className?:'presentation'|'project'
 }
 
-const PostTags:FC<PostTagsProps> = ({tagsId, tagClassName}) => {
+const PostTags:FC<PostTagsProps> = ({tagsId, className}) => {
+
+    if (!tagsId || tagsId.length === 0) return null
+
     return (
         <Style>
             {tagsId?.map((tagId) => 
-                <Tag key={tagId} tagId={tagId} className={tagClassName}/>
+                <Tag key={tagId} tagId={tagId} className={className}/>
             )}
         </Style>
     )
