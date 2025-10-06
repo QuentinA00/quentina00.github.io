@@ -1,4 +1,4 @@
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player/youtube"
 import { PostInterface, PostMediasInterface } from "../interfaces/postsInterfaces"
 import { screen_tablet } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
