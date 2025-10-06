@@ -147,7 +147,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss"],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_scss"],
                 "postTextParagraphs": [
                     "When I built this website, I envisioned it as a kind of website template structure that could be used for many different websites.", 
                     "It aims to be quite flexible, with the text of the entire application managed through a JSON file (to handle translations for example) and another JSON file for the 'posts', like the projects in this list.",
