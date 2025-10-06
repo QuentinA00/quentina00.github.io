@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { PostMediasInterface } from "../interfaces/postsInterfaces"
 import ButtonWithIcon from "./ButtonWithIcon"
 import ReactDOM from 'react-dom'
@@ -77,6 +77,16 @@ interface ImageWrapperProps {
 }
 
 const ImageWrapper:React.FC<ImageWrapperProps> = ({pathHdImage, imageDescription, closingImageWrapper}) => {
+    const [imageLoaded, setImageLoaded] = useState(false)
+
+    // Preload the image for smooth loading
+    useEffect(() => {
+        if (pathHdImage) {
+            const img = new Image()
+            img.onload = () => setImageLoaded(true)
+            img.src = pathHdImage
+        }
+    }, [pathHdImage])
 
     // listening if the escape key is pressed when imageWrapper is loaded
     useEffect(() => {
@@ -122,17 +132,19 @@ const ImageWrapper:React.FC<ImageWrapperProps> = ({pathHdImage, imageDescription
                     <ButtonWithIcon imageName="close.svg"/>
                 </motion.div>
 
-                <motion.div 
-                    transition={{duration:.3, ease:'easeInOut'}} 
-                    className="imageWrapper-items" 
-                    variants={bounce} 
-                    initial='initial' 
-                    animate='animate' 
-                    exit='exit'
-                >
-                    <img src={pathHdImage} alt={imageDescription} decoding="async"/>
-                    <p>{imageDescription}</p>
-                </motion.div>
+                {imageLoaded && (
+                    <motion.div 
+                        transition={{duration:.3, ease:'easeInOut'}} 
+                        className="imageWrapper-items" 
+                        variants={bounce} 
+                        initial='initial' 
+                        animate='animate' 
+                        exit='exit'
+                    >
+                        <img src={pathHdImage} alt={imageDescription} />
+                        <p>{imageDescription}</p>
+                    </motion.div>
+                )}
 
             </AnimationWrapper>
         </Style>,
