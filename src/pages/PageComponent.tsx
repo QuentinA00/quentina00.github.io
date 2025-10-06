@@ -7,23 +7,22 @@ import AnimationWrapper from "../components/AnimationWrapper"
 
 interface PageComponentProps {
     pageItem: PagesTextInterface
-    
     // props from AppTextProps
-    appLanguage:AppTextProps['appLanguage']
-    setAppLanguage: AppTextProps['setAppLanguage']
+    // appLanguage:AppTextProps['appLanguage']
+    // setAppLanguage: AppTextProps['setAppLanguage']
     appText:AppTextProps['appText']
 }
 
-const PageComponent:React.FC<PageComponentProps> = ({pageItem, appLanguage, appText, setAppLanguage}) => {
+const PageComponent:React.FC<PageComponentProps> = ({pageItem, appText}) => {
     return (
         <div className="pageComponent">
 
             <h2>{pageItem.text}</h2>
 
             <AnimationWrapper className="pageComponent-pages">
-                {pageItem.id === '' && <Home key={pageItem.id} appText={appText} setAppLanguage={setAppLanguage} appLanguage={appLanguage}/>}
-                {pageItem.id === 'projects' && <Projects key={pageItem.id} appLanguage={appLanguage} appText={appText}/>}
-                {pageItem.id === 'contact' && <Contact key={pageItem.id} contactData={appText.contact}/>}
+                {pageItem.id === '' && <Home/>}
+                {pageItem.id === 'projects' && <Projects/>}
+                {pageItem.id === 'contact' && <Contact contactData={appText.contact}/>}
             </AnimationWrapper>
 
         </div>

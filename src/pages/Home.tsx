@@ -1,29 +1,22 @@
-import { AppTextInterface } from "../interfaces/appTextInterfaces"
-import { AppTextProps } from "../interfaces/globalPropsInterfaces"
+import styled from "styled-components"
 import PostContainer from "../components/post/PostContainer"
-import { fetchWithPromise } from "../utils/api/promiseWrapper"
-import { PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
+import { usePost } from "../contexts/PostContextProvider"
 
-const postsPromise = fetchWithPromise('./assets/jsons/posts.json')
+const HomeStyle = styled.div`
+    display: flex;
+    transition: ease-in-out .2s;
+`
 
-interface HomeProps {
-    appText:AppTextInterface
-    setAppLanguage: AppTextProps['setAppLanguage']
-    appLanguage:AppTextProps['appLanguage']
-}
+const Home = () => {
 
-const Home:React.FC<HomeProps> = ({appLanguage}) => {
-
-    // gather posts data from json, according to the selected language
-    const postsData:PostsInterfaceWithLanguage[typeof appLanguage] = postsPromise()[appLanguage]
-
-    // gather presentation element(s) from posts.json
-    const presentationPosts = postsData.presentation
+    // get post(s) from context provider
+    const {getPresentationPost} = usePost()
+    const presentationPosts = getPresentationPost()
 
     return (
-        <div className="home">
+        <HomeStyle className="home">
             {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} variantType='presentation'/>)}
-        </div>
+        </HomeStyle>
     )
 }
 

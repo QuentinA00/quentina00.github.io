@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react"
+import { Suspense } from "react"
 import { Navigate, Route, Routes, useLocation } from "react-router-dom"
 import Header from "./components/header/Header"
 import { fetchWithPromise } from "./utils/api/promiseWrapper"
@@ -11,6 +11,7 @@ import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "./utils/responsiveUtils"
+import { useLanguage } from "./contexts/LanguageContextProvider"
 
 // Initialize the promise outside the component to ensure it is created only once
 // This avoids multiple fetches
@@ -20,16 +21,14 @@ const appTextPromise = fetchWithPromise('./assets/jsons/appText.json')
 
 const App = () => {
 
-    // follow state of the selected language in the application. English by default
-    const [appLanguage, setAppLanguage] = useState<'en'|'fr'>('en')
+    // get language from the context provider
+    const {currentLanguage} = useLanguage()
 
     // using appTextPromise function that returns the data, and index the data depending on the app language
-    const appText:AppTextInterfacesWithLanguage[typeof appLanguage] = appTextPromise()[appLanguage]
+    const appText:AppTextInterfacesWithLanguage[typeof currentLanguage] = appTextPromise()[currentLanguage]
 
     // getting the location datas in the app
     const location = useLocation()
-
-    // console.log(location.pathname)
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
@@ -49,7 +48,7 @@ const App = () => {
                             element={
                                 <ErrorBoundary fallback={<FallbackError/>}>
                                     <Suspense fallback={<FallbackLoading/>}>
-                                        <PageComponent pageItem={pageItem} appLanguage={appLanguage} appText={appText} setAppLanguage={setAppLanguage}/>
+                                        <PageComponent pageItem={pageItem} appText={appText}/>
                                     </Suspense>
                                 </ErrorBoundary>
                             }
