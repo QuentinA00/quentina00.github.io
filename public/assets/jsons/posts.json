@@ -20,7 +20,7 @@
         ],
         "projects": [
             {
-                "id": "project6",
+                "id": "semantic_search_project",
                 "projectOrigin": "Personal project",
                 "title": "Semantic searches on audio transcripts",
                 "description": "Python script for creating/storing audio transcripts in vector db (in progress)",
@@ -43,7 +43,30 @@
                 ]
             },
             {
-                "id": "project5",
+                "id": "portfolio_project",
+                "projectOrigin": "Professional project",
+                "title": "Portfolio Website / Reusable website structure",
+                "description": "This current website.",
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_scss","tag_reactContext"],
+                "postTextParagraphs": [
+                    "When I built this website, I envisioned it as a kind of template for a website structure that could be used for many different projects.", 
+                    "This is a 1.0 version, and I'm planning to add new features along the way."
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Reusable structure"},
+                        {"id":2,"text":"Can be fed by a json file or a backend server for the app's text / projects elements"},
+                        {"id":3,"text":"Ready to be connected to a backend"},
+                        {"id":4,"text":"Use of Suspense, Fallback, ErrorBoundaries, react-router and framer-motion"}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Github repot","link": "https://github.com/QuentinA00/quentina00.github.io"}
+                ]
+            },
+            {
+                "id": "temporo",
                 "projectOrigin": "Personal project",
                 "title": "Temporo",
                 "description": "A simple and flexible app to manage timers and habits",
@@ -103,7 +126,7 @@
                 ]
             },
             {
-                "id": "project4",
+                "id": "webinsights",
                 "projectOrigin": "Personal project",
                 "title": "WebInsights",
                 "description": "A Chrome extension to get summaries and informations about websites. (In progress)",
@@ -143,32 +166,7 @@
                 }
             },
             {
-                "id": "project3",
-                "projectOrigin": "Professional project",
-                "title": "Portfolio Website / Reusable website structure",
-                "description": "This current website.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_scss","tag_reactContext"],
-                "postTextParagraphs": [
-                    "When I built this website, I envisioned it as a kind of website template structure that could be used for many different websites.", 
-                    "It aims to be quite flexible, with the text of the entire application managed through a JSON file (to handle translations for example) and another JSON file for the 'posts', like the projects in this list.",
-                    "This is just a 1.0 version, and a lot of additional features can be added.",
-                    "For instance, in the upcoming version, I'd like to add a filter feature to sort the projects by their tags."
-                ],
-                "postTextKeyPoints":{
-                    "text":"Key features : ", 
-                    "points":[
-                        {"id":1,"text":"Reusable structure"},
-                        {"id":2,"text":"Can be fed by a json file or a backend server for the app's text / projects elements"},
-                        {"id":3,"text":"Ready to be connected to a backend"},
-                        {"id":4,"text":"Use of Suspense, Fallback, ErrorBoundaries to mitigate / manage issues when fetching data for example"}
-                    ]
-                },
-                "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/QuentinA00/quentina00.github.io"}
-                ]
-            },
-            {
-                "id": "project2",
+                "id": "kosmo_project",
                 "projectOrigin": "Personal project",
                 "title": "Kosmo Project",
                 "description": "An ideal social network for me. (In progress...)",
@@ -223,7 +221,7 @@
                 }
             },
             {
-                "id": "project1",
+                "id": "coaching_section",
                 "projectOrigin": "Professional project",
                 "title": "Coaching section",
                 "description": "React web app to find coaches by topics",
