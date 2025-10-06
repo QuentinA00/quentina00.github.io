@@ -74,14 +74,14 @@ export const progressiveShowUp: Variants = {
         opacity: 0,
     },
     animate:{ 
-        backdropFilter:'blur(2rem)',
+        backdropFilter:'blur(2.5rem)',
         opacity: 1,
     },
     exit:{ 
         backdropFilter:'blur(0rem)',
         opacity: 0, 
         transition:{
-            opacity:{ delay: 0.3, duration: 0.25, ease:'easeInOut' }
+            opacity:{ delay: .15, duration: .2, ease:'easeInOut' }
         }
     }
 }

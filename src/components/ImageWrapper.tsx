@@ -107,18 +107,31 @@ const ImageWrapper:React.FC<ImageWrapperProps> = ({pathHdImage, imageDescription
 
     return ReactDOM.createPortal(
         <Style>
-            <AnimationWrapper transitionDuration={.4} className="imageWrapper" animationType={progressiveShowUp}>
+            <AnimationWrapper transitionDuration={.3} className="imageWrapper" animationType={progressiveShowUp}>
                 
                 <div className="imageWrapper-background" onClick={closingImageWrapper}></div>
 
-                <motion.div transition={{duration:.3, ease:'easeInOut'}} className="imageWrapper-closingButton" variants={zoomEffect2} initial='initial' animate='animate' exit='exit' onClick={closingImageWrapper}>
-                    {/* <div className="imageWrapper-closingButton" onClick={closingImageWrapper}> */}
-                        <ButtonWithIcon imageName="close.svg"/>
-                    {/* </div> */}
+                <motion.div 
+                    transition={{duration:.3, ease:'easeInOut'}} 
+                    className="imageWrapper-closingButton" 
+                    variants={zoomEffect2} 
+                    initial='initial' 
+                    animate='animate' 
+                    exit='exit' 
+                    onClick={closingImageWrapper}
+                >
+                    <ButtonWithIcon imageName="close.svg"/>
                 </motion.div>
 
-                <motion.div transition={{duration:.3, ease:'easeInOut'}} className="imageWrapper-items" variants={bounce} initial='initial' animate='animate' exit='exit'>
-                    <img src={pathHdImage} alt={imageDescription} />
+                <motion.div 
+                    transition={{duration:.3, ease:'easeInOut'}} 
+                    className="imageWrapper-items" 
+                    variants={bounce} 
+                    initial='initial' 
+                    animate='animate' 
+                    exit='exit'
+                >
+                    <img src={pathHdImage} alt={imageDescription} loading="lazy" decoding="async"/>
                     <p>{imageDescription}</p>
                 </motion.div>
 

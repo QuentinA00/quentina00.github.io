@@ -7,9 +7,6 @@ import AnimationWrapper from "../components/AnimationWrapper"
 
 interface PageComponentProps {
     pageItem: PagesTextInterface
-    // props from AppTextProps
-    // appLanguage:AppTextProps['appLanguage']
-    // setAppLanguage: AppTextProps['setAppLanguage']
     appText:AppTextProps['appText']
 }
 
