@@ -52,16 +52,56 @@ export const slideFromRight: Variants = {
 
 export const bounce: Variants = {
     initial:{ 
-        opacity: 0, 
-        scale: 0.95,
+        // backdropFilter:'blur(0rem)',
+        // opacity: 0, 
+        scale: 0.9,
     },
     animate:{ 
-        opacity: 1, 
+        // backdropFilter:'blur(5rem)',
+        // opacity: 1, 
         scale: [.97,1.02,1],
     },
     exit:{ 
-        opacity: 0, 
+        // backdropFilter:'blur(0rem)',
         scale: 0.95,
+        opacity:0,
+    }
+}
+
+export const progressiveShowUp: Variants = {
+    initial:{
+        backdropFilter:'blur(0rem)',
+        opacity: 0,
+    },
+    animate:{ 
+        backdropFilter:'blur(2rem)',
+        opacity: 1,
+    },
+    exit:{ 
+        backdropFilter:'blur(0rem)',
+        opacity: 0, 
+        transition:{
+            opacity:{ delay: 0.3, duration: 0.25, ease:'easeInOut' }
+        }
+    }
+}
+
+// used for the closing button
+export const zoomEffect2: Variants = {
+    initial:{
+        opacity: 0, 
+        scale: 0.5,
+    },
+    animate:{
+        opacity: 1, 
+        scale: [.97,1.2,1],
+    },
+    exit:{
+        scale: 0.5,
+        opacity: 0,
+        transition:{
+            opacity:{ delay: 0, duration: 0.2, ease:'easeInOut' }
+        }
     }
 }
 

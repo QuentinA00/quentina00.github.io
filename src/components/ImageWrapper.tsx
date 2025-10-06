@@ -1,9 +1,75 @@
+import { motion } from "framer-motion"
 import { useEffect } from "react"
 import { PostMediasInterface } from "../interfaces/postsInterfaces"
 import ButtonWithIcon from "./ButtonWithIcon"
 import ReactDOM from 'react-dom'
 import AnimationWrapper from "./AnimationWrapper"
-import { bounce } from "../style/animations/animations"
+import { bounce, progressiveShowUp, zoomEffect2 } from "../style/animations/animations"
+import styled from "styled-components"
+
+const Style = styled.div`
+.imageWrapper{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    // backdrop-filter: blur(5rem);
+    background: var(--color3);
+    
+    & .imageWrapper-background{
+        transition: ease-in-out 1s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    & .imageWrapper-closingButton{
+        display: flex;
+        padding: 0 2%;
+        align-self: flex-end;
+        z-index: 3;
+        
+        & .buttonWithIcon{
+            padding: .7rem;
+            background: var(--color3);
+            border-radius: 5rem;
+            cursor: pointer;
+            transition: ease-in-out .15s;
+            &:hover {
+                filter:contrast(5);
+            }
+            &:active{
+                scale:1.1;
+            }
+        }
+        
+        & img{
+            width: 1rem;
+        }
+    }
+    & .imageWrapper-items{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+        z-index: 2;
+        margin: 0rem 1rem;
+
+        & img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: .5rem;
+        }
+    }
+}
+`
 
 interface ImageWrapperProps {
     pathHdImage:PostMediasInterface['linkPathHd']
@@ -40,16 +106,24 @@ const ImageWrapper:React.FC<ImageWrapperProps> = ({pathHdImage, imageDescription
     }, [])
 
     return ReactDOM.createPortal(
-        <AnimationWrapper transitionDuration={.3} className="imageWrapper" animationType={bounce}>
-            <div className="imageWrapper-background" onClick={closingImageWrapper}></div>
-            <div className="imageWrapper-closingButton" onClick={closingImageWrapper}>
-                <ButtonWithIcon imageName="close.svg"/>
-            </div>
-            <div className="imageWrapper-items">
-                <img src={pathHdImage} alt={imageDescription} />
-                <p>{imageDescription}</p>
-            </div>
-        </AnimationWrapper>,
+        <Style>
+            <AnimationWrapper transitionDuration={.4} className="imageWrapper" animationType={progressiveShowUp}>
+                
+                <div className="imageWrapper-background" onClick={closingImageWrapper}></div>
+
+                <motion.div transition={{duration:.3, ease:'easeInOut'}} className="imageWrapper-closingButton" variants={zoomEffect2} initial='initial' animate='animate' exit='exit' onClick={closingImageWrapper}>
+                    {/* <div className="imageWrapper-closingButton" onClick={closingImageWrapper}> */}
+                        <ButtonWithIcon imageName="close.svg"/>
+                    {/* </div> */}
+                </motion.div>
+
+                <motion.div transition={{duration:.3, ease:'easeInOut'}} className="imageWrapper-items" variants={bounce} initial='initial' animate='animate' exit='exit'>
+                    <img src={pathHdImage} alt={imageDescription} />
+                    <p>{imageDescription}</p>
+                </motion.div>
+
+            </AnimationWrapper>
+        </Style>,
         document.body
     )
 }
