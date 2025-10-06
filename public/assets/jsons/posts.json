@@ -130,13 +130,13 @@
                         {
                             "id": 1,
                             "linkPath": "./assets/imgs/webinsights1_small.jpeg",
-                            "linkPathHd":"./assets/imgs/webinsights1.png",
+                            "linkPathHd":"./assets/imgs/webinsights1.jpeg",
                             "text": "The summary page, with the choice of tones to use (that uses different prompts)"
                         },
                         {
                             "id": 2,
                             "linkPath": "./assets/imgs/webinsights2_small.jpeg",
-                            "linkPathHd":"./assets/imgs/webinsights2.png",
+                            "linkPathHd":"./assets/imgs/webinsights2.jpeg",
                             "text": "The setting page, where you can set a default tone, as well as setting up the api key"
                         }
                     ]
