@@ -19,7 +19,6 @@ const Style = styled.div`
     align-items: center;
     flex-direction: column;
     row-gap: 2rem;
-    // backdrop-filter: blur(5rem);
     background: var(--color3);
     
     & .imageWrapper-background{
@@ -131,7 +130,7 @@ const ImageWrapper:React.FC<ImageWrapperProps> = ({pathHdImage, imageDescription
                     animate='animate' 
                     exit='exit'
                 >
-                    <img src={pathHdImage} alt={imageDescription} loading="lazy" decoding="async"/>
+                    <img src={pathHdImage} alt={imageDescription} decoding="async"/>
                     <p>{imageDescription}</p>
                 </motion.div>
 

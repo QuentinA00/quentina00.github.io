@@ -99,7 +99,7 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
             {medias?.images && 
                 <div className="mediaComponent-imageSection">
                     {medias.images.map((image) => (
-                        <img key={image.id} src={image.linkPath} alt={image.text} onClick={() => openImageWrapper(image)}/>
+                        <img key={image.id} src={image.linkPath} alt={image.text} onClick={() => openImageWrapper(image)} loading="lazy" decoding="async"/>
                     ))}
                 </div>
             }

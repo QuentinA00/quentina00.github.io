@@ -50,7 +50,7 @@ const ButtonWithIcon:React.FC<ButtonWithImageProps> = ({imageName, text, descrip
     
     return (
         <div className={classesToApply()} style={{display:'flex'}}>
-            {imageName && <img src={`${pathToApply()}${imageName}`} alt={descriptionText}/>}
+            {imageName && <img src={`${pathToApply()}${imageName}`} alt={descriptionText} decoding="async" loading="lazy"/>}
             {text && <p>{text}</p>}
             {description && !isOnMobileScreen && <span>{description}</span>}
         </div>
