@@ -18,7 +18,7 @@ interface MenuBarProps {
     menuBarItems: AppTextInterface['menuBar']
 }
 
-const MenuBar:React.FC<MenuBarProps> = ({pageItems, menuBarItems}) => {
+const MenuBar:React.FC<MenuBarProps> = ({pageItems}) => {
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
     const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})

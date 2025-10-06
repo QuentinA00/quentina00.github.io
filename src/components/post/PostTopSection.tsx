@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive"
-import ButtonWithIcon from "../ButtonWithIcon"
-import Tag from "./Tag"
+// import ButtonWithIcon from "../ButtonWithIcon"
+// import Tag from "./Tag"
 import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
