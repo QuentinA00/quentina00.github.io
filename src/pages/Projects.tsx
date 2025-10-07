@@ -1,12 +1,12 @@
 import PostContainer from "../components/post/PostContainer"
 import { TagInterface } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/postFilter/PostFilterComponent"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { screen_desktop_medium, screen_desktop_small } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { AnimatePresence } from "framer-motion"
 import AnimationWrapper from "../components/AnimationWrapper"
-import { slideFromRight } from "../style/animations/animations"
+import { progressiveShowUpWithZoom, slideFromRight } from "../style/animations/animations"
 import styled from "styled-components"
 import { usePost } from "../contexts/PostContextProvider"
 
@@ -29,6 +29,11 @@ const Style = styled.div`
         &.projectItems-mediumScreen{
             flex:2;
         }
+    }
+
+    > * {
+        content-visibility:auto;
+        contain-intrinsic-size:40rem;
     }
     
     .postFilter {
@@ -57,22 +62,39 @@ const Projects = () => {
         (post.tagsId?.some(tagId => selectedTags.includes(tagId)) || false)
     )
 
+    // new, better implementation of the filtered posts
+    const filteredPostsV2 = useMemo(() => {
+        return projectsPosts.filter(post => 
+            selectedTags.length === 0 ||
+            (post.tagsId?.some(tagId => selectedTags.includes(tagId)) || false)
+        )
+    },[projectsPosts,selectedTags])
+
     return (
         <Style className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
-            <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
-                {filteredPosts.map(projectData => (
-                    <PostContainer
-                        key={projectData.id}
-                        postData={projectData}
-                        variantType='project'
-                    />
-                ))}
-            </div>
-            <AnimatePresence mode='wait'>
-                <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.5}>
+                <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
+                    <AnimatePresence mode="popLayout">
+                        {filteredPostsV2.map(projectData => (
+                            <AnimationWrapper 
+                                key={projectData.id}
+                                className="projectItem"
+                                transitionDuration={.2}     
+                                animationType={progressiveShowUpWithZoom} 
+                                layout
+                                layoutTransition={{duration:0.4,ease:'easeInOut'}}
+                            >
+                                <PostContainer
+                                    postData={projectData}
+                                    variantType='project'
+                                />
+                            </AnimationWrapper>
+                        ))}
+                    </AnimatePresence>
+                </div>
+
+                <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
                     <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
                 </AnimationWrapper>
-            </AnimatePresence>
         </Style>
     )
 }
