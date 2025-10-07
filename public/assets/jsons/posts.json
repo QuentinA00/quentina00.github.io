@@ -47,7 +47,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_scss","tag_reactContext"],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
                 "postTextParagraphs": [
                     "When I built this website, I envisioned it as a kind of template for a website structure that could be used for many different projects.", 
                     "This is a 1.0 version, and I'm planning to add new features along the way."

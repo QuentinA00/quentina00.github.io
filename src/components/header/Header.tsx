@@ -1,23 +1,17 @@
 import Title from "./Title"
-import { AppTextInterface } from "../../interfaces/appTextInterfaces"
 import MenuBar from "./menuBar/MenuBar"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobilePlus } from "../../utils/responsiveUtils"
 import AnimationWrapper from "../AnimationWrapper"
 import { headerAppearance } from "../../style/animations/animations"
 import { AnimatePresence } from "framer-motion"
+import { useLanguage } from "../../contexts/LanguageContextProvider"
 
-
-interface HeaderProps {
-    appText: AppTextInterface
-}
-
-const Header:React.FC<HeaderProps> = ({appText}) => {
+const Header = () => {
 
     const mobileScreen = useMediaQuery({maxWidth:screen_mobilePlus})
 
-    // console.log('screen_mobile : ',screen_mobile ? 'oui' : 'non')
-    // console.log('mobileScreen : ',mobileScreen ? 'oui' : 'non')
+    const {appText} = useLanguage()
 
     return (
         <AnimatePresence mode='wait'>

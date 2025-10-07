@@ -1,5 +1,4 @@
 import { PagesTextInterface } from "../interfaces/appTextInterfaces"
-import { AppTextProps } from "../interfaces/globalPropsInterfaces"
 import Contact from "./Contact"
 import Home from "./Home"
 import Projects from "./Projects"
@@ -7,19 +6,31 @@ import AnimationWrapper from "../components/AnimationWrapper"
 
 interface PageComponentProps {
     pageItem: PagesTextInterface
-    appText:AppTextProps['appText']
 }
 
-const PageComponent:React.FC<PageComponentProps> = ({pageItem, appText}) => {
+const PageComponent:React.FC<PageComponentProps> = ({pageItem}) => {
+
+    const renderPage = () => {
+        switch (pageItem.id) {
+            case '':
+                return <Home/>
+            case 'projects':
+                return <Projects/>
+            case 'contact':
+                return <Contact/>
+            default:
+                // ensures compile-time exhaustiveness if PageId changes
+                return null
+        }
+    }
+
     return (
         <div className="pageComponent">
 
             <h2>{pageItem.text}</h2>
 
             <AnimationWrapper className="pageComponent-pages">
-                {pageItem.id === '' && <Home/>}
-                {pageItem.id === 'projects' && <Projects/>}
-                {pageItem.id === 'contact' && <Contact contactData={appText.contact}/>}
+                {renderPage()}
             </AnimationWrapper>
 
         </div>

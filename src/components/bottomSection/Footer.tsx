@@ -1,29 +1,24 @@
 import { AnimatePresence } from "framer-motion"
-import { AppTextInterface } from "../../interfaces/appTextInterfaces"
 import AnimationWrapper from "../AnimationWrapper"
 import FooterSocialLinks from "./FooterSocialLinks"
+import { useLanguage } from "../../contexts/LanguageContextProvider"
 
-interface FooterProps {
-    bottomSectionText:AppTextInterface['bottomSection']
-}
+const Footer = () => {
 
-const Footer:React.FC<FooterProps> = ({bottomSectionText}) => {
+    const {appText} = useLanguage()
+    const footerText = appText.bottomSection
+
     return (
         <AnimatePresence mode="wait">
             <AnimationWrapper transitionDuration={.8}>
                 <div className="footer">
-                    <h3>{bottomSectionText.contact}</h3>
+                    <h3>{footerText.contact}</h3>
                     <div className="footerItems">
-                        <p>{bottomSectionText.mail}</p>
-                        <FooterSocialLinks itemsLink={bottomSectionText.professionalLinks}/>
-                        {/* <div className="footerDivider divider2"></div>
-                        <div className="footerItems-bottomSection">
-                            <p>{bottomSectionText.personalAccount}</p>
-                            <FooterSocialLinks itemsLink={bottomSectionText.personalLinks}/>
-                        </div> */}
+                        <p>{footerText.mail}</p>
+                        <FooterSocialLinks itemsLink={footerText.professionalLinks}/>
                         <br />
                         <br />
-                        <p title={bottomSectionText.copyright.title} className="footer-copyright">{bottomSectionText.copyright.text}</p>
+                        <p title={footerText.copyright.title} className="footer-copyright">{footerText.copyright.text}</p>
                     </div>
                 </div>
             </AnimationWrapper>

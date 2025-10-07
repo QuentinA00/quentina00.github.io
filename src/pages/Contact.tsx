@@ -1,20 +1,19 @@
-import { AppTextInterface } from "../interfaces/appTextInterfaces"
 import ButtonWithIcon from "../components/ButtonWithIcon"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "../utils/responsiveUtils"
+import { useLanguage } from "../contexts/LanguageContextProvider"
 
-interface ContactProps{
-    contactData:AppTextInterface['contact']
-}
-
-const Contact:React.FC<ContactProps> = ({contactData}) => {
+const Contact = () => {
 
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+
+    const {appText} = useLanguage()
+    const contactText = appText.contact
 
     return (
         <div className={`contact ${isOnMobileScreen ? 'contact-mobile' : ''}`}>
             <div className="contactItems">
-                <ButtonWithIcon imageName={contactData.image} text={contactData.text}/>
+                <ButtonWithIcon imageName={contactText.image} text={contactText.text}/>
             </div>
         </div>
     )
