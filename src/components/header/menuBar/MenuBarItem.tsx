@@ -4,6 +4,7 @@ import AnimationWrapper from "../../AnimationWrapper"
 import ButtonWithIcon from "../../ButtonWithIcon"
 import { screen_mobile } from "../../../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
+import { zoomEffect3 } from "../../../style/animations/animations"
 
 interface MenuBarItemProps {
     id:string
@@ -35,7 +36,7 @@ const MenuBarItem:React.FC<MenuBarItemProps> = ({ id,text,icon }) => {
             {icon && <ButtonWithIcon imageName={icon} description={text} className="menuBarItem-buttonWithIcon"/>}
 
             <AnimatePresence mode="wait">
-                {isElementSelected && !isOnMobileScreen && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint"/>}
+                {isElementSelected && !isOnMobileScreen && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint" animationType={zoomEffect3}/>}
             </AnimatePresence>
             
             {/* {pageItemData.settings && <MenuBarSettings menuBarSettingsItems={pageItemData.settings} isHidden={true}/>} */}

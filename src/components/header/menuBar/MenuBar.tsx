@@ -35,12 +35,12 @@ const MenuBar:React.FC<MenuBarProps> = ({pageItems}) => {
             {/* mapping pages elements */}
             <div className="menuBar-pagesLinks">
                 {pageItems.map(pageItem => (
-                        <Link 
-                            to={pageItem.id}
-                            key={pageItem.id}
-                        >
-                            <MenuBarItem key={pageItem.id} id={pageItem.id} text={pageItem.text}/>
-                        </Link>
+                    <Link 
+                        to={pageItem.id}
+                        key={pageItem.id}
+                    >
+                        <MenuBarItem key={pageItem.id} id={pageItem.id} text={pageItem.text}/>
+                    </Link>
                 ))}
             </div>
 

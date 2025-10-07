@@ -105,6 +105,25 @@ export const zoomEffect2: Variants = {
     }
 }
 
+// menuBar dot
+export const zoomEffect3: Variants = {
+    initial:{
+        opacity: 0, 
+        scale: 0.3,
+    },
+    animate:{
+        opacity: 1, 
+        scale: 1,
+    },
+    exit:{
+        scale: 0.3,
+        opacity: 0,
+        transition:{
+            opacity:{ delay: 0.2, duration: 0.2, ease:'easeInOut' }
+        }
+    }
+}
+
 // ----- testing out -----
 
 export const slideInOut: Variants = {
