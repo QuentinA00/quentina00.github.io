@@ -3,6 +3,7 @@ import Contact from "./Contact"
 import Home from "./Home"
 import Projects from "./Projects"
 import AnimationWrapper from "../components/AnimationWrapper"
+import { progressiveShowUpWithZoom } from "../style/animations/animations"
 
 interface PageComponentProps {
     pageItem: PagesTextInterface
@@ -27,7 +28,9 @@ const PageComponent:React.FC<PageComponentProps> = ({pageItem}) => {
     return (
         <div className="pageComponent">
 
-            <h2>{pageItem.text}</h2>
+            <AnimationWrapper className="pageComponent-pages" animationType={progressiveShowUpWithZoom} transitionDuration={.3}>
+                <h2>{pageItem.text}</h2>
+            </AnimationWrapper>
 
             <AnimationWrapper className="pageComponent-pages">
                 {renderPage()}

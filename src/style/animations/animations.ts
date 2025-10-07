@@ -85,6 +85,20 @@ export const progressiveShowUp: Variants = {
         }
     }
 }
+export const progressiveShowUpWithZoom: Variants = {
+    initial:{
+        scale:.99,
+        opacity: 0,
+    },
+    animate:{
+        scale:1,
+        opacity: 1,
+    },
+    exit:{ 
+        scale:.99,
+        opacity: 0,
+    }
+}
 
 // used for the closing button
 export const zoomEffect2: Variants = {
