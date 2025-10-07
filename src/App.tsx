@@ -13,7 +13,7 @@ import { useLanguage } from "./contexts/LanguageContextProvider"
 
 const App = () => {
 
-    // get language from the context provider
+    // get text from the context provider
     const {appText} = useLanguage()
 
     // getting the location datas in the app

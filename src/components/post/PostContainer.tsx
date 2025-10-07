@@ -25,6 +25,7 @@ const StyleContainer = styled.div`
         background: var(--color3);
         flex-direction: column;
         row-gap: 2.5rem;
+        backdrop-filter:blur(3rem);
     }
 
     // style for presentation post

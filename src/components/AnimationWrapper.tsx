@@ -6,9 +6,11 @@ interface AnimationWrapperProps {
     animationType?:Variants
     transitionDuration?:number
     className?:string
+    layout?:boolean
+    layoutTransition?:any
 }
 
-const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className}) => {
+const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className, layout, layoutTransition}) => {
 
     return (
         <motion.div
@@ -17,10 +19,12 @@ const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, a
             animate='animate'
             exit='exit'
             transition={{
-                duration:transitionDuration ? transitionDuration : .25,
-                ease:'easeInOut'
+                duration:transitionDuration ? transitionDuration : .3,
+                ease:'easeInOut',
+                layout:layout ? (layoutTransition ?? {type:'tween', stiffness:400, damping:35}) : undefined
             }}
             className={`animationWrapper ${className}`}
+            layout={layout}
         >
             {children && children}
         </motion.div>
