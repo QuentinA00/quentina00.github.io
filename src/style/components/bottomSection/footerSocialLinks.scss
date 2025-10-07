@@ -23,13 +23,11 @@
             
             @media (hover:hover){
                 &:hover > span{
-                    // transform: translateY(.5rem);
-                    transform: translate(-50%, .5rem);
+                    transform: translate(-50%, .1rem);
                 }
             }
             &:active > span{
-                // transform: translateY(.5rem);
-                transform: translate(-50%, .5rem);
+                transform: translate(-50%, .1rem);
             }
             
             & span {
@@ -42,11 +40,9 @@
                 padding: .2rem .7rem;
                 inline-size: max-content;
                 box-shadow: var(--borderShadow5);
-                // left: 2.3rem;
-                // top: .4rem;
                 left: 50%;
                 transform: translate(-50%, -0.25rem);
-                top: 2.5rem;
+                top: 2.7rem;
             }
     
         }
