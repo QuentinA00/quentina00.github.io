@@ -1,25 +1,33 @@
 import { useMediaQuery } from "react-responsive"
 import { screen_tablet } from "../../utils/responsiveUtils"
-import MediaComponent from "../MediaComponent"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import PostTopSection from "./PostTopSection"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 import PostText from "./PostText"
 import PostKeypoints from "./PostKeypoints"
 import PostLinks from "./PostLinks"
+import { lazy, Suspense, useRef } from "react"
+import { useInView } from "framer-motion"
 
 interface PostContentSectionProps {
     postData: PostInterface
 }
 
+const MediaComponent = lazy(() => import("../MediaComponent"))
+
 const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = ({postData, variantType}) => {
 
     const smallerScreen = useMediaQuery({maxWidth:screen_tablet})
 
-    return (
-        <div className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
+    const containerRef = useRef<HTMLDivElement | null>(null)
+    const inView = useInView(containerRef, { margin: "200px 0px 200px 0px", amount: 0 })
 
-            <MediaComponent medias={postData.medias}/>
+    return (
+        <div ref={containerRef} className={`postContentSection ${smallerScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
+
+            <Suspense fallback={null}>
+                {inView && <MediaComponent medias={postData.medias}/>}
+            </Suspense>
 
             <div className="postContentSection-description">
                 
