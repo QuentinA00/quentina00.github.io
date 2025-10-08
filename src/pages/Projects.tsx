@@ -20,7 +20,7 @@ const Style = styled.div`
         flex-direction: column-reverse;
     }
 
-    .projectItems{
+    & .projectItems{
         display: flex;
         flex-direction: column;
         row-gap: 3rem;
@@ -56,14 +56,9 @@ const Projects = () => {
 
     // tags selected in PostFilterComponent
     const [selectedTags, setSelectedTags] = useState<TagInterface['id'][]>([])
-    
-    const filteredPosts = projectsPosts.filter(post =>
-        selectedTags.length === 0 ||
-        (post.tagsId?.some(tagId => selectedTags.includes(tagId)) || false)
-    )
 
     // new, better implementation of the filtered posts
-    const filteredPostsV2 = useMemo(() => {
+    const filteredPosts = useMemo(() => {
         return projectsPosts.filter(post => 
             selectedTags.length === 0 ||
             (post.tagsId?.some(tagId => selectedTags.includes(tagId)) || false)
@@ -72,29 +67,29 @@ const Projects = () => {
 
     return (
         <Style className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
-                <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
-                    <AnimatePresence mode="popLayout">
-                        {filteredPostsV2.map(projectData => (
-                            <AnimationWrapper 
-                                key={projectData.id}
-                                className="projectItem"
-                                transitionDuration={.2}     
-                                animationType={progressiveShowUpWithZoom} 
-                                layout
-                                layoutTransition={{duration:0.4,ease:'easeInOut'}}
-                            >
-                                <PostContainer
-                                    postData={projectData}
-                                    variantType='project'
-                                />
-                            </AnimationWrapper>
-                        ))}
-                    </AnimatePresence>
-                </div>
+            <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
+                <AnimatePresence mode="popLayout">
+                    {filteredPosts.map(projectData => (
+                        <AnimationWrapper 
+                            key={projectData.id}
+                            className="projectItem"
+                            transitionDuration={.3}     
+                            animationType={progressiveShowUpWithZoom} 
+                            layout
+                            layoutTransition={{type:'tween', duration:0.5,ease:'easeInOut'}}
+                        >
+                            <PostContainer
+                                postData={projectData}
+                                variantType='project'
+                            />
+                        </AnimationWrapper>
+                    ))}
+                </AnimatePresence>
+            </div>
 
-                <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
-                    <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
-                </AnimationWrapper>
+            <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
+                <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
+            </AnimationWrapper>
         </Style>
     )
 }

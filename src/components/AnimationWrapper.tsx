@@ -21,7 +21,7 @@ const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, a
             transition={{
                 duration:transitionDuration ? transitionDuration : .3,
                 ease:'easeInOut',
-                layout:layout ? (layoutTransition ?? {type:'tween', stiffness:400, damping:35}) : undefined
+                layout:layout ? (layoutTransition ?? {type:'tween', duration:0.5,ease:'easeInOut'}) : undefined
             }}
             className={`animationWrapper ${className}`}
             layout={layout}
