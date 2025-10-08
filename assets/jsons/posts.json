@@ -12,7 +12,7 @@
                     "I love to learn new technologies, and enhance my skills.",
                     "As of now, my expertise includes those languages / technologies:"
                 ],
-                "tagsId":["tag_js","tag_react","tag_node","tag_next","tag_python","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
+                "tagsId":["tag_js","tag_react","tag_node","tag_next","tag_python","tag_pytorch","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
                 "postsLinks": [
                     {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
                 ]
