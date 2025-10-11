@@ -33,7 +33,7 @@
     { "id": "tag_ollama", "text": "Ollama", "category": "Dev Tools" },
     { "id": "tag_ytdlp", "text": "Yt-Dlp", "category": "Dev Tools" },
     { "id": "tag_docker", "text": "Docker", "category": "Dev Tools" },
-    { "id": "tag_vibeCoding", "text": "Vibe-Coding", "category": "Dev Tools" },
+    { "id": "tag_vibeCoding", "text": "Vibe-Coding", "category": "Software Type" },
     { "id": "tag_githubPages", "text": "Github Pages", "category": "Dev Tools" },
     { "id": "tag_figma", "text": "Figma", "category": "UX / UI" },
     { "id": "tag_pytorch", "text": "PyTorch (beginner)", "category": "Software Development" }
