@@ -5,13 +5,14 @@ import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 import styled from "styled-components"
-// import PostLinks from "./PostLinks"
-// import PostKeypoints from "./PostKeypoints"
-// import PostText from "./PostText"
-// import MediaComponent from "../MediaComponent"
-// import PostTags from "./PostTags"
-// import PostOrigin from "./PostOrigin"
-// import PostTitle from "./PostTitle"
+
+import PostLinks from "./PostLinks"
+import PostKeypoints from "./PostKeypoints"
+import PostText from "./PostText"
+import MediaComponent from "../MediaComponent"
+import PostTags from "./PostTags"
+import PostOrigin from "./PostOrigin"
+import PostTitle from "./PostTitle"
 
 const StyleContainer = styled.div`
     display: flex;
@@ -108,14 +109,14 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
             `}
         >
             {/* ##### hide the top section in the presentation section */}
-            {variantType == 'project' && <PostTopSection postData={postData} variantType={variantType}/>}
+            {/* {variantType == 'project' && <PostTopSection postData={postData} variantType={variantType}/>}
 
-            <PostContentSection postData={postData} variantType={variantType}/>
+            <PostContentSection postData={postData} variantType={variantType}/> */}
             
             {/* ----- new implementation for posts ----- */}
-            {/* {variantType === 'presentation' 
+            {variantType === 'presentation' 
             ? 
-                <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'presentation' ? 'postContentSection-presentation' : ''}`}>
+                <div className={`postContentSection postContentSection-presentation ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
                     <div className="postContentSection-description">
                         <PostText textParagraphs={postData.postTextParagraphs} className="presentation"/>
                         <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
@@ -125,21 +126,23 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
                     </div>
                 </div>
             : 
-                <div className={`postContentSection ${tabletScreen ? 'postContentSection-smallerScreen' : ''} ${variantType == 'project' ? 'postContentSection-presentation' : ''}`}>
+                <>
                     <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
                         <PostOrigin postOrigin={postData.projectOrigin}/>
                         <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''} />
-                        <PostTags tagsId={postData.tagsId} className='presentation' />
+                        <PostTags tagsId={postData.tagsId} className='project' />
                     </div>
-                    <MediaComponent medias={postData.medias}/>
-                    <div className="postContentSection-description">
-                        <PostText textParagraphs={postData.postTextParagraphs}/>
-                        <div className="divider3"></div>
-                        <PostKeypoints keypoints={postData.postTextKeyPoints?.points} keypointsTitle={postData.postTextKeyPoints?.text}/>
-                        <PostLinks links={postData.postsLinks} linkTarget='_blank' />
+                    <div className={`postContentSection postContentSection-project ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
+                        <MediaComponent medias={postData.medias}/>
+                        <div className="postContentSection-description">
+                            <PostText textParagraphs={postData.postTextParagraphs}/>
+                            <div className="divider3"></div>
+                            <PostKeypoints keypoints={postData.postTextKeyPoints?.points} keypointsTitle={postData.postTextKeyPoints?.text}/>
+                            <PostLinks links={postData.postsLinks} linkTarget='_blank' />
+                        </div>
                     </div>
-                </div>
-            } */}
+                </>
+            }
 
         </StyleContainer>
     )
