@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import styled from 'styled-components'
 import { PostsInterface } from '../../interfaces/postsInterfaces'
-import Tag from '../post/Tag'
+import Tag from '../Tag'
 import { styleVariables } from '../../style/globalRules'
 import { useMediaQuery } from 'react-responsive'
 import { screen_desktop_small } from '../../utils/responsiveUtils'

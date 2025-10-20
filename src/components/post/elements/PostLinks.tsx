@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { PostLinkInterface } from "../../interfaces/postsInterfaces"
 import { FC } from "react"
+import { PostLinkInterface } from "../../../interfaces/postsInterfaces"
 
 interface PostLinksProps {
     links?:PostLinkInterface[]

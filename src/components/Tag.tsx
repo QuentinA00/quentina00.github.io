@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { useTags } from "../../contexts/TagContextProvider"
-import { styleVariables } from "../../style/globalRules"
+import { useTags } from "../contexts/TagContextProvider"
+import { styleVariables } from "../style/globalRules"
 
 interface TagProps {
     className?:string

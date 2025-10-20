@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { PostKeyPointsInterface } from "../../interfaces/postsInterfaces"
 import { FC } from "react"
+import { PostKeyPointsInterface } from "../../../interfaces/postsInterfaces"
 
 interface PostKeypointsProps {
     keypointsTitle?: string

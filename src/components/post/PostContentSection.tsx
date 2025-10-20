@@ -3,17 +3,17 @@ import { screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import PostTopSection from "./PostTopSection"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
-import PostText from "./PostText"
-import PostKeypoints from "./PostKeypoints"
-import PostLinks from "./PostLinks"
 import { lazy, Suspense, useRef } from "react"
 import { useInView } from "framer-motion"
+import PostText from "./elements/PostText"
+import PostKeypoints from "./elements/PostKeypoints"
+import PostLinks from "./elements/PostLinks"
 
 interface PostContentSectionProps {
     postData: PostInterface
 }
 
-const MediaComponent = lazy(() => import("../MediaComponent"))
+const MediaComponent = lazy(() => import("./elements/PostMedias"))
 
 const PostContentSection:React.FC<PostContentSectionProps & PostVariantProps> = ({postData, variantType}) => {
 

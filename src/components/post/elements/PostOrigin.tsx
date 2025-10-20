@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import ButtonWithIcon from '../ButtonWithIcon'
+import ButtonWithIcon from '../../ButtonWithIcon'
 
 const StyleContainer = styled.div`
     display:flex;

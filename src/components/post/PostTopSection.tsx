@@ -2,9 +2,12 @@ import { useMediaQuery } from "react-responsive"
 import { screen_mobile, screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
-import PostOrigin from "./PostOrigin"
-import PostTitle from "./PostTitle"
-import PostTags from "./PostTags"
+import PostOrigin from "./elements/PostOrigin"
+import PostTitle from "./elements/PostTitle"
+import PostTags from "./elements/PostTags"
+// import PostOrigin from "./PostOrigin"
+// import PostTitle from "./PostTitle"
+// import PostTags from "./PostTags"
 
 interface PostTopSectionProps {
     postData: PostInterface

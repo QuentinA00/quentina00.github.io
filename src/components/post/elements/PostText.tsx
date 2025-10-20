@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { PostInterface } from "../../interfaces/postsInterfaces"
 import { FC } from "react"
+import { PostInterface } from "../../../interfaces/postsInterfaces"
 
 const StyleContainer = styled.div`
     display: flex;
