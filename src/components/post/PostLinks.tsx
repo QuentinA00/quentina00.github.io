@@ -7,7 +7,7 @@ interface PostLinksProps {
     linkTarget:'_self' | '_blank'
 }
 
-const Style = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     align-self: flex-end;
     gap: 1rem;
@@ -18,14 +18,14 @@ const Style = styled.div`
 const PostLinks: FC<PostLinksProps> = ({links, linkTarget}) => {
     if (!links || links.length === 0) return null
     return (
-        <Style>
+        <StyleContainer>
             {links.map((link) => <a 
                 key={link.link} 
                 className="regularLink" 
                 href={link.link} 
                 target={linkTarget}>{link.linkName}</a>
             )}
-        </Style>
+        </StyleContainer>
     )
 }
 

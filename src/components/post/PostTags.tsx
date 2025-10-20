@@ -2,7 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 import Tag from "./Tag"
 
-const Style = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     gap: .8rem;
     flex-wrap: wrap;
@@ -18,11 +18,11 @@ const PostTags:FC<PostTagsProps> = ({tagsId, className}) => {
     if (!tagsId || tagsId.length === 0) return null
 
     return (
-        <Style>
+        <StyleContainer>
             {tagsId?.map((tagId) => 
                 <Tag key={tagId} tagId={tagId} className={className}/>
             )}
-        </Style>
+        </StyleContainer>
     )
 }
 

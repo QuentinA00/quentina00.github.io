@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import ButtonWithIcon from '../ButtonWithIcon'
 
-const Container = styled.div`
+const StyleContainer = styled.div`
     display:flex;
 
     & .buttonWithIcon {
@@ -38,9 +38,9 @@ const PostOrigin: React.FC<PostOriginProps> = ({postOrigin}) => {
     const imageName = isPersonal ? 'logo_qvsp_small.jpeg' : 'logo_q_small.jpeg'
 
     return (
-        <Container>
+        <StyleContainer>
             <ButtonWithIcon text={postOrigin} imageName={imageName} />
-        </Container>
+        </StyleContainer>
     )
 }
 

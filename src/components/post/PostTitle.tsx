@@ -1,7 +1,7 @@
 import { FC } from "react"
 import styled from "styled-components"
 
-const Style = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -36,11 +36,11 @@ interface PostTitleProps {
 
 const PostTitle: FC<PostTitleProps> = ({ title, description, showDot, className }) => {
     return (
-        <Style className={className}>
+        <StyleContainer className={className}>
             <h3>{title}</h3>
             {showDot && <p className="postTitle-dot">•</p>}
             <p className="postTitle-description">{description}</p>
-        </Style>
+        </StyleContainer>
     )
 }
 

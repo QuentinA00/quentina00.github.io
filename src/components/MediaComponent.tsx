@@ -7,7 +7,7 @@ import { useState } from "react"
 import { AnimatePresence } from "framer-motion"
 import styled from "styled-components"
 
-const Container = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -81,7 +81,7 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
     }
 
     return (
-        <Container className={`mediaComponent ${smallScreen ? 'mediaComponent-smallScreen' : ''}`}>
+        <StyleContainer className={`mediaComponent ${smallScreen ? 'mediaComponent-smallScreen' : ''}`}>
             
             {medias?.videos && 
                 <div className="mediaComponent-videoSection">
@@ -108,7 +108,7 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
                 {selectedImage && <ImageWrapper key='imageWrapper' pathHdImage={selectedImage.linkPathHd} imageDescription={selectedImage.text} closingImageWrapper={closingImageWrapper}/>}
             </AnimatePresence>
 
-        </Container>
+        </StyleContainer>
     )
 }
 
