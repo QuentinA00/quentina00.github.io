@@ -10,7 +10,7 @@ import { progressiveShowUpWithZoom, slideFromRight } from "../style/animations/a
 import styled from "styled-components"
 import { usePost } from "../contexts/PostContextProvider"
 
-const Style = styled.div`
+const StyleContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 3rem;
@@ -57,7 +57,7 @@ const Projects = () => {
     // tags selected in PostFilterComponent
     const [selectedTags, setSelectedTags] = useState<TagInterface['id'][]>([])
 
-    // new, better implementation of the filtered posts
+    // filtering posts
     const filteredPosts = useMemo(() => {
         return projectsPosts.filter(post => 
             selectedTags.length === 0 ||
@@ -66,7 +66,7 @@ const Projects = () => {
     },[projectsPosts,selectedTags])
 
     return (
-        <Style className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
+        <StyleContainer className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
             <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
                 <AnimatePresence mode="popLayout">
                     {filteredPosts.map(projectData => (
@@ -90,7 +90,7 @@ const Projects = () => {
             <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
                 <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
             </AnimationWrapper>
-        </Style>
+        </StyleContainer>
     )
 }
 

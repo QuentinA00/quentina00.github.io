@@ -16,7 +16,7 @@ const StyleContainer = styled.div`
     align-self: start;
     max-width: 22rem;
     
-    & .mediaComponent-imageSection{
+    & .postMedias-imageSection{
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
@@ -41,9 +41,9 @@ const StyleContainer = styled.div`
             }
         }
     }
-    & .mediaComponent-videoSection{
+    & .postMedias-videoSection{
 
-        & .mediaComponent-video{
+        & .postMedias-video{
 
             & p{
                 color: var(--color2);
@@ -54,16 +54,16 @@ const StyleContainer = styled.div`
         }
     }
 
-    &.mediaComponent-smallScreen{
+    &.postMedias-smallScreen{
         align-self: center;
     }
 `
 
-interface MediaComponentProps {
+interface PostMediasProps {
     medias: PostInterface['medias']
 }
 
-const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
+const PostMedias:React.FC<PostMediasProps> = ({medias}) => {
 
     if (!medias) return null
 
@@ -81,14 +81,14 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
     }
 
     return (
-        <StyleContainer className={`mediaComponent ${smallScreen ? 'mediaComponent-smallScreen' : ''}`}>
+        <StyleContainer className={`postMedias ${smallScreen ? 'postMedias-smallScreen' : ''}`}>
             
             {medias?.videos && 
-                <div className="mediaComponent-videoSection">
+                <div className="postMedias-videoSection">
                     { medias.videos.map((video) => (
-                        <div key={video.id} className="mediaComponent-video">
+                        <div key={video.id} className="postMedias-video">
                             <ReactPlayer url={video.linkPath} controls width='100%' height='12rem'/>
-                            <p className="mediaComponent-comment">{video.text}</p>
+                            <p className="postMedias-comment">{video.text}</p>
                         </div>
                     ))}
                 </div>
@@ -97,7 +97,7 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
             {medias?.videos && <div className="divider3"></div>}
             
             {medias?.images && 
-                <div className="mediaComponent-imageSection">
+                <div className="postMedias-imageSection">
                     {medias.images.map((image) => (
                         <img key={image.id} src={image.linkPath} alt={image.text} onClick={() => openImageWrapper(image)} loading="lazy" decoding="async"/>
                     ))}
@@ -112,4 +112,4 @@ const MediaComponent:React.FC<MediaComponentProps> = ({medias}) => {
     )
 }
 
-export default MediaComponent
+export default PostMedias

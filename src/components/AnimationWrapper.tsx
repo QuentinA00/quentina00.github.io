@@ -1,5 +1,6 @@
 import { motion, Variants } from "framer-motion"
 import { zoomEffect } from "../style/animations/animations"
+import { FC } from "react"
 
 interface AnimationWrapperProps {
     children?:React.ReactNode
@@ -10,7 +11,7 @@ interface AnimationWrapperProps {
     layoutTransition?:any
 }
 
-const AnimationWrapper:React.FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className, layout, layoutTransition}) => {
+const AnimationWrapper: FC<AnimationWrapperProps> = ({transitionDuration, animationType, children, className, layout, layoutTransition}) => {
 
     return (
         <motion.div
