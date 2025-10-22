@@ -105,7 +105,14 @@ const PostMedias:React.FC<PostMediasProps> = ({medias}) => {
             }
             
             <AnimatePresence mode='wait'>
-                {selectedImage && <ImageWrapper key='imageWrapper' pathHdImage={selectedImage.linkPathHd} imageDescription={selectedImage.text} closingImageWrapper={closingImageWrapper}/>}
+                {selectedImage && 
+                    <ImageWrapper 
+                        key='imageWrapper' 
+                        pathHdImage={selectedImage.linkPathHd} 
+                        imageDescription={selectedImage.text} 
+                        closingImageWrapper={closingImageWrapper}
+                    />
+                }
             </AnimatePresence>
 
         </StyleContainer>

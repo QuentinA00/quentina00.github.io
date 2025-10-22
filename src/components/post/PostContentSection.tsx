@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive"
 import { screen_tablet } from "../../utils/responsiveUtils"
 import { PostInterface } from "../../interfaces/postsInterfaces"
-import PostTopSection from "./PostTopSection"
+// import PostTopSection from "./PostTopSection"
 import { PostVariantProps } from "../../interfaces/globalPropsInterfaces"
 import { lazy, Suspense, useRef } from "react"
 import { useInView } from "framer-motion"
