@@ -1,3 +1,4 @@
+import {motion} from "framer-motion"
 import PostContainer from "../components/post/PostContainer"
 import { TagInterface } from "../interfaces/postsInterfaces"
 import PostFilterComponent from "../components/postFilter/PostFilterComponent"
@@ -67,22 +68,29 @@ const Projects = () => {
 
     return (
         <StyleContainer className={`projects ${isOnDesktopSmallScreen ? 'projects-smallerScreen' : ''}`}>
+            
             <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
                 <AnimatePresence mode="popLayout">
                     {filteredPosts.map(projectData => (
-                        <AnimationWrapper 
+                        <motion.div
                             key={projectData.id}
                             className="projectItem"
-                            transitionDuration={.3}     
-                            animationType={progressiveShowUpWithZoom} 
+                            variants={progressiveShowUpWithZoom} 
+                            initial='initial'
+                            animate='animate'
+                            exit='exit'
+                            transition={{
+                                duration:.5,
+                                ease:'easeInOut',
+                                layout: {type:'tween', duration:.4,ease:'easeInOut'}
+                            }}
                             layout
-                            layoutTransition={{type:'tween', duration:0.5,ease:'easeInOut'}}
                         >
                             <PostContainer
                                 postData={projectData}
                                 variantType='project'
                             />
-                        </AnimationWrapper>
+                        </motion.div>
                     ))}
                 </AnimatePresence>
             </div>
