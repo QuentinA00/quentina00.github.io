@@ -36,5 +36,6 @@
     { "id": "tag_vibeCoding", "text": "Vibe-Coding", "category": "Software Type" },
     { "id": "tag_githubPages", "text": "Github Pages", "category": "Dev Tools" },
     { "id": "tag_figma", "text": "Figma", "category": "UX / UI" },
-    { "id": "tag_pytorch", "text": "PyTorch (beginner)", "category": "Software Development" }
+    { "id": "tag_pytorch", "text": "PyTorch (beginner)", "category": "Software Development" },
+    { "id": "tag_prisma", "text": "Prisma", "category": "Software Development" }
 ]

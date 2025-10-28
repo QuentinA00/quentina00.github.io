@@ -190,7 +190,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Kosmo Project",
                 "description": "An ideal social network for me. (In progress...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next"],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
                 "postTextParagraphs": [
                     "The idea behind this project was to create my ideal Twitter-like social network.",
                     "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
