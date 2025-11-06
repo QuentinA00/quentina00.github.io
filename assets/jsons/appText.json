@@ -2,7 +2,7 @@
     "en": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "monetization", "text": "Support is always appreciated :)", "icon":"dollar.svg", "link":"" }
+            { "id": "monetization", "text": "change language here (not implemented yet..)", "icon":"globe.svg", "link":"" }
         ],
         "pages":[
             { "id": "", "text": "About me" },
@@ -61,13 +61,13 @@
                 {"id":"linktree","text":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"mail","text":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"mail"},
                 {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"compte Github personnel"},
-                {"id":"telegram","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
-                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
+                {"id":"telegram","text":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"mon Telegram"},
+                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"mon Discord"}
             ],
             "personalAccount": "mes comptes personnels :",
             "personalLinks":[
-                {"id":"item1","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"mon compte Github personnel (principal)"},
-                {"id":"item2","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"mon Discord"}
+                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"mon compte Github personnel (principal)"},
+                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"mon Discord"}
             ],
             "copyright":{
                 "title":"Copyright",

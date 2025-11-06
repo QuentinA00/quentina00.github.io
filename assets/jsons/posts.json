@@ -43,7 +43,7 @@
                 "id": "semantic_search_project",
                 "projectOrigin": "Personal project",
                 "title": "Semantic searches on audio transcripts",
-                "description": "Python script for creating/storing audio transcripts in vector db (in progress)",
+                "description": "Script to create & store audio transcripts in vector db",
                 "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "postTextParagraphs": [
                     "A project to perform semantic search on large volumes of audio transcripts.",
@@ -301,7 +301,7 @@
                     "J'aime apprendre de nouvelles technologies et améliorer mes compétences.",
                     "Actuellement, mon expertise comprend ces langages / technologies :"
                 ],
-                "tagsId":["tag_js","tag_react","tag_node","tag_next","tag_python","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
+                "tagsId":["tag_js","tag_python","tag_react","tag_node","tag_next","tag_pytorch","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
                 "postsLinks": [
                     {"linkName": "Aller à la page des projets pour voir mes travaux actuels/précédents","link": "#projects"}
                 ]
@@ -309,10 +309,10 @@
         ],
         "projects": [
             {
-                "id": "project6",
+                "id": "semantic_search_project",
                 "projectOrigin": "Projet personnel",
                 "title": "Recherches sémantiques sur des transcriptions audio",
-                "description": "Script Python pour créer/stocker des transcriptions audio dans une base de données vectorielle (en cours)",
+                "description": "Script pour créer & stocker des transcriptions audio dans une db vectorielle",
                 "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "postTextParagraphs": [
                     "Un projet pour effectuer des recherches sémantiques sur de gros volumes de transcriptions audio.",
@@ -332,7 +332,7 @@
                 ]
             },
             {
-                "id": "project5",
+                "id": "temporo",
                 "projectOrigin": "Projet personnel",
                 "title": "Temporo",
                 "description": "Une application simple et flexible pour gérer les minuteurs et les habitudes",
@@ -392,7 +392,7 @@
                 ]
             },
             {
-                "id": "project4",
+                "id": "webinsights",
                 "projectOrigin": "Projet personnel",
                 "title": "WebInsights",
                 "description": "Une extension Chrome pour obtenir des résumés et des informations sur les sites web. (En cours)",
@@ -419,29 +419,27 @@
                         {
                             "id": 1,
                             "linkPath": "./assets/imgs/webinsights1_small.jpeg",
-                            "linkPathHd":"./assets/imgs/webinsights1.png",
+                            "linkPathHd":"./assets/imgs/webinsights1.jpeg",
                             "text": "La page de résumé, avec le choix des tons à utiliser (qui utilise différents prompts)"
                         },
                         {
                             "id": 2,
                             "linkPath": "./assets/imgs/webinsights2_small.jpeg",
-                            "linkPathHd":"./assets/imgs/webinsights2.png",
+                            "linkPathHd":"./assets/imgs/webinsights2.jpeg",
                             "text": "La page des paramètres, où vous pouvez définir un ton par défaut, ainsi que configurer la clé API"
                         }
                     ]
                 }
             },
             {
-                "id": "project3",
+                "id": "portfolio_project",
                 "projectOrigin": "Projet professionnel",
                 "title": "Site Portfolio / Structure de site web réutilisable",
                 "description": "Ce site web actuel.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss"],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
                 "postTextParagraphs": [
-                    "Quand j'ai construit ce site web, je l'ai envisagé comme une sorte de structure de template de site web qui pourrait être utilisée pour de nombreux sites web différents.", 
-                    "Il vise à être assez flexible, avec le texte de toute l'application géré via un fichier JSON (pour gérer les traductions par exemple) et un autre fichier JSON pour les 'posts', comme les projets dans cette liste.",
-                    "Ce n'est qu'une version 1.0, et beaucoup de fonctionnalités supplémentaires peuvent être ajoutées.",
-                    "Par exemple, dans la version à venir, j'aimerais ajouter une fonctionnalité de filtre pour trier les projets par leurs tags."
+                    "Quand j'ai construit ce site web, je l'ai envisagé comme une sorte de template pour une structure de site web qui pourrait être utilisée pour de nombreux projets différents.", 
+                    "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles fonctionnalités au fil du temps."
                 ],
                 "postTextKeyPoints":{
                     "text":"Fonctionnalités clés : ", 
@@ -449,7 +447,7 @@
                         {"id":1,"text":"Structure réutilisable"},
                         {"id":2,"text":"Peut être alimenté par un fichier json ou un serveur backend pour les éléments de texte/projets de l'app"},
                         {"id":3,"text":"Prêt à être connecté à un backend"},
-                        {"id":4,"text":"Utilisation de Suspense, Fallback, ErrorBoundaries pour atténuer/gérer les problèmes lors de la récupération de données par exemple"}
+                        {"id":4,"text":"Utilisation de Suspense, Fallback, ErrorBoundaries, react-router et framer-motion"}
                     ]
                 },
                 "postsLinks": [
@@ -457,11 +455,11 @@
                 ]
             },
             {
-                "id": "project2",
+                "id": "kosmo_project",
                 "projectOrigin": "Projet personnel",
                 "title": "Projet Kosmo",
                 "description": "Un réseau social idéal pour moi. (En cours...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next"],
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
                 "postTextParagraphs": [
                     "L'idée derrière ce projet était de créer mon réseau social idéal de type Twitter.",
                     "Comme je me sentais frustré par l'absence de certaines fonctionnalités qui me sont cruciales dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.", 
@@ -512,7 +510,7 @@
                 }
             },
             {
-                "id": "project1",
+                "id": "coaching_section",
                 "projectOrigin": "Projet professionnel",
                 "title": "Section Coaching",
                 "description": "Application web React pour trouver des coachs par sujets",
