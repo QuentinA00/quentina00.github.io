@@ -1,6 +1,12 @@
 import { createContext, FC, ReactNode, useContext } from "react"
 import { TagGroupedByCategory, TagInterface } from "../interfaces/postsInterfaces"
-import tags from '../../public/assets/jsons/tags.json'
+import tagsData from '../../public/assets/jsons/tags.json'
+import { useLanguage } from "./LanguageContextProvider"
+
+interface TagsInterfacesWithLanguage {
+    en: TagInterface[]
+    fr: TagInterface[]
+}
 
 interface TagsContextType {
     tags: TagInterface[]
@@ -12,6 +18,8 @@ interface TagsContextType {
 const TagsContext = createContext<TagsContextType | undefined>(undefined)
 
 export const TagsProvider: FC<{ children: ReactNode }> = ({ children }) => {
+    const { currentLanguage } = useLanguage()
+    const tags = (tagsData as TagsInterfacesWithLanguage)[currentLanguage]
 
     // return the tag that has the id given as parameter
     // if no match, return undefined

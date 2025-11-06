@@ -1,62 +1,53 @@
-import { Link } from "react-router-dom"
-import { AppTextInterface } from "../../../interfaces/appTextInterfaces"
-import MenuBarItem from "./MenuBarItem"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile, screen_tinyMobile } from "../../../utils/responsiveUtils"
+import { useLanguage } from "../../../contexts/LanguageContextProvider"
+import MenuBarPages from "./MenuBarPages"
+import MenuBarItems from "./MenuBarItems"
+import styled from "styled-components"
 
+const StyleContainer = styled.div`
+    display: flex;
+    align-items: center;
+    align-self: center;
+    column-gap: 1rem;
+    transition: ease-in-out .2s;
+    margin-right: 2rem;
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// MenuBar is a combination of :
-// - the existing 'pages' elements in the json
-// - the existing 'menuBar' elements in the json
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
+    &.menuBar-mobile {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin-right: 0;
+    }
+    &.menuBar-tinyMobile {
+        background: var(--color3);
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+`
 
-interface MenuBarProps {
-    pageItems:AppTextInterface['pages']
-    menuBarItems: AppTextInterface['menuBar']
-}
+const MenuBar = () => {
 
-const MenuBar:React.FC<MenuBarProps> = ({pageItems}) => {
-
-    const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
+    const isOnMobile = useMediaQuery({maxWidth:screen_mobile})
     const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})
+
+    // get app text from context
+    const {appText} = useLanguage()
     
     return (
-        <div 
+        <StyleContainer 
             className={`
                 menuBar 
-                ${isOnMobileScreen ? 'menuBar-mobile' : ''} 
+                ${isOnMobile ? 'menuBar-mobile' : ''} 
                 ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}
             `}
         >
-
-            {/* mapping pages elements */}
-            <div className="menuBar-pagesLinks">
-                {pageItems.map(pageItem => (
-                    <Link 
-                        to={pageItem.id}
-                        key={pageItem.id}
-                    >
-                        <MenuBarItem key={pageItem.id} id={pageItem.id} text={pageItem.text}/>
-                    </Link>
-                ))}
-            </div>
-
-            {/* ---------- below is the code for menubar items/icons : divider on mobile + menubar items ---------- */}
-            {/* {isOnMobileScreen && <div className="divider2"></div>} */}
-
-            {/* mapping menuBar elements */}
-            {/* <div className="menuBar-items">
-                {menuBarItems.map(menuBarItem => (
-                    <MenuBarItem key={menuBarItem.id} id={menuBarItem.id} text={menuBarItem.text} icon={menuBarItem.icon}/>
-                ))}
-            </div> */}
-            
-            {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}
-
-        </div>
+            <MenuBarPages pageItems={appText.pages} isOnMobile={isOnMobile} isOnTinyMobile={isOnTinyMobile}/>
+            {isOnMobile && <div className="divider2"></div>}
+            <MenuBarItems menuBarItems={appText.menuBar} />
+        </StyleContainer>
     )
 }
 

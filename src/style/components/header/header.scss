@@ -1,24 +1,24 @@
-@use '../../mixin';
-.header{
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
-    @include mixin.transition(.1s);
+// @use '../../mixin';
+// .header{
+//     // display: flex;
+//     // flex-direction: column;
+//     // row-gap: 2rem;
+//     // @include mixin.transition(.1s);
     
-    & .header-topSection{
-        margin: 0rem 2rem;
-        display: flex;
-        flex-grow: 1;
-        justify-content:space-between;
-        @include mixin.transition(.1s);
-    }
+//     // & .header-topSection{
+//     //     margin: 0rem 2rem;
+//     //     display: flex;
+//     //     flex-grow: 1;
+//     //     justify-content:space-between;
+//     //     @include mixin.transition(.1s);
+//     // }
 
-    &.header-mobile {
+//     // &.header-mobile {
 
-        & .header-topSection{
-            flex-direction: column;
-            row-gap: 3rem;
-            margin: 0 1rem;
-        }
-    }
-}
+//     //     & .header-topSection{
+//     //         flex-direction: column;
+//     //         row-gap: 3rem;
+//     //         margin: 0 1rem;
+//     //     }
+//     // }
+// }

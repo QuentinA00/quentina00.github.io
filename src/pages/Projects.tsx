@@ -80,9 +80,9 @@ const Projects = () => {
                             animate='animate'
                             exit='exit'
                             transition={{
-                                duration:.5,
+                                duration:.6,
                                 ease:'easeInOut',
-                                layout: {type:'tween', duration:.4,ease:'easeInOut'}
+                                layout: {type:'tween', duration:.5,ease:'easeInOut'}
                             }}
                             layout
                         >
