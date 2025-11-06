@@ -2,7 +2,7 @@
     "en": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "monetization", "text": "change language here", "icon":"globe.svg", "link":"" }
+            { "id": "monetization", "text": "change language here (not implemented yet..)", "icon":"globe.svg", "link":"" }
         ],
         "pages":[
             { "id": "", "text": "About me" },

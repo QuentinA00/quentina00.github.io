@@ -31,11 +31,11 @@
 
         @media (hover:hover){
             &:hover > span{
-                transform: translate(-10rem, 2.7rem) scale(1);
+                transform: translate(-19rem, 2.7rem) scale(1);
             }
         }
         &:active > span{
-            transform: translate(-14rem, 2.7rem) scale(1);
+            transform: translate(-19rem, 2.7rem) scale(1);
         }
 
         & > span{
