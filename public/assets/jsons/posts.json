@@ -86,6 +86,61 @@
                 ]
             },
             {
+                "id": "kosmo_project",
+                "projectOrigin": "Personal project",
+                "title": "Kosmo Project",
+                "description": "An ideal social network for me. (In progress...)",
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
+                "postTextParagraphs": [
+                    "The idea behind this project was to create my ideal Twitter-like social network.",
+                    "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
+                    "For me, many features on Reddit are really well-designed and should be integrated into Twitter. I've drawn a lot of inspiration from it.",
+                    "I don't take it too seriously for now though, I see it more as a portfolio project to show off a bit, rather than something that will release for real one day, but who knows 🤷🏻‍♂️"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Key features : ", 
+                    "points":[
+                        {"id":1,"text":"Meant to be a healthy social network"},
+                        {"id":2,"text":"Upvote/downvote system"},
+                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations / responsive / pages.."}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Github repot front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
+                    {"linkName": "Github repot (v2)","link": "https://github.com/quentinvespero/kosmo"},
+                    {"linkName": "Current version online (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
+                ],
+                "medias": {
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://youtu.be/mfaUbzyOqTk",
+                            "text": "A video showing off the project"
+                        }
+                    ],
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/kosmo3_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo3.png",
+                            "text": "Entry page"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/kosmo1_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo1.png",
+                            "text": "Home page"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/kosmo2_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo2.png",
+                            "text": "Home page displaying posts in a column view, with the menu to create a post toggled."
+                        }
+                    ]
+                }
+            },
+            {
                 "id": "temporo",
                 "projectOrigin": "Personal project",
                 "title": "Temporo",
@@ -186,61 +241,6 @@
                 }
             },
             {
-                "id": "kosmo_project",
-                "projectOrigin": "Personal project",
-                "title": "Kosmo Project",
-                "description": "An ideal social network for me. (In progress...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
-                "postTextParagraphs": [
-                    "The idea behind this project was to create my ideal Twitter-like social network.",
-                    "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
-                    "For me, many features on Reddit are really well-designed and should be integrated into Twitter. I've drawn a lot of inspiration from it.",
-                    "I don't take it too seriously for now though, I see it more as a portfolio project to show off a bit, rather than something that will release for real one day, but who knows 🤷🏻‍♂️"
-                ],
-                "postTextKeyPoints":{
-                    "text":"Key features : ", 
-                    "points":[
-                        {"id":1,"text":"Meant to be a healthy social network"},
-                        {"id":2,"text":"Upvote/downvote system"},
-                        {"id":3,"text":"Built almost Vanilla. No libraries for managing animations / responsive / pages.."}
-                    ]
-                },
-                "postsLinks": [
-                    {"linkName": "Github repot front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
-                    {"linkName": "Github repot (v2)","link": "https://github.com/quentinvespero/kosmo"},
-                    {"linkName": "Current version online (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
-                ],
-                "medias": {
-                    "videos":[
-                        {
-                            "id": 1,
-                            "linkPath": "https://youtu.be/mfaUbzyOqTk",
-                            "text": "A video showing off the project"
-                        }
-                    ],
-                    "images":[
-                        {
-                            "id": 1,
-                            "linkPath": "./assets/imgs/kosmo3_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo3.png",
-                            "text": "Entry page"
-                        },
-                        {
-                            "id": 2,
-                            "linkPath": "./assets/imgs/kosmo1_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo1.png",
-                            "text": "Home page"
-                        },
-                        {
-                            "id": 3,
-                            "linkPath": "./assets/imgs/kosmo2_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo2.png",
-                            "text": "Home page displaying posts in a column view, with the menu to create a post toggled."
-                        }
-                    ]
-                }
-            },
-            {
                 "id": "coaching_section",
                 "projectOrigin": "Professional project",
                 "title": "Coaching section",
@@ -330,6 +330,84 @@
                 "postsLinks": [
                     {"linkName": "Dépôt Github","link": "https://github.com/quentinvespero/podcast_transcription"}
                 ]
+            },
+            {
+                "id": "portfolio_project",
+                "projectOrigin": "Projet professionnel",
+                "title": "Site Portfolio / Structure de site web réutilisable",
+                "description": "Ce site web actuel.",
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
+                "postTextParagraphs": [
+                    "Quand j'ai construit ce site web, je l'ai envisagé comme une sorte de template pour une structure de site web qui pourrait être utilisée pour de nombreux projets différents.", 
+                    "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles fonctionnalités au fil du temps."
+                ],
+                "postTextKeyPoints":{
+                    "text":"Fonctionnalités clés : ", 
+                    "points":[
+                        {"id":1,"text":"Structure réutilisable"},
+                        {"id":2,"text":"Peut être alimenté par un fichier json ou un serveur backend pour les éléments de texte/projets de l'app"},
+                        {"id":3,"text":"Prêt à être connecté à un backend"},
+                        {"id":4,"text":"Utilisation de Suspense, Fallback, ErrorBoundaries, react-router et framer-motion"}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Dépôt Github","link": "https://github.com/QuentinA00/quentina00.github.io"}
+                ]
+            },
+            {
+                "id": "kosmo_project",
+                "projectOrigin": "Projet personnel",
+                "title": "Projet Kosmo",
+                "description": "Un réseau social idéal pour moi. (En cours...)",
+                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
+                "postTextParagraphs": [
+                    "L'idée derrière ce projet était de créer mon réseau social idéal de type Twitter.",
+                    "Comme je me sentais frustré par l'absence de certaines fonctionnalités qui me sont cruciales dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.", 
+                    "Pour moi, beaucoup de fonctionnalités sur Reddit sont vraiment bien conçues et devraient être intégrées dans Twitter. J'ai beaucoup puisé mon inspiration de là.",
+                    "Je ne le prends pas trop au sérieux pour l'instant, je le vois plus comme un projet de portfolio pour me mettre en valeur, plutôt que comme quelque chose qui sortira vraiment un jour, mais qui sait 🤷🏻‍♂️"
+                ],
+                "postTextKeyPoints":{
+                    "text":"Fonctionnalités clés : ", 
+                    "points":[
+                        {"id":1,"text":"Destiné à être un réseau social sain"},
+                        {"id":2,"text":"Système de vote positif/négatif"},
+                        {"id":3,"text":"Construit presque en Vanilla. Aucune bibliothèque pour gérer les animations / responsive / pages.."}
+                    ]
+                },
+                "postsLinks": [
+                    {"linkName": "Dépôt Github front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
+                    {"linkName": "Dépôt Github (v2)","link": "https://github.com/quentinvespero/kosmo"},
+                    {"linkName": "Version actuelle en ligne (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
+                ],
+                "medias": {
+                    "videos":[
+                        {
+                            "id": 1,
+                            "linkPath": "https://youtu.be/mfaUbzyOqTk",
+                            "text": "Une vidéo montrant le projet"
+                        }
+                    ],
+                    "images":[
+                        {
+                            "id": 1,
+                            "linkPath": "./assets/imgs/kosmo3_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo3.png",
+                            "text": "Page d'entrée"
+                        },
+                        {
+                            "id": 2,
+                            "linkPath": "./assets/imgs/kosmo1_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo1.png",
+                            "text": "Page d'accueil"
+                        },
+                        {
+                            "id": 3,
+                            "linkPath": "./assets/imgs/kosmo2_small.jpeg",
+                            "linkPathHd":"./assets/imgs/kosmo2.png",
+                            "text": "Page d'accueil affichant les posts en vue colonne, avec le menu pour créer un post activé."
+                        }
+                    ]
+                }
             },
             {
                 "id": "temporo",
@@ -427,84 +505,6 @@
                             "linkPath": "./assets/imgs/webinsights2_small.jpeg",
                             "linkPathHd":"./assets/imgs/webinsights2.jpeg",
                             "text": "La page des paramètres, où vous pouvez définir un ton par défaut, ainsi que configurer la clé API"
-                        }
-                    ]
-                }
-            },
-            {
-                "id": "portfolio_project",
-                "projectOrigin": "Projet professionnel",
-                "title": "Site Portfolio / Structure de site web réutilisable",
-                "description": "Ce site web actuel.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
-                "postTextParagraphs": [
-                    "Quand j'ai construit ce site web, je l'ai envisagé comme une sorte de template pour une structure de site web qui pourrait être utilisée pour de nombreux projets différents.", 
-                    "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles fonctionnalités au fil du temps."
-                ],
-                "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
-                    "points":[
-                        {"id":1,"text":"Structure réutilisable"},
-                        {"id":2,"text":"Peut être alimenté par un fichier json ou un serveur backend pour les éléments de texte/projets de l'app"},
-                        {"id":3,"text":"Prêt à être connecté à un backend"},
-                        {"id":4,"text":"Utilisation de Suspense, Fallback, ErrorBoundaries, react-router et framer-motion"}
-                    ]
-                },
-                "postsLinks": [
-                    {"linkName": "Dépôt Github","link": "https://github.com/QuentinA00/quentina00.github.io"}
-                ]
-            },
-            {
-                "id": "kosmo_project",
-                "projectOrigin": "Projet personnel",
-                "title": "Projet Kosmo",
-                "description": "Un réseau social idéal pour moi. (En cours...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
-                "postTextParagraphs": [
-                    "L'idée derrière ce projet était de créer mon réseau social idéal de type Twitter.",
-                    "Comme je me sentais frustré par l'absence de certaines fonctionnalités qui me sont cruciales dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.", 
-                    "Pour moi, beaucoup de fonctionnalités sur Reddit sont vraiment bien conçues et devraient être intégrées dans Twitter. J'ai beaucoup puisé mon inspiration de là.",
-                    "Je ne le prends pas trop au sérieux pour l'instant, je le vois plus comme un projet de portfolio pour me mettre en valeur, plutôt que comme quelque chose qui sortira vraiment un jour, mais qui sait 🤷🏻‍♂️"
-                ],
-                "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
-                    "points":[
-                        {"id":1,"text":"Destiné à être un réseau social sain"},
-                        {"id":2,"text":"Système de vote positif/négatif"},
-                        {"id":3,"text":"Construit presque en Vanilla. Aucune bibliothèque pour gérer les animations / responsive / pages.."}
-                    ]
-                },
-                "postsLinks": [
-                    {"linkName": "Dépôt Github front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
-                    {"linkName": "Dépôt Github (v2)","link": "https://github.com/quentinvespero/kosmo"},
-                    {"linkName": "Version actuelle en ligne (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
-                ],
-                "medias": {
-                    "videos":[
-                        {
-                            "id": 1,
-                            "linkPath": "https://youtu.be/mfaUbzyOqTk",
-                            "text": "Une vidéo montrant le projet"
-                        }
-                    ],
-                    "images":[
-                        {
-                            "id": 1,
-                            "linkPath": "./assets/imgs/kosmo3_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo3.png",
-                            "text": "Page d'entrée"
-                        },
-                        {
-                            "id": 2,
-                            "linkPath": "./assets/imgs/kosmo1_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo1.png",
-                            "text": "Page d'accueil"
-                        },
-                        {
-                            "id": 3,
-                            "linkPath": "./assets/imgs/kosmo2_small.jpeg",
-                            "linkPathHd":"./assets/imgs/kosmo2.png",
-                            "text": "Page d'accueil affichant les posts en vue colonne, avec le menu pour créer un post activé."
                         }
                     ]
                 }
