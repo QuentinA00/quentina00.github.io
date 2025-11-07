@@ -1,28 +1,7 @@
-export interface MenuBarSubMenuItemInterface{
-    key:string
-    text:string
-    icon:string
-}
-
-export interface MenuBarItemInterface {
-    id:string
-    text:string
-    icon?:string
-    link?:string
-    subMenuItems:MenuBarSubMenuItemInterface[]
-}
-
-export interface BottomSectionLinkInterface {
-    id:string
-    text:string
-    icon:string
-    link:string
-    description:string
-}
-
-export interface PagesTextInterface {
-    id:string
-    text:string
+// export the whole interfaces above, starting with a language
+export interface AppTextInterfacesWithLanguage {
+    fr: AppTextInterface
+    en: AppTextInterface
 }
 
 // main interface
@@ -60,8 +39,30 @@ export interface AppTextInterface {
     }
 }
 
-// export the whole interfaces above, starting with a language
-export interface AppTextInterfacesWithLanguage {
-    fr: AppTextInterface
-    en: AppTextInterface
+// ---------- elements of the main interface ----------
+
+export interface MenuBarItemInterface {
+    id:string
+    text:string
+    icon?:string
+    link?:string
+    subMenuItems:MenuBarSubMenuItemInterface[]
+}
+export interface MenuBarSubMenuItemInterface{
+    key:string
+    text:string
+    icon?:string
+}
+
+export interface BottomSectionLinkInterface {
+    id:string
+    text:string
+    icon:string
+    link:string
+    description:string
+}
+
+export interface PagesTextInterface {
+    id:string
+    text:string
 }

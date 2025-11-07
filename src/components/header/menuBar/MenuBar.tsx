@@ -37,13 +37,7 @@ const MenuBar = () => {
     const {appText} = useLanguage()
     
     return (
-        <StyleContainer 
-            className={`
-                menuBar 
-                ${isOnMobile ? 'menuBar-mobile' : ''} 
-                ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}
-            `}
-        >
+        <StyleContainer className={`${isOnMobile ? 'menuBar-mobile' : ''} ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}`}>
             <MenuBarPages pageItems={appText.pages} isOnMobile={isOnMobile} isOnTinyMobile={isOnTinyMobile}/>
             {isOnMobile && <div className="divider2"></div>}
             <MenuBarItems menuBarItems={appText.menuBar} />
