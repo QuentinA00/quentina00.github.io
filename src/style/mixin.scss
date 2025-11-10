@@ -55,7 +55,6 @@
     display: flex;
     position: relative;
     cursor: pointer;
-    // @include transition(.15s);
     @include hoverLink3;
         
     // showing the description if hovered
@@ -78,7 +77,6 @@
         visibility: hidden;
         opacity: 0;
         z-index: 2;
-        // @include transition(.15s);
 
         // creating the description
         &::after{

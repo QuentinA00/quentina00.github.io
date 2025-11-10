@@ -26,30 +26,30 @@
         border-radius: 3rem;
         cursor: pointer;
         background: var(--color3);
-        @include mixin.itemDescriptionOnHover;
+        // @include mixin.itemDescriptionOnHover;
         @include mixin.transition(.15s);
 
-        @media (hover:hover){
-            &:hover > span{
-                transform: translate(-19rem, 2.7rem) scale(1);
-            }
-        }
-        &:active > span{
-            transform: translate(-19rem, 2.7rem) scale(1);
-        }
+        // @media (hover:hover){
+        //     &:hover > span{
+        //         transform: translate(-19rem, 2.7rem) scale(1);
+        //     }
+        // }
+        // &:active > span{
+        //     transform: translate(-19rem, 2.7rem) scale(1);
+        // }
 
-        & > span{
-            background: var(--color2);
-            border-radius: 3rem 0 3rem 3rem;
-            padding: .2rem .7rem;
-            font-size: .8rem;
-            font-weight: 400;
-            color: var(--color1);
-            box-shadow: var(--borderShadow5);
-            inline-size: max-content;
-            transform: translate(-50%,0) scale(.1);
-            @include mixin.transition(.15s);
-        }
+        // & > span{
+        //     background: var(--color2);
+        //     border-radius: 3rem 0 3rem 3rem;
+        //     padding: .2rem .7rem;
+        //     font-size: .8rem;
+        //     font-weight: 400;
+        //     color: var(--color1);
+        //     box-shadow: var(--borderShadow5);
+        //     inline-size: max-content;
+        //     transform: translate(-50%,0) scale(.1);
+        //     @include mixin.transition(.15s);
+        // }
 
         & img{
             width: 1rem;
