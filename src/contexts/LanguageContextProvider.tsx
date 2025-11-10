@@ -10,12 +10,15 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
-export const LanguageProvider: FC<{children : ReactNode}> = ({children}) => {
-    const [currentLanguage,setCurrentLanguage] = useState<'en'|'fr'>('en')
+const getBrowserLanguage = (): 'en'| 'fr' =>{
+    const browserLanguage = navigator.language || (navigator as any).userLangue
+    return browserLanguage.toLowerCase().startsWith('fr') ? 'fr' : 'en'
+}
 
-    const setLanguage = (language:'en'|'fr') => {
-        setCurrentLanguage(language)
-    }
+export const LanguageProvider: FC<{children : ReactNode}> = ({children}) => {
+    const [currentLanguage,setCurrentLanguage] = useState<'en'|'fr'>(getBrowserLanguage())
+
+    const setLanguage = (language:'en'|'fr') => setCurrentLanguage(language)
 
     const appTextData = appText as AppTextInterfacesWithLanguage
     const currentAppText = appTextData[currentLanguage]
