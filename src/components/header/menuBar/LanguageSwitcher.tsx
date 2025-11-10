@@ -16,12 +16,12 @@ const StyleContainer = styled.div`
     
     & .languageItem{
         padding:.15rem 1rem;
-        border-radius:.4rem;
+        border-radius:.3rem;
         cursor:pointer;
         transition:ease-in-out .1s;
         
         &:hover{
-            /* background:var(--color3); */
+            background:var(--color3);
             filter:brightness(.9);
         }
         &:active{
@@ -32,6 +32,10 @@ const StyleContainer = styled.div`
         /* border: solid .1rem var(--color2); */
         color:var(--color1);
         background:var(--color2);
+
+        &:hover{
+            background:var(--color2);
+        }
     }
 `
 

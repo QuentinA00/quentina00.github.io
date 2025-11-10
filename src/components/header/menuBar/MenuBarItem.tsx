@@ -32,9 +32,9 @@ const MenuBarItem: React.FC<MenuBarItemProps> = ({ id, text, icon, toggleLanguag
             {/* if there isn't icon, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
             {!icon && <div className="menuBarItem-buttonWithText">{text}</div>}
 
-            {/* if there is an icon, then we use the component ButtonWithIcon, and the class is menuBarItem-buttonWithIcon */}
             {icon && <ButtonWithIcon imageName={icon} className="menuBarItem-buttonWithIcon" />}
 
+            {/*  */}
             <AnimatePresence mode="wait">
                 {isElementSelected && !isOnMobileScreen && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint" animationType={zoomEffect3} />}
             </AnimatePresence>
