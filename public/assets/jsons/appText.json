@@ -2,7 +2,7 @@
     "en": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "monetization", "text": "change language here (not implemented yet..)", "icon":"globe.svg", "link":"" }
+            {"id": "language", "text": "change language here (not implemented yet..)", "icon":"globe.svg", "link":""}
         ],
         "pages":[
             { "id": "", "text": "About me" },
@@ -43,7 +43,7 @@
     "fr": {
         "title": "Quentin A.",
         "menuBar": [
-            { "id": "monetization", "text": "Le soutien est toujours apprécié :)", "icon":"dollar.svg", "link":"" }
+            {"id": "language", "text": "change language here (not implemented yet..)", "icon":"globe.svg", "link":""}
         ],
         "pages":[
             { "id": "", "text": "À propos de moi" },
