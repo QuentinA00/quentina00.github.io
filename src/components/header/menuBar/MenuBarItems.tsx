@@ -4,7 +4,6 @@ import MenuBarItem from './MenuBarItem'
 import { useState } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 import { AnimatePresence } from 'framer-motion'
-import AnimationWrapper from '../../AnimationWrapper'
 
 const StyleContainer = styled.div`
     column-gap: 1rem;
@@ -29,11 +28,7 @@ const MenuBarItems: React.FC<MenuBarItemsProps> = ({menuBarItems}) => {
             ))}
 
             <AnimatePresence mode='wait'>
-                {showLanguageSwitcher && 
-                    // <AnimationWrapper>
-                    // </AnimationWrapper>
-                        <LanguageSwitcher/>
-                }
+                {showLanguageSwitcher && <LanguageSwitcher/>}
             </AnimatePresence>
             
             {/* <MenuBarSubMenu subMenuItems={menuBarItem.subMenuItems}/> */}

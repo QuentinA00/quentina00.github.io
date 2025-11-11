@@ -137,6 +137,20 @@ export const zoomEffect3: Variants = {
         }
     }
 }
+export const zoomEffect4: Variants = {
+    initial:{
+        opacity: 0, 
+        transform: 'translate(-50%,2.2rem) scale(.98)'
+    },
+    animate:{
+        opacity: 1, 
+        transform: 'translate(-50%,2.5rem)'
+    },
+    exit:{
+        opacity: 0,
+        transform: 'translate(-50%,2.2rem) scale(.98)'
+    }
+}
 
 // ----- testing out -----
 

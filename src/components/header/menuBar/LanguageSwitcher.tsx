@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 import { useLanguage } from '../../../contexts/LanguageContextProvider'
+import { motion } from 'framer-motion'
+import { zoomEffect4 } from '../../../style/animations/animations'
 
-const StyleContainer = styled.div`
+// here, StyleContainer is a Framer "motion.div", not a simple div
+const StyleContainer = styled(motion.div)`
     display:flex;
     flex-direction:column;
     row-gap:.5rem;
@@ -19,6 +22,7 @@ const StyleContainer = styled.div`
         border-radius:.3rem;
         cursor:pointer;
         transition:ease-in-out .1s;
+        font-size:.85rem;
         
         &:hover{
             background:var(--color3);
@@ -29,7 +33,6 @@ const StyleContainer = styled.div`
         }
     }
     & .languageItem-selected{
-        /* border: solid .1rem var(--color2); */
         color:var(--color1);
         background:var(--color2);
 
@@ -51,7 +54,16 @@ const LanguageSwitcher = () => {
     const handleLanguageChange = (language: 'en'| 'fr') => setLanguage(language)
 
     return (
-        <StyleContainer>
+        <StyleContainer 
+            variants={zoomEffect4}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            transition={{
+                duration:.15,
+                ease:'easeInOut'
+            }}
+        >
             {languagesItems.map(language => (
                 <div 
                     key={language.languageCode} 
