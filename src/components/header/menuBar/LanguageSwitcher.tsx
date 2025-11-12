@@ -16,6 +16,7 @@ const StyleContainer = styled(motion.div)`
     border-radius:.5rem;
     border: solid .1rem var(--color3);
     backdrop-filter:blur(1rem);
+    box-shadow:0rem 0rem 1.5rem var(--color3);
     
     & .languageItem{
         padding:.15rem 1rem;

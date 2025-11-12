@@ -27,7 +27,7 @@ const MenuBarItem: React.FC<MenuBarItemProps> = ({ id, text, icon, toggleLanguag
     return (
         <div
             className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : ''} ${isElementSelected ? 'menuBarItem-selected' : ''}`}
-            onClick={toggleLanguageSwitcher}
+            onClick={toggleLanguageSwitcher || undefined}
         >
             {/* if there isn't icon, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
             {!icon && <div className="menuBarItem-buttonWithText">{text}</div>}
