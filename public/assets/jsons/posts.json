@@ -296,10 +296,11 @@
                 "title": "",
                 "description": "",
                 "postTextParagraphs": [
-                    "Je suis un développeur expérimenté dans la création de sites web et d'applications web modernes, robustes, évolutifs et responsives, avec un accent sur l'expérience utilisateur.",
-                    "J'ai également une solide expérience en administration de serveurs Linux.",
-                    "J'aime apprendre de nouvelles technologies et améliorer mes compétences.",
-                    "Actuellement, mon expertise comprend ces langages / technologies :"
+                    "Je suis un développeur Full-Stack ayant de l'experience dans la création d'application / web application modernes en particulier, avec un accent sur l'expérience utilisateur et le souci du détail",
+                    "En dehors du web, j'ai également été amené à travailler sur des projets de script ou d'application.",
+                    "Ayant un parcours orienté administration serveur, j'ai une solide expérience avec Linux.",
+                    "J'aime toujours apprendre de nouvelles technologies et améliorer mes compétences.",
+                    "Voici une vue d'ensemble de mes compétences, que je tiens à jour régulierement :"
                 ],
                 "tagsId":["tag_js","tag_python","tag_react","tag_node","tag_next","tag_pytorch","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
                 "postsLinks": [
