@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useLanguage } from '../../../contexts/LanguageContextProvider'
 import { motion } from 'framer-motion'
 import { zoomEffect4 } from '../../../style/animations/animations'
+import { forwardRef } from 'react'
 
 // here, StyleContainer is a Framer "motion.div", not a simple div
 const StyleContainer = styled(motion.div)`
@@ -16,7 +17,6 @@ const StyleContainer = styled(motion.div)`
     border-radius:.5rem;
     border: solid .1rem var(--color3);
     backdrop-filter:blur(1rem);
-    box-shadow:0rem 0rem 1.5rem var(--color3);
     
     & .languageItem{
         padding:.15rem 1rem;
@@ -43,7 +43,7 @@ const StyleContainer = styled(motion.div)`
     }
 `
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = forwardRef<HTMLDivElement>((_,ref) => {
 
     const {setLanguage, currentLanguage} = useLanguage()
 
@@ -56,6 +56,7 @@ const LanguageSwitcher = () => {
 
     return (
         <StyleContainer 
+            ref={ref}
             variants={zoomEffect4}
             initial='initial'
             animate='animate'
@@ -76,6 +77,8 @@ const LanguageSwitcher = () => {
             ))}
         </StyleContainer>
     )
-}
+})
+
+LanguageSwitcher.displayName = 'LanguageSwitcher'
 
 export default LanguageSwitcher
