@@ -6,6 +6,7 @@ import { styleVariables } from '../../style/globalRules'
 import { useMediaQuery } from 'react-responsive'
 import { screen_desktop_small } from '../../utils/responsiveUtils'
 import { useTags } from '../../contexts/TagContextProvider'
+import { useLanguage } from '../../contexts/LanguageContextProvider'
 
 // Styled component for both container and buttons
 const Style = styled.div`
@@ -40,14 +41,6 @@ const Style = styled.div`
         display: flex;
         flex-direction: column;
         row-gap: 1.7rem;
-
-        /* overflow-y: scroll;
-        max-height:78vh; */
-        /* border: solid .2rem var(--color3); */
-        /* background: var(--color3); */
-        /* border-radius: 1.5rem;
-        padding: 1.5rem; */
-        /* box-shadow: 0rem 0rem 1rem 1rem var(--color3) inset; */
         
         & .tagCategory {
             display: flex;
@@ -122,6 +115,9 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     
     const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop_small})
 
+    // get the text from the context
+    const {appText} = useLanguage()
+
     // get function to get tag object from context
     const {getTagsGroupedByCategory} = useTags()
 
@@ -152,7 +148,7 @@ const PostFilterComponent: React.FC<PostFilterProps> = ({ projectPosts, setSelec
     return (
         <Style className={`postFilterComponent ${isOnSmallerScreen ? 'postFilterComponent-smallerScreen' : ''}`}>
             
-            <p className='postFilterComponent-title'>Filter the projects by tags :</p>
+            <p className='postFilterComponent-title'>{appText.projects.filter}</p>
 
             {isOnSmallerScreen && <div className="tagListItems">
 

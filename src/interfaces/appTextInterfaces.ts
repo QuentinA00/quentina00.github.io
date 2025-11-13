@@ -14,9 +14,15 @@ export interface AppTextInterface {
     // pages are used to create the routes of the app as well as menuBar elements
     pages:PagesTextInterface[]
 
+    // text for contact page
     contact:{
         text:string
         image:string
+    }
+
+    // text for projects page
+    projects :{
+        filter:string
     }
 
     bottomSection: {

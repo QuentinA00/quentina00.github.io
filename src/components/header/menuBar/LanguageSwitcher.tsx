@@ -62,7 +62,7 @@ const LanguageSwitcher = forwardRef<HTMLDivElement>((_,ref) => {
             animate='animate'
             exit='exit'
             transition={{
-                duration:.15,
+                duration:.1,
                 ease:'easeInOut'
             }}
         >

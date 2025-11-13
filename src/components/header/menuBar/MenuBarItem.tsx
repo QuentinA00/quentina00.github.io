@@ -6,6 +6,68 @@ import { screen_mobile } from "../../../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { zoomEffect3 } from "../../../style/animations/animations"
 import { forwardRef } from "react"
+import styled from "styled-components"
+
+const StyleContainer = styled.div`
+    display: flex;
+    position: relative;
+    transition: .15s ease-in-out;
+    
+    // responsive rules
+    &.menuBarItem-mobile{
+        & .menuBarItem-dotPoint{
+            top: 120%;
+            left: 50%;
+        }
+        
+        & .menuBarItem-button{
+            padding: .2rem 1rem;
+        }
+        &.menuBarItem-selected{
+            background: var(--color3);
+            border-radius: 3rem;
+        }
+    }
+    
+    & .menuBarItem-buttonWithText{
+        cursor: pointer;
+        padding: .2rem 1.3rem;
+        border-radius: 3rem;
+        white-space: nowrap;
+        transition: .1s ease-in-out;
+        &:hover{
+            background: var(--color3);
+        }
+        &:active{
+            transform: scale(.98);
+        }
+    }
+    
+    & .menuBarItem-dotPoint{
+        position: absolute;
+        width: .3rem;
+        height: .3rem;
+        border-radius: 3rem;
+        background: var(--color2);
+        top: 140%;
+        left: 50%;
+    }
+    
+    & .menuBarItem-buttonWithIcon {
+        padding: .5rem;
+        border-radius: 3rem;
+        cursor: pointer;
+        background: var(--color3);
+        transition: .15s ease-in-out;
+        &:active{
+            scale: .93;
+        }
+
+        & img{
+            width: 1rem;
+        }
+    }
+`
 
 interface MenuBarItemProps {
     id: string
@@ -26,22 +88,20 @@ const MenuBarItem = forwardRef<HTMLDivElement, MenuBarItemProps>(({ id, text, ic
     const isOnMobileScreen = useMediaQuery({ maxWidth: screen_mobile })
 
     return (
-        <div
+        <StyleContainer
             ref={ref}
             className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : ''} ${isElementSelected ? 'menuBarItem-selected' : ''}`}
             onClick={toggleLanguageSwitcher || undefined}
         >
-            {/* if there isn't icon, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
+            {/* if icon isn't provided, then only the text is displayed, and the class is menuBarItem-buttonWithText */}
             {!icon && <div className="menuBarItem-buttonWithText">{text}</div>}
 
             {icon && <ButtonWithIcon imageName={icon} className="menuBarItem-buttonWithIcon" />}
 
-            {/*  */}
             <AnimatePresence mode="wait">
                 {isElementSelected && !isOnMobileScreen && <AnimationWrapper transitionDuration={.2} className="menuBarItem-dotPoint" animationType={zoomEffect3} />}
             </AnimatePresence>
-            {/* {pageItemData.settings && <MenuBarSettings menuBarSettingsItems={pageItemData.settings} isHidden={true}/>} */}
-        </div>
+        </StyleContainer>
     )
 })
 

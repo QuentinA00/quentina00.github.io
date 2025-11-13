@@ -311,8 +311,8 @@
             {
                 "id": "semantic_search_project",
                 "projectOrigin": "Projet personnel",
-                "title": "Recherches sémantiques sur des transcriptions audio",
-                "description": "Script pour créer & stocker des transcriptions audio dans une db vectorielle",
+                "title": "Recherches sémantiques sur transcriptions audio",
+                "description": "Script pour générer transcriptions audio dans db vectorielle",
                 "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "postTextParagraphs": [
                     "Un projet pour effectuer des recherches sémantiques sur de gros volumes de transcriptions audio.",
