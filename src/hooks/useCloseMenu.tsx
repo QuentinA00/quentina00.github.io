@@ -4,9 +4,10 @@ interface UseCloseMenuProps{
     openingState: boolean
     closing: () => void
     ref: RefObject<HTMLDivElement>
+    refsToExclude?: RefObject<HTMLElement>[]
 }
 
-export const useCloseMenu = ({openingState, closing, ref}:UseCloseMenuProps) => {
+export const useCloseMenu = ({openingState, closing, ref, refsToExclude = []}:UseCloseMenuProps) => {
     
     // handle escape key press
     useEffect(() => {
@@ -25,9 +26,16 @@ export const useCloseMenu = ({openingState, closing, ref}:UseCloseMenuProps) => 
         if (!openingState) return
 
         const handleClickOutside = (event:MouseEvent) => {
-            if (ref.current && !ref.current.contains(event.target as Node)) {
-                closing()
-            }
+            const target = event.target as Node
+
+            // if click inside the main ref
+            if (ref.current?.contains(target)) return
+
+            // if click inside element inside an array of ref
+            if (refsToExclude.some(refToExclude => refToExclude.current?.contains(target))) return
+
+            // click is outside all refs, close menu
+            closing()
         }
 
         document.addEventListener('mousedown', handleClickOutside)

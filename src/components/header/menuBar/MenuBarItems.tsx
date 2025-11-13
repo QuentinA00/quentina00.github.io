@@ -20,7 +20,9 @@ const MenuBarItems: React.FC<MenuBarItemsProps> = ({menuBarItems}) => {
 
     const [showLanguageSwitcher, setShowLanguageSwitcher] = useState(false)
 
+    // refs that shouldn't trigger the closing of the language switcher menu
     const languageSwitcherRef = useRef<HTMLDivElement>(null)
+    const triggerButtonRef = useRef<HTMLDivElement>(null)
 
     // toggle is for when clicking on the button itself
     const toggleLanguageSwitcher = () => setShowLanguageSwitcher(!showLanguageSwitcher)
@@ -32,7 +34,8 @@ const MenuBarItems: React.FC<MenuBarItemsProps> = ({menuBarItems}) => {
     useCloseMenu({
         openingState: showLanguageSwitcher,
         closing: closeLanguageSwitcher,
-        ref: languageSwitcherRef
+        ref: languageSwitcherRef,
+        refsToExclude: [triggerButtonRef]
     })
 
     return (
@@ -43,7 +46,8 @@ const MenuBarItems: React.FC<MenuBarItemsProps> = ({menuBarItems}) => {
                     id={menuBarItem.id} 
                     text={menuBarItem.text} 
                     icon={menuBarItem.icon} 
-                    toggleLanguageSwitcher={toggleLanguageSwitcher} 
+                    toggleLanguageSwitcher={toggleLanguageSwitcher}
+                    ref={menuBarItem.icon ? triggerButtonRef : undefined}
                 />
             ))}
 

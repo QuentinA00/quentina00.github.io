@@ -5,6 +5,7 @@ import ButtonWithIcon from "../../ButtonWithIcon"
 import { screen_mobile } from "../../../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { zoomEffect3 } from "../../../style/animations/animations"
+import { forwardRef } from "react"
 
 interface MenuBarItemProps {
     id: string
@@ -13,7 +14,7 @@ interface MenuBarItemProps {
     toggleLanguageSwitcher?: () => void
 }
 
-const MenuBarItem: React.FC<MenuBarItemProps> = ({ id, text, icon, toggleLanguageSwitcher }) => {
+const MenuBarItem = forwardRef<HTMLDivElement, MenuBarItemProps>(({ id, text, icon, toggleLanguageSwitcher }, ref) => {
 
     // function to gather the current path
     const location = useLocation()
@@ -26,6 +27,7 @@ const MenuBarItem: React.FC<MenuBarItemProps> = ({ id, text, icon, toggleLanguag
 
     return (
         <div
+            ref={ref}
             className={`menuBarItem ${isOnMobileScreen ? 'menuBarItem-mobile' : ''} ${isElementSelected ? 'menuBarItem-selected' : ''}`}
             onClick={toggleLanguageSwitcher || undefined}
         >
@@ -41,6 +43,6 @@ const MenuBarItem: React.FC<MenuBarItemProps> = ({ id, text, icon, toggleLanguag
             {/* {pageItemData.settings && <MenuBarSettings menuBarSettingsItems={pageItemData.settings} isHidden={true}/>} */}
         </div>
     )
-}
+})
 
 export default MenuBarItem
