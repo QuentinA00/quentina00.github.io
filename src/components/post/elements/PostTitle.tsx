@@ -28,7 +28,7 @@ const StyleContainer = styled.div`
 `
 
 interface PostTitleProps {
-    title: string
+    title?: string
     description?: string
     showDot?: boolean
     className?:string
@@ -37,7 +37,7 @@ interface PostTitleProps {
 const PostTitle: FC<PostTitleProps> = ({ title, description, showDot, className }) => {
     return (
         <StyleContainer className={className}>
-            <h3>{title}</h3>
+            {title && <h3>{title}</h3>}
             {showDot && <p className="postTitle-dot">•</p>}
             <p className="postTitle-description">{description}</p>
         </StyleContainer>

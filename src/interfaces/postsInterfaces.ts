@@ -34,7 +34,7 @@ export interface PostKeyPointsInterface{
 export interface PostInterface {
     id: string
     projectOrigin?: string
-    title:string
+    title?:string
     description?:string
     tagsId?: string[]
     postTextParagraphs: string[]
