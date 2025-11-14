@@ -15,7 +15,7 @@ const StyleContainer = styled.div`
     // style for projects posts
     &.postContainer-project{
         border-radius: 1.5rem;
-        padding: 1.5rem;
+        padding: 2rem;
         background: var(--color3);
         flex-direction: column;
         row-gap: 2.5rem;

@@ -3,14 +3,11 @@
         "presentation": [
             {
                 "id": "presentation",
-                "projectOrigin": "",
-                "title": "",
-                "description": "",
                 "postTextParagraphs": [
-                    "I'm a developer experienced in creating modern, robust, scalable and responsive websites and web applications, with an emphasis on user-experience.",
+                    "Full-Stack developer experienced in creating modern, robust, scalable and responsive websites and web applications, with an emphasis on user-experience.",
                     "I also have a solid background with linux server administration.",
                     "I love to learn new technologies, and enhance my skills.",
-                    "As of now, my expertise includes those languages / technologies:"
+                    "Here is an overview of my skills, that I update frequently:"
                 ],
                 "tagsId":[
                     "tag_js",
@@ -32,9 +29,6 @@
                     "tag_obsidian",
                     "tag_cursor",
                     "tag_ollama"
-                ],
-                "postsLinks": [
-                    {"linkName": "Go to the projects page to see my current/previous works","link": "#projects"}
                 ]
             }
         ],
@@ -249,7 +243,7 @@
                 "postTextParagraphs": [
                     "It aims to be a pretty simple web app that needs to be fed with a JSON file containing coaches in different topics.", 
                     "It allows clients to find the perfect coach for their needs.",
-                    "Also it was my first React application, so not at my best for sure in terms of good practices and such...",
+                    "Also it was my first React application",
                     "Client : Amazon"
                 ],
                 "postTextKeyPoints":{
@@ -292,19 +286,33 @@
         "presentation": [
             {
                 "id": "presentation",
-                "projectOrigin": "",
-                "title": "",
-                "description": "",
                 "postTextParagraphs": [
-                    "Je suis un développeur Full-Stack ayant de l'experience dans la création d'application / web application modernes en particulier, avec un accent sur l'expérience utilisateur et le souci du détail",
+                    "Développeur Full-Stack ayant de l'experience dans la création d'application / web application en particulier, avec un accent sur l'expérience utilisateur",
                     "En dehors du web, j'ai également été amené à travailler sur des projets de script ou d'application.",
-                    "Ayant un parcours orienté administration serveur, j'ai une solide expérience avec Linux.",
-                    "J'aime toujours apprendre de nouvelles technologies et améliorer mes compétences.",
-                    "Voici une vue d'ensemble de mes compétences, que je tiens à jour régulierement :"
+                    "Ayant initialement un parcours en administration serveur, j'ai une solide expérience avec Linux notamment.",
+                    "J'aime apprendre de nouvelles technologies et améliorer mes compétences.",
+                    "Voici une vue d'ensemble de mes compétences, que je mets à jour régulierement :"
                 ],
-                "tagsId":["tag_js","tag_python","tag_react","tag_node","tag_next","tag_pytorch","tag_postgre","tag_mongo","tag_git","tag_jupyterNotebook","tag_llmIntegration","tag_linux","tag_debian","tag_proxmox","tag_figma","tag_notion","tag_obsidian","tag_cursor","tag_ollama"],
-                "postsLinks": [
-                    {"linkName": "Aller à la page des projets pour voir mes travaux actuels/précédents","link": "#projects"}
+                "tagsId":[
+                    "tag_js",
+                    "tag_python",
+                    "tag_react",
+                    "tag_node",
+                    "tag_next",
+                    "tag_pytorch",
+                    "tag_postgre",
+                    "tag_mongo",
+                    "tag_git",
+                    "tag_jupyterNotebook",
+                    "tag_llmIntegration",
+                    "tag_linux",
+                    "tag_debian",
+                    "tag_proxmox",
+                    "tag_figma",
+                    "tag_notion",
+                    "tag_obsidian",
+                    "tag_cursor",
+                    "tag_ollama"
                 ]
             }
         ],
@@ -316,16 +324,17 @@
                 "description": "Script pour générer transcriptions audio dans db vectorielle",
                 "tagsId":["tag_python","tag_jupyterNotebook","tag_docker","tag_whisper","tag_qdrant","tag_postgre","tag_ytdlp"],
                 "postTextParagraphs": [
-                    "Un projet pour effectuer des recherches sémantiques sur de gros volumes de transcriptions audio.",
-                    "Il collecte d'abord les fichiers audio en utilisant yt-dlp, puis crée des transcriptions via Whisper.cpp.",
-                    "Ensuite, les morceaux de transcription sont stockés dans une base de données SQL, qui sera utilisée pour créer des embeddings.",
-                    "Enfin, ces embeddings seront stockés dans une base de données vectorielle"
+                    "Un projet pour effectuer des recherches sémantiques sur de gros volumes de transcriptions audio à partir de modèle d'IA en local.",
+                    "Il collecte d'abord les fichiers audio en utilisant yt-dlp, puis génère des transcriptions à partir de ces fichiers via Whisper.cpp.",
+                    "Ensuite, les transcriptions sont stockés dans une base de données SQL, qui sera utilisée pour créer des embeddings.",
+                    "Enfin, ces embeddings seront stockés dans une base de données vectorielle",
+                    "Le but final est de pouvoir effectuer des recherches sémantique à partir de ces données"
                 ],
                 "postTextKeyPoints":{
                     "text":"Points clés : ", 
                     "points":[
                         {"id":1,"text":"Collecte de fichiers via yt-dlp depuis une URL de flux unique"},
-                        {"id":2,"text":"Transcriptions générées localement, aucune API utilisée"}
+                        {"id":2,"text":"Transcriptions générées à partir de modèle d'IA en local, pas d'API externe utilisée"}
                     ]
                 },
                 "postsLinks": [
@@ -336,19 +345,17 @@
                 "id": "portfolio_project",
                 "projectOrigin": "Projet professionnel",
                 "title": "Site Portfolio / Structure de site web réutilisable",
-                "description": "Ce site web actuel.",
+                "description": "(Ce site web)",
                 "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
                 "postTextParagraphs": [
-                    "Quand j'ai construit ce site web, je l'ai envisagé comme une sorte de template pour une structure de site web qui pourrait être utilisée pour de nombreux projets différents.", 
-                    "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles fonctionnalités au fil du temps."
+                    "Quand j'ai créé ce site web, je l'ai envisagé comme une sorte de template d'application React que je pourrais utiliser pour différents projets.", 
+                    "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles features au fil du temps."
                 ],
                 "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
+                    "text":"Fonctions clés : ", 
                     "points":[
                         {"id":1,"text":"Structure réutilisable"},
-                        {"id":2,"text":"Peut être alimenté par un fichier json ou un serveur backend pour les éléments de texte/projets de l'app"},
-                        {"id":3,"text":"Prêt à être connecté à un backend"},
-                        {"id":4,"text":"Utilisation de Suspense, Fallback, ErrorBoundaries, react-router et framer-motion"}
+                        {"id":2,"text":"La structure du site peut facilement être créée en alimentant l'app avec un fichier json ou un serveur backend"}
                     ]
                 },
                 "postsLinks": [
@@ -359,20 +366,20 @@
                 "id": "kosmo_project",
                 "projectOrigin": "Projet personnel",
                 "title": "Projet Kosmo",
-                "description": "Un réseau social idéal pour moi. (En cours...)",
+                "description": "Un réseau social idéal selon moi. (En cours...)",
                 "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
                 "postTextParagraphs": [
-                    "L'idée derrière ce projet était de créer mon réseau social idéal de type Twitter.",
-                    "Comme je me sentais frustré par l'absence de certaines fonctionnalités qui me sont cruciales dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.", 
-                    "Pour moi, beaucoup de fonctionnalités sur Reddit sont vraiment bien conçues et devraient être intégrées dans Twitter. J'ai beaucoup puisé mon inspiration de là.",
-                    "Je ne le prends pas trop au sérieux pour l'instant, je le vois plus comme un projet de portfolio pour me mettre en valeur, plutôt que comme quelque chose qui sortira vraiment un jour, mais qui sait 🤷🏻‍♂️"
+                    "L'idée derrière ce projet est un peu de créer mon réseau social idéal, type Twitter/X.",
+                    "Il y a beaucoup de fonctions que j'aurais voulu voir arriver et qui me semblent importante dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.",
+                    "Pour moi, beaucoup de fonctionnalités sur Reddit sont vraiment bien pensées et devraient être intégrées dans Twitter/X. J'ai beaucoup puisé mon inspiration sur Reddit.",
+                    "Je ne le prends pas trop au sérieux pour l'instant, je le vois plus comme un projet portfolio, plutôt que comme quelque chose qui sortira vraiment un jour, mais qui sait 🤷🏻‍♂️"
                 ],
                 "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
+                    "text":"Fonctions clés : ", 
                     "points":[
                         {"id":1,"text":"Destiné à être un réseau social sain"},
-                        {"id":2,"text":"Système de vote positif/négatif"},
-                        {"id":3,"text":"Construit presque en Vanilla. Aucune bibliothèque pour gérer les animations / responsive / pages.."}
+                        {"id":2,"text":"Système d'upvote/downvote"},
+                        {"id":3,"text":"Je reconstruis le projet quasi de zero dans la version 2, en utilisant NextJS"}
                     ]
                 },
                 "postsLinks": [
@@ -452,16 +459,16 @@
                 },
                 "postTextParagraphs": [
                     "(Ce projet était une sorte d'expérience, je voulais voir si je pouvais créer une application iOS complète et la publier sur l'App Store sans écrire une seule ligne de code.)",
-                    "Il prend en charge la définition de minuteurs pour la cuisine, la création de compte à rebours pour les objectifs et les événements, et le suivi des séances d'entraînement.",
-                    "Il est conçu pour être intuitif et flexible.",
-                    "Les minuteurs peuvent être personnalisés avec des noms, des couleurs, des icônes et des catégories. Les progrès peuvent être suivis dans le temps en utilisant une grille de completion."
+                    "Le but de l'application est de pouvoir manager, organiser, classer ses timers, chronomètres et compte à rebours.",
+                    "Il est pensé pour être simple et flexible.",
+                    "Les timers peuvent être personnalisés avec des noms, des couleurs, des icônes et des catégories. Les progrès peuvent être suivis via une grille de completion."
                 ],
                 "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
+                    "text":"Fonctions clés : ", 
                     "points":[
-                        {"id":1,"text":"Minuteurs de différents types"},
-                        {"id":2,"text":"Gérer, trier et filtrer les minuteurs avec des catégories, des couleurs, des noms et plus encore"},
-                        {"id":3,"text":"Grille de completion pour suivre les progrès dans le temps"}
+                        {"id":1,"text":"Gérer, trier et filtrer les minuteurs avec des catégories, des couleurs, des noms et plus encore"},
+                        {"id":2,"text":"Grille de completion pour suivre les progrès dans le temps"},
+                        {"id":3,"text":"Possibilité d'importer/exporter les datas de l'app en format JSON"}
                     ]
                 },
                 "postsLinks": [
@@ -474,19 +481,20 @@
                 "id": "webinsights",
                 "projectOrigin": "Projet personnel",
                 "title": "WebInsights",
-                "description": "Une extension Chrome pour obtenir des résumés et des informations sur les sites web. (En cours)",
+                "description": "Une extension Chrome pour résumer et fact-checker des infos de pages web. (En cours)",
                 "tagsId": ["tag_chromeExtension", "tag_js", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
                 "postTextParagraphs": [
-                    "Elle vise à être une extension Chrome simple qui fournit des résumés et des explications en utilisant le contexte de la page web actuelle.",
-                    "Initialement, l'idée derrière cette extension était d'utiliser le LLM Gemini Nano intégré de Chrome, en s'appuyant uniquement sur un LLM local pour l'inférence dans l'application.",
-                    "Mais... cette fonctionnalité n'est pas encore largement disponible, alors j'ai ajouté l'option d'entrer une clé API OpenAi et d'utiliser gpt4o-mini à la place."
+                    "Elle vise à être une extension Chrome simple qui fournit des résumés et des explications/fact-check en utilisant le contexte de la page web actuelle.",
+                    "Initialement, l'idée derrière cette extension était d'utiliser le LLM Gemini Nano intégré de Chrome, pour s'appuyer sur un LLM local pour l'inférence dans l'application.",
+                    "Mais... au moment de faire l'application, ce n'était pas clair si l'intégration et l'API de gemini nano allaient être déployés en dehors des version dev/betas de Chrome",
+                    "Du coup j'ai ajouté l'option d'entrer une clé API OpenAi à la place, même si ce n'est pas idéal à mes yeux."
                 ],
                 "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
+                    "text":"Fonctions clés : ", 
                     "points":[
-                        {"id":1,"text":"Résumés utilisant LLM"},
+                        {"id":1,"text":"Résumér page web via LLM"},
                         {"id":2,"text":"Structure d'application flexible"},
-                        {"id":3,"text":"Synchroniser les paramètres entre les instances Chrome pour un compte Google donné"}
+                        {"id":3,"text":"Synchronisation des paramètres de l'extension avec le compte Google connecté à Chrome"}
                     ]
                 },
                 "postsLinks": [
@@ -505,7 +513,7 @@
                             "id": 2,
                             "linkPath": "./assets/imgs/webinsights2_small.jpeg",
                             "linkPathHd":"./assets/imgs/webinsights2.jpeg",
-                            "text": "La page des paramètres, où vous pouvez définir un ton par défaut, ainsi que configurer la clé API"
+                            "text": "La page des paramètres, où on peut définir un ton par défaut, ainsi que configurer la clé API"
                         }
                     ]
                 }
@@ -517,16 +525,16 @@
                 "description": "Application web React pour trouver des coachs par sujets",
                 "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
                 "postTextParagraphs": [
+                    "Projet demandé par Amazon.", 
                     "Elle vise à être une application web assez simple qui doit être alimentée par un fichier JSON contenant des coachs dans différents sujets.", 
-                    "Elle permet aux clients de trouver le coach parfait pour leurs besoins.",
-                    "C'était aussi ma première application React, donc pas au mieux en termes de bonnes pratiques et tout ça...",
-                    "Client : Amazon"
+                    "Elle permet aux clients de trouver les coachs avec la fonction de filtre.",
+                    "C'était aussi ma première application React"
                 ],
                 "postTextKeyPoints":{
-                    "text":"Fonctionnalités clés : ", 
+                    "text":"Fonctions clés : ", 
                     "points":[
                         {"id":1,"text":"Alimentée par un fichier JSON"},
-                        {"id":2,"text":"Filtrer les éléments par sujets"}
+                        {"id":2,"text":"Fonciton de filtre"}
                     ]
                 },
                 "postsLinks": [

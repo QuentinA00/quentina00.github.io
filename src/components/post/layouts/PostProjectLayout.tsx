@@ -5,7 +5,6 @@ import PostKeypoints from "../elements/PostKeypoints"
 import PostText from "../elements/PostText"
 import PostTags from "../elements/PostTags"
 import PostTitle from "../elements/PostTitle"
-import PostOrigin from "../elements/PostOrigin"
 import { useInView } from "framer-motion"
 
 interface PostProjectLayoutProps {
@@ -24,7 +23,6 @@ const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen, 
     return (
         <>
             <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
-                <PostOrigin postOrigin={postData.projectOrigin}/>
                 <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''} />
                 <PostTags tagsId={postData.tagsId} className='project' />
             </div>
