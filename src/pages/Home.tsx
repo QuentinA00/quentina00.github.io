@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import PostContainer from "../components/post/PostContainer"
 import { usePost } from "../contexts/PostContextProvider"
+import Post from "../components/post/Post"
 
 const HomeStyle = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <HomeStyle className="home">
-            {presentationPosts.map((presentationPost) => <PostContainer key={presentationPost.id} postData={presentationPost} variantType='presentation'/>)}
+            {presentationPosts.map((presentationPost) => <Post key={presentationPost.id} postData={presentationPost} variantType='presentation'/>)}
         </HomeStyle>
     )
 }

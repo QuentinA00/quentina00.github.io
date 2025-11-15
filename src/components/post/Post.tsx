@@ -6,14 +6,16 @@ import styled from "styled-components"
 
 import PostPresentationLayout from "./layouts/PostPresentationLayout"
 import PostProjectLayout from "./layouts/PostProjectLayout"
+import { motion } from "framer-motion"
+import { progressiveShowUpWithZoom } from "../../style/animations/animations"
 
-const StyleContainer = styled.div`
+const StyleContainer = styled(motion.div)`
     display: flex;
     max-width: 70rem;
     transition: .1s ease-in-out 0s;
 
     // style for projects posts
-    &.postContainer-project{
+    &.post-project{
         border-radius: 1.5rem;
         padding: 2rem;
         background: var(--color3);
@@ -23,7 +25,7 @@ const StyleContainer = styled.div`
     }
 
     // style for presentation post
-    &.postContainer-presentation{
+    &.post-presentation{
         font-size: 1.1rem;
 
         & .postContentSection{ // ----- deprecated
@@ -36,13 +38,13 @@ const StyleContainer = styled.div`
     }
 
     // style for mobile < 700
-    &.postContainer-mobile{
+    &.post-mobile{
         width: unset;
         row-gap: 3rem;
     }
 
     // style for tablet < 1000
-    &.postContainer-tablet{
+    &.post-tablet{
         width: unset;
     }
 
@@ -83,11 +85,11 @@ const StyleContainer = styled.div`
     }
 `
 
-interface PostContainerProps {
+interface PostProps {
     postData: PostInterface
 }
 
-const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postData, variantType }) => {
+const Post:React.FC<PostProps & PostVariantProps> = ({ postData, variantType }) => {
 
     const mobileScreen = useMediaQuery({maxWidth:screen_mobile})
     const tabletScreen = useMediaQuery({maxWidth:screen_tablet})
@@ -95,11 +97,21 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
     return (
         <StyleContainer 
             className={`
-                postContainer 
-                ${variantType ? 'postContainer-'+variantType : ''}
-                ${mobileScreen ? 'postContainer-mobile' : ''}
-                ${tabletScreen ? 'postContainer-tablet' : ''}
+                post 
+                ${variantType ? 'post-'+variantType : ''}
+                ${mobileScreen ? 'post-mobile' : ''}
+                ${tabletScreen ? 'post-tablet' : ''}
             `}
+            variants={progressiveShowUpWithZoom} 
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            transition={{
+                duration:.3,
+                ease:'easeInOut',
+                layout: {type:'tween', duration:.2,ease:'easeInOut'}
+            }}
+            layout='size'
         >
             {variantType === 'presentation' 
                 ? 
@@ -112,4 +124,4 @@ const PostContainer:React.FC<PostContainerProps & PostVariantProps> = ({ postDat
     )
 }
 
-export default PostContainer
+export default Post

@@ -1,15 +1,14 @@
-import {motion} from "framer-motion"
-import PostContainer from "../components/post/PostContainer"
 import { TagInterface } from "../interfaces/postsInterfaces"
-import PostFilterComponent from "../components/postFilter/PostFilterComponent"
 import { useMemo, useState } from "react"
 import { screen_desktop_medium, screen_desktop_small } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { AnimatePresence } from "framer-motion"
 import AnimationWrapper from "../components/AnimationWrapper"
-import { progressiveShowUpWithZoom, slideFromRight } from "../style/animations/animations"
+import { slideFromRight } from "../style/animations/animations"
 import styled from "styled-components"
 import { usePost } from "../contexts/PostContextProvider"
+import Post from "../components/post/Post"
+import PostFilter from "../components/postFilter/PostFilter"
 
 const StyleContainer = styled.div`
     display: flex;
@@ -72,31 +71,32 @@ const Projects = () => {
             <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
                 <AnimatePresence mode="popLayout">
                     {filteredPosts.map(projectData => (
-                        <motion.div
+                        // <motion.div
+                        //     key={projectData.id}
+                        //     className="projectItem"
+                        //     variants={progressiveShowUpWithZoom} 
+                        //     initial='initial'
+                        //     animate='animate'
+                        //     exit='exit'
+                        //     transition={{
+                        //         duration:.6,
+                        //         ease:'easeInOut',
+                        //         layout: {type:'tween', duration:.5,ease:'easeInOut'}
+                        //     }}
+                        //     layout
+                        // >
+                        // </motion.div>
+                        <Post
                             key={projectData.id}
-                            className="projectItem"
-                            variants={progressiveShowUpWithZoom} 
-                            initial='initial'
-                            animate='animate'
-                            exit='exit'
-                            transition={{
-                                duration:.6,
-                                ease:'easeInOut',
-                                layout: {type:'tween', duration:.5,ease:'easeInOut'}
-                            }}
-                            layout
-                        >
-                            <PostContainer
-                                postData={projectData}
-                                variantType='project'
-                            />
-                        </motion.div>
+                            postData={projectData}
+                            variantType='project'
+                        />
                     ))}
                 </AnimatePresence>
             </div>
 
             <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
-                <PostFilterComponent projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
+                <PostFilter projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
             </AnimationWrapper>
         </StyleContainer>
     )
