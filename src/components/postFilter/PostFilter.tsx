@@ -1,0 +1,82 @@
+import React, { useMemo } from 'react'
+import styled from 'styled-components'
+import { PostsInterface } from '../../interfaces/postsInterfaces'
+import { useMediaQuery } from 'react-responsive'
+import { screen_desktop_small } from '../../utils/responsiveUtils'
+import { useTags } from '../../contexts/TagContextProvider'
+import { useLanguage } from '../../contexts/LanguageContextProvider'
+import TagCategoryLayout from './TagCategoryLayout'
+import TagListLayout from './TagListLayout'
+
+// Styled component for both container and buttons
+const StyleContainer = styled.div`
+    display: flex;
+    flex-direction:column;
+    row-gap:2rem;
+    place-self:flex-start;
+    position:sticky;
+    top:2rem;
+    padding-left: 3rem;
+    border-left: solid .15rem var(--color3);
+    overflow-y: auto;
+    max-height:calc(100vh - 4rem);
+    &.postFilter-smallerScreen{
+        position:unset;
+        border-left:unset;
+        padding-left:unset;
+        overflow-y:unset;
+        max-height:unset;
+    }
+
+    & .postFilter-title{
+        font-weight:600;
+    }
+`
+
+interface PostFilterProps {
+    projectPosts: PostsInterface['projects']
+    setSelectedTags: React.Dispatch<React.SetStateAction<string[]>>
+    selectedTags: string[]
+}
+
+const PostFilter: React.FC<PostFilterProps> = ({ projectPosts, setSelectedTags, selectedTags }) => {
+    
+    const isOnSmallerScreen = useMediaQuery({maxWidth:screen_desktop_small})
+
+    // get the text from the context
+    const {appText} = useLanguage()
+
+    // get function to get tag object from context
+    const {getTagsGroupedByCategory} = useTags()
+
+    // Extract all unique tags from the projects posts
+    // we don't get them from tags context, because then we would get tags that are not used in projects
+    const postsTagsIds = Array.from(
+        new Set(projectPosts.flatMap(post => post.tagsId?.map(tag => tag) || []))
+    )
+
+    // create the structure to group the tags by their category
+    const tagsByCategory = useMemo(
+        () => getTagsGroupedByCategory(postsTagsIds),
+        [postsTagsIds]
+    )
+
+    // Handle tag selection toggling
+    const handleTagSelectionToggle = (tagId: string) => {
+        setSelectedTags(prevSelectedTags =>
+            prevSelectedTags.includes(tagId)
+                ? prevSelectedTags.filter(selectedTag => selectedTag !== tagId)
+                : [...prevSelectedTags, tagId]
+        )
+    }
+
+    return (
+        <StyleContainer className={`postFilter ${isOnSmallerScreen ? 'postFilter-smallerScreen' : ''}`}>
+            <p className='postFilter-title'>{appText.projects.filter}</p>
+            {isOnSmallerScreen && <TagListLayout postTagsIds={postsTagsIds} selectedTags={selectedTags} handleTagSelection={handleTagSelectionToggle} />}
+            {!isOnSmallerScreen && <TagCategoryLayout tagsByCategory={tagsByCategory} handleTagSelection={handleTagSelectionToggle} selectedTags={selectedTags}/>}
+        </StyleContainer>
+    )
+}
+
+export default PostFilter

@@ -15,7 +15,7 @@ const PostPresentationLayout: FC<PostPresentationLayoutProps> = ({postData, tabl
             <div className="postContentSection-description">
                 <PostText textParagraphs={postData.postTextParagraphs} className="presentation"/>
                 <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
-                    <PostTags tagsId={postData.tagsId} className='presentation' />
+                    <PostTags tagsId={postData.tagsId} tagVariant='presentation' />
                 </div>
                 <PostLinks links={postData.postsLinks} linkTarget='_self' />
             </div>

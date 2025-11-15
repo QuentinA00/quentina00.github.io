@@ -1,24 +1,27 @@
-import { FC, ReactNode } from "react"
+import { FC } from "react"
 import styled from "styled-components"
+import Tag from "../Tag"
 
-const TagSelectorStyle = styled.div`
+const StyleContainer = styled.div`
     cursor:pointer;
-    transition:ease-in-out .15s;
+    transition:ease-in-out .1s;
     border:solid .1rem var(--color3);
-
-    &:hover{
-        filter:brightness(.90);
-    }
-    &:active{
-        transform:scale(.97);
-    }
+    border-radius:3rem;
+    filter:brightness(.99);
 `
 
-const TagSelector:FC<{children:ReactNode}> = ({children}) => {
+interface TagSelectorProps{
+    className?:string
+    handleTagSelection:(tagId:string) => void
+    tagId:string
+    selectedTags:string[]
+}
+
+const TagSelector:FC<TagSelectorProps> = ({className, handleTagSelection, tagId, selectedTags}) => {
     return (
-        <TagSelectorStyle className="tagSelector">
-            {children}
-        </TagSelectorStyle>
+        <StyleContainer className={className} onClick={() => handleTagSelection(tagId)}>
+            <Tag tagId={tagId} isSelected={selectedTags.includes(tagId)} variant="postFilter"/>
+        </StyleContainer>
     )
 }
 

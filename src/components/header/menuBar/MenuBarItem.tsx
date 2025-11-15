@@ -57,10 +57,12 @@ const StyleContainer = styled.div`
         padding: .5rem;
         border-radius: 3rem;
         cursor: pointer;
-        background: var(--color3);
         transition: .15s ease-in-out;
         &:active{
             scale: .93;
+        }
+        &:hover{
+            background: var(--color3);
         }
 
         & img{
