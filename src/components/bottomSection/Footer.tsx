@@ -15,7 +15,7 @@ const Footer = () => {
                     <h3>{footerText.contact}</h3>
                     <div className="footerItems">
                         <p>{footerText.mail}</p>
-                        <FooterSocialLinks itemsLink={footerText.professionalLinks}/>
+                        <FooterSocialLinks itemsLink={footerText.socialLinks}/>
                         <br />
                         <br />
                         <p title={footerText.copyright.title} className="footer-copyright">{footerText.copyright.text}</p>

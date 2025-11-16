@@ -1,8 +1,8 @@
-import { BottomSectionLinkInterface } from "../../interfaces/appTextInterfaces"
+import { SocialLinkInterface } from "../../interfaces/appTextInterfaces"
 import ButtonWithIcon from "../ButtonWithIcon"
 
 interface FooterSocialLinksProps {
-    itemsLink:BottomSectionLinkInterface[]
+    itemsLink:SocialLinkInterface[]
 }
 
 const FooterSocialLinks:React.FC<FooterSocialLinksProps> = ({itemsLink}) => {

@@ -28,9 +28,7 @@ export interface AppTextInterface {
     bottomSection: {
         contact: string
         mail:string
-        professionalLinks: BottomSectionLinkInterface[]
-        personalAccount: string
-        personalLinks: BottomSectionLinkInterface[]
+        socialLinks: SocialLinkInterface[]
         copyright:{
             title:string
             text:string
@@ -60,7 +58,7 @@ export interface MenuBarSubMenuItemInterface{
     icon?:string
 }
 
-export interface BottomSectionLinkInterface {
+export interface SocialLinkInterface{
     id:string
     text:string
     icon:string

@@ -19,17 +19,12 @@
         "bottomSection": {
             "contact": "Socials",
             "mail":"",
-            "professionalLinks":[
+            "socialLinks":[
                 {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"Mail address : quentinartaud.work@gmail.com"},
                 {"id":"githubPerso","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"Github"},
                 {"id":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
                 {"id":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
-            ],
-            "personalAccount": "my personal accounts :",
-            "personalLinks":[
-                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"my personal Github account (main)"},
-                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"my Discord"}
             ],
             "copyright":{
                 "title":"Copyright",
@@ -63,17 +58,12 @@
         "bottomSection": {
             "contact": "Réseaux",
             "mail":"",
-            "professionalLinks":[
+            "socialLinks":[
                 {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"Adresse mail : quentinartaud.work@gmail.com"},
                 {"id":"githubPerso","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"Github"},
                 {"id":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
                 {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
-            ],
-            "personalAccount": "Mes comptes personnels :",
-            "personalLinks":[
-                {"id":"githubPerso","text":"github","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"mon compte Github personnel (principal)"},
-                {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"mon Discord"}
             ],
             "copyright":{
                 "title":"Copyright",
