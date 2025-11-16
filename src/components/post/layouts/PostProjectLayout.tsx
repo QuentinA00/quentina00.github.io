@@ -29,9 +29,7 @@ const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen, 
             <div ref={containerRef} className={`postContentSection postContentSection-project ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
                 
                 <Suspense fallback={null}>
-                    {inView && 
-                        <PostMedias medias={postData.medias}/>
-                    }
+                    {inView && <PostMedias medias={postData.medias}/>}
                 </Suspense>
                 
                 <div className="postContentSection-description">

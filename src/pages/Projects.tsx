@@ -71,21 +71,6 @@ const Projects = () => {
             <div className={`projectItems ${isOnDesktopMediumScreen ? 'projectItems-mediumScreen' : ''}`}>
                 <AnimatePresence mode="popLayout">
                     {filteredPosts.map(projectData => (
-                        // <motion.div
-                        //     key={projectData.id}
-                        //     className="projectItem"
-                        //     variants={progressiveShowUpWithZoom} 
-                        //     initial='initial'
-                        //     animate='animate'
-                        //     exit='exit'
-                        //     transition={{
-                        //         duration:.6,
-                        //         ease:'easeInOut',
-                        //         layout: {type:'tween', duration:.5,ease:'easeInOut'}
-                        //     }}
-                        //     layout
-                        // >
-                        // </motion.div>
                         <Post
                             key={projectData.id}
                             postData={projectData}

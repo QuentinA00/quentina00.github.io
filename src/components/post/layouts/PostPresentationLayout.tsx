@@ -3,6 +3,7 @@ import { PostInterface } from "../../../interfaces/postsInterfaces"
 import PostText from "../elements/PostText"
 import PostTags from "../elements/PostTags"
 import PostLinks from "../elements/PostLinks"
+import { PostContentSectionStyle } from "../Post"
 
 interface PostPresentationLayoutProps {
     postData:PostInterface
@@ -11,7 +12,7 @@ interface PostPresentationLayoutProps {
 
 const PostPresentationLayout: FC<PostPresentationLayoutProps> = ({postData, tabletScreen}) => {
     return (
-        <div className={`postContentSection postContentSection-presentation ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
+        <PostContentSectionStyle className={`postContentSection postContentSection-presentation ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
             <div className="postContentSection-description">
                 <PostText textParagraphs={postData.postTextParagraphs} className="presentation"/>
                 <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
@@ -19,7 +20,7 @@ const PostPresentationLayout: FC<PostPresentationLayoutProps> = ({postData, tabl
                 </div>
                 <PostLinks links={postData.postsLinks} linkTarget='_self' />
             </div>
-        </div>
+        </PostContentSectionStyle>
     )
 }
 

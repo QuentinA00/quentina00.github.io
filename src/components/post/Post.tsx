@@ -12,7 +12,6 @@ import { progressiveShowUpWithZoom } from "../../style/animations/animations"
 const StyleContainer = styled(motion.div)`
     display: flex;
     max-width: 70rem;
-    transition: .1s ease-in-out 0s;
 
     // style for projects posts
     &.post-project{
@@ -85,6 +84,42 @@ const StyleContainer = styled(motion.div)`
     }
 `
 
+// style for the layout components
+export const PostContentSectionStyle = styled.div`
+    display: flex;
+    column-gap: 2rem;
+    transition: .1s ease-in-out 0s;
+    
+    & .postContentSection-description{
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        row-gap: 2rem;
+    }
+    
+    &.postContentSection-smallerScreen{
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    &.postContentSection-presentation{
+        & .postContentSection-description{
+            row-gap: 5rem;
+        }
+    }
+`
+
+// style for the layout components
+export const PostTopSectionStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    transition: .1s ease-in-out 0s;
+
+    &.postTopSection-mobile{
+        row-gap: 2rem;
+    }
+`
+
 interface PostProps {
     postData: PostInterface
 }
@@ -106,12 +141,8 @@ const Post:React.FC<PostProps & PostVariantProps> = ({ postData, variantType }) 
             initial='initial'
             animate='animate'
             exit='exit'
-            transition={{
-                duration:.3,
-                ease:'easeInOut',
-                layout: {type:'tween', duration:.2,ease:'easeInOut'}
-            }}
-            layout='size'
+            transition={{duration:.3,ease:'easeInOut'}}
+            layout
         >
             {variantType === 'presentation' 
                 ? 
