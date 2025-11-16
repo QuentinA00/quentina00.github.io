@@ -3,8 +3,6 @@ import { useMemo, useState } from "react"
 import { screen_desktop_medium, screen_desktop_small } from "../utils/responsiveUtils"
 import { useMediaQuery } from "react-responsive"
 import { AnimatePresence } from "framer-motion"
-import AnimationWrapper from "../components/AnimationWrapper"
-import { slideFromRight } from "../style/animations/animations"
 import styled from "styled-components"
 import { usePost } from "../contexts/PostContextProvider"
 import Post from "../components/post/Post"
@@ -80,9 +78,7 @@ const Projects = () => {
                 </AnimatePresence>
             </div>
 
-            <AnimationWrapper className="postFilter" animationType={slideFromRight} transitionDuration={.4}>
-                <PostFilter projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
-            </AnimationWrapper>
+            <PostFilter projectPosts={projectsPosts} setSelectedTags={setSelectedTags} selectedTags={selectedTags}/>
         </StyleContainer>
     )
 }

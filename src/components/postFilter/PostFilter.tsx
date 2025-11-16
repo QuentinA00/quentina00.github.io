@@ -7,9 +7,11 @@ import { useTags } from '../../contexts/TagContextProvider'
 import { useLanguage } from '../../contexts/LanguageContextProvider'
 import TagCategoryLayout from './TagCategoryLayout'
 import TagListLayout from './TagListLayout'
+import { motion } from 'framer-motion'
+import { slideFromRight } from '../../style/animations/animations'
 
 // Styled component for both container and buttons
-const StyleContainer = styled.div`
+const StyleContainer = styled(motion.div)`
     display: flex;
     flex-direction:column;
     row-gap:2rem;
@@ -71,10 +73,19 @@ const PostFilter: React.FC<PostFilterProps> = ({ projectPosts, setSelectedTags, 
     }
 
     return (
-        <StyleContainer className={`postFilter ${isOnSmallerScreen ? 'postFilter-smallerScreen' : ''}`}>
+        <StyleContainer 
+            className={`postFilter ${isOnSmallerScreen ? 'postFilter-smallerScreen' : ''}`}
+            variants={slideFromRight}
+            initial='initial'
+            animate='animate'
+            exit='exit'
+            transition={{duration:.5,ease:'easeInOut'}}
+        >
             <p className='postFilter-title'>{appText.projects.filter}</p>
-            {isOnSmallerScreen && <TagListLayout postTagsIds={postsTagsIds} selectedTags={selectedTags} handleTagSelection={handleTagSelectionToggle} />}
-            {!isOnSmallerScreen && <TagCategoryLayout tagsByCategory={tagsByCategory} handleTagSelection={handleTagSelectionToggle} selectedTags={selectedTags}/>}
+            {isOnSmallerScreen
+                ? <TagListLayout postTagsIds={postsTagsIds} selectedTags={selectedTags} handleTagSelection={handleTagSelectionToggle} />
+                : <TagCategoryLayout tagsByCategory={tagsByCategory} handleTagSelection={handleTagSelectionToggle} selectedTags={selectedTags}/>
+            }
         </StyleContainer>
     )
 }
