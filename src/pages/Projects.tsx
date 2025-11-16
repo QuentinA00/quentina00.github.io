@@ -33,11 +33,6 @@ const StyleContainer = styled.div`
         content-visibility:auto;
         contain-intrinsic-size:40rem;
     }
-    
-    .postFilter {
-        display: flex;
-        flex: 1;
-    }
 `
 
 const Projects = () => {
