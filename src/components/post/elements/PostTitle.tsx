@@ -3,14 +3,8 @@ import styled from "styled-components"
 
 const StyleContainer = styled.div`
     display: flex;
-    align-items: center;
     gap: 1rem;
-
-    // responsive rules
-    &.postTitle-mobile{
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    flex-direction:column;
 
     & h3 {
         flex-shrink: 0;
@@ -24,21 +18,19 @@ const StyleContainer = styled.div`
     & .postTitle-description{
         font-style: italic;
         flex-shrink: 1;
+        font-size:.9rem;
     }
 `
 
 interface PostTitleProps {
     title?: string
     description?: string
-    showDot?: boolean
-    className?:string
 }
 
-const PostTitle: FC<PostTitleProps> = ({ title, description, showDot, className }) => {
+const PostTitle: FC<PostTitleProps> = ({ title, description }) => {
     return (
-        <StyleContainer className={className}>
+        <StyleContainer>
             {title && <h3>{title}</h3>}
-            {showDot && <p className="postTitle-dot">•</p>}
             <p className="postTitle-description">{description}</p>
         </StyleContainer>
     )
