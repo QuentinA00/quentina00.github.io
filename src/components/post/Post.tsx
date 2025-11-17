@@ -148,7 +148,7 @@ const Post:React.FC<PostProps & PostVariantProps> = ({ postData, variantType }) 
                 ? 
                     <PostPresentationLayout postData={postData} tabletScreen={tabletScreen} />
                 :
-                    <PostProjectLayout postData={postData} tabletScreen={tabletScreen} mobileScreen={mobileScreen} />
+                    <PostProjectLayout postData={postData} tabletScreen={tabletScreen}/>
             }
 
         </StyleContainer>

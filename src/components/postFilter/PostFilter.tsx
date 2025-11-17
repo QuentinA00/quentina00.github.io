@@ -13,7 +13,7 @@ import { slideFromRight } from '../../style/animations/animations'
 // Styled component for both container and buttons
 const StyleContainer = styled(motion.div)`
     display: flex;
-    flex:1;
+    flex:.85;
     flex-direction:column;
     row-gap:2rem;
     place-self:flex-start;

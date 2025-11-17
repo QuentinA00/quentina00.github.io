@@ -10,12 +10,11 @@ import { useInView } from "framer-motion"
 interface PostProjectLayoutProps {
     postData: PostInterface
     tabletScreen: boolean
-    mobileScreen: boolean
 }
 
 const PostMedias = lazy(() => import('../elements/PostMedias'))
 
-const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen, mobileScreen}) => {
+const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen}) => {
 
     const containerRef = useRef<HTMLDivElement | null>(null)
     const inView = useInView(containerRef, { margin: "300px 0px 300px 0px", amount: 0 })
@@ -23,7 +22,7 @@ const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen, 
     return (
         <>
             <div className={`postTopSection ${tabletScreen ? 'postTopSection-mobile' : ''}`}>
-                <PostTitle title={postData.title} description={postData.description} showDot={!tabletScreen && !!postData.description} className={mobileScreen ? 'postTitle-mobile' : ''} />
+                <PostTitle title={postData.title} description={postData.description}/>
                 <PostTags tagsId={postData.tagsId} tagVariant='project' />
             </div>
             <div ref={containerRef} className={`postContentSection postContentSection-project ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
