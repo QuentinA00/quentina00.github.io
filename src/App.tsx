@@ -10,6 +10,18 @@ import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "./utils/responsiveUtils"
 import { useLanguage } from "./contexts/LanguageContextProvider"
+import styled from "styled-components"
+
+const StyleContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    row-gap: 12rem;
+    transition:.2s ease-in-out;
+
+    &.app-mobile{
+        row-gap: 4rem;
+    }
+`
 
 const App = () => {
 
@@ -22,7 +34,7 @@ const App = () => {
     const isOnMobileScreen = useMediaQuery({maxWidth:screen_mobile})
 
     return (
-        <div className={`app ${isOnMobileScreen ? 'app-mobile' : ''}`}>
+        <StyleContainer className={`app ${isOnMobileScreen ? 'app-mobile' : ''}`}>
             
             <Header/>
             
@@ -51,7 +63,7 @@ const App = () => {
             </AnimatePresence>
 
             <Footer/>
-        </div>
+        </StyleContainer>
     )
 }
 
