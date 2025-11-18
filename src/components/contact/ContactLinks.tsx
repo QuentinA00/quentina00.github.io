@@ -19,7 +19,7 @@ const StyleContainer = styled.div<StyleContainerProps>`
 
     ${props => props.$isOnMobileScreen && `
         padding:1.5rem;
-        font-size:.9rem;
+        font-size:1rem;
         row-gap:3rem;
     `}
 `

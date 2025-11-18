@@ -14,16 +14,11 @@ const StyleContainer = styled.div<StyleContainerProps>`
         flex-direction:column;
         align-items:start;
     `}
-
-    & p {
-        font-weight:200;
-    }
 `
 
 const StyledLink = styled.a`
     cursor: pointer;
     transition:.15s ease-in-out;
-    font-size: .9rem;
     border-radius: .3rem;
     font-weight: 500;
     text-underline-offset: .25rem;

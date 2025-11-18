@@ -31,7 +31,7 @@ const Contact = () => {
 
     return (
         <StyleContainer className={isOnMobileScreen ? 'contact-mobile' : ''}>
-            <h4>{contactText.heading}</h4>
+            {/* <h4>{contactText.heading}</h4> */}
             <ContactLinks contactLinks={contactText.contactLinks} isOnMobileScreen={isOnMobileScreen} />
         </StyleContainer>
     )
