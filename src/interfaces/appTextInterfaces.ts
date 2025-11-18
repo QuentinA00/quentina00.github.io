@@ -16,6 +16,8 @@ export interface AppTextInterface {
 
     // text for contact page
     contact:{
+        heading:string
+        contactLinks: contactLinkInterface[]
         text:string
         image:string
     }
@@ -56,6 +58,14 @@ export interface MenuBarSubMenuItemInterface{
     key:string
     text:string
     icon?:string
+}
+
+export interface contactLinkInterface {
+    id:string
+    text:string
+    linkText:string
+    link:string
+    icon:string
 }
 
 export interface SocialLinkInterface{
