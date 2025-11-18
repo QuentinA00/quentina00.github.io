@@ -55,7 +55,7 @@ const ContactLink: React.FC<ContactLinkProps> = ({text,link,linkText,icon,isOnMo
         <StyleContainer $isOnMobileScreen={isOnMobileScreen} >
             {!isOnMobileScreen && <StyledButtonWithIcon imageName={icon} />}
             <p>{text}</p>
-            <StyledLink href={link}>{linkText}</StyledLink>
+            <StyledLink href={link} target='_blank'>{linkText}</StyledLink>
         </StyleContainer>
     )
 }
