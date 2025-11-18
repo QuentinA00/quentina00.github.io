@@ -10,6 +10,11 @@
             { "id": "contact", "text": "Contact" }
         ],
         "contact":{
+            "heading":"You can retrieve me / contact me there :",
+            "contactLinks":[
+                {"id":"mail", "text":"Mail :", "linkText":"quentinartaud.work@gmail.com", "link":"mailto:quentinartaud.work@gmail.com", "icon":"mail.svg"},
+                {"id":"github", "text":"Main Github :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
+            ],
             "text":"Flashcode to my Linktree, for more contact info",
             "image":"flashcode.png"
         },
@@ -20,8 +25,8 @@
             "contact": "Socials",
             "mail":"",
             "socialLinks":[
-                {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"Mail address : quentinartaud.work@gmail.com"},
+                {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"githubPerso","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"Github"},
                 {"id":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
                 {"id":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
@@ -49,6 +54,11 @@
             { "id": "contact", "text": "Contact" }
         ],
         "contact":{
+            "heading":"Vous pouvez me retrouver / me contacter notamment ici :",
+            "contactLinks":[
+                {"id":"mail", "text":"Mail :", "linkText":"quentinartaud.work@gmail.com", "link":"mailto:quentinartaud.work@gmail.com", "icon":"mail.svg"},
+                {"id":"github", "text":"Github principal :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
+            ],
             "text":"Flashcode vers mon Linktree, pour plus d'informations de contact",
             "image":"flashcode.png"
         },
@@ -59,8 +69,8 @@
             "contact": "Réseaux",
             "mail":"",
             "socialLinks":[
-                {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"mail","icon":"mail.svg","link":"mailto:quentinartaud.work@gmail.com", "description":"Adresse mail : quentinartaud.work@gmail.com"},
+                {"id":"linktree","icon":"linktree.svg","link":"https://linktr.ee/quentinatd", "description":"Linktree"},
                 {"id":"githubPerso","icon":"github.svg","link":"https://github.com/quentinvespero", "description":"Github"},
                 {"id":"telegram","icon":"telegram.svg","link":"https://t.me/quenti_n", "description":"Telegram"},
                 {"id":"discord","text":"discord","icon":"discord.svg","link":"https://discord.gg/VupWnrGy", "description":"Discord"}
