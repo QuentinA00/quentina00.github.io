@@ -13,15 +13,6 @@ const StyleContainer = styled.div<StyleContainerProps>`
     column-gap: 1rem;
     display: flex;
 
-    /* &.mobile{
-        row-gap: 1.5rem;
-        column-gap: .5rem;
-        justify-content: center;
-        align-items: center;
-    }
-    &.tiny-mobile{
-        flex-direction: column;
-    } */
     ${props => props.$isOnMobile && `
         row-gap: 1.5rem;
         column-gap: .5rem;
@@ -41,7 +32,6 @@ interface MenuBarPagesProps {
 
 const MenuBarPages:FC<MenuBarPagesProps> = ({pageItems, isOnMobile, isOnTinyMobile}) => {
     return (
-        // <StyleContainer className={`menubar-${isOnMobile ? 'mobile' : ''} ${isOnTinyMobile ? 'tiny-mobile' : ''} `}>
         <StyleContainer $isOnMobile={isOnMobile} $isOnTinyMobile={isOnTinyMobile}>
             {pageItems.map(pageItem => (
                 <Link

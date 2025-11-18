@@ -2,7 +2,11 @@ import styled from 'styled-components'
 import { contactLinkInterface } from '../../interfaces/appTextInterfaces'
 import ContactLink from './ContactLink'
 
-const StyleContainer = styled.div`
+interface StyleContainerProps {
+    $isOnMobileScreen?:boolean
+}
+
+const StyleContainer = styled.div<StyleContainerProps>`
     display:flex;
     flex-direction:column;
     row-gap:2rem;
@@ -12,15 +16,22 @@ const StyleContainer = styled.div`
     /* border: .1rem solid var(--color2); */
 
     border-radius:1rem;
+
+    ${props => props.$isOnMobileScreen && `
+        padding:1.5rem;
+        font-size:.9rem;
+        row-gap:3rem;
+    `}
 `
 
 type ContactLinksProps = {
     contactLinks: contactLinkInterface[]
+    isOnMobileScreen: boolean
 }
 
-const ContactLinks: React.FC<ContactLinksProps> = ({ contactLinks }) => {
+const ContactLinks: React.FC<ContactLinksProps> = ({ contactLinks, isOnMobileScreen }) => {
     return (
-        <StyleContainer>
+        <StyleContainer $isOnMobileScreen={isOnMobileScreen}>
             {contactLinks.map((element) => (
                 <ContactLink
                     key={element.id} 
@@ -28,6 +39,7 @@ const ContactLinks: React.FC<ContactLinksProps> = ({ contactLinks }) => {
                     icon={element.icon} 
                     linkText={element.linkText} 
                     link={element.link} 
+                    isOnMobileScreen={isOnMobileScreen}
                 />
             ))}
         </StyleContainer>

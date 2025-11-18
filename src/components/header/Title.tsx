@@ -8,7 +8,8 @@ const StyleContainer = styled.div`
     display: flex;
     cursor: pointer;
     transition:.15s ease-in-out;
-    white-space: nowrap;
+    /* white-space: nowrap; */
+    word-break: break-all;
     &.title-mobile{
         align-self: center;
 

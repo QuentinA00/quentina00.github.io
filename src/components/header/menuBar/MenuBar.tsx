@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive"
-import { screen_mobile, screen_tinyMobile } from "../../../utils/responsiveUtils"
+import { screen500, screen700 } from "../../../utils/responsiveUtils"
 import { useLanguage } from "../../../contexts/LanguageContextProvider"
 import MenuBarPages from "./MenuBarPages"
 import MenuBarItems from "./MenuBarItems"
@@ -14,30 +14,23 @@ const StyleContainer = styled.div`
     margin-right: 2rem;
 
     &.menuBar-mobile {
-        padding: 1.5rem;
-        border-radius: 1rem;
-        flex-direction: column;
-        row-gap: 2rem;
+        flex-direction: column-reverse;
+        row-gap: 1.5rem;
         margin-right: 0;
-    }
-    &.menuBar-tinyMobile {
-        background: var(--color3);
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
+        width:100%;
     }
 `
 
 const MenuBar = () => {
 
-    const isOnMobile = useMediaQuery({maxWidth:screen_mobile})
-    const isOnTinyMobile = useMediaQuery({maxWidth:screen_tinyMobile})
+    const isOnMobile = useMediaQuery({maxWidth:screen700})
+    const isOnTinyMobile = useMediaQuery({maxWidth:screen500})
 
     // get app text from context
     const {appText} = useLanguage()
     
     return (
-        <StyleContainer className={`${isOnMobile ? 'menuBar-mobile' : ''} ${isOnTinyMobile ? 'menuBar-tinyMobile' : ''}`}>
+        <StyleContainer className={`${isOnMobile ? 'menuBar-mobile' : ''}`}>
             <MenuBarPages pageItems={appText.pages} isOnMobile={isOnMobile} isOnTinyMobile={isOnTinyMobile}/>
             {isOnMobile && <div className="divider2"></div>}
             <MenuBarItems menuBarItems={appText.menuBar} />

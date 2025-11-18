@@ -23,23 +23,11 @@ const StyleContainer = styled(motion.div)`
         backdrop-filter:blur(3rem);
     }
 
-    // style for presentation post
-    &.post-presentation{
-        font-size: 1.1rem;
-
-        & .postContentSection{ // ----- deprecated
-            & .postContentSection-description{
-                & .postContentSection-text{ 
-                    font-weight: 200;
-                }
-            }
-        }
-    }
-
     // style for mobile < 700
     &.post-mobile{
         width: unset;
-        row-gap: 3rem;
+        row-gap: 2rem;
+        padding:1rem;
     }
 
     // style for tablet < 1000
@@ -52,22 +40,21 @@ const StyleContainer = styled(motion.div)`
         display: flex;
         column-gap: 2rem;
         transition: .1s ease-in-out 0s;
+        &.postContentSection-smallerScreen{
+            flex-direction: column;
+            row-gap: 5rem;
+        }
+        &.postContentSection-presentation{
+            /* & .postContentSection-description{
+                row-gap: 5rem;
+            } */
+        }
 
         & .postContentSection-description{
             display: flex;
             flex-direction: column;
             flex: 2;
             row-gap: 2rem;
-        }
-
-        &.postContentSection-smallerScreen{
-            flex-direction: column;
-            row-gap: 2rem;
-        }
-        &.postContentSection-presentation{
-            & .postContentSection-description{
-                row-gap: 5rem;
-            }
         }
     }
 
@@ -145,10 +132,8 @@ const Post:React.FC<PostProps & PostVariantProps> = ({ postData, variantType }) 
             layout
         >
             {variantType === 'presentation' 
-                ? 
-                    <PostPresentationLayout postData={postData} tabletScreen={tabletScreen} />
-                :
-                    <PostProjectLayout postData={postData} tabletScreen={tabletScreen}/>
+                ? <PostPresentationLayout postData={postData} tabletScreen={tabletScreen} />
+                : <PostProjectLayout postData={postData} tabletScreen={tabletScreen}/>
             }
 
         </StyleContainer>

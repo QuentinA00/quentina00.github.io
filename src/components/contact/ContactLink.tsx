@@ -1,11 +1,19 @@
 import styled from 'styled-components'
 import ButtonWithIcon from '../ButtonWithIcon'
 
-const StyleContainer = styled.div`
+interface StyleContainerProps {
+    $isOnMobileScreen:boolean
+}
+
+const StyleContainer = styled.div<StyleContainerProps>`
     display:flex;
     gap:1rem;
     align-items:center;
     transition:.1s ease-in-out;
+    ${props => props.$isOnMobileScreen && `
+        flex-direction:column;
+        align-items:start;
+    `}
 
     & p {
         font-weight:200;
@@ -19,6 +27,7 @@ const StyledLink = styled.a`
     border-radius: .3rem;
     font-weight: 500;
     text-underline-offset: .25rem;
+    word-break: break-all;
     @media (hover:hover){
         &:hover{
             text-decoration: underline;
@@ -26,7 +35,7 @@ const StyledLink = styled.a`
         }
     }
     &:active{
-        box-shadow: 0 0 0rem .15rem var(--color3);
+        /* box-shadow: 0 0 0rem .15rem var(--color3); */
         border-radius: .5rem;
         transform: scale(.98);
     }
@@ -43,12 +52,13 @@ type ContactLinkProps = {
     linkText:string
     link:string
     icon:string
+    isOnMobileScreen:boolean
 }
 
-const ContactLink: React.FC<ContactLinkProps> = ({text,link,linkText,icon}) => {
+const ContactLink: React.FC<ContactLinkProps> = ({text,link,linkText,icon,isOnMobileScreen}) => {
     return (
-        <StyleContainer>
-            <StyledButtonWithIcon imageName={icon} />
+        <StyleContainer $isOnMobileScreen={isOnMobileScreen} >
+            {!isOnMobileScreen && <StyledButtonWithIcon imageName={icon} />}
             <p>{text}</p>
             <StyledLink href={link}>{linkText}</StyledLink>
         </StyleContainer>
