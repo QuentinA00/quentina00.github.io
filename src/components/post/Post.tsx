@@ -21,13 +21,15 @@ const StyleContainer = styled(motion.div)`
         flex-direction: column;
         row-gap: 2.5rem;
         backdrop-filter:blur(3rem);
+        &.post-mobile{
+            padding:1rem 1.5rem;
+        }
     }
 
     // style for mobile < 700
     &.post-mobile{
         width: unset;
         row-gap: 2rem;
-        padding:1rem;
     }
 
     // style for tablet < 1000
@@ -42,7 +44,6 @@ const StyleContainer = styled(motion.div)`
         transition: .1s ease-in-out 0s;
         &.postContentSection-smallerScreen{
             flex-direction: column;
-            row-gap: 5rem;
         }
         &.postContentSection-presentation{
             /* & .postContentSection-description{
