@@ -83,7 +83,7 @@ const PostMedias:React.FC<PostMediasProps> = ({medias}) => {
     return (
         <StyleContainer className={`postMedias ${smallScreen ? 'postMedias-smallScreen' : ''}`}>
             
-            {medias?.videos && 
+            {medias.videos && 
                 <div className="postMedias-videoSection">
                     { medias.videos.map((video) => (
                         <div key={video.id} className="postMedias-video">
@@ -94,9 +94,9 @@ const PostMedias:React.FC<PostMediasProps> = ({medias}) => {
                 </div>
             }
 
-            {medias?.videos && <div className="divider3"></div>}
+            {medias.videos && <div className="divider3"></div>}
             
-            {medias?.images && 
+            {medias.images && 
                 <div className="postMedias-imageSection">
                     {medias.images.map((image) => (
                         <img key={image.id} src={image.linkPath} alt={image.text} onClick={() => openImageWrapper(image)} loading="lazy" decoding="async"/>

@@ -13,7 +13,7 @@ const StyleContainer = styled(motion.div)`
     display: flex;
     max-width: 70rem;
 
-    // style for projects posts
+    /* style for projects posts */
     &.post-project{
         border-radius: 1.5rem;
         padding: 2rem;
@@ -26,13 +26,13 @@ const StyleContainer = styled(motion.div)`
         }
     }
 
-    // style for mobile < 700
+    /* style for mobile < 700 */
     &.post-mobile{
         width: unset;
         row-gap: 2rem;
     }
 
-    // style for tablet < 1000
+    /* style for tablet < 1000 */
     &.post-tablet{
         width: unset;
     }
