@@ -13,7 +13,7 @@ const StyleContainer = styled.div<StyleContainerProps>`
     align-items:start;
     padding:3.5rem;
     background:var(--color3);
-    /* border: .1rem solid var(--color2); */
+    border: .1rem solid var(--color3);
 
     border-radius:1rem;
 

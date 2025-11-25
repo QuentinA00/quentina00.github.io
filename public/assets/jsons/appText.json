@@ -13,7 +13,7 @@
             "heading":"You can retrieve me / contact me there :",
             "contactLinks":[
                 {"id":"mail", "text":"Mail :", "linkText":"quentinartaud.work@gmail.com", "link":"mailto:quentinartaud.work@gmail.com", "icon":"mail.svg"},
-                {"id":"github", "text":"Main Github :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
+                {"id":"github", "text":"Github :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
             ],
             "text":"Flashcode to my Linktree, for more contact info",
             "image":"flashcode.png"
@@ -49,7 +49,7 @@
             {"id": "language", "icon":"globe.svg", "link":""}
         ],
         "pages":[
-            { "id": "", "text": "À propos de moi" },
+            { "id": "", "text": "Bio" },
             { "id": "projects", "text": "Projets" },
             { "id": "contact", "text": "Contact" }
         ],
@@ -57,7 +57,7 @@
             "heading":"Vous pouvez me retrouver / me contacter notamment ici :",
             "contactLinks":[
                 {"id":"mail", "text":"Mail :", "linkText":"quentinartaud.work@gmail.com", "link":"mailto:quentinartaud.work@gmail.com", "icon":"mail.svg"},
-                {"id":"github", "text":"Github principal :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
+                {"id":"github", "text":"Github :", "linkText":"github.com/quentinvespero", "link":"https://github.com/quentinvespero", "icon":"github.svg"}
             ],
             "text":"Flashcode vers mon Linktree, pour plus d'informations de contact",
             "image":"flashcode.png"
