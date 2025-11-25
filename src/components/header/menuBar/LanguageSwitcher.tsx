@@ -14,7 +14,7 @@ const StyleContainer = styled(motion.div)`
     left:50%;
     background:var(--color3);
     padding:1rem;
-    border-radius:.5rem;
+    border-radius:.7rem;
     border: solid .1rem var(--color3);
     backdrop-filter:blur(1rem);
     
