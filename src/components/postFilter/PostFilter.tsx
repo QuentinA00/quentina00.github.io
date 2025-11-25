@@ -19,7 +19,6 @@ const StyleContainer = styled(motion.div)`
     place-self:flex-start;
     position:sticky;
     top:2rem;
-    padding-left: 3rem;
     overflow-y: auto;
     max-height:calc(100vh - 4rem);
     &.postFilter-smallerScreen{

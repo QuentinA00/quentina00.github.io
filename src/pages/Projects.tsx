@@ -11,7 +11,7 @@ import PostFilter from "../components/postFilter/PostFilter"
 const StyleContainer = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 4rem;
     @include transition(.1s);
 
     &.projects-smallerScreen{
@@ -22,7 +22,7 @@ const StyleContainer = styled.div`
         display: flex;
         flex-direction: column;
         row-gap: 3rem;
-        flex: 3;
+        flex: 2.5;
 
         &.projectItems-mediumScreen{
             flex:2;
