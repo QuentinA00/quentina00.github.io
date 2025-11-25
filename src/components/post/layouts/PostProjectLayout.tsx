@@ -17,7 +17,7 @@ const PostMedias = lazy(() => import('../elements/PostMedias'))
 const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen}) => {
 
     const containerRef = useRef<HTMLDivElement | null>(null)
-    const inView = useInView(containerRef, { margin: "300px 0px 300px 0px", amount: 0 })
+    const inView = useInView(containerRef, { margin: "500px 0px 500px 0px", amount: 0 })
 
     return (
         <>
@@ -27,7 +27,7 @@ const PostProjectLayout: FC<PostProjectLayoutProps> = ({postData, tabletScreen})
             </div>
             <div ref={containerRef} className={`postContentSection postContentSection-project ${tabletScreen ? 'postContentSection-smallerScreen' : ''}`}>
                 
-                <Suspense fallback={null}>
+                <Suspense fallback={'loading...'}>
                     {inView && <PostMedias medias={postData.medias}/>}
                 </Suspense>
                 

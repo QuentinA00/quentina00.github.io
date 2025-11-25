@@ -21,6 +21,7 @@ const StyleContainer = styled(motion.div)`
         flex-direction: column;
         row-gap: 2.5rem;
         backdrop-filter:blur(3rem);
+        border:.1rem solid var(--color3);
         &.post-mobile{
             padding:1rem 1.5rem;
         }
@@ -41,7 +42,7 @@ const StyleContainer = styled(motion.div)`
     .postContentSection{
         display: flex;
         column-gap: 2rem;
-        transition: .1s ease-in-out 0s;
+        transition: .1s ease-in-out;
         &.postContentSection-smallerScreen{
             flex-direction: column;
         }
@@ -56,6 +57,7 @@ const StyleContainer = styled(motion.div)`
             flex-direction: column;
             flex: 2;
             row-gap: 2rem;
+            transition: .1s ease-in-out;
         }
     }
 

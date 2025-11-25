@@ -29,10 +29,10 @@ const StyleContainer = styled.div`
         }
     }
 
-    > * {
+    /* > * {
         content-visibility:auto;
         contain-intrinsic-size:40rem;
-    }
+    } */
 `
 
 const Projects = () => {

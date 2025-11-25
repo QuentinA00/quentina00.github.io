@@ -20,7 +20,6 @@ const StyleContainer = styled(motion.div)`
     position:sticky;
     top:2rem;
     padding-left: 3rem;
-    border-left: solid .15rem var(--color3);
     overflow-y: auto;
     max-height:calc(100vh - 4rem);
     &.postFilter-smallerScreen{

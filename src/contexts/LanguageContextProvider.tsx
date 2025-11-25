@@ -10,6 +10,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
+// get the language of the browser
+// can be used to set the default language of the app via currentLanguage state
 const getBrowserLanguage = (): 'en'| 'fr' =>{
     const browserLanguage = navigator.language || (navigator as any).userLangue
     return browserLanguage.toLowerCase().startsWith('fr') ? 'fr' : 'en'
