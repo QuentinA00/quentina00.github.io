@@ -1,35 +1,35 @@
 import styled from 'styled-components'
 
-const StyleContainer = styled.svg`
-    position: fixed;
+const StyleContainer = styled.div`
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: 0.03; /* Adjust for subtlety */
+    /* pointer-events: none;
+    z-index: 2;
+    opacity: 3;
     filter: url(#noise);
-    mix-blend-mode: overlay;
+    mix-blend-mode: overlay; */
+    background: black;
 `
 
-type NoiseLayerProps = {
-
-}
-
-const NoiseLayer: React.FC<NoiseLayerProps> = ({ }) => {
+const NoiseLayer: React.FC = () => {
     return (
-        <StyleContainer style={{ position: 'fixed', width: 0, height: 0 }}>
-            <filter id="noise">
-                <feTurbulence
-                    type="fractalNoise"
-                    baseFrequency="0.8"
-                    numOctaves="4"
-                    stitchTiles="stitch"
-                />
-                <feColorMatrix type="saturate" values="0" />
-            </filter>
-        </StyleContainer>
+        <>
+            <svg>
+                <filter id="noise">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.8"
+                        numOctaves="4"
+                        stitchTiles="stitch"
+                    />
+                    <feColorMatrix type="saturate" values="0" />
+                </filter>
+            </svg>
+            <StyleContainer />
+        </>
     )
 }
 
