@@ -287,11 +287,10 @@
             {
                 "id": "presentation",
                 "postTextParagraphs": [
-                    "Développeur Full-Stack Typescript, ayant de l'experience en particulier dans la création d'application / web application, avec un accent sur l'expérience utilisateur",
-                    "Je travaille également régulièrement avec python à travers différents projets.",
+                    "Développeur Full-Stack Typescript React/Next, ayant de l'experience dans la création de web application, avec un accent sur l'expérience utilisateur",
+                    "Je travaille aussi sur différents projets avec Python.",
                     "Ayant initialement un parcours en administration serveur, j'ai une solide expérience avec Linux.",
-                    "J'aime apprendre de nouvelles technologies et améliorer mes compétences.",
-                    "Une vue d'ensemble de mes compétences, via ces tags :"
+                    "J'aime apprendre de nouvelles technologies et améliorer mes compétences."
                 ],
                 "tagsId":[
                     "tag_js",
