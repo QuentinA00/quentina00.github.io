@@ -9,8 +9,8 @@ import FallbackError from "./components/fallbackComponents/FallbackError"
 import FallbackLoading from "./components/fallbackComponents/FallbackLoading"
 import { useMediaQuery } from "react-responsive"
 import { screen_mobile } from "./utils/responsiveUtils"
-import { useLanguage } from "./contexts/LanguageContextProvider"
 import styled from "styled-components"
+import { useLanguage } from "./contexts/useLanguage"
 
 const StyleContainer = styled.div`
     display: flex;

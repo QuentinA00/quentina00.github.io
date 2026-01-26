@@ -4,11 +4,11 @@ import { PostsInterface } from '../../interfaces/postsInterfaces'
 import { useMediaQuery } from 'react-responsive'
 import { screen_desktop_small } from '../../utils/responsiveUtils'
 import { useTags } from '../../contexts/TagContextProvider'
-import { useLanguage } from '../../contexts/LanguageContextProvider'
 import TagCategoryLayout from './TagCategoryLayout'
 import TagListLayout from './TagListLayout'
 import { motion } from 'framer-motion'
 import { slideFromRight } from '../../style/animations/animations'
+import { useLanguage } from '../../contexts/useLanguage'
 
 // Styled component for both container and buttons
 const StyleContainer = styled(motion.div)`

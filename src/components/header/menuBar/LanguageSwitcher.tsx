@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { useLanguage } from '../../../contexts/LanguageContextProvider'
 import { motion } from 'framer-motion'
 import { zoomEffect4 } from '../../../style/animations/animations'
 import { forwardRef } from 'react'
+import { useLanguage } from '../../../contexts/useLanguage'
 
 // here, StyleContainer is a Framer "motion.div", not a simple div
 const StyleContainer = styled(motion.div)`

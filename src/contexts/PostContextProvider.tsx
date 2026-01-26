@@ -1,7 +1,7 @@
 import { createContext, FC, ReactNode, useContext } from "react"
 import { PostInterface, PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
 import posts from '../../public/assets/jsons/posts.json'
-import { useLanguage } from "./LanguageContextProvider"
+import { useLanguage } from "./useLanguage"
 
 interface PostContextType {
     posts: PostsInterfaceWithLanguage

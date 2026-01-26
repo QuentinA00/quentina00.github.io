@@ -1,9 +1,9 @@
 import { useMediaQuery } from "react-responsive"
 import { screen500, screen700 } from "../../../utils/responsiveUtils"
-import { useLanguage } from "../../../contexts/LanguageContextProvider"
 import MenuBarPages from "./MenuBarPages"
 import MenuBarItems from "./MenuBarItems"
 import styled from "styled-components"
+import { useLanguage } from "../../../contexts/useLanguage"
 
 const StyleContainer = styled.div`
     display: flex;

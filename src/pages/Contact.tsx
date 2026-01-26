@@ -1,8 +1,8 @@
 import { useMediaQuery } from "react-responsive"
 import { screen700 } from "../utils/responsiveUtils"
 import styled from "styled-components"
-import { useLanguage } from "../contexts/LanguageContextProvider"
 import ContactLinks from "../components/contact/ContactLinks"
+import { useLanguage } from "../contexts/useLanguage"
 
 const StyleContainer = styled.div`
     display: flex;

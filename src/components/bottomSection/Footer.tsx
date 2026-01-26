@@ -1,8 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useLanguage } from "../../contexts/LanguageContextProvider"
 import SocialLinks from "./SocialLinks"
 import styled from "styled-components"
 import { zoomEffect } from "../../style/animations/animations"
+import { useLanguage } from "../../contexts/useLanguage"
 
 const StyleContainer = styled(motion.div)`
     display: flex;

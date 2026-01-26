@@ -1,7 +1,7 @@
 import { createContext, FC, ReactNode, useContext } from "react"
 import { TagGroupedByCategory, TagInterface } from "../interfaces/postsInterfaces"
 import tagsData from '../../public/assets/jsons/tags.json'
-import { useLanguage } from "./LanguageContextProvider"
+import { useLanguage } from "./useLanguage"
 
 interface TagsInterfacesWithLanguage {
     en: TagInterface[]

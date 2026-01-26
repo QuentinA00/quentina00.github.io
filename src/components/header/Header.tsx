@@ -5,8 +5,8 @@ import { screen_tablet_small } from "../../utils/responsiveUtils"
 import AnimationWrapper from "../AnimationWrapper"
 import { headerAppearance } from "../../style/animations/animations"
 import { AnimatePresence } from "framer-motion"
-import { useLanguage } from "../../contexts/LanguageContextProvider"
 import styled from "styled-components"
+import { useLanguage } from "../../contexts/useLanguage"
 
 const StyleContainer = styled.div`
     display: flex;
