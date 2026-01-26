@@ -4,9 +4,9 @@ import { screen_desktop_medium, screen_desktop_small } from "../utils/responsive
 import { useMediaQuery } from "react-responsive"
 import { AnimatePresence } from "framer-motion"
 import styled from "styled-components"
-import { usePost } from "../contexts/PostContextProvider"
 import Post from "../components/post/Post"
 import PostFilter from "../components/postFilter/PostFilter"
+import { usePost } from "../contexts/usePost"
 
 const StyleContainer = styled.div`
     display: flex;

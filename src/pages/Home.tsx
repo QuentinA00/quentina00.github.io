@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { usePost } from "../contexts/PostContextProvider"
 import Post from "../components/post/Post"
+import { usePost } from "../contexts/usePost"
 
 const HomeStyle = styled.div`
     display: flex;

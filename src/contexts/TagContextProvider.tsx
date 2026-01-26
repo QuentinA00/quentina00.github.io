@@ -1,4 +1,4 @@
-import { createContext, FC, ReactNode, useContext } from "react"
+import { createContext, FC, ReactNode } from "react"
 import { TagGroupedByCategory, TagInterface } from "../interfaces/postsInterfaces"
 import tagsData from '../../public/assets/jsons/tags.json'
 import { useLanguage } from "./useLanguage"
@@ -8,7 +8,7 @@ interface TagsInterfacesWithLanguage {
     fr: TagInterface[]
 }
 
-interface TagsContextType {
+export interface TagsContextType {
     tags: TagInterface[]
     getTagById: (id: string) => TagInterface | undefined
     getTagsByIds: (ids:string[]) => TagInterface[]
@@ -37,13 +37,13 @@ export const TagsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         const tagsObjects = getTagsByIds(ids)
 
         // checking whether the method groupBy exist in the browser context
-        // because groupBy is a ES2024 feature so it may not be compatible with all browsers
-        const hasGroupBy = typeof (Object as any).groupBy === 'function'
+        // (because groupBy is a ES2024 feature so it may not be compatible with all browsers)
+        const hasGroupBy = typeof Object.groupBy === 'function'
         
         // return an object with the category as string and then an array of the tags that belong to this category
         // if the browser don't support groupBy, return another way to achieve the same result
-        const groupedTags: Record<string, TagInterface[]> = hasGroupBy
-            ? (Object as any).groupBy(tagsObjects, (tag:TagInterface) => tag.category)
+        const groupedTags: Partial<Record<string, TagInterface[]>> = hasGroupBy
+            ? Object.groupBy(tagsObjects, (tag) => tag.category)
             : tagsObjects.reduce((acc,t) => {
                 (acc[t.category] ||= []).push(t)
                 return acc
@@ -54,7 +54,7 @@ export const TagsProvider: FC<{ children: ReactNode }> = ({ children }) => {
         return Object.keys(groupedTags)
             // .sort().reverse()
             // retrieve the tag object from groupedTags for each category
-            .map(category => ({category, tags: groupedTags[category]}))
+            .map(category => ({category, tags: groupedTags[category] ?? []}))
     }
 
     return (
@@ -64,8 +64,4 @@ export const TagsProvider: FC<{ children: ReactNode }> = ({ children }) => {
     )
 }
 
-export const useTags = () => {
-    const context = useContext(TagsContext)
-    if (!context) throw new Error('useTags must be used within TagsProvider')
-    return context
-}
+export { TagsContext }

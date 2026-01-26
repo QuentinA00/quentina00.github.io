@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { useTags } from "../contexts/TagContextProvider"
+import { useTags } from "../contexts/useTags"
 
 // below, the values for the colors are not mean to change, it uses the same colors in both light and dark mode
 const TagGlobalStyle = styled.div`

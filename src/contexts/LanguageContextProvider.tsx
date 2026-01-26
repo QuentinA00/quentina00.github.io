@@ -2,7 +2,7 @@ import { createContext, FC, ReactNode, useState } from "react"
 import { AppTextInterface, AppTextInterfacesWithLanguage } from "../interfaces/appTextInterfaces"
 import appText from '../../public/assets/jsons/appText.json'
 
-interface LanguageContextType {
+export interface LanguageContextType {
     currentLanguage: 'en' | 'fr'
     setLanguage: (language: 'en' | 'fr') => void
     appText: AppTextInterface

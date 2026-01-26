@@ -1,9 +1,9 @@
-import { createContext, FC, ReactNode, useContext } from "react"
+import { createContext, FC, ReactNode } from "react"
 import { PostInterface, PostsInterfaceWithLanguage } from "../interfaces/postsInterfaces"
 import posts from '../../public/assets/jsons/posts.json'
 import { useLanguage } from "./useLanguage"
 
-interface PostContextType {
+export interface PostContextType {
     posts: PostsInterfaceWithLanguage
     getPresentationPost: () => PostInterface[]
     getProjectPosts: () => PostInterface[]
@@ -29,8 +29,4 @@ export const PostProvider: FC<{ children: ReactNode }> = ({ children }) => {
     )
 }
 
-export const usePost = () => {
-    const context = useContext(PostContext)
-    if (!context) throw new Error('usePost must be used within a PostProvider')
-    return context
-}
+export { PostContext }
