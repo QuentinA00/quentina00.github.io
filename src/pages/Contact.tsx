@@ -27,12 +27,12 @@ const Contact = () => {
     const isOnMobileScreen = useMediaQuery({maxWidth:screen700})
 
     const {appText} = useLanguage()
-    const contactText = appText.contact
+    const contactData = appText.contact
 
     return (
         <StyleContainer className={isOnMobileScreen ? 'contact-mobile' : ''}>
             {/* <h4>{contactText.heading}</h4> */}
-            <ContactLinks contactLinks={contactText.contactLinks} isOnMobileScreen={isOnMobileScreen} />
+            <ContactLinks contactLinks={contactData.contactLinks} contactText={contactData.text} isOnMobileScreen={isOnMobileScreen} />
         </StyleContainer>
     )
 }
