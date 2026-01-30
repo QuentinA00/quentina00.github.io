@@ -13,10 +13,11 @@
                     "tag_js",
                     "tag_python",
                     "tag_react",
-                    "tag_node",
                     "tag_next",
-                    "tag_pytorch",
+                    "tag_node",
+                    "tag_tailwind",
                     "tag_postgre",
+                    "tag_pytorch",
                     "tag_mongo",
                     "tag_git",
                     "tag_jupyterNotebook",
@@ -61,7 +62,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Portfolio Website / Reusable website structure",
                 "description": "This current website.",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
+                "tagsId": ["tag_ts", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
                 "postTextParagraphs": [
                     "When I built this website, I envisioned it as a kind of template for a website structure that could be used for many different projects.", 
                     "This is a 1.0 version, and I'm planning to add new features along the way."
@@ -84,7 +85,7 @@
                 "projectOrigin": "Personal project",
                 "title": "Kosmo Project",
                 "description": "An ideal social network for me. (In progress...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
+                "tagsId": ["tag_ts", "tag_react", "tag_next", "tag_postgre", "tag_tailwind", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_node", "tag_prisma"],
                 "postTextParagraphs": [
                     "The idea behind this project was to create my ideal Twitter-like social network.",
                     "Since I felt frustrated by the absence of some features that are crucial to me in X/Twitter, I decided to channel that frustration into building something of my own.", 
@@ -199,7 +200,7 @@
                 "projectOrigin": "Personal project",
                 "title": "WebInsights",
                 "description": "A Chrome extension to get summaries and informations about websites. (In progress)",
-                "tagsId": ["tag_chromeExtension", "tag_js", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
+                "tagsId": ["tag_chromeExtension", "tag_ts", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
                 "postTextParagraphs": [
                     "It aims to be a simple Chrome extension that provides summaries and explanations using the context of the current webpage.",
                     "Initially, the idea behind this extension was to use Chrome's built-in Gemini Nano LLM, relying solely on a local LLM for inference within the app.",
@@ -239,7 +240,7 @@
                 "projectOrigin": "Professional project",
                 "title": "Coaching section",
                 "description": "React web app to find coaches by topics",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
+                "tagsId": ["tag_ts", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
                 "postTextParagraphs": [
                     "It aims to be a pretty simple web app that needs to be fed with a JSON file containing coaches in different topics.", 
                     "It allows clients to find the perfect coach for their needs.",
@@ -296,10 +297,11 @@
                     "tag_js",
                     "tag_python",
                     "tag_react",
-                    "tag_node",
                     "tag_next",
-                    "tag_pytorch",
+                    "tag_node",
+                    "tag_tailwind",
                     "tag_postgre",
+                    "tag_pytorch",
                     "tag_mongo",
                     "tag_git",
                     "tag_jupyterNotebook",
@@ -345,7 +347,7 @@
                 "projectOrigin": "Projet professionnel",
                 "title": "Site Portfolio / Structure de site web réutilisable",
                 "description": "(Ce site web)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
+                "tagsId": ["tag_ts", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_framerMotion", "tag_reactResponsive", "tag_reactRouter", "tag_scss", "tag_styledComponents","tag_reactContext"],
                 "postTextParagraphs": [
                     "Quand j'ai créé ce site web, je l'ai envisagé comme une sorte de template d'application React que je pourrais utiliser pour différents projets.", 
                     "C'est une version 1.0, et j'ai prévu d'ajouter de nouvelles features au fil du temps."
@@ -366,7 +368,7 @@
                 "projectOrigin": "Projet personnel",
                 "title": "Projet Kosmo",
                 "description": "Un réseau social idéal selon moi. (En cours...)",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_scss", "tag_node","tag_mongo","tag_next", "tag_postgre", "tag_prisma"],
+                "tagsId": ["tag_ts", "tag_react", "tag_next", "tag_postgre", "tag_tailwind", "tag_suspense", "tag_errorBoundaries", "tag_githubPages", "tag_node", "tag_prisma"],
                 "postTextParagraphs": [
                     "L'idée derrière ce projet est un peu de créer mon réseau social idéal, type Twitter/X.",
                     "Il y a beaucoup de fonctions que j'aurais voulu voir arriver et qui me semblent importante dans X/Twitter, j'ai décidé de canaliser cette frustration en construisant quelque chose qui m'appartient.",
@@ -481,7 +483,7 @@
                 "projectOrigin": "Projet personnel",
                 "title": "WebInsights",
                 "description": "Une extension Chrome pour résumer et fact-checker des infos de pages web. (En cours)",
-                "tagsId": ["tag_chromeExtension", "tag_js", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
+                "tagsId": ["tag_chromeExtension", "tag_ts", "tag_llmIntegration", "tag_react", "tag_vite", "tag_styledComponents", "tag_reactContext", "tag_reactRouter", "tag_suspense", "tag_errorBoundaries", "tag_githubPages"],
                 "postTextParagraphs": [
                     "Elle vise à être une extension Chrome simple qui fournit des résumés et des explications/fact-check en utilisant le contexte de la page web actuelle.",
                     "Initialement, l'idée derrière cette extension était d'utiliser le LLM Gemini Nano intégré de Chrome, pour s'appuyer sur un LLM local pour l'inférence dans l'application.",
@@ -522,7 +524,7 @@
                 "projectOrigin": "Projet professionnel",
                 "title": "Section Coaching",
                 "description": "Application web React pour trouver des coachs par sujets",
-                "tagsId": ["tag_js", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
+                "tagsId": ["tag_ts", "tag_react", "tag_vite", "tag_scss", "tag_swiper"],
                 "postTextParagraphs": [
                     "Projet demandé par Amazon.", 
                     "Elle vise à être une application web assez simple qui doit être alimentée par un fichier JSON contenant des coachs dans différents sujets.", 

@@ -1,9 +1,9 @@
 {
     "en": [
         { "id": "tag_js", "text": "Javascript / Typescript", "category": "Software Development" },
-        { "id": "tag_react", "text": "ReactJS", "category": "Software Development" },
-        { "id": "tag_node", "text": "NodeJS", "category": "Software Development" },
-        { "id": "tag_next", "text": "NextJS", "category": "Software Development" },
+        { "id": "tag_react", "text": "React", "category": "Software Development" },
+        { "id": "tag_node", "text": "Node.js", "category": "Software Development" },
+        { "id": "tag_next", "text": "Next.js", "category": "Software Development" },
         { "id": "tag_python", "text": "Python", "category": "Software Development" },
         { "id": "tag_postgre", "text": "PostgreSQL", "category": "Software Development" },
         { "id": "tag_mongo", "text": "MongoDB", "category": "Software Development" },
@@ -38,13 +38,15 @@
         { "id": "tag_githubPages", "text": "Github Pages", "category": "Dev Tools" },
         { "id": "tag_figma", "text": "Figma", "category": "UX / UI" },
         { "id": "tag_pytorch", "text": "PyTorch (beginner)", "category": "Software Development" },
-        { "id": "tag_prisma", "text": "Prisma", "category": "Software Development" }
+        { "id": "tag_prisma", "text": "Prisma", "category": "Software Development" },
+        { "id": "tag_ts", "text": "Typescript", "category": "Software Development" },
+        { "id": "tag_tailwind", "text": "Tailwind", "category": "React" }
     ],
     "fr": [
         { "id": "tag_js", "text": "Javascript / Typescript", "category": "Développement" },
-        { "id": "tag_react", "text": "ReactJS", "category": "Développement" },
-        { "id": "tag_node", "text": "NodeJS", "category": "Développement" },
-        { "id": "tag_next", "text": "NextJS", "category": "Développement" },
+        { "id": "tag_react", "text": "React", "category": "Développement" },
+        { "id": "tag_node", "text": "Node.js", "category": "Développement" },
+        { "id": "tag_next", "text": "Next.js", "category": "Développement" },
         { "id": "tag_python", "text": "Python", "category": "Développement" },
         { "id": "tag_postgre", "text": "PostgreSQL", "category": "Développement" },
         { "id": "tag_mongo", "text": "MongoDB", "category": "Développement" },
@@ -79,6 +81,8 @@
         { "id": "tag_githubPages", "text": "Github Pages", "category": "Outils de dev" },
         { "id": "tag_figma", "text": "Figma", "category": "UX / UI" },
         { "id": "tag_pytorch", "text": "PyTorch (débutant)", "category": "Développement" },
-        { "id": "tag_prisma", "text": "Prisma", "category": "Développement" }
+        { "id": "tag_prisma", "text": "Prisma", "category": "Développement" },
+        { "id": "tag_ts", "text": "Typescript", "category": "Développement" },
+        { "id": "tag_tailwind", "text": "Tailwind", "category": "React" }
     ]
 }
