@@ -41,7 +41,8 @@
         { "id": "tag_prisma", "text": "Prisma", "category": "Software Development" },
         { "id": "tag_ts", "text": "Typescript", "category": "Software Development" },
         { "id": "tag_tailwind", "text": "Tailwind", "category": "React" },
-        { "id": "tag_shadcn", "text": "Shadcn", "category": "React" }
+        { "id": "tag_shadcn", "text": "Shadcn", "category": "React" },
+        { "id": "tag_betterauth", "text": "Better-Auth", "category": "React" }
     ],
     "fr": [
         { "id": "tag_js", "text": "Javascript / Typescript", "category": "Développement" },
@@ -85,6 +86,7 @@
         { "id": "tag_prisma", "text": "Prisma", "category": "Développement" },
         { "id": "tag_ts", "text": "Typescript", "category": "Développement" },
         { "id": "tag_tailwind", "text": "Tailwind", "category": "React" },
-        { "id": "tag_shadcn", "text": "Shadcn", "category": "React" }
+        { "id": "tag_shadcn", "text": "Shadcn", "category": "React" },
+        { "id": "tag_betterauth", "text": "Better-Auth", "category": "React" }
     ]
 }
