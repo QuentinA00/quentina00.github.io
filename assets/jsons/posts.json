@@ -54,7 +54,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/quentinvespero/podcast_transcription"}
+                    {"linkName": "Github repo","link": "https://github.com/quentinvespero/podcast_transcription"}
                 ]
             },
             {
@@ -77,7 +77,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/QuentinA00/quentina00.github.io"}
+                    {"linkName": "Github repo","link": "https://github.com/QuentinA00/quentina00.github.io"}
                 ]
             },
             {
@@ -101,9 +101,8 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
-                    {"linkName": "Github repot (v2)","link": "https://github.com/quentinvespero/kosmo"},
-                    {"linkName": "Current version online (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
+                    {"linkName": "Github repo","link": "https://github.com/quentinvespero/kosmo"},
+                    {"linkName": "Current version online (old build)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
                 ],
                 "medias": {
                     "videos":[
@@ -215,7 +214,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/quentinvespero/WebInsights"},
+                    {"linkName": "Github repo","link": "https://github.com/quentinvespero/WebInsights"},
                     {"linkName": "See the current version online (in dev)","link": "https://quentinvespero.github.io/WebInsights/"}
                 ],
                 "medias": {
@@ -255,7 +254,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Github repot","link": "https://github.com/weuplearning/ADN-coaching"}
+                    {"linkName": "Github repo","link": "https://github.com/weuplearning/ADN-coaching"}
                 ],
                 "medias": {
                     "videos":[
@@ -339,7 +338,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Dépôt Github","link": "https://github.com/quentinvespero/podcast_transcription"}
+                    {"linkName": "Repo Github","link": "https://github.com/quentinvespero/podcast_transcription"}
                 ]
             },
             {
@@ -360,7 +359,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Dépôt Github","link": "https://github.com/QuentinA00/quentina00.github.io"}
+                    {"linkName": "Repo Github","link": "https://github.com/QuentinA00/quentina00.github.io"}
                 ]
             },
             {
@@ -384,9 +383,8 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Dépôt Github front (v1)","link": "https://github.com/quentinvespero/kosmo_front_web"},
-                    {"linkName": "Dépôt Github (v2)","link": "https://github.com/quentinvespero/kosmo"},
-                    {"linkName": "Version actuelle en ligne (v1)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
+                    {"linkName": "Repo Github","link": "https://github.com/quentinvespero/kosmo"},
+                    {"linkName": "Version actuelle en ligne (vieux build)","link": "https://quentinvespero.github.io/kosmo_front_web/"}
                 ],
                 "medias": {
                     "videos":[
@@ -499,7 +497,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Dépôt Github","link": "https://github.com/quentinvespero/WebInsights"},
+                    {"linkName": "Repo Github","link": "https://github.com/quentinvespero/WebInsights"},
                     {"linkName": "Voir la version actuelle en ligne (en dev)","link": "https://quentinvespero.github.io/WebInsights/"}
                 ],
                 "medias": {
@@ -539,7 +537,7 @@
                     ]
                 },
                 "postsLinks": [
-                    {"linkName": "Dépôt Github","link": "https://github.com/weuplearning/ADN-coaching"}
+                    {"linkName": "Repo Github","link": "https://github.com/weuplearning/ADN-coaching"}
                 ],
                 "medias": {
                     "videos":[
